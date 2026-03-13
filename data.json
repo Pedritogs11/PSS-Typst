@@ -1,0 +1,94 @@
+{
+  "proyecto": {
+    "titulo": "Proyecto de instalación fotovoltaica de autoconsumo 53.2 kWp y 50 kW nominales con CUPS ES02161216548 en Torredelcampo, Jaén",
+    "fecha": "11 de MARZO de 2026",
+    "fechaNumero": "11/03/2026",
+    "empresa": {
+        "nombre": "Rafael",
+        "enlaceMaps": "https://"
+    },
+    "localizacion": {
+      "situacion": "C/ Ejército Español, 7 23640, Torredelcampo, Jaén",
+      "localidad": "Torredelcampo",
+      "provincia": "Jaén",
+      "lat": "37.5623",
+      "lon": "-4.2356",
+      "coordX": "X",
+      "coordY": "Y"
+    },
+    "duracion": "15 días",
+    "trabajadores":{
+        "totales": 5,
+        "media": 2
+    },
+    "presupuesto": {
+        "pem": 656.232,
+        "pPSS": 2.500
+    }
+  },
+
+  "promotor": {
+    "nombre": "Talleres Augusto",
+    "cif": "B6464",
+    "domicilioSocial": "Polígono Industrial Los Olivares",
+    "localidad": "Jaén",
+    "provincia": "Jaén"
+  },
+
+  "instaladora": {
+    "representante": "representante de la instaladora",
+    "nombre": "instaladora",
+    "cif": "B654564",
+    "domicilioSocial": "Polígono Industrial Los Olivares",
+    "localidad": "Jaén",
+    "provincia": "Jaén"
+  },
+
+  "SYS": {
+    "autorPlan": {
+        "nombre": "nombre autor",
+        "titulo": "Ingeniero Industrial",
+        "colegiado": "2.365 COITI Jaén",
+        "direccion":"C/ Ejército Español, 7 23640, Torredelcampo, Jaén"
+    },
+
+    "empresaRedactora": {
+      "nombre": "Ingenertic S.L.",
+      "cif": "B-70986716",
+      "domicilioSocial": "C/ Polonia, 4 23700, Linares (Jaén)",
+      "localidad": "Linares",
+      "provincia": "Jaén",
+      "web": "www.ingenertic.es",
+      "telefono": "647 08 71 92"
+    },
+
+    "direccionFacultativa": {
+      "nombre": "pepito",
+      "titulo": "Ingeniero",
+      "colegiado": "2.365 COITI Jaén",
+      "direccion": "sucasa"
+    },
+    "coordinador": {
+      "nombre": "pepito",
+      "titulo": "Arquitecto",
+      "colegiado":"2.365 COITI Jaén",
+      "direccion": "sucasa"
+    },
+    "subcontrataModeloPreventivo": "subcontrata",
+    "encargadoRecursoPreventivo": "Federico",
+    "centroSalud": {
+        "nombre": "Centro Salud",
+        "direccion": "Calle CS",
+        "telefono": "953 65 23 85",
+        "enlaceMaps": "https://",
+        "distancia": 5000,
+        "tiempo": 3
+    },
+    "telefonos": {
+        "urgencias": "561 23 22 12",
+        "bomberos": "956 23 51 42",
+        "policiaLocal": "456 12 36 85",
+        "guardiaCivil": "852 33 14 75"
+    }
+  }
+}

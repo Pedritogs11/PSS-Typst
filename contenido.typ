@@ -220,7 +220,7 @@ Se aportará al inicio de la obra el documento que autoriza a instaladora.nombre
   [ACTUACIONES PREVIAS],[4.1.1 FASE 1 (PÁG. X)],[PEQEUÑAS HERRAMIENTAS ELÉCTRICAS / DE MANO],[],[SÍ],
   [EJECUCIÓN DE LA ESTRUCTURA DE SOPORTES DE MÓDULOS Y MONTAJE DE LO SMÓDULOS FV Y CAJAS DE CONCENTRACIÓN],[4.1.2. FASE 2 (PÁG. X)],[EQUIPO DE ELEVACIÓN: CAMIÓN GRÚA EQUIPO DE SOLDADURA ELÉCTRICA], [8.3 CAMIÓN GRÚA (PÁG X) 8.1 / 8.2 PEQUEÑAS HERRAMIENTAS ELÉCTRICAS / DE MANO], [SÍ],
   [EJECUCIÓN DE CANALIZACIONES Y PEQUEÑOS TRABAJOS DE ALBAÑILERÍA], [4.1.3 FASE 3 (PÁG. X)], [PEQUEÑAS HERRAMIENTAS ELÉCTRICAS / DE MANO / PLATAFORMA CON CESTILLO], [8.1 / 8.2 PEQUEÑAS HERRAMIENTAS ELÉCTRICAS / DE MANO / 8.6 PLATAFORMA ELEVADORA (PÁG. X/Y/Z)], [SÍ],
-  [MONTAJE D EINVERSORES Y EJECUCIÓN DE LA INSTALACIÓN ELÉCTRICA], [4.1.4 FASE 4 (PÁG. X)], [PEQUÑAS HERRAMIENTAS ELÉCTRICAS / DE MANO], [8.1 /.2 PEQUEÑAS HERRAMIENTAS ELÉCTRICAS / DE MANO (PÁG. X/Y)], [SÍ],
+  [MONTAJE DE INVERSORES Y EJECUCIÓN DE LA INSTALACIÓN ELÉCTRICA], [4.1.4 FASE 4 (PÁG. X)], [PEQUÑAS HERRAMIENTAS ELÉCTRICAS / DE MANO], [8.1 /.2 PEQUEÑAS HERRAMIENTAS ELÉCTRICAS / DE MANO (PÁG. X/Y)], [SÍ],
   [PUESTA EN MARCHA DE LA INSTALACIÓN Y MONITORIZACIÓN], [4.1.5 FASE 5 (PÁG. X)], [], [], [SÍ]
 )
 
@@ -454,7 +454,6 @@ Picaduras de insectos:
 Cuando trabajamos en el medio natural corremos el riesgo de sufrir picaduras de insectos, principalmente himenópteros como abejas y avispas, o también arañas, escorpiones, escolopendras, etc. 
 Aunque la mayoría de estas picaduras sólo causan una molestia leve o fuerte según especies, algunas pueden provocar reacciones alérgicas graves que requieren de atención médica de urgencia.
 
-
 Medidas preventivas:
 -	Durante las marchas o momentos de ascensión, extremar la atención al acceder a la cubierta.
 -	No acercarnos conscientemente a panales de abejas ni a nidos de avispas y si el acercamiento ha sido accidental, alejarnos con movimientos lentos. Estos panales se sitúan en los sitios más recónditos.
@@ -503,155 +502,20 @@ La maquinaria a utilizar en los citados trabajos será:
 Identificación de riesgos:
 
 Durante la ejecución del montaje de la instalación, se identifican los siguientes riesgos particulares inherentes al propio trabajo.
-
-==== Caídas a distinto nivel
-
-- Caídas desde la cubierta al ubicar estructura y paneles y al realizar el montaje de bandejas y cableado: este riesgo existe puesto que los paneles y la estructura se colocarán sobre la cubierta , siendo necesario desplazarse por la misma, al igual que durante el montaje del cableado.
-
-Protecciones colectivas e individuales:
-
-El acceso a la cubierta sólo se realizará cuando se garantice que se ha minimizado el riesgo de caídas a distinto nivel de los operarios. 
-En este caso se usará la propia estructura metálica de la nave para sujetar los dispositivos de anclaje de la línea de vida provisional.
-
-Todos los trabajos que se realicen en altura se realizarán haciendo uso de calzado de seguridad antideslizante y puntera reforzada.
-
-La manipulación de cargas se efectuará mediante el uso de guantes de protección mecánica.
-
-Medidas preventivas:
-
-Todo el personal que deba acceder a la obra habrá recibido la información correspondiente a la circulación por la misma. 
-Nuestro recurso preventivo deberá/n dejar constancia de ello.
-
-Se prohíbe subir a la estructura durante tiempo lluvioso y tras un periodo de lluvia se examinará el estado de la misma por parte del recurso preventivo, asegurándose que no resbale de la superficie de tránsito.
-
-Antes de acceder a la estructura, en periodo invernal, se comprobará la inexistencia de hielo en la misma.
-
-==== Caídas al mismo nivel por falta de orden y limpieza
-
-Medidas preventivas:
-
-Mantener la zona de trabajo lo más ordenada y limpia posible. 
-Retirar inmediatamente cualquier elemento que obstaculice las zonas de paso.
-
-==== Desplome de material mal apilado
-
-Medidas preventivas:
-
-El material se apilará adecuadamente, evitando generar pilas inestables. 
-La altura de apilamiento tampoco será excesiva.
-
-El acopio de material en cubierta se realizará sobre elementos estructurales, evitando sobrecargas en la cubierta que superen los 220 kg/m2.
-
-Se evitará asimismo el acopio de materiales junto a los bordes de cubierta.
-
-El acopio de material se realizará de manera progresiva, repartiendo los palets a medida que se vayan subiendo.
-
-==== Caída de objetos (en su manipulación)
-
-Protecciones individuales:
-
-Todos los trabajos que se realicen en altura se realizarán haciendo uso de calzado de seguridad antideslizante y puntera reforzada.
-
-La manipulación de cargas se efectuará mediante el uso de guantes de protección mecánica.
-
-Durante el transcurso de toda la obra será obligatorio el uso de casco de seguridad con barbuquejo.
-
-Protecciones colectivas:
-
-En el perímetro de la zona de trabajo, donde abajo existen accesos de personal con el consiguiente tránsito de personas, para impedir la posible caída de objetos sobre personas, se balizará impidiendo el paso durante los trabajos en altura. 
-No obstante, se vigilará por recurso preventivo en planta baja la zona de trabajo durante el izado de materiales.
-
-Medidas preventivas:
-
-Solo podrán manipular cargas con maquinaria auxiliar aquellas personas que hayan recibido formación e información específica para la mencionada tarea, y hayan sido debidamente autorizadas por la empresa.
-
-Las tareas de manipulación manual de placas fotovoltaicas se realizarán siempre por 2 trabajadores, y de la manera más mecanizada posible para prevenir la caída de las mismas. 
-No se ubicarán los pies debajo de la carga a manipular.
-
-Se evitará situarse por debajo de placas no convenientemente fijadas a la estructura.
-
-==== Golpes y cortes con elemeentos desprendidos y con el propio material
-
-Durante las operaciones de izado de cargas se prohibirá el paso a toda persona ajena a los trabajos, balizando la zona de trabajo (como mínimo cinta de balizamiento, señal de prohibido el paso y señal labores de montaje e instalación).
-
-
-Protecciones individuales:
--	Guantes de protección mecánica. Casco de polietileno con barbuquejo.
--	Ropa de trabajo adecuada.
-
-Medidas preventivas:
--	Queda terminantemente prohibido, situarse debajo de cargas suspendidas. Para evitar dicha situación, se emitirán señales previamente establecidas, generalmente sonoras, con el fin de que puedan ponerse a salvo de posibles desprendimientos de aquellas.
--	Se evitarán los trabajos a distinto nivel y en la misma vertical. No se transitará por debajo de la plataforma cuando esté elevada.
--	Se tendrá especial precaución cuando realicemos trabajos o pasemos junto a materiales apilados o almacenados que presenten aristas vivas, cantos afilados o elementos que sobresalgan.
-
-==== Golpes y cortes con herramientas
-
-Medidas preventivas:
--	No atornillar o destornillar un tornillo sujetando la pieza con la palma de la mano. Si el destornillador resbala se puede sufrir una lesión. Apoyar la pieza sobre una base sólida.
--	Los destornilladores no se deben usar como palancas, como cincel, ni para perforar.
--	La llave debe estar siempre colocada perpendicular al eje del tornillo, ya que si esta inclinada no se puede ajustar perfectamente y es fácil que resbale.
--	Las llaves ajustables (inglesas), se deben usar colocándolas de tal forma que la mandíbula fija esté en el lado opuesto a la dirección del movimiento que se efectúa.
--	Tirar de la llave es más seguro que empujarla.
--	No se deben utilizar prolongaciones de las llaves, como tubos, otras llaves, etc.
--	Atrapamientos por el material descargado.
--	Se tendrá especial precaución, con la posición de las manos al depositar las placas sobre los soportes, a fin de prevenir aplastamientos.
-
-Protecciones individuales:
--	La manipulación de cargas se efectuará mediante el uso de guantes de protección mecánica.
--	Todos los trabajos que se realicen con el material descargado se realizarán haciendo uso de calzado de seguridad antideslizante y puntera reforzada.
-
-==== Atrapamiento por equipo de elevación de cargas
-
-Medidas preventivas:
--	La elevación de cargas se realizará exclusivamente con equipos de trabajo diseñados a tal fin.
--	Se estará a lo dispuesto en el apartado correspondiente al medio auxiliar o herramienta correspondiente.
--	No se emplearán prolongadores de horquillas ni ningún otro accesorio que no sea autorizado por el fabricante del equipo de trabajo.
--	Se comprobará que el terreno tiene consistencia suficiente para que los apoyos de la maquinaria empleada no se hundan en el mismo durante la ejecución de las maniobras.
-
-==== Sobreesfuerzos por manipulación manual de cargas
-
-Medidas preventivas:
--	Las tareas de manipulación manual de placas fotovoltaicas se realizarán siempre por 2 trabajadores, y de la manera más mecanizada posible, para prevenir daños dorso lumbares. Se emplearán medios auxiliares siempre que sea posible para reducir el trabajo manual.
--	No se manipularán por un solo trabajador cargas que superen los 25 K de peso que sean voluminosos o no dispongan de buen agarre.
-
-==== Atropellos
-
-Medidas preventivas:
--	Se prestará especial precaución de no invadir la zona natural de paso de los vehículos de carga, durante las operaciones de descarga de material.
--	Nunca pasaremos por detrás de un camión o una carretilla que están maniobrando sin asegurarnos de que el conductor nos ha visto y nos permite el paso.
--	En las operaciones de descarga de material se reducirá al mínimo imprescindible la presencia de trabajadores en las proximidades.
-
-==== Proyección de fragmentos o partículas
-
-Protecciones individuales:
--	Es obligatorio el uso de gafas de seguridad homologadas frente a impactos para las operaciones susceptibles de producir proyección de partículas, como por ejemplo los trabajos de taladrado o radial.
-
-Medidas preventivas:
--	Se tendrá especial precaución, con la posición de las manos al depositar las placas sobre los soportes, a fin de prevenir aplastamientos.
-
-==== Exposición al ruido
-
-Protecciones individuales:
--	Es obligatorio el uso de protectores auditivos en las operaciones de taladrado y radialado en aquellas operaciones susceptibles de generar niveles de ruido superiores a 80 dBA.
-
-==== Daños a terceros o por terceros
-
-Medidas preventivas:
--	Se establecerá un área de uso exclusivo para los trabajadores del contratista o sus subcontratas, de manera que quede prohibida la realización de trabajos en la misma vertical (tanto por encima como por debajo) donde se encuentre el personal prestando su servicio.
-
-==== Pisadas sobre superficies de tránsito
-
-Medidas preventivas:
--	Se dispondrán accesos fáciles y seguros para llegar a los lugares de trabajo.
--	Las derivadas de trabajos sobre suelos húmedos o mojados: Los operarios llevarán calzado de seguridad antideslizante, con el fin de evitar resbalones en superficies mojadas.
-
-==== Recurso preventivo
-
-El Recurso Preventivo comprobará que los operarios encargados de la instalación realizan las operaciones mediante procedimientos de trabajo seguros.
-
-Deberán vigilar el cumplimiento de las actividades preventivas, debiendo permanecer en el centro de trabajo durante el tiempo que se esté realizando los trabajos con el equipo de elevación.
-
-La presencia del recurso preventivo en esta obra servirá para garantizar el estricto cumplimiento de los métodos de trabajo y, por lo tanto, el control del riesgo.
+- R01: Caídas a distinto nivel.
+- R02: Caídas al mismo nivel por falta de orden y limpieza.
+- R03: Desplome de material mal apilado.
+- R04: Caídas de objetos (En su manipulación)
+- R05: Golpes y cortes con elementos desprendidos y con el propio material.
+- R06: Golpes y cortes con herramientas.
+- R07: Atrapamiento por equipo de elevación de cargas.
+- R08: Sobreesfuerzos por manipulación manual de cargas.
+- R09: Atropellos por equipos de trabajo o vehículos.
+- R10: Proyección de fragmentos o partículas.
+- R11: Exposición al ruido.
+- R12: Daños a terceros o por terceros.
+- R13: Pisadas sobre superficies de tránsito
+- RP: Recurso preventivo
 
 === Conexión del cableado y puesta en marcha de la instalación
 
@@ -676,80 +540,13 @@ La maquinaria a utilizar en los citados trabajos será:
 Identificación de riesgos:
 
 Durante la ejecución del montaje de la instalación en cubierta, se identifican los siguientes riesgos particulares inherentes al propio trabajo.
-
-==== Caídas desde altura durante las operaciones de cableado
-
-Protecciones colectivas:
--	El acceso a cubierta sólo se realizará cuando se garantice que se ha minimizado el riesgo de caídas a distinto nivel de los operarios por el borde de la cubierta mediante el empleo de protecciones colectivas y mediante el empleo de arneses de seguridad conectados a líneas de vida ancladas a puntos firmes de la estructura de la nave.
--	Se comprobará a diario el correcto estado de las protecciones colectivas: vallado y líneas de vida.
-
-Protecciones individuales:
--	Todos los trabajos que se realicen en cubierta se realizarán haciendo uso de calzado de seguridad antideslizante y puntera reforzada.
-
-Medidas preventivas:
--	Nuestro recurso preventivo deberá comprobar en todo momento el estado de las protecciones colectivas, encargándose de que sean repuestas en caso de detectar alguna 
-  anomalía, dejando constancia escrita de ello, y prohibiendo al resto de trabajadores el acceso a la zona hasta que quede subsanada.
--	Todo el personal que deba acceder a la obra habrá recibido la información correspondiente a la circulación por la misma. Nuestro recurso preventivo deberá/n dejar 
-  constancia de ello.
--	Se prohíbe subir a la cubierta durante tiempo lluvioso y tras un periodo de lluvia se examinará el estado de la misma por parte del recurso preventivo, asegurándose 
-  que no resbale de la superficie de tránsito.
-
-==== Caída de personas al mismo nivel, por falta de orden y limpieza
-
-Medidas preventivas:
-- Mantener la zona de trabajo lo más ordenada y limpia posible. Retirar inmediatamente cualquier elemento que obstaculice las zonas de paso.
-
-==== Golpes y cortes con herramientas
-
-Medidas preventivas:
--	No atornillar o destornillar un tornillo sujetando la pieza con la palma de la mano. Si el destornillador resbala se puede sufrir una lesión. Apoyar la pieza sobre una base sólida.
--	Los destornilladores no se deben usar como palancas, como cincel, ni para perforar.
--	La llave debe estar siempre colocada perpendicular al eje del tornillo, ya que si esta inclinada no se puede ajustar perfectamente y es fácil que resbale.
--	Las llaves ajustables (inglesas), se deben usar colocándolas de tal forma que la mandíbula fija esté en el lado opuesto a la dirección del movimiento que se efectúa.
--	Tirar de la llave es más seguro que empujarla.
--	No se deben utilizar prolongaciones de las llaves, como tubos, otras llaves, etc.
-
-==== Proyección de fragmentos o partículas
-
-Protecciones individuales:
--	Es obligatorio el uso de gafas de seguridad homologadas frente a impactos para las operaciones susceptibles de producir proyección de partículas, como por ejemplo los trabajos de taladrado o radialado.
-
-Medidas preventivas:
--	Se tendrá especial precaución, con la posición de las manos al depositar las placas sobre los soportes, a fin de prevenir aplastamientos.
-
-==== Contactos eléctricos directos e indirectos
-
-Protecciones individuales:
--	Los trabajos en tensión solamente se podrán realizar mediante empleo de los equipos de protección individual adecuados para proteger a los trabajadores frente al riesgo eléctrico. Para trabajos en baja tensión se emplearán guantes aislantes adecuados para la tensión de trabajo. Para trabajos en centros de transformación es necesario el empleo de guantes y manguitos aislantes, pantalla facial para la protección de proyecciones por arco eléctrico, gafas inactínicas, banqueta de maniobras y pértigas aislantes.
-
-Medidas preventivas:
--	Antes de poner en carga la instalación eléctrica se revisarán en profundidad las conexiones de mecanismos, protecciones y empalmes de todos los cuadros eléctricos, para comprobar el estricto cumplimiento de lo dispuesto en el vigente Reglamento Electrotécnico.
--	Sólo los trabajadores autorizados, y con la formación adecuada, podrán realizar trabajos en proximidad, mediciones, verificaciones y ensayos en las instalaciones de baja tensión.
--	Sólo los trabajadores cualificados podrán realizar trabajos en tensión y trabajos en proximidad, mediciones, verificaciones y ensayos en las instalaciones de alta tensión.
--	Se estará a lo dispuesto en el correspondiente en el procedimiento de medición de corrientes y tensiones en cuadros eléctricos de corriente continua en cubierta. Ver Anexo.
-
-==== Riesgo de incendio
-
-Protecciones individuales:
--	Los trabajos en tensión solamente se podrán realizar mediante empleo de los equipos de protección individual adecuados para proteger a los trabajadores frente al riesgo eléctrico.
--	Para trabajos en baja tensión se emplearán guantes aislantes adecuados para la tensión de trabajo.
--	Para trabajos en centros de transformación es necesario el empleo de guantes y manguitos aislantes, pantalla facial para la protección de proyecciones por arco eléctrico, gafas inactínicas, banqueta de maniobras y pértigas aislantes.
-
-Medidas preventivas:
--	Nuestro recurso preventivo deberá comprobar en todo momento el estado de las protecciones colectivas, encargándose de que sean repuestas en caso de detectar alguna anomalía, dejando constancia escrita de ello, y prohibiendo al resto de trabajadores el acceso a la zona hasta que quede subsanada.
--	Para realizar la conexión de las series en el cuadro de corriente continua se necesarios realizar los siguientes pasos:
-  -	Quitar los fusibles del cuadro de corriente continua.
-  -	Conectar las series en los fusibles o en las bornas de entrada.
-  -	Medir mediante pinza amperimétrica la tensión de cada una de las series.
-  -	La tensión debe ser siempre la misma en función del número de módulos y la tensión en circuito abierto.
-  -	Siempre se debe medir con el polo positivo en la pinza positiva y la pinza negativa con el polo negativo de forma que siempre debe salir la tensión positiva, si tuviéramos una tensión negativa significa que hemos conectado al revés y debemos modificar la conexión.
-  - Una vez tengamos todas las tensiones positivas y con el mismo valor se pueden poner los fusibles.
-
-==== Recurso preventivo
-
-El Recurso Preventivo comprobará que los operarios encargados de la instalación realizan las operaciones mediante procedimientos de trabajo seguros.
-
-Deberán vigilar el cumplimiento de las actividades preventivas, debiendo permanecer en el centro de trabajo cuando se realicen los trabajos de conexión a la red principal.
+- R14: Caídas desde altura durante las operaciones de cableado.
+- R02: Caídas al mismo nivel por falta de orden y limpieza.
+- R06: Golpes y cortes con herramientas.
+- R10: Proyección de fragmentos o partículas.
+- R15: Contactos eléctricos directos e indirectos.
+- R16: Riesgo de incendio.
+- RP: Recurso preventivo.
 
 === Medición y limpieza del inversor
 
@@ -770,42 +567,11 @@ Maquinaria de obra y herramientas:
 La maquinaria a utilizar en los citados trabajos será:
 -	Pequeña herramienta de mano, tipo tenaza, martillo, destornillador..., para labores de bricolaje en cubierta, así como aparatos de medición.
 
-==== Golpes y cortes con herramientas
-
-Medidas preventivas:
--	No atornillar o destornillar un tornillo sujetando la pieza con la palma de la mano. Si el destornillador resbala se puede sufrir una lesión. Apoyar la pieza sobre una base sólida.
--	Los destornilladores no se deben usar como palancas, como cincel, ni para perforar.
--	La llave debe estar siempre colocada perpendicular al eje del tornillo, ya que si esta inclinada no se puede ajustar perfectamente y es fácil que resbale.
--	Las llaves ajustables (inglesas), se deben usar colocándolas de tal forma que la mandíbula fija esté en el lado opuesto a la dirección del movimiento que se efectúa.
--	Tirar de la llave es más seguro que empujarla.
--	No se deben utilizar prolongaciones de las llaves, como tubos, otras llaves, etc…
-
-==== Contactos eléctricos directos e indirectos
-
-Protecciones individuales:
--	Es obligatorio el uso de gafas de seguridad homologadas frente a impactos para las operaciones susceptibles de producir proyección de partículas, como por ejemplo los trabajos de taladrado o radialado.
-
-Medidas preventivas:
--	Se tendrá especial precaución, con la posición de las manos al depositar las placas sobre los soportes, a fin de prevenir aplastamientos.
-
-==== Contactos eléctricos directos e indirectos
-
-Protecciones individuales:
--	Los trabajos en tensión solamente se podrán realizar mediante empleo de los equipos de protección individual adecuados para proteger a los trabajadores frente al riesgo eléctrico.
--	Para trabajos en baja tensión se emplearán guantes aislantes adecuados para la tensión de trabajo.
--	Para trabajos en centros de transformación es necesario el empleo de guantes y manguitos aislantes, pantalla facial para la protección de proyecciones por arco eléctrico, gafas inactínicas, banqueta de maniobras y pértigas aislantes.
-
-Medidas preventivas:
--	Antes de poner en carga la instalación eléctrica se revisarán en profundidad las conexiones de mecanismos, protecciones y empalmes de todos los cuadros eléctricos, para comprobar el estricto cumplimiento de lo dispuesto en el vigente Reglamento Electrotécnico de Baja Tensión.
--	Sólo los trabajadores autorizados, y con la formación adecuada, podrán realizar trabajos en proximidad, mediciones, verificaciones y ensayos en las instalaciones de baja tensión.
--	Sólo los trabajadores cualificados podrán realizar trabajos en tensión y trabajos en proximidad, mediciones, verificaciones y ensayos en las instalaciones de alta tensión.
--	Se estará a lo dispuesto en el correspondiente en el procedimiento de medición y limpieza de inversores. Ver Anexo.
-
-==== Recurso preventivo
-
-El Recurso Preventivo comprobará que los operarios encargados de la instalación realizan las operaciones mediante procedimientos de trabajo seguros.
-
-Deberán vigilar el cumplimiento de las actividades preventivas, debiendo permanecer en el centro de trabajo cuando se realicen los trabajos de conexión a la red principal.
+Identificación de riesgos:
+- R06: Golpes y cortes con herramientas.
+- R10: Proyección de fragmentos o partículas.
+- R15: Contactos eléctricos directos e indirectos.
+- RP: Recurso preventivo
 
 === Trabajos con tensión
 
@@ -835,6 +601,16 @@ Si la aparamenta está debidamente homologada, tenemos la garantía de que el co
 -	Puentes flojos
 
 La simple observación de la timonería del dispositivo no es garantía suficiente de la apertura del mismo.
+
+==== Enclavamiento, bloqueo y señalización
+
+Se debe prevenir cualquier posible reconexión, utilizando para ello medios mecánicos (por ejemplo candados). Para enclavar los dispositivos de mando no se deben emplear medios fácilmente anulables, tales como cinta aislante, bridas y similares.
+
+Cuando los dispositivos sean telemandados, se debe anular el telemando eliminando la alimentación eléctrica del circuito de maniobra.
+
+En los dispositivos de mando enclavados se señalizará claramente que se están realizando trabajos.
+
+Además, es conveniente advertir a otros compañeros que se ha realizado el corte y el dispositivo está enclavado.
 
 ==== Comprobación de ausencia de tensión
 
@@ -871,6 +647,197 @@ Aunque este sistema protege frente al riesgo eléctrico, puede provocar otros ri
 
 La zona dónde se están realizando los trabajos se señalizará por medio de vallas, conos o dispositivos análogos. 
 Si procede, también se señalizarán las zonas seguras para el personal que no está trabajando en la instalación.
+
+=== Identificación, descripción de riesgos y recurso preventivo
+
+==== RP: Recurso preventivo
+
+El Recurso Preventivo comprobará que los operarios encargados de la instalación realizan las operaciones mediante procedimientos de trabajo seguros.
+
+Deberán vigilar el cumplimiento de las actividades preventivas, debiendo permanecer en el centro de trabajo cuando se realicen los trabajos de conexión a la red principal.
+
+==== R01: Caídas a distinto nivel
+
+- Caídas desde la cubierta al ubicar estructura y paneles y al realizar el montaje de bandejas y cableado: este riesgo existe puesto que los paneles y la estructura se colocarán sobre la cubierta , siendo necesario desplazarse por la misma, al igual que durante el montaje del cableado.
+
+Protecciones colectivas e individuales:
+
+El acceso a la cubierta sólo se realizará cuando se garantice que se ha minimizado el riesgo de caídas a distinto nivel de los operarios. 
+En este caso se usará la propia estructura metálica de la nave para sujetar los dispositivos de anclaje de la línea de vida provisional.
+
+Todos los trabajos que se realicen en altura se realizarán haciendo uso de calzado de seguridad antideslizante y puntera reforzada.
+
+La manipulación de cargas se efectuará mediante el uso de guantes de protección mecánica.
+
+Medidas preventivas:
+
+Todo el personal que deba acceder a la obra habrá recibido la información correspondiente a la circulación por la misma. 
+Nuestro recurso preventivo deberá/n dejar constancia de ello.
+
+Se prohíbe subir a la estructura durante tiempo lluvioso y tras un periodo de lluvia se examinará el estado de la misma por parte del recurso preventivo, asegurándose que no resbale de la superficie de tránsito.
+
+Antes de acceder a la estructura, en periodo invernal, se comprobará la inexistencia de hielo en la misma.
+
+==== R02: Caída de personas al mismo nivel, por falta de orden y limpieza
+
+Medidas preventivas:
+- Mantener la zona de trabajo lo más ordenada y limpia posible. Retirar inmediatamente cualquier elemento que obstaculice las zonas de paso.
+
+==== R03: Desplome de material mal apilado
+
+Medidas preventivas:
+
+El material se apilará adecuadamente, evitando generar pilas inestables. 
+La altura de apilamiento tampoco será excesiva.
+
+El acopio de material en cubierta se realizará sobre elementos estructurales, evitando sobrecargas en la cubierta que superen los 220 kg/m2.
+
+Se evitará asimismo el acopio de materiales junto a los bordes de cubierta.
+
+El acopio de material se realizará de manera progresiva, repartiendo los palets a medida que se vayan subiendo.
+
+==== R04: Caída de objetos (en su manipulación)
+
+Protecciones individuales:
+
+Todos los trabajos que se realicen en altura se realizarán haciendo uso de calzado de seguridad antideslizante y puntera reforzada.
+
+La manipulación de cargas se efectuará mediante el uso de guantes de protección mecánica.
+
+Durante el transcurso de toda la obra será obligatorio el uso de casco de seguridad con barbuquejo.
+
+Protecciones colectivas:
+
+En el perímetro de la zona de trabajo, donde abajo existen accesos de personal con el consiguiente tránsito de personas, para impedir la posible caída de objetos sobre personas, se balizará impidiendo el paso durante los trabajos en altura. 
+No obstante, se vigilará por recurso preventivo en planta baja la zona de trabajo durante el izado de materiales.
+
+Medidas preventivas:
+
+Solo podrán manipular cargas con maquinaria auxiliar aquellas personas que hayan recibido formación e información específica para la mencionada tarea, y hayan sido debidamente autorizadas por la empresa.
+
+Las tareas de manipulación manual de placas fotovoltaicas se realizarán siempre por 2 trabajadores, y de la manera más mecanizada posible para prevenir la caída de las mismas. 
+No se ubicarán los pies debajo de la carga a manipular.
+
+Se evitará situarse por debajo de placas no convenientemente fijadas a la estructura.
+
+==== R05: Golpes y cortes con elementos desprendidos y con el propio material
+
+Durante las operaciones de izado de cargas se prohibirá el paso a toda persona ajena a los trabajos, balizando la zona de trabajo (como mínimo cinta de balizamiento, señal de prohibido el paso y señal labores de montaje e instalación).
+
+
+Protecciones individuales:
+-	Guantes de protección mecánica. Casco de polietileno con barbuquejo.
+-	Ropa de trabajo adecuada.
+
+Medidas preventivas:
+-	Queda terminantemente prohibido, situarse debajo de cargas suspendidas. Para evitar dicha situación, se emitirán señales previamente establecidas, generalmente sonoras, con el fin de que puedan ponerse a salvo de posibles desprendimientos de aquellas.
+-	Se evitarán los trabajos a distinto nivel y en la misma vertical. No se transitará por debajo de la plataforma cuando esté elevada.
+-	Se tendrá especial precaución cuando realicemos trabajos o pasemos junto a materiales apilados o almacenados que presenten aristas vivas, cantos afilados o elementos que sobresalgan.
+
+==== R06: Golpes y cortes con herramientas
+
+Medidas preventivas:
+-	No atornillar o destornillar un tornillo sujetando la pieza con la palma de la mano. Si el destornillador resbala se puede sufrir una lesión. Apoyar la pieza sobre una base sólida.
+-	Los destornilladores no se deben usar como palancas, como cincel, ni para perforar.
+-	La llave debe estar siempre colocada perpendicular al eje del tornillo, ya que si esta inclinada no se puede ajustar perfectamente y es fácil que resbale.
+-	Las llaves ajustables (inglesas), se deben usar colocándolas de tal forma que la mandíbula fija esté en el lado opuesto a la dirección del movimiento que se efectúa.
+-	Tirar de la llave es más seguro que empujarla.
+-	No se deben utilizar prolongaciones de las llaves, como tubos, otras llaves, etc…
+
+==== R07: Atrapamiento por equipo de elevación de cargas
+
+Medidas preventivas:
+-	La elevación de cargas se realizará exclusivamente con equipos de trabajo diseñados a tal fin.
+-	Se estará a lo dispuesto en el apartado correspondiente al medio auxiliar o herramienta correspondiente.
+-	No se emplearán prolongadores de horquillas ni ningún otro accesorio que no sea autorizado por el fabricante del equipo de trabajo.
+-	Se comprobará que el terreno tiene consistencia suficiente para que los apoyos de la maquinaria empleada no se hundan en el mismo durante la ejecución de las maniobras.
+
+==== R08: Sobreesfuerzos por manipulación manual de cargas
+
+Medidas preventivas:
+-	Las tareas de manipulación manual de placas fotovoltaicas se realizarán siempre por 2 trabajadores, y de la manera más mecanizada posible, para prevenir daños dorso lumbares. Se emplearán medios auxiliares siempre que sea posible para reducir el trabajo manual.
+-	No se manipularán por un solo trabajador cargas que superen los 25 K de peso que sean voluminosos o no dispongan de buen agarre.
+
+==== R09: Atropellos
+
+Medidas preventivas:
+-	Se prestará especial precaución de no invadir la zona natural de paso de los vehículos de carga, durante las operaciones de descarga de material.
+-	Nunca pasaremos por detrás de un camión o una carretilla que están maniobrando sin asegurarnos de que el conductor nos ha visto y nos permite el paso.
+-	En las operaciones de descarga de material se reducirá al mínimo imprescindible la presencia de trabajadores en las proximidades.
+
+==== R10: Proyección de fragmentos o partículas
+
+Protecciones individuales:
+-	Es obligatorio el uso de gafas de seguridad homologadas frente a impactos para las operaciones susceptibles de producir proyección de partículas, como por ejemplo los trabajos de taladrado o radialado.
+
+Medidas preventivas:
+-	Se tendrá especial precaución, con la posición de las manos al depositar las placas sobre los soportes, a fin de prevenir aplastamientos.
+
+Medidas preventivas:
+-	Se tendrá especial precaución, con la posición de las manos al depositar las placas sobre los soportes, a fin de prevenir aplastamientos.
+
+==== R11: Exposición al ruido
+
+Protecciones individuales:
+-	Es obligatorio el uso de protectores auditivos en las operaciones de taladrado y radialado en aquellas operaciones susceptibles de generar niveles de ruido superiores a 80 dBA.
+
+==== R12: Daños a terceros o por terceros
+
+Medidas preventivas:
+-	Se establecerá un área de uso exclusivo para los trabajadores del contratista o sus subcontratas, de manera que quede prohibida la realización de trabajos en la misma vertical (tanto por encima como por debajo) donde se encuentre el personal prestando su servicio.
+
+==== R13: Pisadas sobre superficies de tránsito
+
+Medidas preventivas:
+-	Se dispondrán accesos fáciles y seguros para llegar a los lugares de trabajo.
+-	Las derivadas de trabajos sobre suelos húmedos o mojados: Los operarios llevarán calzado de seguridad antideslizante, con el fin de evitar resbalones en superficies mojadas.
+
+==== R14: Caídas desde altura durante las operaciones de cableado
+
+Protecciones colectivas:
+-	El acceso a cubierta sólo se realizará cuando se garantice que se ha minimizado el riesgo de caídas a distinto nivel de los operarios por el borde de la cubierta mediante el empleo de protecciones colectivas y mediante el empleo de arneses de seguridad conectados a líneas de vida ancladas a puntos firmes de la estructura de la nave.
+-	Se comprobará a diario el correcto estado de las protecciones colectivas: vallado y líneas de vida.
+
+Protecciones individuales:
+-	Todos los trabajos que se realicen en cubierta se realizarán haciendo uso de calzado de seguridad antideslizante y puntera reforzada.
+
+Medidas preventivas:
+-	Nuestro recurso preventivo deberá comprobar en todo momento el estado de las protecciones colectivas, encargándose de que sean repuestas en caso de detectar alguna 
+  anomalía, dejando constancia escrita de ello, y prohibiendo al resto de trabajadores el acceso a la zona hasta que quede subsanada.
+-	Todo el personal que deba acceder a la obra habrá recibido la información correspondiente a la circulación por la misma. Nuestro recurso preventivo deberá/n dejar 
+  constancia de ello.
+-	Se prohíbe subir a la cubierta durante tiempo lluvioso y tras un periodo de lluvia se examinará el estado de la misma por parte del recurso preventivo, asegurándose 
+  que no resbale de la superficie de tránsito.
+
+==== R15: Contactos eléctricos directos e indirectos
+
+Protecciones individuales:
+-	Los trabajos en tensión solamente se podrán realizar mediante empleo de los equipos de protección individual adecuados para proteger a los trabajadores frente al riesgo eléctrico.
+-	Para trabajos en baja tensión se emplearán guantes aislantes adecuados para la tensión de trabajo.
+-	Para trabajos en centros de transformación es necesario el empleo de guantes y manguitos aislantes, pantalla facial para la protección de proyecciones por arco eléctrico, gafas inactínicas, banqueta de maniobras y pértigas aislantes.
+
+Medidas preventivas:
+-	Antes de poner en carga la instalación eléctrica se revisarán en profundidad las conexiones de mecanismos, protecciones y empalmes de todos los cuadros eléctricos, para comprobar el estricto cumplimiento de lo dispuesto en el vigente Reglamento Electrotécnico de Baja Tensión.
+-	Sólo los trabajadores autorizados, y con la formación adecuada, podrán realizar trabajos en proximidad, mediciones, verificaciones y ensayos en las instalaciones de baja tensión.
+-	Sólo los trabajadores cualificados podrán realizar trabajos en tensión y trabajos en proximidad, mediciones, verificaciones y ensayos en las instalaciones de alta tensión.
+-	Se estará a lo dispuesto en el correspondiente en el procedimiento de medición y limpieza de inversores. Ver Anexo.
+
+==== R16: Riesgo de incendio
+
+Protecciones individuales:
+-	Los trabajos en tensión solamente se podrán realizar mediante empleo de los equipos de protección individual adecuados para proteger a los trabajadores frente al riesgo eléctrico.
+-	Para trabajos en baja tensión se emplearán guantes aislantes adecuados para la tensión de trabajo.
+-	Para trabajos en centros de transformación es necesario el empleo de guantes y manguitos aislantes, pantalla facial para la protección de proyecciones por arco eléctrico, gafas inactínicas, banqueta de maniobras y pértigas aislantes.
+
+Medidas preventivas:
+-	Nuestro recurso preventivo deberá comprobar en todo momento el estado de las protecciones colectivas, encargándose de que sean repuestas en caso de detectar alguna anomalía, dejando constancia escrita de ello, y prohibiendo al resto de trabajadores el acceso a la zona hasta que quede subsanada.
+-	Para realizar la conexión de las series en el cuadro de corriente continua se necesarios realizar los siguientes pasos:
+  -	Quitar los fusibles del cuadro de corriente continua.
+  -	Conectar las series en los fusibles o en las bornas de entrada.
+  -	Medir mediante pinza amperimétrica la tensión de cada una de las series.
+  -	La tensión debe ser siempre la misma en función del número de módulos y la tensión en circuito abierto.
+  -	Siempre se debe medir con el polo positivo en la pinza positiva y la pinza negativa con el polo negativo de forma que siempre debe salir la tensión positiva, si tuviéramos una tensión negativa significa que hemos conectado al revés y debemos modificar la conexión.
+  - Una vez tengamos todas las tensiones positivas y con el mismo valor se pueden poner los fusibles.
 
 == Identificación de riesgos y medidas preventivas a adoptar en los diferentes medios auxiliares intervinientes en la obra
 

@@ -550,7 +550,7 @@ Durante la ejecución del montaje de la instalación en cubierta, se identifican
 
 === Medición y limpieza del inversor
 
-DEFINICIÓN DEL TRABAJO:
+Definición del trabajo:
 
 Verificar que la medición del display del inversor coincide con la medición realizada en corriente continua y alterna, realización de la limpieza del inversor.
 
@@ -3434,7 +3434,7 @@ En caso de ser así deben cumplir con las especificaciones mínimas de esta list
 
 #pagebreak()
 
-= Anexo XII Normativa de apliación al proyecto
+= Anexo XII Normativa de aplicación al proyecto
 
 #pagebreak()
 
@@ -3555,26 +3555,24 @@ En caso de ser así deben cumplir con las especificaciones mínimas de esta list
 
 ESTATALES:
 -	CTE (R.D. 314/2006) y las exigencias básicas desarrolladas en sus Documentos Básicos "DB SE (Seguridad Estructural): DB-SE-AE: Acciones en la Edificación, DB-SE-C: Cimientos, DB-SE- A: Acero, DB-SE-F: Fábrica, DB-SE M: Madera". "DB SI (Seguridad en caso de incendio)". "DB SUA (Seguridad de utilización y accesibilidad)". "DB HS (Salubridad)". "DB HR (Protección frente al ruido)". "DB HE (Ahorro de energía)" y modificaciones en el R.D. 1371/2007, R.D. 1675/2008, Orden VIV/984/2009, R.D. 173/2010, Orden FOM/1635/2013, Orden FOM/588/2017, R.D. 732/2019 y R.D. 450/2022.
--	R.D. 470/2021. Código Estructural.
--	R.D. 163/2019. Instrucción Técnica para la realización del control de producción de los hormigones fabricados en central.
--	R.D. 256/2016. Instrucción para la recepción de cementos (RC-16) y R.D. 320/2024, por el que se modifica.
--	R.D. 997/2002. Norma de construcción sismorresistente (NCSR-02).
--	Ley 32/2014, de Metrología, R.D. 244/2016, por el que se desarrolla la Ley 32/2014 y R.D. 249/2025, por el que se modifica el R.D. 244/2016.
+
+
+
 -	Ley 24/2013, del Sector Eléctrico y disposiciones adicionales no derogadas de la antigua Ley 54/1997, del sector eléctrico.
 -	R.D. 337/2014. Reglamento sobre condiciones técnicas y garantías de seguridad en instalaciones eléctricas de alta tensión y sus ITC-RAT 01 a 23.
 -	R.D. 223/2008. Reglamento sobre condiciones técnicas y garantías de seguridad en líneas eléctricas de alta tensión y sus ITC-LAT 01 a 09.
--	R.D. 1432/2008. Medidas para la protección de la avifauna contra la colisión y la electrocución en líneas eléctricas de alta tensión.
+
 -	R.D. 842/2002. Reglamento electrotécnico para baja tensión y sus instrucciones técnicas complementarias (ITC) BT 01 a BT 51.
--	R.D. 1053/2014. ITC BT 52 "Instalaciones con fines especiales. Infraestructura para la recarga de vehículos eléctricos", del R.D. 842/2002, y se modifican otras ITCs, del mismo.
--	R.D. 184/2022. Regula la actividad de prestación de servicios de recarga energética de vehículos eléctricos.
--	R.D. 1890/2008. Reglamento de eficiencia energética en instalaciones de alumbrado exterior y sus ITC EA-01 a ITC EA-07.
+
+
+
 -	Resolución 18-09-2025. Actualiza el listado de normas de la ITC RAT-02.
 -	Resolución 09-01-2020. Actualiza el listado de normas de la ITC BT-02.
--	Normas UNE, UNESA, ONSE Y ENDESA para materiales e instalaciones eléctricas.
--	R.D. 997/2025. Aprueba medidas urgentes para el refuerzo del sistema eléctrico.
--	R.D. 962/2024. Regula la producción de energía eléctrica a partir de fuentes renovables en instalaciones ubicadas en el mar.
--	R.D. 314/2023. Procedimiento y requisitos para otorgamiento de la autorización administrativa de las redes de distribución de energía eléctrica cerradas.
--	R.D. 150/2023. Planes de ordenación del espacio marítimo de las cinco demarcaciones marinas españolas.
+
+
+
+
+
 -	R.D. 36/2023. Establece un sistema de Certificados de Ahorro Energético.
 -	R.D-ley 18/2022. Medidas de refuerzo de la protección de los consumidores de energía y de contribución a la reducción del consumo de gas natural.
 -	R.D-ley 29/2021. Adopta medidas urgentes en el ámbito energético para el fomento de la movilidad eléctrica, el autoconsumo y el despliegue de energías renovables.
@@ -3645,97 +3643,44 @@ ESTATALES:
 -	R.D. 1523/1999. Modificaciones del Reglamento de instalaciones petrolíferas y de la ITC MI-IP03 que queda redactada como “Instalaciones de almacenamiento para su consumo en la propia instalación”.
 -	R.D. 706/2017. ITC MI-IP 04 "Instalaciones para suministro a vehículos" y se regulan determinados aspectos de la reglamentación de instalaciones petrolíferas.
 -	Resolución de 25-03-2019. Se actualiza el listado de normas de la ITC MI-IP 04 "instalaciones de suministro a vehículos", aprobada por el RD 706/2017.
--	R.D. 144/2016. Establece los requisitos esenciales de salud y seguridad exigibles a los aparatos y sistemas de protección para su uso en atmósferas potencialmente explosivas y por el que se modifica el R.D. 455/2012, por el que se establecen las medidas destinadas a reducir la cantidad de vapores de gasolina emitidos a la atmósfera durante el repostaje de los vehículos de motor en las estaciones de servicio.
--	R.D. 365/2005. ITC MI-IP05 “Instaladores o reparadores y empresas instaladoras o reparadoras de PPL".
--	R.D. 1416/2006. ITC MI-IP06 “Procedimiento para dejar fuera de servicio los tanques de almacenamiento de PPL".
--	R. Decreto-ley 23/2020. Medidas en materia de energía y en otros ámbitos para la reactivación económica.
+
+
+
+
+
 -	R.D. 770/2025. Modifica diversas normas reglamentarias en materia de seguridad industrial.
 -	R.D. 145/2023. Modifica diversas normas reglamentarias en materia de seguridad industrial para su adaptación al principio de reconocimiento mutuo.
 -	R.D. 298/2021. Modifica diversas normas reglamentarias en materia de seguridad industrial.
 -	R.D. 542/2020. Modifica y deroga diferentes disposiciones en materia de calidad y seguridad industrial.
 -	R.D. 560/2010. Modifica diversas normas reglamentarias en materia de seguridad industrial.
--	R.D. Legislativo 7/2015. Texto refundido de la Ley de Suelo y Rehabilitación Urbana.
--	R.D. 899/2025. Reglamento General de Carreteras, deroga el RD 1812/1994, con excepción del apartado 1 de su disposición transitoria primera: «Ampliación de la zona de dominio público»
--	Ley 37/2015. Ley de carreteras.
--	R.D. 345/2011, sobre gestión de la seguridad de las infraestructuras viarias en la Red de Carreteras del Estado y R.D. 61/2022, que lo modifica.
--	Orden de 16-12-1997. Regula los accesos a las carreteras del Estado, las vías de servicio y la construcción de instalaciones de servicios y Orden TMA/277/2023, que la modifica.
--	Orden FOM/273/2016, de 19 de febrero. Aprueba la Norma 3.1-IC Trazado, de la Instrucción de Carreteras. Deroga en cuanto se oponga la Orden de 16-12-1997.
--	Orden TMA/178/2020, Orden FOM/1740/2006, Orden FOM/392/2006, Sentencia del TS de 04- 05-2004 y Orden de 13-09-2001 por las que se modifica la Orden de 16-12-1997, por la que se regulan los accesos a las carreteras del Estado, las vías de servicio y la construcción de instalaciones de servicio.
--	Orden FOM/891/2004. Actualiza determinados artículos del pliego de prescripciones técnicas generales para obras de carreteras y puentes, relativos a firmes y pavimentos.
--	Orden FOM/1382/2002. Actualiza determinados artículos del pliego de prescripciones técnicas generales para obras de carreteras y puentes a la construcción de explanaciones, drenajes y cimentaciones.
--	R. Decreto 1812/1994. Reglamento general de carreteras.
--	Ley 8/2013, de rehabilitación, regeneración y renovación urbanas.
--	R.D. 1492/2011. Reglamento de valoraciones de la Ley del suelo.
--	R.D. 2159/1978. Reglamento del Planeamiento Urbanístico.
--	R.D. 3288/1978. Reglamento de Gestión Urbanística para el desarrollo y aplicación de la Ley sobre régimen del Suelo y Ordenación Urbana.
--	R.D. 773/2017. Modifica diversos reales decretos en materia de productos y emisiones industriales.
--	R.D. Legislativo 1/2016. Texto refundido de la Ley de Prevención y control integrados de la contaminación.
--	Ley 21/2013, de evaluación ambiental.
--	R.D. 445/2023. Modificación de los anexos I, II y III de la Ley 21/2013.
--	Ley 9/2018, que modifica la Ley 21/2013, la Ley 21/2015 y la Ley 1/2005.
--	R.D. 815/2013. Reglamento de emisiones industriales y de desarrollo de la Ley 16/2002.
--	Ley 7/2021, de cambio climático y transición energética.
--	R.D. 1052/2022, por el que se regulan las zonas de bajas emisiones.
--	Ley 7/2022, de residuos y suelos contaminados para una economía circular.
--	R.D. 208/2022, sobre las garantías financieras en materia de residuos.
--	R.D. 1055/2022, de envases y residuos de envases.
--	R D. 646/2020. Regula la eliminación de residuos mediante depósito en vertedero.
--	R.D. 553/2020. Regula el traslado de residuos en el interior del territorio del Estado.
--	Orden APM/1007/2017, sobre normas generales de valorización de materiales naturales excavados para su utilización en operaciones de relleno y obras distintas a aquéllas en las que se generaron.
+
+
+
 -	R.D. 105/2008. Regula la producción y gestión de los residuos de construcción y demolición.
--	R.D. 9/2005. Relación de actividades potencialmente contaminantes del suelo y los criterios y estándares para la declaración de suelos contaminado.
--	R.D. 665/2023, por el que se modifica el Reglamento del Dominio Público Hidráulico (R.D. 849/1986); el Reglamento de la Administración Pública del Agua, (R.D. 927/1988); y el R.D. 9/2005, por el que se establece la relación de actividades potencialmente contaminantes del suelo y los criterios y estándares para la declaración de suelos contaminados.
--	Orden PRA/1080/2017. Modifica el Anexo I del Real Decreto 9/2005.
--	R.D. 214/2025. Crea el registro de huella de carbono, compensación y proyectos de absorción de dióxido de carbono y por el que se establece la obligación del cálculo de la huella de carbono y de la elaboración y publicación de planes de reducción de emisiones de gases de efecto invernadero.
--	R.D. 34/2023, por el que se modifican el R.D. 102/2011, relativo a la mejora de la calidad del aire; el Reglamento de emisiones industriales y de desarrollo de la Ley 16/2002, de prevención y control integrados de la contaminación, R. D. 815/2013 y el R.D. 208/2022, sobre las garantías financieras en materia de residuos.
--	R.D. 102/2011, relativo a la mejora de la calidad del aire.
--	Ley 34/2007, de calidad del aire y protección de la atmósfera.
-- Ley 37/2003, del ruido y desarrollo en R.D. 1513/2005, R.D 1367/2007, R.D. 1038/2012, Orden PCI/1319/2018, Orden PCM/542/2021 y Orden PCM/80/2022.
--	R.D. 1400/2018. Reglamento sobre seguridad nuclear en instalaciones nucleares.
--	Orden TMA/851/2021. Desarrolla el documento técnico de condiciones básicas de accesibilidad y no discriminación para el acceso y la utilización de los espacios públicos urbanizados.
--	R.D. 1544/2007, que regula las condiciones básicas de accesibilidad y no discriminación para el acceso y utilización de los modos de transporte para personas con discapacidad y modificaciones en el R.D. 537/2019.
--	Decreto 505/2007. Condiciones básicas de accesibilidad y no discriminación para el acceso y utilización de los espacios públicos urbanizados y edificaciones.
--	R.D. 1085/2024. Reglamento de reutilización del agua y se modifican diversos reales decretos que regulan la gestión del agua.
--	R.D. 849/1986. Reglamento del dominio público hidráulico que desarrolla los títulos preliminares, I, IV, V, VI, Y VII de la Ley 29/1985 de agua.
--	R.D. 9/2008. Modifica el RD 849/1986. Introducción de un nuevo título relativo a la seguridad de balsas.
--	R.D. 264/2021. Normas técnicas de seguridad para las presas y sus embalses.
--	Orden TED/225/2025. Procedimientos administrativos derivados de las normas técnicas de seguridad para las presas y sus embalses aprobadas por el R. D. 264/2021.
--	R.D. 339/2021. Regula el equipo de seguridad y de prevención de la contaminación de las embarcaciones de recreo.
--	R.D. 524/2023. Aprueba la Norma Básica de Protección Civil.
--	Ley 17/2015, del Sistema Nacional de Protección Civil.
+
+
+
+
+
 -	Ley 31/1995, de Prevención de riesgos laborales, y Reglamentos que desarrollan dicha Ley, y modificaciones, entre otros: R.D. 39/1997 Reglamento de los servicios de prevención, Orden Ministerial del 27-06-97 que desarrolla el R.D. 39/1997, R.D. 780/1998, que modifica el RD 39/1997, R.D. 1627/1997 sobre Disposiciones mínimas de seguridad y salud en las obras, R.D. 598/2015, R.D. 337/2010, R.D. 604/2006, R.D. 665/1997, R.D. 664/1997, R.D. 486/1997, Disposiciones mínimas de seguridad y salud en los lugares de trabajo, R.D. 487/1997, Disposiciones mínimas de seguridad y salud relativas a la manipulación manual de cargas que entrañe riesgos, en particular dorsolumbares, R.D. 485/1997, Disposiciones mínimas en materia de señalización de seguridad y salud en el trabajo, R.D. 1215/1997, Disposiciones mínimas de seguridad y salud para la utilización por los trabajadores de los equipos de trabajo, R.D. 773/1997, Disposiciones mínimas de seguridad y salud relativas a la utilización por los trabajadores de equipos de protección individual, R.D. 614/2001, Disposiciones mínimas para la protección de la salud y seguridad de los trabajadores frente al riesgo eléctrico, R.D. 286/2006, protección de la salud y la seguridad de los trabajadores contra los riesgos relacionados con la exposición al ruido, R.D. 299/2016, protección de la salud y la seguridad de los trabajadores contra los riesgos relacionados con la exposición a campos electromagnéticos, R.D. 1029/2022, protección de la salud contra los riesgos derivados de la exposición a las radiaciones ionizantes.
+
 -	Ley 32/2006, de subcontratación en el sector de la construcción, R.D. 1109/2007 que desarrolla la ley 32/2006, Orden de 22-11-2007 que desarrolla el procedimiento de habilitación del libro de subcontratación y R.D. 337/2010 que modifica el R.D.1109/2007, y modificaciones.
 -	Condiciones impuestas por los Organismos Públicos afectados.
--	R.D. Legislativo 1/2007, por el que se aprueba el texto refundido de la Ley General para la Defensa de los Consumidores y Usuarios.
--	Artículos aplicables del Código Civil y Penal.
--	R.D. 773/2015. Se modifican determinados preceptos del Reglamento General de la Ley de Contratos de las Administraciones Públicas del R.D 1098/2001.
--	R.D. 817/2009. Se desarrolla parcialmente la Ley 30/2007, de Contratos del Sector Público.
--	R.D. 1098/2001. Reglamento general de la Ley de Contratos de las Administraciones Publicas.
--	Pliego de Condiciones Generales para la Contratación de Obras Publicas aprobado por Decreto 3854/1970.
--	Ley 21/92 de Industria.
--	Real Decreto 2135/80 sobre la Liberalización Industrial.
--	R.D. 886/88 sobre Prevención de accidentes mayores en determinadas actividades industriales.
--	R.D. 840/2015, por el que se aprueban medidas de control de los riesgos inherentes a los accidentes graves en los que intervengan sustancias peligrosas.
--	R.D. 212/2002. Regulación de las emisiones sonoras en el entorno debidas a determinadas máquinas de uso al aire libre y R.D. 524/2006 por el que se modifica el R.D. 212/2002.
--	R.D. 1630/92, sobre Productos de la construcción.
--	R.D. 1328/1995. Modifica las disposiciones para la libre circulación de productos de construcción aprobadas por el R.D. 1630/1992.
--	R.D. 159/95, que modifica el RD 1407/92, por el que se regulan las condiciones para la comercialización y libre circulación intracomunitaria de los equipos de protección individual.
--	R.D. 697/95 sobre Reglamento del registro de establecimientos industriales.
+
+
+
+
+
+
+- R. D. 286/2006
+
+
 -	Ordenanza General de Seguridad e Higiene en el Trabajo del 09-03-71.
--	Resolución del 25-04-96, en la que se aporta Información complementaria del R.D. 1407-92, por el que se regulan las condiciones para la comercialización y libre circulación infracomunitaria de los equipos de protección individual.
--	Resolución de 27-05-2002, por la que se actualiza el anexo IV de la Resolución de 25-04-1996, por la que se regula las condiciones para la comercialización y libre circulación intracomunitaria de los equipos de protección individual.
--	Artículos aplicables de la Ley 42/94 sobre Medidas Fiscales, Administrativas y de Orden Social.
--	Artículos aplicables de la Ley LO 10/95, referente al Código Penal.
--	Artículos aplicables de la Ley 13/96 acerca de Medidas Fiscales, administrativas y del orden social.
+
+
 -	Ley 23/2015, Ordenadora del Sistema de Inspección de Trabajo y Seguridad Social.
--	Artículos aplicables de la Ley 66/97 sobre Medidas fiscales, administrativas y del orden social.
--	Artículos aplicables de la Ley 29/98, Reguladora de la Jurisdicción Contencioso-Administrativa.
--	Artículos aplicables de la Ley 50/98, sobre Medidas fiscales, Administrativas y del Orden Social.
--	Artículos aplicables de la Ley 55/99, sobre Medidas fiscales, Administrativas y del Orden Social.
--	Artículos aplicables del R.D. Legislativo 1/95, que recoge el Texto Refundido de la Ley del Estatuto de los Trabajadores.
--	Ley 36/2011, reguladora de la Jurisdicción Social.
--	Artículos aplicables del R.D. 577/82, por el que se regulan la estructura y competencias del INST.
--	Artículos aplicables del R.D. 1778/94, que se adecuan a la Ley 30/92, de régimen jurídico de las administraciones públicas y del procedimiento administrativo común, las normas reguladoras de los procedimientos de otorgamiento, modificación y extinción de autorizaciones.
+
+
 -	Artículos aplicables del R.D 1993/1995, que establece el Reglamento General sobre colaboración en la gestión de las Mutuas de Accidentes de Trabajo y Enfermedades Profesionales de la Seguridad Social.
 -	Artículos aplicables del R.D. 250/97, que modifica el Reglamento de Colaboración de las Mutuas de Accidentes de Trabajo y Enfermedades Profesionales de la Seguridad Social, aprobado por RD 1993/95, y el Reglamento General sobre inscripción de empresas y afiliación, altas, bajas y variaciones de datos de trabajadores en la Seguridad Social, aprobado por RD 84/96.
 -	Artículos aplicables del R R.D. 216/99, que recoge las Disposiciones mínimas de seguridad y salud en el trabajo en el ámbito de las empresas de trabajo temporal.

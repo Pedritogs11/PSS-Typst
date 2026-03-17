@@ -20,10 +20,6 @@
     "trabajadores":{
         "totales": 5,
         "media": 2
-    },
-    "presupuesto": {
-        "pem": 656.232,
-        "pPSS": 2.500
     }
   },
 
@@ -41,7 +37,9 @@
     "cif": "B654564",
     "domicilioSocial": "Polígono Industrial Los Olivares",
     "localidad": "Jaén",
-    "provincia": "Jaén"
+    "provincia": "Jaén",
+    "web": "web",
+    "telefono": "953 52 52 52"
   },
 
   "SYS": {
@@ -89,6 +87,40 @@
         "bomberos": "956 23 51 42",
         "policiaLocal": "456 12 36 85",
         "guardiaCivil": "852 33 14 75"
+    }
+  },
+
+  "presupuesto": {
+    "pem": 656.232,
+    "pPSS": 2.500,
+    "ud":{
+      "proteccionesColectivas": {
+        "anclajes": 5,
+        "lineasDeVida": 4,
+        "red": 6
+      },
+      "balizado": {
+        "cinta": 2,
+        "cono": 5,
+        "cartelRiesgosProhibiciones": 4,
+        "senalRiesgoEspecifico": 5,
+        "senalUsoEPIS": 4
+      },
+      "EPIS": {
+        "uniformeInvierno": 45,
+        "casco": 25,
+        "chalecoReflectante": 45,
+        "arnesAnticaida": 36,
+        "dispositivoAnticaidas": 45,
+        "peqMaterialDesechable": 25
+      },
+      "HigieneBienestar": {
+        "ColabLimpieza": 3
+      },
+      "FormacionInformacion": {
+        "charlaInformativa": 1,
+        "reunionCoordinacion": 1
+      }
     }
   }
 }

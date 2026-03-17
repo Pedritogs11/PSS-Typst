@@ -122,8 +122,8 @@ Las actuaciones tendrán lugar en la zona sur del aparcamiento de la residencia 
   [DIRECCIÓN FACULTATIVA],[#for (_, valor) in data.SYS.direccionFacultativa [#valor \ ]],
   [COORDINADOR DE SEGURIDAD Y SALUD], [#for (_, valor) in data.SYS.coordinador [#valor \ ]],
   [ENCARGADO / RECURSO PREVENTIVO],[#data.SYS.encargadoRecursoPreventivo],
-  [PRESUPUESTO EJECUCIÓN MATERIAL], [#data.proyecto.presupuesto.pem €],
-  [PRESUPUESTO PLAN SEGURIDAD Y SALUD], [#data.proyecto.presupuesto.pPSS €],
+  [PRESUPUESTO EJECUCIÓN MATERIAL], [#data.presupuesto.pem €],
+  [PRESUPUESTO PLAN SEGURIDAD Y SALUD], [#data.presupuesto.pPSS €],
   [PLAZO DE EJECUCIÓN], [#data.proyecto.duracion de trabajo efectivo, en función del suministro se podría alargar en el tiempo cronológico, pero no en trabajo efectivo],
   [JORNADA LABORAL],[Según convenio, siempre que la climatología y los trabajos a efectuar lo permitan],
   [Nº TRABAJADORES PREVISTOS],[Máxima concentración de personal de obra: #data.proyecto.trabajadores.totales operarios. Personal medio de obra: #data.proyecto.trabajadores.media operarios.]

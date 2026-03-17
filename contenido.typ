@@ -2202,7 +2202,7 @@ Es aquel trabajador autorizado que posee los conocimientos especializados en mat
 
 En contacto con el responsable de trabajo determinará la necesidad de actuación del parte de trabajo y atenderá a las necesidades de los trabajadores de la empresa durante su estancia en las instalaciones.
 
-== Proceso constructivo
+== Procedimiento de trabajo
 
 El recurso preventivo valorará y determinará el trabajador (autorizado o cualificado) para desarrollar la tarea.
 
@@ -2223,7 +2223,7 @@ Verificar como mínimo lo siguiente:
 -	Si hay diferencial y tierra en el cuadro de acometida principal.
 -	Si hay partes con tensión sin proteger dentro del cuadro (por ejemplo: relés, regletas, bornas de transformadores, etc ...) En este caso, deben colocarse etiquetas de riesgo eléctrico para advertir del peligro o, si es posible, poner una protección.
 -	Si hay elementos con riesgo eléctrico, ya que debe eliminarse el riesgo con protecciones definitivas o poner protecciones temporales.
--	Si hay humedad (aguas o líquidos conductores), en cuyo caso está prohibido trabajar con aparatos eléctricos hasta que no se elimine los riesgos.
+-	Si hay humedad (aguas o líquidos conductores), en cuyo caso está prohibido trabajar con aparatos eléctricos hasta que no se eliminen los riesgos.
 
 ==== Analizar el tipo de trabajo a realizar
 
@@ -2264,7 +2264,7 @@ Se deberán seguir las pautas indicadas en el procedimiento de trabajo de acceso
 
 === Medición de corrientes y tensiones
 
-El trabajador utilizará los equipos de protección individual proporcionados por la empresa y adecuados a los riesgos que pueda estar expuesto (botas aislantes, casco con pantalla facial, guantes aislantes, arnés de seguridad, alfombra aislante, ropa), herramienta aislada y los equipos de seguridad colectiva.
+El trabajador utilizará los equipos de protección individual proporcionados por la empresa y adecuados a los riesgos a los que pueda estar expuesto (botas aislantes, casco con pantalla facial, guantes aislantes, arnés de seguridad, alfombra aislante, ropa), herramienta aislada y los equipos de seguridad colectiva.
 
 El procedimiento será el siguiente:
 +	Abrir el cuadro de corriente continua.
@@ -2283,15 +2283,15 @@ El procedimiento será el siguiente:
 
 === Medición de inversores
 
-+	El trabajador utilizará los equipos de protección individual proporcionados por la empresa y adecuados a los riesgos que pueda estar expuesto (botas aislantes, casco con pantalla facial, guantes aislantes, alfombra aislante, ropa), herramienta aislada y los equipos de seguridad colectiva.
-+	Se accederá primero al inversor y mediante un destornillador aislante y utilizando los equipos de protección individual (botas aislantes, casco con pantalla facial, guantes aislantes, alfombra aislante), se procede al tripeo del seccionador de corriente alterna y del seccionador de corriente continua.
++	El trabajador utilizará los equipos de protección individual proporcionados por la empresa y adecuados a los riesgos a los que pueda estar expuesto (botas aislantes, casco con pantalla facial, guantes aislantes, alfombra aislante, ropa), herramienta aislada y los equipos de seguridad colectiva.
++	Se accederá primero al inversor y mediante un destornillador aislante y utilizando los equipos de protección individual (botas aislantes, casco con pantalla facial, guantes aislantes, alfombra aislante), se procede al disparo del seccionador de corriente alterna y del seccionador de corriente continua.
 +	Una vez abierta la puerta, se coloca la pinza amperimétrica y se realiza la medición de tensiones.
 +	Se cierra la puerta y se verifica visualmente en el display del inversor la tensión.
 +	Pulsar la parada de emergencia del inversor.
 +	Colocar el seccionador de continua off y a continuación el seccionador de alterna.
 +	Abrir la puerta del inversor.
 +	Una vez seccionado el inversor se secciona el cuadro de corriente alterna. A continuación, se secciona el de corriente continua.
-+	Se debe de esperar el tiempo suficiente para que no haya nada de corriente continua en el variador. Tiempo de espera mínimo de 15 minutos.
++	Se debe esperar el tiempo suficiente para que no haya nada de corriente continua en el variador. Tiempo de espera mínimo de 15 minutos.
 +	Comprobar siempre la ausencia de corriente y de tensión.
 +	Proceder a la comprobación de ausencia de corriente continua con la pinza amperimétrica.
 +	Se deberán utilizar los equipos de protección mientras no se verifique la ausencia de corriente y tensión.
@@ -2318,7 +2318,7 @@ En el caso que se deba acceder a la parte alta de la estructura, se deberán seg
 
 === Anomalía en la hornacina
 
-+	El trabajador utilizará los equipos de protección individual proporcionados por la empresa y adecuados a los riesgos que pueda estar expuesto (botas aislantes, casco con pantalla facial, guantes aislantes, arnés de seguridad, alfombra aislante, ropa), herramienta aislada y los equipos de seguridad colectiva.
++	El trabajador utilizará los equipos de protección individual proporcionados por la empresa y adecuados a los riesgos a los que pueda estar expuesto (botas aislantes, casco con pantalla facial, guantes aislantes, arnés de seguridad, alfombra aislante, ropa), herramienta aislada y los equipos de seguridad colectiva.
 +	Se paran todos los inversores en manual.
 +	Se desconectan los inversores de corriente alterna.
 +	Se desconectan todos los inversores de corriente continua.
@@ -2328,15 +2328,13 @@ En el caso que se deba acceder a la parte alta de la estructura, se deberán seg
 +	Se repara la anomalía.
 +	Se conecta el interruptor de corriente alterna de la hornacina.
 +	Se conectan todos los cuadros de corriente alterna.
-+	Se van conectando los inversores uno a uno.
-+	Primero se conecta el inversor en corriente continua.
-+	Se conecta el inversor de corriente continua.
++	Se van conectando los inversores uno a uno, conectando primero los inversores en corriente continua.
 +	Hasta que un inversor no está completamente en marcha no se actúa sobre el siguiente.
 +	Verificar que todos los inversores están funcionando correctamente.
 
 === Anomalía en las averías de módulos o el cableado de corriente continua en cubierta
 
-+ El trabajador utilizará los equipos de protección individual proporcionados por la empresa y adecuados a los riesgos que pueda estar expuesto (botas aislantes, casco con pantalla facial, guantes aislantes, arnés de seguridad, alfombra aislante, ropa), herramienta aislada y los equipos de seguridad colectiva.
++ El trabajador utilizará los equipos de protección individual proporcionados por la empresa y adecuados a los riesgos a los que pueda estar expuesto (botas aislantes, casco con pantalla facial, guantes aislantes, arnés de seguridad, alfombra aislante, ropa), herramienta aislada y los equipos de seguridad colectiva.
 +	Se para el inversor en manual.
 +	Se desconecta el inversor de corriente alterna.
 +	Se desconecta el inversor de corriente continua.
@@ -2361,7 +2359,7 @@ En el caso que se deba acceder a la parte alta de la estructura, se deberán seg
 
 === Anomalía en una instalación fotovoltaica
 
-+	El trabajador utilizará los equipos de protección individual proporcionados por la empresa y adecuados a los riesgos que pueda estar expuesto (botas aislantes, casco con pantalla facial, guantes aislantes, arnés de seguridad, alfombra aislante, ropa), herramienta aislada y los equipos de seguridad colectiva.
++	El trabajador utilizará los equipos de protección individual proporcionados por la empresa y adecuados a los riesgos a los que pueda estar expuesto (botas aislantes, casco con pantalla facial, guantes aislantes, arnés de seguridad, alfombra aislante, ropa), herramienta aislada y los equipos de seguridad colectiva.
 +	Se recepciona la anomalía por sms a los móviles habilitados a dicho efecto.
 +	Se conecta desde el servidor del SAT con los programas de monitorización para analizar la anomalía.
 +	Una vez analizada se decide la actuación a realizar.
@@ -2373,7 +2371,7 @@ En el caso que se deba acceder a la parte alta de la estructura, se deberán seg
 +	Se espera 15 minutos, que es la recomendación del fabricante antes de actuar.
 +	Se comprueba la alimentación de continua y alterna de nuevo antes de realizar cualquier actuación.
 +	Comprobar siempre la ausencia de corriente y de tensión.
-+	Una vez comprobada las tensiones se actúa sobre e inversor reparándolo.
++	Una vez comprobadas las tensiones, se actúa sobre el inversor reparándolo.
 +	Cuando la anomalía ya está solucionada se cierra de nuevo el inversor.
 +	Se conecta el cuadro de corriente continua.
 +	Se conecta el inversor a corriente continua.

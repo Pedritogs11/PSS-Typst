@@ -90,6 +90,13 @@
     }
   },
 
+  "planos":{
+    "titulo": "titulo proyecto",
+    "autor": "autor planos",
+    "fecha": "17/03/2026",
+    "firma": "firma"
+  },
+
   "presupuesto": {
     "pem": 656.232,
     "pPSS": 2.500,

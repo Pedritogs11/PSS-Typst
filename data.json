@@ -1,4 +1,10 @@
 {
+  "planos": {
+    "titulo": "Proyecto de instalación fotovoltaica de autoconsumo 53.2 kWp y 50 kW nominales con CUPS ES02161216548 en Torredelcampo, Jaén",
+    "autor": "Álvaro Ruiz Martínez",
+    "fecha": "01/01/2026",
+    "firma": "Álvaro"
+  },
   "proyecto": {
     "titulo": "Proyecto de instalación fotovoltaica de autoconsumo 53.2 kWp y 50 kW nominales con CUPS ES02161216548 en Torredelcampo, Jaén",
     "fecha": "11 de MARZO de 2026",
@@ -90,12 +96,6 @@
     }
   },
 
-  "planos":{
-    "titulo": "titulo proyecto",
-    "autor": "autor planos",
-    "fecha": "17/03/2026",
-    "firma": "firma"
-  },
 
   "presupuesto": {
     "pem": 656.232,

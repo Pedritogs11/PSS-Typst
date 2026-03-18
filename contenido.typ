@@ -4,8 +4,8 @@
 
 #let data = json("data.json")
 
-//Sergio:
-//Codigo:
+//Sergio: Preguntas o dudas que tengo sobre como incluir o redactar ciertos datos o frases en el documento para que todo quede coherente.
+//Codigo: Sitios donde aparece algo de código (sin incluir los bucles que hay en algunas tablas, como en la primera que ves justo debajo).
 
 
 // =======================
@@ -365,7 +365,7 @@ Protecciones colectivas:
 
 Herramienta para instalación eléctrica que permite a los instaladores enrutar cables fácilmente.
 
-EPIS:
+EPIs:
 -	La manipulación del cableado se efectuará mediante el uso de guantes de protección mecánica.
 
 ==== Soporte de rodillos para bobinas
@@ -379,7 +379,7 @@ Medidas preventivas:
 -	Instalar los equipos sobre una superficie estable y lisa.
 -	No sobrepasar las cargas y dimensiones dadas por el fabricante.
 
-EPIS:
+EPIs:
 -	La manipulación del equipo se efectuará mediante el uso de guantes de protección mecánica.
 -	Calzado de seguridad.
 
@@ -1516,11 +1516,11 @@ En caso de accidente laboral:
 
 Para la investigación de accidentes se dispone de una serie de actuaciones administrativas a las que se está legalmente obligado.
 
-Cualquier accidente del índole que sea se deberá comunicar al promotor, en este caso, promotor.nombre
+Cualquier accidente del índole que sea se deberá comunicar al promotor, en este caso, #data.promotor.nombre
 
 === Vías de evacuación y salidas de emergencia
 
-instaladora.nombre, contratista adjudicatario de la obra: proyecto.nombre conoce que está legalmente obligado, a componer el plan de evacuación de emergencia de cada uno de los puestos de trabajo de esta obra. 
+#data.instaladora.nombre, contratista adjudicatario de la obra: #data.proyecto.titulo conoce que está legalmente obligado, a componer el plan de evacuación de emergencia de cada uno de los puestos de trabajo de esta obra. 
 Se trata de una tarea ociosa si se realiza sobre planos antes de su comienzo; le faltaría el rigor y el realismo necesario para hacerla eficaz. 
 En consecuencia, declara su voluntad de componer, tajo a tajo en planos de obra para su replanteo permanente, las vías de evacuación necesarias según la marcha de los trabajos. 
 Esta tarea será puesta permanentemente en la obra y se divulgará plenamente entre los trabajadores de la misma para lograr su eficacia.
@@ -1548,9 +1548,9 @@ Además de observar las disposiciones anteriores, se adoptarán las prevenciones
 
 Otras actuaciones:
 
-instaladora.nombre prevee, de acuerdo con lo fijado en el Plan de Seguridad y Salud en su caso y siguiendo las normas de las compañías suministradoras, las actuaciones a llevar a cabo para posibles casos de fugas de gas, roturas de canalizaciones de agua, inundaciones, derrumbamientos y hundimientos, estableciendo en el Plan de Seguridad y Salud las previsiones y normas a seguir para tales casos de emergencia.
+#data.instaladora.nombre prevee, de acuerdo con lo fijado en el Plan de Seguridad y Salud en su caso y siguiendo las normas de las compañías suministradoras, las actuaciones a llevar a cabo para posibles casos de fugas de gas, roturas de canalizaciones de agua, inundaciones, derrumbamientos y hundimientos, estableciendo en el Plan de Seguridad y Salud las previsiones y normas a seguir para tales casos de emergencia.
 
-== Presencia de lso recursos preventivos del contratista
+== Presencia de los recursos preventivos del contratista
 
 Dadas las características de las obras de construcción y los riesgos previstos, en cumplimiento del artículo 4.3 de la Ley 54/2003 de 12 de diciembre, de reforma del marco normativo de la prevención de riesgos laborales, mediante el cual se incorpora el artículo 32 bis, Presencia de los recursos preventivos, a la Ley de Prevención de Riesgos Laborales, cada contratista deberá asignar la presencia de sus recursos preventivos en la obra.
 
@@ -1584,13 +1584,13 @@ Medidas de higiene personales e instalaciones:
 
 == Conclusión
 
-Con lo anteriormente expuesto, estimamos que queda suficientemente aclarado el alcance del presente Slan de Seguridad y Salud
+Con lo anteriormente expuesto, estimamos que queda suficientemente aclarado el alcance del presente Plan de Seguridad y Salud
 
-En autorPSS.localidad, proyecto.fechaLetra
+En #data.autor_pss.localidad, #data.proyecto.fecha
 
 El autor del P.S.S.
 
-autorPSS.firma
+//autorPSS.firma
 
 
 
@@ -1660,19 +1660,19 @@ Se excluyen de esta definición:
 
 - La ropa de trabajo corriente y los uniformes que no estén destinados a proteger la seguridad o la salud del trabajador.
 - Los equipos de los servicios de socorro y salvamento.
-- Los EPI´s de los militares, de los policías y de las personas de los servicios de mantenimiento del orden.
-- Los EPI´s de los medios de transporte por carretera.
+- Los EPIs de los militares, de los policías y de las personas de los servicios de mantenimiento del orden.
+- Los EPIs de los medios de transporte por carretera.
 - El material de deporte.
 - El material de autodefensa o de disuasión.
 - Los aparatos portátiles para la detección y señalización de los riesgos y de los factores de molestia.
 - Los Equipos de Protección Individual se clasifican en tres categorías, siendo el proyectista y/o fabricante del EPI y/o su delegado establecido en la Comunidad Económica Europea, el responsable de su clasificación:
 
-*TABLA DE CLASIFICACIÓN DE EPI*
+*Tabla de clasificación de EPI*
 
 El proceso de fabricación y comercialización de los Equipos de Protección Individual es el siguiente:
 
 + Las normas UNE-EN establecen las características técnicas de diseño, resistencia y pruebas a las que deben someterse los equipos por parte de los organismos de control autorizados.
-+ Los fabricantes de EPI´s, siguiendo las pautas establecidas por las normas UNE-EN, diseñan un prototipo ajustado a esas normas, sometiéndolo a pruebas internas para comprobar que cumple las exigencias.
++ Los fabricantes de EPIs, siguiendo las pautas establecidas por las normas UNE-EN, diseñan un prototipo ajustado a esas normas, sometiéndolo a pruebas internas para comprobar que cumple las exigencias.
 + Se presenta el prototipo ante el organismo de control autorizado para realizar las pruebas de comprobación para su homologación. 
   Dichas pruebas vienen definidas en la norma UNE-EN. 
   En caso de que el resultado sea satisfactorio, el fabricante o marca comercial obtiene la declaración de conformidad CЄ (“conforme a exigencias”).
@@ -1690,9 +1690,9 @@ A tal efecto deberán:
 En caso de riesgos múltiples que exijan la utilización simultánea de varios equipos de protección individual, éstos deberán ser compatibles entre sí y mantener su eficacia en relación con el riesgo o riesgos correspondientes. 
 En cualquier caso, los equipos de protección individual que se utilicen, deberán reunir los requisitos establecidos en cualquier disposición legal o reglamentaria que les sea de aplicación, en particular en lo relativo a su diseño y fabricación.
 
-Las normas sobre seguridad, en cuanto a elección, utilización y mantenimiento de los EPI´s, establecen condiciones mínimas que hay que cumplir, lo que no impide que puedan ser mejoradas o superadas.
+Las normas sobre seguridad, en cuanto a elección, utilización y mantenimiento de los EPIs, establecen condiciones mínimas que hay que cumplir, lo que no impide que puedan ser mejoradas o superadas.
 
-Los epi deberán utilizarse cuando existan riesgos para la seguridad y salud de los trabajadores, que no hayan podido evitarse o limitarse suficientemente por medios técnicos de protección colectiva o mediante medidas, métodos o procedimientos de organización del trabajo.
+Los EPI deberán utilizarse cuando existan riesgos para la seguridad y salud de los trabajadores, que no hayan podido evitarse o limitarse suficientemente por medios técnicos de protección colectiva o mediante medidas, métodos o procedimientos de organización del trabajo.
 
 En función de los riesgos establecidos y como complemento a las medidas de protección colectiva, los EPI a utilizar para cada uno de ellos son:
 
@@ -3252,7 +3252,7 @@ Estos descansos deben realizarse en lugares con un ambiente más fresco y seco, 
 
 Se debe utilizar ropa de trabajo adecuada: amplia, ligera, no voluminosa, de color claro para reflejar el calor radiante, flexible y de tejidos frescos, que permita la transpiración para liberar el exceso de calor.
 
-En el mercado existe una amplia gama, tanto de ropa de trabajo como de EPIS que son más adecuados para su uso en condiciones de calor.
+En el mercado existe una amplia gama, tanto de ropa de trabajo como de EPIs que son más adecuados para su uso en condiciones de calor.
 
 Aunque es obligatorio el uso de chalecos de alta visibilidad, en las épocas de calor intenso es más apropiado el uso de una camiseta que cumpla esta función para que el trabajador no tenga que llevar varias capas. 
 Existen camisetas de alta visibilidad con una capa de algodón que resultan más frescas y confortables para los trabajadores.
@@ -3574,7 +3574,7 @@ En cualquier caso, el trabajador afectado debe ser trasladado a un centro donde 
 
 == Identificación y evaluación de los riesgos laborales. Medidas preventivas
 
-A pesar de que la reglamentación vigente en materia de Seguridad y Salud contempla la obligatoriedad de identificar los riesgos separándolos en evitables y no eliminables, dadas las características de las obras que se van a acometer y en aras de un mayor rigor en la aplicación de la seguridad al proceso productivo, los vamos a considerar todos del tipo “no eliminables”, de manera que, además de las protecciones colectivas, también será fundamental que los trabajadores hagan uso permanente de las oportunas protecciones individuales (EPI’s) que procedan.
+A pesar de que la reglamentación vigente en materia de Seguridad y Salud contempla la obligatoriedad de identificar los riesgos separándolos en evitables y no eliminables, dadas las características de las obras que se van a acometer y en aras de un mayor rigor en la aplicación de la seguridad al proceso productivo, los vamos a considerar todos del tipo “no eliminables”, de manera que, además de las protecciones colectivas, también será fundamental que los trabajadores hagan uso permanente de las oportunas protecciones individuales (EPIs) que procedan.
 
 La evaluación de los riesgos laborales es el proceso dirigido a estimar la magnitud de aquellos riesgos que no hayan podido evitarse, obteniendo la información necesaria para que el empresario esté en condiciones de tomar una decisión apropiada sobre la necesidad de adoptar medidas preventivas y, en tal caso, sobre el tipo de medidas que deben adoptarse.
 
@@ -3643,9 +3643,9 @@ Accidentes causados por seres vivos:
 = Anexo XI Especificaciones técnicas de los EPI
 
 
-Listado de principales EPIS usados en obra y sus especificaciones técnicas mínimas.
+Listado de principales EPIs usados en obra y sus especificaciones técnicas mínimas.
 
-Nota: Este listado no es exhaustivo, pudiendo usarse en obra otros EPIS, según necesidad. 
+Nota: Este listado no es exhaustivo, pudiendo usarse en obra otros EPIs, según necesidad. 
 En caso de ser así deben cumplir con las especificaciones mínimas de esta lista, y en caso de no aprecer, se revisará de forma previa a su uso que cumplen con la normativa que les sea de aplicación, y será aprobado su uso por la dirección de obra y el coordinador de seguridad.
 
 + *Casco protector para trabajos en altura con Certificado Riesgos Intermedios. EPI Cat II.SEGÚN EN 397:2012+A1:2012.*

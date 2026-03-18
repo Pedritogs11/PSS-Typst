@@ -49,7 +49,8 @@
     "nombre": "nombre autor",
     "titulo": "Ingeniero Industrial",
     "colegiado": "2.365 COITI Jaén",
-    "direccion": "C/ Ejército Español, 7 23640, Torredelcampo, Jaén"
+    "direccion": "C/ Ejército Español, 7 23640, Torredelcampo, Jaén",
+    "localidad": "Torredelcampo"
   },
   "empresa_redactora": {
     "nombre": "Ingenertic S.L.",

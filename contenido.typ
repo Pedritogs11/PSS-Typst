@@ -4,6 +4,12 @@
 
 #let data = json("data.json")
 
+// #show heading.where(level: 1): it => [
+//   #pagebreak()
+//   #it
+//   #pagebreak()
+// ]
+
 
 // =======================
 // DOCUMENTO
@@ -16,10 +22,10 @@
   [PROMOTOR], [#data.promotor.nombre],
   [SITUACIÓN OBRA], [#data.proyecto.localizacion.situacion],
   [INSTALADORA], [#data.instaladora.representante, #data.instaladora.nombre],
-  [AUTOR DEL PLAN DE SEGURIDAD Y SALUD], [#for (_, valor) in data.SYS.autorPlan [#valor \ ]],
-  [DIRECCIÓN FACULTATIVA], [#for (_, valor) in data.SYS.direccionFacultativa [#valor \ ]],
-  [COORDINADOR DE SEGURIDAD Y SALUD], [#for (_, valor) in data.SYS.coordinador [#valor \ ]],
-  [ENCARGADO DEL RECURSO PREVENTIVO], [#data.SYS.encargadoRecursoPreventivo]
+  [AUTOR DEL PLAN DE SEGURIDAD Y SALUD], [#for (_, valor) in data.autor_pss [#valor \ ]],
+  [DIRECCIÓN FACULTATIVA], [#for (_, valor) in data.direccion_facultativa [#valor \ ]],
+  [COORDINADOR DE SEGURIDAD Y SALUD], [#for (_, valor) in data.coordinador_pss [#valor \ ]],
+  [ENCARGADO DEL RECURSO PREVENTIVO], [#data.sys.encargado_recurso_preventivo]
 )
 
 *TABLA RESUMEN DE LAS FASES DE OBRA*
@@ -34,7 +40,7 @@
   [PUESTA EN MARCHA DE LA INSTALACIÓN Y MONITORIZACIÓN], [4.1.5 FASE 5 \ (PÁG. 19)], [], [], [Sí],
 )
 
-#pagebreak()
+
 
 *OBLIGACIONES DEL COORDINADOR DE SYS EN FASE DE EJECUCIÓN DE LA OBRA.*
 
@@ -47,30 +53,32 @@ ejecución de la obra deberá desarrollar las siguientes funciones:
   - Al estimar la duración requerida para la ejecución de estos distintos trabajos o fases de trabajo.
 
 + Coordinar las actividades de la obra para garantizar que los contratistas y, en su caso, los subcontratistas y los trabajadores autónomos apliquen de manera coherente y responsable los principios de la acción preventiva que se recogen en el artículo 15 de la Ley de Prevención de Riesgos Laborales durante la ejecución de la obra y, en particular, en las tareas o actividades a que se refiere el artículo 10 del Real Decreto 1627.
-+ Aprobar el plan de seguridad y salud elaborado por el contratista y, en su caso, las modificaciones introducidas en el mismo. La dirección facultativa asumirá esta función cuando no fuera necesaria la designación de coordinador.
++ Aprobar el plan de seguridad y salud elaborado por el contratista y, en su caso, las modificaciones introducidas en el mismo. 
+  La dirección facultativa asumirá esta función cuando no fuera necesaria la designación de coordinador.
 + Organizar la coordinación de actividades empresariales prevista en el artículo 24 de la Ley de Prevención de Riesgos Laborales.
 + Coordinar las acciones y funciones de control de la aplicación correcta de los métodos de trabajo.
-+ Adoptar las medidas necesarias para que sólo las personas autorizadas puedan acceder a la obra. La dirección facultativa asumirá esta función cuando no fuera necesaria la designación de coordinador.
++ Adoptar las medidas necesarias para que sólo las personas autorizadas puedan acceder a la obra. 
+  La dirección facultativa asumirá esta función cuando no fuera necesaria la designación de coordinador.
 
 instaladora.nombre, como contratista, colaborará en todo lo posible con el coordinador de seguridad para que éste pueda cumplir con sus atribuciones de la forma más eficiente posible.
 
-#pagebreak()
+
 
 = Memoria descriptiva
 
-#pagebreak()
 
+//Sergio.codigo:
 #outline(title: "Índice de la memoria")
 
-#pagebreak()
 
-== Memoria descriptiva
+
+== Introducción
 === Antecedentes
-
+//Sergio: el 99% de los proyectos de FV a los que les he hecho un PSS son sobre una cubierta de una nave, pero si llega un contratista que quiere el plan y la ejecución de la obra no es sobre una nave, este texto no sirve, ¿lo guardo como variable?
 #data.promotor.nombre como promotor de la instalación encarga a #data.instaladora.nombre para la ejecución de *una planta fotovoltaica sobre la cubierta de su nave*.
 
-Con tal motivo, se encarga a instaladora.nombre, la realización del “#data.proyecto.titulo” situada en proyecto.situacion, con el fin de que sirva de base al instalador para su ejecución, así como para solicitar de los Organismos Competentes de la Administración las preceptivas autorizaciones de instalación y puesta en servicio. 
-La empresa instaladora designada por promotor.nombre es instaladora.nombre instaladora.responsable, como responsable de dicha empresa, redacta el presente Plan de Seguridad y Salud con el fin de analizar, estudiar, desarrollar y complementar, en función del propio sistema de ejecución del contratista las previsiones respecto a la prevención del riesgo de accidentes laborales y enfermedades profesionales, las instalaciones preceptivas de higiene y bienestar y demás prescripciones reglamentarias, así como las contenidas en el Estudio Básico de Seguridad y Salud del Proyecto redactado por instaladora.nombre
+Con tal motivo, se encarga a #data.instaladora.nombre, la realización del “#data.proyecto.titulo” situada en #data.proyecto.localizacion.situacion, con el fin de que sirva de base al instalador para su ejecución, así como para solicitar de los Organismos Competentes de la Administración las preceptivas autorizaciones de instalación y puesta en servicio. 
+La empresa instaladora designada por #data.promotor.nombre es instaladora.nombre instaladora.responsable, como responsable de dicha empresa, redacta el presente Plan de Seguridad y Salud con el fin de analizar, estudiar, desarrollar y complementar, en función del propio sistema de ejecución del contratista las previsiones respecto a la prevención del riesgo de accidentes laborales y enfermedades profesionales, las instalaciones preceptivas de higiene y bienestar y demás prescripciones reglamentarias, así como las contenidas en el Estudio Básico de Seguridad y Salud del Proyecto redactado por instaladora.nombre
 
 === Objeto del plan de seguridad y salud
 
@@ -104,7 +112,7 @@ Propiedad: #data.proyecto.empresa.nombre
 
 Dirección: #data.proyecto.localizacion.situacion
 
-Ubicación google maps: #data.proyecto.empresa.enlaceMaps
+Ubicación google maps: #data.proyecto.empresa.enlace_maps
 
 *empresa.foto*
 
@@ -118,19 +126,21 @@ Las actuaciones tendrán lugar en la zona sur del aparcamiento de la residencia 
   [PROMOTOR],[#data.promotor.nombre],
   [SITUACIÓN OBRA], [#data.proyecto.localizacion.situacion],
   [INSTALADORA],[instaladora.nombre, instaladora.cif],
-  [AUTOR DEL PLAN DE SEGURIDAD Y SALUD],[#data.SYS.autorPlan.nombre, #data.SYS.empresaRedactora.nombre],
-  [DIRECCIÓN FACULTATIVA],[#for (_, valor) in data.SYS.direccionFacultativa [#valor \ ]],
-  [COORDINADOR DE SEGURIDAD Y SALUD], [#for (_, valor) in data.SYS.coordinador [#valor \ ]],
-  [ENCARGADO / RECURSO PREVENTIVO],[#data.SYS.encargadoRecursoPreventivo],
+  [AUTOR DEL PLAN DE SEGURIDAD Y SALUD],[#data.autor_pss.nombre, #data.empresa_redactora.nombre],
+  [DIRECCIÓN FACULTATIVA],[#for (_, valor) in data.direccion_facultativa [#valor \ ]],
+  [COORDINADOR DE SEGURIDAD Y SALUD], [#for (_, valor) in data.coordinador_pss [#valor \ ]],
+  [ENCARGADO / RECURSO PREVENTIVO],[#data.sys.encargado_recurso_preventivo],
   [PRESUPUESTO EJECUCIÓN MATERIAL], [#data.presupuesto.pem €],
-  [PRESUPUESTO PLAN SEGURIDAD Y SALUD], [#data.presupuesto.pPSS €],
+  [PRESUPUESTO PLAN SEGURIDAD Y SALUD], [#data.presupuesto.p_pss €],
   [PLAZO DE EJECUCIÓN], [#data.proyecto.duracion de trabajo efectivo, en función del suministro se podría alargar en el tiempo cronológico, pero no en trabajo efectivo],
   [JORNADA LABORAL],[Según convenio, siempre que la climatología y los trabajos a efectuar lo permitan],
   [Nº TRABAJADORES PREVISTOS],[Máxima concentración de personal de obra: #data.proyecto.trabajadores.totales operarios. Personal medio de obra: #data.proyecto.trabajadores.media operarios.]
 )
 
--	La empresa contratista, instaladora.nombre, ha adoptado como modalidad preventiva la contratación de servicio de prevención ajeno, teniendo contratado dicho servicio con #data.SYS.subcontrataModeloPreventivo.
--	Relación de empresas subcontratistas y trabajadores autónomos. Cumplimiento de la Ley 32/2006 y 1109/2007 del 24 de agosto desarrollando al anterior. Será obligado el cumplimiento de la Ley 32/2006 DE 18 DE OCTUBRE REGULADORA DE LA SUBCONTRATACIÓN EN EL SECTOR DE LA CONSTRUCCION y el RD. 1109/2007 de 24 DE AGOSTO.
+-	La empresa contratista, instaladora.nombre, ha adoptado como modalidad preventiva la contratación de servicio de prevención ajeno, teniendo contratado dicho servicio con #data.sys.subcontrata_modelo_preventivo.
+-	Relación de empresas subcontratistas y trabajadores autónomos. 
+  Cumplimiento de la Ley 32/2006 y 1109/2007 del 24 de agosto desarrollando al anterior. 
+  Será obligado el cumplimiento de la Ley 32/2006 DE 18 DE OCTUBRE REGULADORA DE LA SUBCONTRATACIÓN EN EL SECTOR DE LA CONSTRUCCION y el RD. 1109/2007 de 24 DE AGOSTO.
 -	Coordinación de actividades: Se harán reuniones especialmente dedicadas a actividades empresariales, cuando confluya más de 1 empresa desempeñando labores en la obra, atendiendo a lo reflejado en el REAL DECRETO 171/2004, de 30 de enero, por el que se desarrolla el artículo 24 de la Ley 31/1995, de 8 de noviembre, de Prevención de Riesgos Laborales, en materia de coordinación de actividades empresariales. BOE nº 27 31/01/2004.
 
 - Aviso coordinador:
@@ -138,7 +148,8 @@ Las actuaciones tendrán lugar en la zona sur del aparcamiento de la residencia 
   -	Notificar cualquier cambio con la planificación aportada en el plan de seguridad.
   -	Realizar acta de inicio de coordinación de los trabajos.
   -	Notificar al coordinador previamente la subcontratación, para su aprobación de acceso a la obra.
--	No se ve afectado ningún servicio en el interior de la parcela, tan solo se verá afectado el suministro eléctrico, que será interrumpido para las maniobras de conexión de la instalación proyectada al cuadro general de la nave. Dicha maniobra se coordinará con la empresa para causar el menor impacto posible.
+-	No se ve afectado ningún servicio en el interior de la parcela, tan solo se verá afectado el suministro eléctrico, que será interrumpido para las maniobras de conexión de la instalación proyectada al cuadro general de la nave. 
+  Dicha maniobra se coordinará con la empresa para causar el menor impacto posible.
 
 === Entorno de la obra
 
@@ -149,15 +160,15 @@ La nave está dotada de todos los servicios necesarios pudiendo usarse por los t
 
 === Centro asistencial más cercano y tlf. de urgencias
 
-El centro de urgencias más cercano se encuentra a #data.SYS.centroSalud.tiempo minutos, #data.SYS.centroSalud.distancia m.
+El centro de urgencias más cercano se encuentra a #data.sys.centro_salud.tiempo #data.sys.centro_salud.ud_tiempo, #data.sys.centro_salud.distancia #data.sys.centro_salud.ud_distancia.
 
-Centro: #data.SYS.centroSalud.nombre
+Centro: #data.sys.centro_salud.nombre
 
-Teléfono de contacto: #data.SYS.centroSalud.telefono
+Teléfono de contacto: #data.sys.centro_salud.telefono
 
-Ubicación: #data.SYS.centroSalud.direccion
+Ubicación: #data.sys.centro_salud.direccion
 
-#data.SYS.centroSalud.enlaceMaps
+#data.sys.centro_salud.enlace_maps
 
 centroSalud.foto
 
@@ -167,11 +178,11 @@ El citado plano, deberá estar situado en un lugar visible y accesible a la tota
 Teléfonos de urgencias:
 
 - Emergencias: 112
-- Urgencias sanitarias: 061 - #data.SYS.telefonos.urgencias
-- Bomberos: 080 - #data.SYS.telefonos.bomberos
+- Urgencias sanitarias: 061 - #data.sys.telefonos.urgencias
+- Bomberos: 080 - #data.sys.telefonos.bomberos
 - Policía nacional: 091 
-- Policía local: 092 - #data.SYS.telefonos.policiaLocal
-- Guardia civil: 062 - #data.SYS.telefonos.guardiaCivil
+- Policía local: 092 - #data.sys.telefonos.policia_local
+- Guardia civil: 062 - #data.sys.telefonos.guardia_civil
 
 === Documentación obra
 
@@ -286,7 +297,8 @@ Se instalarán las canalizaciones consistentes en:
 -	Bandeja perforada.
 - Las medidas de protección colectivas a emplear en esta fase de la obra serán las colocadas, es decir, arnés con doble anclaje y puntos de anclaje en estructura.
 -	Bajada de la bandeja a inversor, por fachada de la nave.
--	Se prevé la realización de trabajos de albañilería, los cuáles, aunque son de poca envergadura deben de evaluarse. Se incluyen en esta fase los pequeños trabajos  tales como apertura y cierre de rozas y pasos de muro, recibido a fábricas de soportes, pinturas, etc…
+-	Se prevé la realización de trabajos de albañilería, los cuáles, aunque son de poca envergadura deben de evaluarse. 
+  Se incluyen en esta fase los pequeños trabajos  tales como apertura y cierre de rozas y pasos de muro, recibido a fábricas de soportes, pinturas, etc…
 
 ==== Fase 4: Montaje de inversores y ejecución de la instalación eléctrica
 
@@ -401,19 +413,27 @@ Estas traducciones correrán a cargo del contratista afectado.
 
 === Normas de acceso y circulación por obra
 
--	Toda persona que entre en la obra deberá ir provista de calzado de seguridad con plantilla metálica y casco de protección con barbuquejo. Ambas protecciones deberán estar en correcto estado. En caso de realizar algún trabajo con herramientas o materiales que puedan caer, el calzado deberá disponer también de puntera metálica con el fin de controlar el riesgo no evitable de caída de objetos en manipulación. Recuerde que las citadas protecciones tienen una caducidad, pasada la cual no garantizan su efectividad.
+-	Toda persona que entre en la obra deberá ir provista de calzado de seguridad con plantilla metálica y casco de protección con barbuquejo. 
+  Ambas protecciones deberán estar en correcto estado. 
+  En caso de realizar algún trabajo con herramientas o materiales que puedan caer, el calzado deberá disponer también de puntera metálica con el fin de controlar el riesgo no evitable de caída de objetos en manipulación. 
+  Recuerde que las citadas protecciones tienen una caducidad, pasada la cual no garantizan su efectividad.
 -	Puesto que los trabajos se desarrollan principalmente en altura toda persona que trabaje bajo esta circunstancia deberá de tener la formación necesaria para realizar los trabajos en altura correspondientes.
 -	Nunca debe pisar un tablón o trozo de madera que esté dejado en el suelo. Podría tener algún clavo dejado por olvido o por estar limpiándolo en ese momento y clavárselo.
--	En caso de ver una señalización de peligro que corte el paso debe evitar el cruzarla. Dicha señalización está indicando una zona de acceso restringido o prohibido. Si tiene necesidad de cruzarla consúltele a nuestro recurso preventivo, le indicarán cuál es la forma correcta de hacerlo.
+-	En caso de ver una señalización de peligro que corte el paso debe evitar el cruzarla. Dicha señalización está indicando una zona de acceso restringido o prohibido. 
+  Si tiene necesidad de cruzarla consúltele a nuestro recurso preventivo, le indicarán cuál es la forma correcta de hacerlo.
 -	Haga caso de los carteles indicadores existentes por la obra.
-- No quite, bajo ningún concepto, una protección colectiva sin antes haberlo consultado y advertido a nuestro recurso preventivo, pues deberá/n tomar las medidas preventivas necesarias antes de dejar la zona desprotegida. Sólo bajo la supervisión de los citados recursos preventivos se puede retirar una protección y/o trabajar sin ella.
+- No quite, bajo ningún concepto, una protección colectiva sin antes haberlo consultado y advertido a nuestro recurso preventivo, pues deberá/n tomar las medidas preventivas necesarias antes de dejar la zona desprotegida. 
+  Sólo bajo la supervisión de los citados recursos preventivos se puede retirar una protección y/o trabajar sin ella.
 -	Si encuentra alguna protección en mal estado o mal colocada, adviértalo inmediatamente a nuestro recurso preventivo.
--	Circule sin prisas. No debe ir corriendo por la obra pues podría sufrir un accidente.
--	En caso encontrarse obstáculos (plataformas de trabajo elevadas, con operarios trabajando sobre ellos), esquívelos cambiando de camino. Aunque dé un rodeo, es preferible a que sufra o provoque un accidente por solapes con el trabajo realizado.
--	Si tiene que hacer uso de algún cuadro de auxiliar eléctrico, hágalo utilizando las clavijas adecuadas para su conexión. Si tiene alguna duda pregúnteselo a nuestro recurso preventivo el/ellos le sacarán de dudas.
+-	Circule sin prisas.
+  No debe ir corriendo por la obra pues podría sufrir un accidente.
+-	En caso encontrarse obstáculos (plataformas de trabajo elevadas, con operarios trabajando sobre ellos), esquívelos cambiando de camino. 
+  Aunque dé un rodeo, es preferible a que sufra o provoque un accidente por solapes con el trabajo realizado.
+-	Si tiene que hacer uso de algún cuadro de auxiliar eléctrico, hágalo utilizando las clavijas adecuadas para su conexión. 
+  Si tiene alguna duda pregúnteselo a nuestro recurso preventivo el/ellos le sacarán de dudas.
 -	Si le surge cualquier otra duda durante su tránsito por la obra, no improvise, advierta y pregunte a nuestro recurso preventivo, esa es una de sus funciones.
 
-=== Nomras de utilización del auxiliar eléctrico provisional de obra
+=== Normas de utilización del auxiliar eléctrico provisional de obra
 
 Puesto que la nave dispone de instalación eléctrica en funcionamiento, se hará uso de la misma si fuese necesario, revisándose su correcto estado y funcionamiento, adecuándose en caso de ser necesario. 
 Aunque las herramientas previstas funcionan a batería y no se prevé usar la red eléctrica, cabe la posibilidad de tener que usar puntualmente la red, para cargar baterías, por ejemplo. 
@@ -437,13 +457,19 @@ En cada punto se identifican los riesgos propios tipo existentes por la ejecuci�
 
 Para la definición de cada trabajo, se ha adoptado la forma indicada a continuación:
 -	Definición del trabajo: consiste en una enunciación de los trabajos que intervendrán en cada una de las actividades.
--	Medios auxiliares a utilizar: se determinan cuáles son los medios auxiliares que se van a utilizar. La identificación de los riesgos de cada uno de ellos, así como las medidas preventivas y protecciones técnicas a adoptar, vendrán indicadas en el apartado correspondiente a medios auxiliares, por lo que deberá atenderse a lo citado en los mismos.
--	Materiales a utilizar: se indican qué materiales se utilizarán en la ejecución de los trabajos. Igual que en el punto anterior, deberá atenderse, en cada caso, a lo estipulado en el apartado de materiales del presente Plan.
--	Maquinaria de obra y herramientas: se cita en este punto la maquinaria y herramientas necesarias para la total ejecución de cada trabajo que intervenga en la actividad. Igual que en los puntos anteriores, la identificación de los riesgos de cada tipo de maquinaria o herramienta, así como las medidas preventivas y protecciones técnicas a adoptar vendrán indicadas en el apartado correspondiente a medios auxiliares, por lo que deberá atenderse a lo citado en los mismos.
--	Identificación de riesgos: se aportará una relación de los riesgos propios del trabajo a realizar, sin incluir los pertenecientes a la utilización de medios auxiliares, maquinaria o materiales, puesto que ya se definen en los apartados correspondientes. Dentro de este epígrafe se define, para cada riesgo, lo siguiente:
+-	Medios auxiliares a utilizar: se determinan cuáles son los medios auxiliares que se van a utilizar. 
+  La identificación de los riesgos de cada uno de ellos, así como las medidas preventivas y protecciones técnicas a adoptar, vendrán indicadas en el apartado correspondiente a medios auxiliares, por lo que deberá atenderse a lo citado en los mismos.
+-	Materiales a utilizar: se indican qué materiales se utilizarán en la ejecución de los trabajos
+  Igual que en el punto anterior, deberá atenderse, en cada caso, a lo estipulado en el apartado de materiales del presente Plan.
+-	Maquinaria de obra y herramientas: se cita en este punto la maquinaria y herramientas necesarias para la total ejecución de cada trabajo que intervenga en la actividad. 
+  Igual que en los puntos anteriores, la identificación de los riesgos de cada tipo de maquinaria o herramienta, así como las medidas preventivas y protecciones técnicas a adoptar vendrán indicadas en el apartado correspondiente a medios auxiliares, por lo que deberá atenderse a lo citado en los mismos.
+-	Identificación de riesgos: se aportará una relación de los riesgos propios del trabajo a realizar, sin incluir los pertenecientes a la utilización de medios auxiliares, maquinaria o materiales, puesto que ya se definen en los apartados correspondientes. 
+  Dentro de este epígrafe se define, para cada riesgo, lo siguiente:
 -	Protecciones colectivas: en caso de utilizar unas protecciones colectivas particulares para la realización de los trabajos que no estén indicadas en el apartado de “Protecciones colectivas a utilizar durante el proceso constructivo” del presente Plan de seguridad, se indican en este punto, en caso contrario no se mencionan.
--	Protecciones individuales: se indica qué protecciones individuales particulares será necesario utilizar para cada una de las actividades intervinientes en cada procedimiento de trabajo. No se incluyen las necesarias para la utilización de los medios auxiliares, maquinaria ni materiales, puesto que ya se definen en los apartados correspondientes.
--	Medidas preventivas: se citan las normas preventivas intrínsecas a la realización de los trabajos, así como (si procede) los procedimientos de trabajo seguro. No se incluyen las necesarias para la utilización de los medios auxiliares, maquinaria ni materiales, puesto que ya se definen en los apartados correspondientes.
+-	Protecciones individuales: se indica qué protecciones individuales particulares será necesario utilizar para cada una de las actividades intervinientes en cada procedimiento de trabajo. 
+  No se incluyen las necesarias para la utilización de los medios auxiliares, maquinaria ni materiales, puesto que ya se definen en los apartados correspondientes.
+-	Medidas preventivas: se citan las normas preventivas intrínsecas a la realización de los trabajos, así como (si procede) los procedimientos de trabajo seguro. 
+  No se incluyen las necesarias para la utilización de los medios auxiliares, maquinaria ni materiales, puesto que ya se definen en los apartados correspondientes.
 
 === Trabajos al aire
 
@@ -456,9 +482,11 @@ Aunque la mayoría de estas picaduras sólo causan una molestia leve o fuerte se
 
 Medidas preventivas:
 -	Durante las marchas o momentos de ascensión, extremar la atención al acceder a la cubierta.
--	No acercarnos conscientemente a panales de abejas ni a nidos de avispas y si el acercamiento ha sido accidental, alejarnos con movimientos lentos. Estos panales se sitúan en los sitios más recónditos.
+-	No acercarnos conscientemente a panales de abejas ni a nidos de avispas y si el acercamiento ha sido accidental, alejarnos con movimientos lentos. 
+  Estos panales se sitúan en los sitios más recónditos.
 -	Si un insecto peligroso está volando a nuestro alrededor, lo mejor será quedarnos quietos y tranquilos, ya que si tratamos de matarlo puede hacer que nos pique.
--	Si nos atacan varios insectos lo mejor, sin duda, será alejarnos corriendo. Por ejemplo, las abejas al picar pueden liberar una sustancia química que atrae a otras abejas.
+-	Si nos atacan varios insectos lo mejor, sin duda, será alejarnos corriendo. 
+  Por ejemplo, las abejas al picar pueden liberar una sustancia química que atrae a otras abejas.
 -	Usar ropa que nos cubra la mayor parte posible del cuerpo.
 -	Y recuerda que, si se cuela un insecto dentro de nuestro vehículo, debemos parar despacio y abrir todas las ventanas.
 -	Si bebes en recipientes que contengan líquidos azucarados, comprueba antes que no existan abejas o avispas en los bordes o el interior.
@@ -495,7 +523,8 @@ Los materiales necesarios para la ejecución de estos trabajos serán únicament
 Maquinaria de obra y herramientas:
 
 La maquinaria a utilizar en los citados trabajos será:
--	Radial, para cortar los perfiles auxiliares y realizar pequeñas modificaciones. Taladro, para agujerear y atornillar los elementos a la estructura y entre sí.
+-	Radial, para cortar los perfiles auxiliares y realizar pequeñas modificaciones
+  Taladro, para agujerear y atornillar los elementos a la estructura y entre sí.
 -	Pequeña herramienta de mano, tipo tenaza, martillo, destornillador..., para labores varias.
 -	Camión pluma.
 
@@ -604,7 +633,8 @@ La simple observación de la timonería del dispositivo no es garantía suficien
 
 ==== Enclavamiento, bloqueo y señalización
 
-Se debe prevenir cualquier posible reconexión, utilizando para ello medios mecánicos (por ejemplo candados). Para enclavar los dispositivos de mando no se deben emplear medios fácilmente anulables, tales como cinta aislante, bridas y similares.
+Se debe prevenir cualquier posible reconexión, utilizando para ello medios mecánicos (por ejemplo candados). 
+Para enclavar los dispositivos de mando no se deben emplear medios fácilmente anulables, tales como cinta aislante, bridas y similares.
 
 Cuando los dispositivos sean telemandados, se debe anular el telemando eliminando la alimentación eléctrica del circuito de maniobra.
 
@@ -681,7 +711,8 @@ Antes de acceder a la estructura, en periodo invernal, se comprobará la inexist
 ==== R02: Caída de personas al mismo nivel, por falta de orden y limpieza
 
 Medidas preventivas:
-- Mantener la zona de trabajo lo más ordenada y limpia posible. Retirar inmediatamente cualquier elemento que obstaculice las zonas de paso.
+- Mantener la zona de trabajo lo más ordenada y limpia posible
+  Retirar inmediatamente cualquier elemento que obstaculice las zonas de paso.
 
 ==== R03: Desplome de material mal apilado
 
@@ -726,18 +757,23 @@ Durante las operaciones de izado de cargas se prohibirá el paso a toda persona 
 
 
 Protecciones individuales:
--	Guantes de protección mecánica. Casco de polietileno con barbuquejo.
+-	Guantes de protección mecánica. 
+  Casco de polietileno con barbuquejo.
 -	Ropa de trabajo adecuada.
 
 Medidas preventivas:
--	Queda terminantemente prohibido, situarse debajo de cargas suspendidas. Para evitar dicha situación, se emitirán señales previamente establecidas, generalmente sonoras, con el fin de que puedan ponerse a salvo de posibles desprendimientos de aquellas.
--	Se evitarán los trabajos a distinto nivel y en la misma vertical. No se transitará por debajo de la plataforma cuando esté elevada.
+-	Queda terminantemente prohibido, situarse debajo de cargas suspendidas. 
+  Para evitar dicha situación, se emitirán señales previamente establecidas, generalmente sonoras, con el fin de que puedan ponerse a salvo de posibles desprendimientos de aquellas.
+-	Se evitarán los trabajos a distinto nivel y en la misma vertical. 
+  No se transitará por debajo de la plataforma cuando esté elevada.
 -	Se tendrá especial precaución cuando realicemos trabajos o pasemos junto a materiales apilados o almacenados que presenten aristas vivas, cantos afilados o elementos que sobresalgan.
 
 ==== R06: Golpes y cortes con herramientas
 
 Medidas preventivas:
--	No atornillar o destornillar un tornillo sujetando la pieza con la palma de la mano. Si el destornillador resbala se puede sufrir una lesión. Apoyar la pieza sobre una base sólida.
+-	No atornillar o destornillar un tornillo sujetando la pieza con la palma de la mano. 
+  Si el destornillador resbala se puede sufrir una lesión. 
+  Apoyar la pieza sobre una base sólida.
 -	Los destornilladores no se deben usar como palancas, como cincel, ni para perforar.
 -	La llave debe estar siempre colocada perpendicular al eje del tornillo, ya que si esta inclinada no se puede ajustar perfectamente y es fácil que resbale.
 -	Las llaves ajustables (inglesas), se deben usar colocándolas de tal forma que la mandíbula fija esté en el lado opuesto a la dirección del movimiento que se efectúa.
@@ -755,7 +791,8 @@ Medidas preventivas:
 ==== R08: Sobreesfuerzos por manipulación manual de cargas
 
 Medidas preventivas:
--	Las tareas de manipulación manual de placas fotovoltaicas se realizarán siempre por 2 trabajadores, y de la manera más mecanizada posible, para prevenir daños dorso lumbares. Se emplearán medios auxiliares siempre que sea posible para reducir el trabajo manual.
+-	Las tareas de manipulación manual de placas fotovoltaicas se realizarán siempre por 2 trabajadores, y de la manera más mecanizada posible, para prevenir daños dorso lumbares. 
+  Se emplearán medios auxiliares siempre que sea posible para reducir el trabajo manual.
 -	No se manipularán por un solo trabajador cargas que superen los 25 K de peso que sean voluminosos o no dispongan de buen agarre.
 
 ==== R09: Atropellos
@@ -804,8 +841,8 @@ Protecciones individuales:
 Medidas preventivas:
 -	Nuestro recurso preventivo deberá comprobar en todo momento el estado de las protecciones colectivas, encargándose de que sean repuestas en caso de detectar alguna 
   anomalía, dejando constancia escrita de ello, y prohibiendo al resto de trabajadores el acceso a la zona hasta que quede subsanada.
--	Todo el personal que deba acceder a la obra habrá recibido la información correspondiente a la circulación por la misma. Nuestro recurso preventivo deberá/n dejar 
-  constancia de ello.
+-	Todo el personal que deba acceder a la obra habrá recibido la información correspondiente a la circulación por la misma. 
+  Nuestro recurso preventivo deberá/n dejar constancia de ello.
 -	Se prohíbe subir a la cubierta durante tiempo lluvioso y tras un periodo de lluvia se examinará el estado de la misma por parte del recurso preventivo, asegurándose 
   que no resbale de la superficie de tránsito.
 
@@ -820,7 +857,8 @@ Medidas preventivas:
 -	Antes de poner en carga la instalación eléctrica se revisarán en profundidad las conexiones de mecanismos, protecciones y empalmes de todos los cuadros eléctricos, para comprobar el estricto cumplimiento de lo dispuesto en el vigente Reglamento Electrotécnico de Baja Tensión.
 -	Sólo los trabajadores autorizados, y con la formación adecuada, podrán realizar trabajos en proximidad, mediciones, verificaciones y ensayos en las instalaciones de baja tensión.
 -	Sólo los trabajadores cualificados podrán realizar trabajos en tensión y trabajos en proximidad, mediciones, verificaciones y ensayos en las instalaciones de alta tensión.
--	Se estará a lo dispuesto en el correspondiente en el procedimiento de medición y limpieza de inversores. Ver Anexo.
+-	Se estará a lo dispuesto en el correspondiente en el procedimiento de medición y limpieza de inversores. 
+  Ver Anexo.
 
 ==== R16: Riesgo de incendio
 
@@ -850,8 +888,10 @@ Toda la maquinaria dispondrá de certificado CE, cumpliendo con lo establecido e
 
 Para la definición de cada medio auxiliar, se ha adoptado la forma indicada a continuación:
 -	Descripción del medio auxiliar: se describe del medio auxiliar tipo a utilizar, teniendo en cuenta que cada contratista deberá definir más concretamente en su plan de seguridad cómo será dicho medio.
--	Maquinaria de obra y herramientas: se cita en este punto la maquinaria y herramientas necesarias para el montaje, mantenimiento y desmontaje del medio auxiliar. Igual que en los puntos anteriores, la identificación de los riesgos de cada tipo de maquinaria o herramienta, así como las medidas preventivas y protecciones técnicas a adoptar vendrán indicadas en el apartado correspondiente, por lo que deberá atenderse a lo citado en los mismos.
--	Identificación de riesgos: se aporta una relación de los riesgos propios, tanto evitables como no evitables, de la utilización del medio auxiliar, incluyendo, en su caso, los correspondientes al montaje, mantenimiento y desmontaje del mismo. Dentro de este epígrafe se define, para cada riesgo, lo que indico a continuación:
+-	Maquinaria de obra y herramientas: se cita en este punto la maquinaria y herramientas necesarias para el montaje, mantenimiento y desmontaje del medio auxiliar. 
+  Igual que en los puntos anteriores, la identificación de los riesgos de cada tipo de maquinaria o herramienta, así como las medidas preventivas y protecciones técnicas a adoptar vendrán indicadas en el apartado correspondiente, por lo que deberá atenderse a lo citado en los mismos.
+-	Identificación de riesgos: se aporta una relación de los riesgos propios, tanto evitables como no evitables, de la utilización del medio auxiliar, incluyendo, en su caso, los correspondientes al montaje, mantenimiento y desmontaje del mismo. 
+  Dentro de este epígrafe se define, para cada riesgo, lo que indico a continuación:
   -	Protecciones colectivas: en caso de utilizar unas protecciones colectivas particulares para el empleo del medio auxiliar que no estén indicadas en el apartado de  “Protecciones colectivas a utilizar durante el proceso constructivo” del presente Plan de seguridad, se indican en este punto, en caso contrario no se mencionan.
   -	Protecciones individuales: se indican qué protecciones individuales particulares será necesario emplear para la correcta utilización del medio auxiliar.
   -	Medidas preventivas: se citan las normas preventivas necesarias para la utilización de los medios auxiliares.
@@ -867,7 +907,8 @@ Es un aparato portátil que consiste en dos piezas paralelas o ligeramente conve
 Está previsto que puedan ser utilizadas en obra todo tipo de escaleras de mano existentes, los tipos de escalera más usuales:
 -	Escalera simple de un tramo: escalera portátil no autosoportada y no ajustable en longitud, compuesta de dos largueros.
 -	Escalera doble de tijera: la unión de las secciones se realiza mediante un dispositivo metálico de articulación que permite su plegado.
--	Escalera extensible: es una escalera compuesta de dos simples superpuestas y cuya longitud varía por desplazamientos relativo de un tramo sobre otro. Pueden ser mecánicas (cable) o manuales.
+-	Escalera extensible: es una escalera compuesta de dos simples superpuestas y cuya longitud varía por desplazamientos relativo de un tramo sobre otro. 
+  Pueden ser mecánicas (cable) o manuales.
 -	Escalera transformable: es una extensible de dos o tres tramos (mixta de una doble y extensible).
 -	Escalera mixta con rótula: la unión de las secciones se realiza mediante un dispositivo metálico de articulación que permite su plegado.
 
@@ -880,9 +921,13 @@ Cuando se utilice, se tendrá en cuenta el siguiente esquema:
   -	Maceta o martillo (para la posible sujeción superior e inferior de la escalera).
   -	Identificación de riesgos: Las siguientes medidas preventivas serán comunes a todos los riesgos citados a continuación:
     -	El contratista deberá informar y formar a todos sus trabajadores (tanto propios como subcontratados), sobre el uso adecuado de escaleras de mano.
-    -	Nuestro recurso preventivo deberá comprobar tanto que se está utilizando el medio auxiliar tal y como se menciona en los puntos señalados a continuación, así como que su estado es el correcto. También atenderá a lo dispuesto en los planes de seguridad y de prevención correspondientes. Deberá encargarse de que se rectifique cualquier anomalía que encuentre al respecto.
+    -	Nuestro recurso preventivo deberá comprobar tanto que se está utilizando el medio auxiliar tal y como se menciona en los puntos señalados a continuación, así como que su estado es el correcto. 
+      También atenderá a lo dispuesto en los planes de seguridad y de prevención correspondientes. 
+      Deberá encargarse de que se rectifique cualquier anomalía que encuentre al respecto.
     -	La empresa usuaria del medio auxiliar deberá solicitar al fabricante o suministrador, tal y como indica el artículo 41 de la Ley de Prevención de Riesgos Laborales, la información necesaria para la correcta y segura utilización del mismo, debiendo entregarla a cada uno de los trabajadores que vayan a utilizarlo.
-  -	Caída en altura debido a un deslizamiento lateral de la cabeza de la escalera (apoyo precario, escalera mal situada, viento, desplazamiento lateral del usuario, etc). Es un riesgo evitable. Con el fin de controlarlo se tendrá en cuenta lo siguiente:
+  -	Caída en altura debido a un deslizamiento lateral de la cabeza de la escalera (apoyo precario, escalera mal situada, viento, desplazamiento lateral del usuario, etc). 
+    Es un riesgo evitable. 
+    Con el fin de controlarlo se tendrá en cuenta lo siguiente:
   -	Medidas preventivas: con el fin de evitar el deslizamiento lateral, se sujetará la escalera superiormente, atándola correctamente en su cabeza (por ejemplo, durante la fase de encofrado, con tachas clavadas en el mismo y alambre de atar).
 
 === Caída en altura debidoa  deslizamiento del pie de la escalera
@@ -892,7 +937,8 @@ Es un riesgo evitable.
 Con el fin de controlarlo se tendrá en cuenta lo siguiente:
 
 Medidas preventivas:
--	Todas las escaleras de que se utilicen en la obra deberán disponer de zapatas antideslizamiento. Nuestro recurso preventivo, ordenará/n reparar o retirar todas aquellas escaleras de mano que no dispongan de las citadas zapatas.
+-	Todas las escaleras de que se utilicen en la obra deberán disponer de zapatas antideslizamiento. 
+  Nuestro recurso preventivo, ordenará/n reparar o retirar todas aquellas escaleras de mano que no dispongan de las citadas zapatas.
 -	La inclinación de la escalera deberá ser la correcta tal y como indica el fabricante en la información de seguridad que debe entregar.
 -	Estarán firmemente amarradas en su extremo superior al objeto o estructura al que dan acceso.
 
@@ -951,12 +997,14 @@ Medidas preventivas:
 
 === Atrapamiento entre objetos
 
--	Atrapamiento entre objetos de algún miembro producido al desencajar los herrajes de ensamblaje de las cabezas de una escalera de tijera o transformable o al desplegar una escalera extensible. Es un riesgo evitable.
+-	Atrapamiento entre objetos de algún miembro producido al desencajar los herrajes de ensamblaje de las cabezas de una escalera de tijera o transformable o al desplegar una escalera extensible. 
+  Es un riesgo evitable.
 
 Medidas preventivas:
 
 Las escaleras de tijera deberán tener en su articulación superior unos topes de seguridad de apertura.
--	Atrapamiento entre objetos de algún miembro al producirse la rotura de la cuerda de maniobra en una escalera extensible, cuerda mal atada, tanto en el plegado como en el desplegado. Es un riesgo evitable.
+-	Atrapamiento entre objetos de algún miembro al producirse la rotura de la cuerda de maniobra en una escalera extensible, cuerda mal atada, tanto en el plegado como en el desplegado
+  Es un riesgo evitable.
 
 Medidas preventivas:
 
@@ -976,7 +1024,8 @@ Medidas preventivas:
 -	Las escaleras deberán sobrepasarán en 1 m la altura a salvar.
 -	Se instalarán de tal forma, que su apoyo inferior diste de la proyección vertical del superior, 1/4 de la longitud del larguero entre apoyos.
 -	La base de las escaleras de mano nunca debe apoyarse sobre lugares u objetos poco firmes que pueden mermar su estabilidad.
--	El acceso de operarios, a través de las escaleras de mano, se realizará de uno en uno. En ningún caso podrán acceder a la misma dos o más operarios a la vez.
+-	El acceso de operarios, a través de las escaleras de mano, se realizará de uno en uno. 
+  En ningún caso podrán acceder a la misma dos o más operarios a la vez.
 -	El ascenso y descenso y trabajo debe efectuarse frontalmente, es decir, mirando directamente hacia los peldaños que se están utilizando.
 
 === Caída en altura debido a estar realizando un trabajo sobre la escalera
@@ -984,7 +1033,8 @@ Medidas preventivas:
 En principio no debe utilizarse una escalera manual para trabajar, pero en caso de ser necesario y siempre que no sea posible utilizar una plataforma de trabajo se deberán adoptar las protecciones y medidas preventivas que siguen a continuación:
 
 Protecciones individuales:
--	En caso de que los pies del operario se encuentres a más de 2 m del suelo, debe utilizarse un cinturón de seguridad anclado a un punto sólido y resistente. Nuestro recurso preventivo deberá comprobar su eficacia, paralizando los trabajos ante cualquier anomalía y poniéndola en conocimiento del contratista, el servicio de prevención y el coordinador de seguridad para que puedan dar una solución.
+-	En caso de que los pies del operario se encuentres a más de 2 m del suelo, debe utilizarse un cinturón de seguridad anclado a un punto sólido y resistente
+  Nuestro recurso preventivo deberá comprobar su eficacia, paralizando los trabajos ante cualquier anomalía y poniéndola en conocimiento del contratista, el servicio de prevención y el coordinador de seguridad para que puedan dar una solución.
 -	Para trabajos de cierta duración deben utilizarse dispositivos que favorezcan la estabilidad y comodidad tales como reposapies que se acoplan a la escalera.
 
 Medidas preventivas:
@@ -994,8 +1044,11 @@ Medidas preventivas:
 === Electrocución
 
 Medidas preventivas:
--	En ningún caso se trabajará o transportará una escalera a una distancia de menos de 5 ml, tanto en horizontal como en vertical, de una línea de alta o media tensión. Debe ponerse especial cuidado con el transporte de escaleras en las cercanías de líneas eléctricas, debiendo respetar siempre las distancias de separación mínima. No obstante, en esta obra, no se observa ninguna línea ni se tiene constancia de su existencia.
--	Las escaleras deben utilizarse para trabajar de la forma que han sido concebidas, por lo que nunca podrán utilizarse en posición horizontal para servir de puentes, pasarelas o plataformas. Además, tampoco deben utilizarse para servir de soportes a un andamiaje.
+-	En ningún caso se trabajará o transportará una escalera a una distancia de menos de 5 ml, tanto en horizontal como en vertical, de una línea de alta o media tensión. 
+  Debe ponerse especial cuidado con el transporte de escaleras en las cercanías de líneas eléctricas, debiendo respetar siempre las distancias de separación mínima. 
+  No obstante, en esta obra, no se observa ninguna línea ni se tiene constancia de su existencia.
+-	Las escaleras deben utilizarse para trabajar de la forma que han sido concebidas, por lo que nunca podrán utilizarse en posición horizontal para servir de puentes, pasarelas o plataformas. 
+  Además, tampoco deben utilizarse para servir de soportes a un andamiaje.
 
 === Caídas de objetos sobre personas
 
@@ -1008,7 +1061,8 @@ Medidas preventivas:
 Medidas preventivas:
 -	Las escaleras extensibles y de tijera se llevarán plegadas, sin arrastrar los dispositivos de unión de estas últimas por el suelo.
 -	En el transporte manual, la parte delantera de las escaleras se llevará hacia abajo, sin hacerla pivotar ni transportarla sobre la espalda.
--	Si se transportan en vehículos se fijarán de forma sólida evitando que sobresalga lateralmente. La escalera no deberá sobresalir ni por la parte anterior ni posterior más de un tercio de su longitud total, señalizándose en este último caso con un trozo de tela color vivo o con una luz roja si se transportan de noche o en condiciones de escasa visibilidad.
+-	Si se transportan en vehículos se fijarán de forma sólida evitando que sobresalga lateralmente. 
+  La escalera no deberá sobresalir ni por la parte anterior ni posterior más de un tercio de su longitud total, señalizándose en este último caso con un trozo de tela color vivo o con una luz roja si se transportan de noche o en condiciones de escasa visibilidad.
 
 === Comprobaciones a realizar antes de la utilización de las escaleras
 
@@ -1020,7 +1074,7 @@ Nuestro recurso preventivo deberá inspeccionar el estado de los siguientes elem
 Ante cualquier anomalía de los descritos u otros, se deberá retirar de circulación la escalera, informando de ello, nuestro recurso preventivo, a la totalidad de los usuarios de la misma. 
 Esta deberá ser reparada por personal especializado o retirada definitivamente.
 
-== Idenrificación de riesgos y medidas preventivas a adoptar con la diferente maquinaria y herramienta a utilizar en la obra
+== Identificación de riesgos y medidas preventivas a adoptar con la diferente maquinaria y herramienta a utilizar en la obra
 
 En este apartado, se cita una relación de la maquinaria y herramienta que previsiblemente se utilizará en la ejecución del proyecto, así como de unos procedimientos de trabajo seguro necesarios para su utilización.
 
@@ -1040,7 +1094,8 @@ Se llevará un registro de las máquinas y herramientas al día, realizándose u
 
 Para la definición de cada maquinaria o herramienta, se ha adoptado la forma indicada a continuación:
 -	Descripción de la maquinaria o herramienta: se describe la maquinaria o herramienta tipo a utilizar, teniendo en cuenta que cada contratista deberá definirla más concretamente en su plan de seguridad.
--	Identificación de riesgos: se aporta una relación de los riesgos propios de la utilización de la maquinaria y herramienta. Dentro de este epígrafe se define, para cada riesgo, lo siguiente
+-	Identificación de riesgos: se aporta una relación de los riesgos propios de la utilización de la maquinaria y herramienta. 
+  Dentro de este epígrafe se define, para cada riesgo, lo siguiente
 -	Protecciones colectivas: en caso de utilizar unas protecciones colectivas particulares para la realización de los trabajos que no estén indicadas en el apartado de “Protecciones colectivas a utilizar durante el proceso constructivo” del presente Plan de seguridad, se indican en este punto, en caso contrario no mencionan.
 -	Protecciones individuales: se indica qué protecciones individuales particulares será necesario emplear para la correcta utilización del medio auxiliar.
 -	Medidas preventivas: se citan las normas preventivas necesarias para la utilización de la maquinaria y herramienta.
@@ -1064,7 +1119,8 @@ En general en este tipo de herramienta serán los siguientes:
 -	Contactos eléctricos directos o indirectos.
 
 Protecciones individuales:
--	Gafas de seguridad integrales que protejan contra impactos de alta energía, incluso si provienen de ángulos laterales. Es conveniente que tengan tratamiento antivaho.
+-	Gafas de seguridad integrales que protejan contra impactos de alta energía, incluso si provienen de ángulos laterales. 
+  Es conveniente que tengan tratamiento antivaho.
 -	Guantes anticorte si la manipulación del material a trabajar puede dar lugar a cortes.
 -	Mandil de cuero cuando sea necesario adoptar posturas peligrosas, para minimizar el riesgo de un contacto fortuito del disco con el cuerpo.
 -	Mascarilla auto filtrante contra partículas.
@@ -1134,42 +1190,67 @@ Protecciones individuales:
 Medidas preventivas:
 -	Se prohíbe superar la capacidad de carga del gancho instalado.
 -	No se superará la capacidad de carga de la grúa instalada sobre el camión.
--	Las maniobras sin visibilidad, así como dar marcha atrás, serán dirigidas por un señalista. Las operaciones de guía de carga se realizarán mediante cuerdas de guía segura de cargas. Se mantendrá la máquina alejada de terrenos inseguros, propensos a hundimientos.
--	Se evitará pasar el brazo de la grúa (con carga o sin ella) sobre el personal. Suba y baje del camión grúa por los lugares previstos para ello.
+-	Las maniobras sin visibilidad, así como dar marcha atrás, serán dirigidas por un señalista. 
+  Las operaciones de guía de carga se realizarán mediante cuerdas de guía segura de cargas. 
+  Se mantendrá la máquina alejada de terrenos inseguros, propensos a hundimientos.
+-	Se evitará pasar el brazo de la grúa (con carga o sin ella) sobre el personal. 
+  Suba y baje del camión grúa por los lugares previstos para ello.
 -	Antes de cruzar un puente de obra, cerciórese de que tiene la resistencia necesaria para soportar el peso de la máquina.
 -	Antes de iniciar ningún desplazamiento, asegure la inmovilidad del brazo de la grúa poniéndolo en la posición de viaje.
 -	No se permitirá que nadie se encarame sobre la carga ni que se cuelgue del gancho, ni que el resto de personal acceda a la cabina o maneje los mandos.
 -	No se realizarán arrastres de carga o tirones sesgados.
--	Se mantendrá la carga siempre a la vista. Si debe mirar hacia otro lado, pare las maniobras.
--	Levante una sola carga de una vez. La carga de varios objetos distintos puede resultar complicada y peligrosa.
+-	Se mantendrá la carga siempre a la vista. 
+  Si debe mirar hacia otro lado, pare las maniobras.
+-	Levante una sola carga de una vez. 
+  La carga de varios objetos distintos puede resultar complicada y peligrosa.
 -	Antes de levantar cargas, asegúrese de que la máquina está estabilizada mediante los gatos totalmente extendidos.
--	Se prohíbe abandonar la máquina con una carga suspendida, no es seguro. No se permitirá que haya operarios bajo las cargas suspendidas.
+-	Se prohíbe abandonar la máquina con una carga suspendida, no es seguro. 
+  No se permitirá que haya operarios bajo las cargas suspendidas.
 -	Asegúrese de que todos los ganchos de los aparejos, eslingas o estrobos poseen el pestillo de seguridad.
 -	Siempre utilizará las prendas de protección que se indiquen en la obra.
 
 Normas de seguridad para los operadores del camión grúa:
--	Mantenga la máquina alejada de terrenos inseguros, propensos a hundimientos. Pueden volcar y sufrir lesiones.
+-	Mantenga la máquina alejada de terrenos inseguros, propensos a hundimientos. 
+  Pueden volcar y sufrir lesiones.
 -	Evite pasar el brazo de la grúa, con carga o sin ella sobre el personal.
--	No dé marcha atrás sin la ayuda de un señalista. Tras la máquina puede haber operarios y objetos que usted desconoce al iniciar la maniobra.
--	Suba y baje del camión grúa por los lugares previstos para ello. Evitará las caídas.
+-	No dé marcha atrás sin la ayuda de un señalista. 
+  Tras la máquina puede haber operarios y objetos que usted desconoce al iniciar la maniobra.
+-	Suba y baje del camión grúa por los lugares previstos para ello. 
+  Evitará las caídas.
 -	No salte nunca directamente al suelo desde la máquina si no es por un inminente riesgo para su integridad física.
--	Si entra en contacto con una línea eléctrica, pida auxilio con la bocina y espere recibir instrucciones. No intente abandonar la cabina aunque el contacto con la energía eléctrica haya cesado, podría sufrir lesiones. Sobre todo, no permita que nadie toque el camión grúa, puede estar cargado de electricidad.
--	No haga por sí mismo maniobras en espacios angostos. Pida ayuda de un señalista y evitará accidentes.
+-	Si entra en contacto con una línea eléctrica, pida auxilio con la bocina y espere recibir instrucciones. 
+  No intente abandonar la cabina aunque el contacto con la energía eléctrica haya cesado, podría sufrir lesiones. 
+  Sobre todo, no permita que nadie toque el camión grúa, puede estar cargado de electricidad.
+-	No haga por sí mismo maniobras en espacios angostos. 
+  Pida ayuda de un señalista y evitará accidentes.
 -	Antes de cruzar un “puente provisional de obra”, cerciórese de que tiene la resistencia necesaria para soportar el peso de la máquina. Si lo hunde, usted y la máquina se accidentarán.
--	Asegure la inmovilidad del brazo de la grúa antes de iniciar ningún desplazamiento. Póngalo en la posición de viaje y evitará accidentes por movimientos descontrolados.
--	No permita que nadie se encarame sobre la carga. No consienta que nadie se cuelgue del gancho. Es muy peligroso.
--	Limpie sus zapatos del barro o grava que pudiera tener antes de subir a la cabina. Si resbalan los pedales durante una maniobra o durante la marcha, puede provocar accidentes.
--	No realice nunca arrastres de carga o tirones sesgados. La grúa puede volcar y en el mejor de los casos, las presiones y esfuerzos realizados pueden dañar los sistemas hidráulicos del brazo.
--	Mantenga a la vista la carga. Si debe mirar hacia otro lado, pare las maniobras. Evitará accidentes.
--	Levante una sola carga cada vez. La carga de varios objetos distintos puede resultar problemática y difícil de gobernar.
--	Asegúrese de que la máquina está estabilizada antes de levantar cargas. Ponga en servicio los gatos estabilizadores totalmente extendidos, es la posición más segura.
+-	Asegure la inmovilidad del brazo de la grúa antes de iniciar ningún desplazamiento. 
+  Póngalo en la posición de viaje y evitará accidentes por movimientos descontrolados.
+-	No permita que nadie se encarame sobre la carga. 
+  No consienta que nadie se cuelgue del gancho. 
+  Es muy peligroso.
+-	Limpie sus zapatos del barro o grava que pudiera tener antes de subir a la cabina. 
+  Si resbalan los pedales durante una maniobra o durante la marcha, puede provocar accidentes.
+-	No realice nunca arrastres de carga o tirones sesgados. 
+  La grúa puede volcar y en el mejor de los casos, las presiones y esfuerzos realizados pueden dañar los sistemas hidráulicos del brazo.
+-	Mantenga a la vista la carga. 
+  Si debe mirar hacia otro lado, pare las maniobras. 
+  Evitará accidentes.
+-	Levante una sola carga cada vez. 
+  La carga de varios objetos distintos puede resultar problemática y difícil de gobernar.
+-	Asegúrese de que la máquina está estabilizada antes de levantar cargas. 
+  Ponga en servicio los gatos estabilizadores totalmente extendidos, es la posición más segura.
 -	No abandone la máquina con una carga suspendida, no es seguro.
--	No permita que haya operarios bajo las cargas suspendidas. Pueden sufrir accidentes.
--	Antes de izar una carga, compruebe en la tabla de cargas de la cabina la distancia de extensión máxima del brazo. No sobrepase el límite marcado en ella, puede volcar.
+-	No permita que haya operarios bajo las cargas suspendidas. 
+  Pueden sufrir accidentes.
+-	Antes de izar una carga, compruebe en la tabla de cargas de la cabina la distancia de extensión máxima del brazo. 
+  No sobrepase el límite marcado en ella, puede volcar.
 -	Respeta siempre las tablas, rótulos y señales adheridas a la máquina y haga que las respeten el resto del personal.
 -	Evite el contacto con el brazo telescópico en servicio, puede sufrir atrapamientos.
--	Antes de poner en servicio la máquina, compruebe todos los dispositivos de frenado. Evitará accidentes.
--	No permita que el resto del personal acceda a la cabina o maneje los mandos. Pueden provocar accidentes.
+-	Antes de poner en servicio la máquina, compruebe todos los dispositivos de frenado. 
+  Evitará accidentes.
+-	No permita que el resto del personal acceda a la cabina o maneje los mandos. 
+  Pueden provocar accidentes.
 -	No consienta que se utilicen aparejos, balancines, eslingas o estrobos defectuosos o dañados.
 -	Asegúrese de que todos los ganchos de los aparejos, balancines, eslingas o estrobos posean pestillo de seguridad que evite el desenganche fortuito.
 -	Utilice siempre las prendas de protección que se le indiquen en la obra.
@@ -1190,7 +1271,8 @@ Riesgos detectables más comunes:
 -	Condiciones climáticas.
 -	Exposición a ruidos.
 -	Vibraciones del vehículo.
--	Polución de la atmósfera. Incendios y explosiones.
+-	Polución de la atmósfera. 
+  Incendios y explosiones.
 -	Naturaleza del producto transportado.
 
 Prendas de protección personal recomendables:
@@ -1202,19 +1284,28 @@ Prendas de protección personal recomendables:
 
 Normas preventivas y protecciones colectivas:
 -	Las carretillas automotoras elevadoras utilizadas dispondrán de marcado CE.
--	Antes de iniciar la jornada, el conductor debe realizar una inspección de la carretilla  que contemple las ruedas, la fijación y estado de los brazos de la horquilla, la inexistencia de fugas en el circuito hidráulico, niveles de aceite, mandos en servicio, protectores y dispositivos de seguridad, frenos de pie y de mano, etc. En caso de avería o deficiencia, la carretilla quedará fuera de uso, advirtiéndolo mediante una adecuada señalización.
+-	Antes de iniciar la jornada, el conductor debe realizar una inspección de la carretilla  que contemple las ruedas, la fijación y estado de los brazos de la horquilla, la inexistencia de fugas en el circuito hidráulico, niveles de aceite, mandos en servicio, protectores y dispositivos de seguridad, frenos de pie y de mano, etc. 
+  En caso de avería o deficiencia, la carretilla quedará fuera de uso, advirtiéndolo mediante una adecuada señalización.
 -	El conductor de la carretilla será una persona autorizada para ello, y no se permitirá que ninguna otra persona suba, expresamente durante el trabajo.
--	El conductor mirará siempre en la dirección de avance y mantendrá la vista en el camino que recorre. Se prohíbe circular por encima de 20 km/h en espacios exteriores y 10 km/h en espacios interiores. Además, se disminuirá la velocidad en cruces y lugares con poca visibilidad.
+-	El conductor mirará siempre en la dirección de avance y mantendrá la vista en el camino que recorre. 
+  Se prohíbe circular por encima de 20 km/h en espacios exteriores y 10 km/h en espacios interiores. 
+  Además, se disminuirá la velocidad en cruces y lugares con poca visibilidad.
 -	Se circulará por el lado de los pasillos de circulación previstos a tal efecto,  manteniendo una distancia prudencial con otros vehículos que le precedan y evitando los adelantamientos.
 -	Se deberán respetar las normas del código de circulación, especialmente en áreas en las que pueden encontrarse con otros vehículos.
 -	Hay que evitar las paradas y arranques bruscos y virajes rápidos.
 -	Transportar únicamente cargas preparadas correctamente y asegurarse que no chocará con techos, conductos, etc.
--	Antes de abandonar la carretilla, el conductor se asegurará de que las palancas están en punto muerto, motor parado, frenos echados, llave de contacto sacada o la toma de batería retirada. Si la carretilla está en pendiente, se calzarán las ruedas.
--	No sobrecargar nunca la carretilla elevadora, respetando escrupulosamente el diagrama de cargas del vehículo. Igualmente actuar con relación a la sobrecarga por una excesiva distancia entre el centro de gravedad de la carga y el mástil.
--	Está rigurosamente prohibido maniobrar la carretilla desde el exterior. Cualquier operación (desplazamiento, elevación, et.) se realizará desde la cabina del operador.
+-	Antes de abandonar la carretilla, el conductor se asegurará de que las palancas están en punto muerto, motor parado, frenos echados, llave de contacto sacada o la toma de batería retirada. 
+  Si la carretilla está en pendiente, se calzarán las ruedas.
+-	No sobrecargar nunca la carretilla elevadora, respetando escrupulosamente el diagrama de cargas del vehículo. 
+  Igualmente actuar con relación a la sobrecarga por una excesiva distancia entre el centro de gravedad de la carga y el mástil.
+-	Está rigurosamente prohibido maniobrar la carretilla desde el exterior. 
+  Cualquier operación (desplazamiento, elevación, et.) se realizará desde la cabina del operador.
 -	Las cargas a transportar / elevar con las horquillas estarán paletizadas, empaquetadas en cajas o flejadas según los casos.
--	Está prohibido circular con cargas levantadas. Durante los desplazamientos, la carga estará baja (15 cm del suelo), con el mástil completamente inclinado hacia la cabina.
--	Está prohibido el izado de cargas mientras se desplaza el vehículo. El proceso correcto es: acercar el vehículo al punto de carga/descarga, parar el vehículo, elevar la carga, depositar la carga. El operador siempre debe mirar en el sentido de la marcha del vehículo, incluso en las operaciones de carga y descarga
+-	Está prohibido circular con cargas levantadas. 
+  Durante los desplazamientos, la carga estará baja (15 cm del suelo), con el mástil completamente inclinado hacia la cabina.
+-	Está prohibido el izado de cargas mientras se desplaza el vehículo. 
+  El proceso correcto es: acercar el vehículo al punto de carga/descarga, parar el vehículo, elevar la carga, depositar la carga. 
+  El operador siempre debe mirar en el sentido de la marcha del vehículo, incluso en las operaciones de carga y descarga.
 -	Está prohibido el desplazamiento y estancia de trabajadores en el entorno de una carretilla con cargas elevadas.
 
 Normas de actuación preventiva para los maquinistas:
@@ -1223,7 +1314,8 @@ Durante la manipulación de cargas:
 -	Se constituirán correctamente las cargas, paletas, o los elementos bien solidarizados con flejado o recubrimiento en vacío.
 -	La manipulación de cargas se efectuará guardando siempre la relación dada por el fabricante entre la carga máxima y la altura a la que se ha de transportar y descargar.
 -	Se recogerá la carga y se elevará 15 cm sobre el suelo, circulando con el mástil inclinado al máximo hacia atrás.
--	Para elevar la carga, se mantendrá la carretilla frenada. Para alturas superiores a 4 metros se programarán las alturas de descarga y carga con un sistema automático que compense la limitación visual.
+-	Para elevar la carga, se mantendrá la carretilla frenada. 
+  Para alturas superiores a 4 metros se programarán las alturas de descarga y carga con un sistema automático que compense la limitación visual.
 -	Para descargar, se situará la carretilla hasta que la carga se encuentre sobre el lugar de descarga, se situarán las horquillas en posición horizontal y se depositará la carga.
 -	La circulación sin carga se hará con las horquillas bajas.
 -	El ascenso de rampas se hará siempre marcha adelante, pero para el descenso, si la pendiente es superior a la inclinación máxima de la horquilla, se realizará marcha atrás.
@@ -1288,7 +1380,8 @@ Al arrancar la plataforma:
 -	El cuadro de control del chasis sólo se debe utilizar en las operaciones de puesta en marcha y parada, en las pruebas de funcionamiento y en casos de emergencia y nunca durante las operaciones rutinarias con la plataforma.
 -	La plataforma deberá estar situada siempre en la posición más baja posible, tanto para acceder como para descender de la máquina.
 -	No subir o bajar de la plataforma cuando esté elevada trepando por la estructura extensible o empleando escaleras, tablones o cualquier otro sistema de acceso.
--	Subir y bajar de la plataforma de forma frontal, empleando los peldaños y asideros dispuestos en la máquina. No saltar de la máquina, salvo en casos excepcionales de emergencia.
+-	Subir y bajar de la plataforma de forma frontal, empleando los peldaños y asideros dispuestos en la máquina. 
+  No saltar de la máquina, salvo en casos excepcionales de emergencia.
 -	Deben llevarse y mantenerse las manos secas y las suelas del calzado limpias de barro y/o grasa.
 -	Cerrar la puerta o colocar la barra de protección después de acceder a la plataforma.
 
@@ -1319,15 +1412,22 @@ Medidas preventivas y protecciones colectivas:
 -	Se evitarán dobleces y cantos vivos que puedan deteriorarlos o cortarlos.
 -	Cada uno de los elementos auxiliares que se utilicen en las maniobras (eslingas, ganchos, grilletes, etc.) tendrán capacidad de carga suficiente para soportar, sin deformarse, las solicitaciones a las que estarán sometidos.
 -	Eslingas y cuerdas se almacenarán a cubierto, en lugar seco, bien ventilado y nunca tiradas por el suelo, evitando que entre arena entre los cordones.
--	Se evitará su uso en la proximidad de fuentes de calor importantes. Siempre que sea posible se emplearán eslingas para el izado de cargas.
--	El ángulo formado entre eslingas será de 90º como máximo, siendo recomendable un ángulo de 45º. Para conseguir dicho ángulo se emplearán, si es preciso, eslingas de diferentes medidas.
+-	Se evitará su uso en la proximidad de fuentes de calor importantes. 
+  Siempre que sea posible se emplearán eslingas para el izado de cargas.
+-	El ángulo formado entre eslingas será de 90º como máximo, siendo recomendable un ángulo de 45º. 
+  Para conseguir dicho ángulo se emplearán, si es preciso, eslingas de diferentes medidas.
 -	Se desecharán aquellos cables cuyos hilos rotos, contados a lo largo de un tramo de cable de longitud inferior a ocho veces su diámetro, superen el 10% del total de los mismos.
 -	Para garantizar su mantenimiento se utilizará el tipo de grasa recomendado por el fabricante.
 -	La sección del elemento de la eslinga de izado ha de soportar la carga de rotura: carga de elevación x coeficiente de seguridad.
--	El factor de seguridad contra rotura de los cables será igual o mayor a 6 y de 10 en el caso de cuerdas. Los cables estarán siempre libres de nudos y en ningún caso llevarán ningún empalme.
--	Si se emplean cadenas serán de hierro forjado o acero, con un factor de seguridad contra rotura igual o mayor a 5. Se mantendrán libres de nudos y torceduras, retirándose aquellas que presenten algún eslabón torcido, alargado, aplastado o abierto.
--	Las fibras de las cuerdas fundidas y ennegrecidas / oscurecidas suelen ser indicativas de daño por quemadura, al igual que las salpicaduras de adhesivo en caliente. El ataque químico suele detectarse por la presencia de manchas o por el debilitamiento y ablandamiento de la tela, de manera que las fibras superficiales pueden ser extraídas o eliminadas al frotarlas. Los ganchos estarán homologados, quedando prohibida la utilización como gancho de alambre o hierro doblados en forma de S.
--	Los ganchos dispondrán de pestillo o cierre de seguridad, el cual deberá cerrarse siempre. La garganta tendrá la amplitud suficiente como para permitir el cierre de dicho pestillo, una vez alojada en su interior las eslingas correspondientes.
+-	El factor de seguridad contra rotura de los cables será igual o mayor a 6 y de 10 en el caso de cuerdas. 
+  Los cables estarán siempre libres de nudos y en ningún caso llevarán ningún empalme.
+-	Si se emplean cadenas serán de hierro forjado o acero, con un factor de seguridad contra rotura igual o mayor a 5. 
+  Se mantendrán libres de nudos y torceduras, retirándose aquellas que presenten algún eslabón torcido, alargado, aplastado o abierto.
+-	Las fibras de las cuerdas fundidas y ennegrecidas / oscurecidas suelen ser indicativas de daño por quemadura, al igual que las salpicaduras de adhesivo en caliente. 
+  El ataque químico suele detectarse por la presencia de manchas o por el debilitamiento y ablandamiento de la tela, de manera que las fibras superficiales pueden ser extraídas o eliminadas al frotarlas. 
+    Los ganchos estarán homologados, quedando prohibida la utilización como gancho de alambre o hierro doblados en forma de S.
+-	Los ganchos dispondrán de pestillo o cierre de seguridad, el cual deberá cerrarse siempre. 
+  La garganta tendrá la amplitud suficiente como para permitir el cierre de dicho pestillo, una vez alojada en su interior las eslingas correspondientes.
 -	Los ganchos abiertos o doblados serán inmediatamente substituidos.
 -	El esfuerzo será soportado siempre por la garganta del gancho, nunca por el pico.
 -	En los trabajos de izado de cargas el personal que los ejecute dispondrá permanentemente de cinturón de seguridad anclado a elemento seguro y estable distinto de cualquier elemento de la maquinaria de elevación.
@@ -1343,21 +1443,26 @@ No obstante, siempre deberán tenerse en cuenta las recomendaciones de seguridad
 === Espuma de poliuretano
 
 Riesgos químicos:
--	La espuma de poliuretano es un material muy agresivo, que puede producir serios daños en contacto con la piel. Para evitar dicho riesgo, los operarios que trabajen con él o sus derivados deberán estar provistos en todo momento de guantes de goma largos, mono de trabajo, protectores oculares (gafas antiproyecciones) y mascarilla con filtro adecuado, que les protejan del citado contacto.
+-	La espuma de poliuretano es un material muy agresivo, que puede producir serios daños en contacto con la piel. 
+  Para evitar dicho riesgo, los operarios que trabajen con él o sus derivados deberán estar provistos en todo momento de guantes de goma largos, mono de trabajo, protectores oculares (gafas antiproyecciones) y mascarilla con filtro adecuado, que les protejan del citado contacto.
 -	Como medida preventiva a tener en cuenta, los operarios no deberán comer ni beber durante la manipulación del producto en estado puro, debiendo llevar una buena higiene personal.
--	Para evitar daños en operarios que estén realizando otros trabajos, se acotará una zona de seguridad, siendo obligación de nuestro recurso preventivo vigilar que nadie se la salte. Además, se colocará un cartel señalizador que informe a todos los trabajadores del peligro existente.
+-	Para evitar daños en operarios que estén realizando otros trabajos, se acotará una zona de seguridad, siendo obligación de nuestro recurso preventivo vigilar que nadie se la salte. 
+  Además, se colocará un cartel señalizador que informe a todos los trabajadores del peligro existente.
 
 Riesgos físicos:
 -	Dado que para su aplicación (bien sea en forma de mortero, bien sea en forma de hormigón) es fácil (riesgo no evitable) que salte alguna gota o esquirla directamente a los ojos, deberá tenerse en cuenta y protegerse con algún tipo de protector ocular (por ejemplo, gafas).
 
 Otros riesgos:
--	La espuma de poliuretano es un material muy inflamable, por lo que está totalmente prohibido fumar o encender cualquier fuego tanto durante su aplicación como en las cercanías del material aplicado o acopiado. Nuestro recurso preventivo, deberán vigilar que esto se está realizando de esta forma, advirtiendo a todo aquel operario que desobedezca las normas. Además, deberá colocarse un cartel señalizador que informe a todos los trabajadores del peligro existente tanto en almacenes como en lugar de trabajo.
+-	La espuma de poliuretano es un material muy inflamable, por lo que está totalmente prohibido fumar o encender cualquier fuego tanto durante su aplicación como en las cercanías del material aplicado o acopiado. 
+  Nuestro recurso preventivo, deberán vigilar que esto se está realizando de esta forma, advirtiendo a todo aquel operario que desobedezca las normas. 
+  Además, deberá colocarse un cartel señalizador que informe a todos los trabajadores del peligro existente tanto en almacenes como en lugar de trabajo.
 -	Dado que puede producirse un incendio aún habiendo tomado las medidas necesarias, para que no ocurra (un accidente), deberá existir un extintor portátil en el lugar de trabajo, debiendo tener los operarios encargados de la manipulación del producto formación suficiente sobre el uso correcto de los medios de extinción de incendios disponibles.
 
 == Plan de emergencias de la obra
 === Medidas preventivas y de seguridad para accidentes
 
--	Se nombrará a personas encargadas de llamar a los servicios de emergencia en caso de emergencias. Dispondrán de toda la información de teléfonos, personas de contacto.
+-	Se nombrará a personas encargadas de llamar a los servicios de emergencia en caso de emergencias. 
+  Dispondrán de toda la información de teléfonos, personas de contacto.
 
 === Actiación en caso de incendio
 
@@ -1374,24 +1479,31 @@ Otros riesgos:
   -	Qué asistencia están recibiendo.
 -	Evacuación del lugar del accidente.
 -	En todas las áreas de trabajo o en los vehículos del Jefe de Obra y Encargados según el caso deberán existir botiquines.
--	Si el accidente no es grave se deberá acudir al centro asistencial que cada empresa tenga con su Mutua de Accidentes de Trabajo. Ver hoja de teléfonos de emergencia.
--	La obra dispone de vehículos, de tal manera que cualquier trabajador que se encuentre en la obra siempre tiene a su disposición uno de ellos. Estos vehículos serán los utilizados para el traslado de los heridos leves hasta el centro asistencial correspondiente y para recibir a los servicios médicos en el punto S.O.S. correspondiente.
+-	Si el accidente no es grave se deberá acudir al centro asistencial que cada empresa tenga con su Mutua de Accidentes de Trabajo. 
+  Ver hoja de teléfonos de emergencia.
+-	La obra dispone de vehículos, de tal manera que cualquier trabajador que se encuentre en la obra siempre tiene a su disposición uno de ellos. 
+  Estos vehículos serán los utilizados para el traslado de los heridos leves hasta el centro asistencial correspondiente y para recibir a los servicios médicos en el punto S.O.S. correspondiente.
 
 === Plan de actuación en caso de evacuación
 
 Procedimiento de evacuación:
 -	Decisión y preparativos previos:
-  -	Declarada una situación de emergencia, el Jefe de Emergencia asumirá la responsabilidad de ordenar evacuar total o parcialmente de la zona de obras. En cualquier caso, se determinará el alcance de la evacuación, la urgencia (con tiempo o sin tiempo) y establecimiento de servicios mínimos, si se precisan. Avisar a los Servicios de Ayuda más próximos si la emergencia puede afectarles.
+  -	Declarada una situación de emergencia, el Jefe de Emergencia asumirá la responsabilidad de ordenar evacuar total o parcialmente de la zona de obras. 
+    En cualquier caso, se determinará el alcance de la evacuación, la urgencia (con tiempo o sin tiempo) y establecimiento de servicios mínimos, si se precisan. 
+    Avisar a los Servicios de Ayuda más próximos si la emergencia puede afectarles.
 -	Evacuación del a zona de trabajo:
-  -	Todas las personas afectadas reaccionarán a la orden de evacuación. Realizarán un barrido del área comprobando que no quedan rezagados en la obra.
+  -	Todas las personas afectadas reaccionarán a la orden de evacuación. 
+    Realizarán un barrido del área comprobando que no quedan rezagados en la obra.
 -	Punto de reunión:
   -	Zona fuera de las instalaciones donde se dirigirá el personal una vez evacuado.
 -	Llegada de los servicios de ayuda exterior:
-  -	El Jefe de Emergencia les informará de la situación; asumiendo éstos el mando y actuaciones necesarias para el control de la emergencia. El personal desalojado permanecerá a disposición de los Servicios de Ayuda Externa (especialmente el Jefe de Emergencia o encargado), colaborando con estos si su ayuda es requerida.
+  -	El Jefe de Emergencia les informará de la situación; asumiendo éstos el mando y actuaciones necesarias para el control de la emergencia. 
+    El personal desalojado permanecerá a disposición de los Servicios de Ayuda Externa (especialmente el Jefe de Emergencia o encargado), colaborando con estos si su ayuda es requerida.
 -	Finalizada la Emergencia:
   -	Previo informe favorable de los Servicios de ayuda exterior, el Jefe de emergencia ordenará restablecer el orden cuando se comunique la situación de “todo seguro” y adoptará las medidas necesarias para evitar su repetición.
   -	Una vez finalizada la situación de emergencia será el Encargado el que se ocupará de retirar los extintores usados para recarga inmediata, aunque sólo hayan sido vaciados parcialmente.
-  - En caso de incendio, la obra será evacuada por el área más alejada del mismo. El recorrido de evacuación hacia el Centro de salud más cercano.
+  - En caso de incendio, la obra será evacuada por el área más alejada del mismo. 
+    El recorrido de evacuación hacia el Centro de salud más cercano.
 
 === Implantación del plan
 
@@ -1405,8 +1517,10 @@ Procedimiento de evacuación:
 
 === Normas a seguir ante un accidentado por electricidad
 
--	Antes de iniciar cualquier maniobra, comprobar que no está en contacto con un conductor en tensión. En caso contrario se producirá una operación posiblemente peligrosa y delicada. El desprendimiento de la víctima, teniendo en cuenta que la humedad hace esta operación más peligrosa.
--	Se cortará inmediatamente la corriente si el aparato de corte se encuentra en las cercanías del accidentado. En el caso que no se pueda efectuar el corte de corriente, la persona que efectúe el desprendimiento, deberá:
+-	Antes de iniciar cualquier maniobra, comprobar que no está en contacto con un conductor en tensión. 
+  En caso contrario se producirá una operación posiblemente peligrosa y delicada. El desprendimiento de la víctima, teniendo en cuenta que la humedad hace esta operación más peligrosa.
+-	Se cortará inmediatamente la corriente si el aparato de corte se encuentra en las cercanías del accidentado. 
+  En el caso que no se pueda efectuar el corte de corriente, la persona que efectúe el desprendimiento, deberá:
   -	Aislarse a la vez de la Tensión y la Tierra.
   -	Protegerse con guantes, utilizando pértigas y ganchos y banquetas aislantes, apropiadas a la Tensión de que se trate.
   -	Separar inmediatamente al accidentado del conductor teniendo la precaución de no entrar en contacto directo o por intermedio de un objeto metálico con un conductor en tensión.
@@ -1414,7 +1528,8 @@ Procedimiento de evacuación:
 -	Si después de haber efectuado una docena de insuflacciones por el método boca a boca, se observase indicios de parada circulatoria (palidez, ausencia de pulso en el cuello y muñeca, dilatación de las pupilas), se procederá a practicar simultáneamente el masaje cardiaco externo.
 -	No se perderá en mover al accidentado, salvo si es para retirarlo de una atmósfera viciada.
 -	Si en el momento de ocurrir el accidente hubiera varias personas presentes, una de ellas avisará al Médico, pero en ningún caso se moverá a la víctima ni se dejará de practicar la reanimación.
--	Una vez que la víctima esté reanimada se permanecerá a su lado, en el caso que la respiración natural cediese. Es preciso tener en cuenta que esté tipo de accidentes, al recobrar el conocimiento, a veces presentan movimientos convulsivos.
+-	Una vez que la víctima esté reanimada se permanecerá a su lado, en el caso que la respiración natural cediese. 
+  Es preciso tener en cuenta que esté tipo de accidentes, al recobrar el conocimiento, a veces presentan movimientos convulsivos.
 -	Todo electrocutado, por pequeño que haya sido el período de la pérdida de conocimiento, será reconocido necesariamente por un Médico.
 
 === Accidente laboral
@@ -1447,8 +1562,14 @@ Se deberá prever en obra un número suficiente de dispositivos apropiados de lu
 Medidas de prevención y extinción:
 
 Además de observar las disposiciones anteriores, se adoptarán las prevenciones que se indican a continuación, combinando su empleo, en su caso, con la protección general más próxima que puedan prestar los servicios públicos contra incendios.
--	Extintores portátiles: En la proximidad de los puestos de trabajo con mayor riesgo de incendio y colocados en sitio visible y de fácil acceso, se dispondrán extintores portátiles o móviles sobre ruedas, de espuma física o química, mezcla de ambas o polvos secos, anhídrido carbónico o agua, según convenga a la posible causa determinante del fuego a extinguir. En concreto será necesario colocar un extintor junto a los inversores y otro dentro de los vestuarios. Cuando se empleen distintos tipos de extintores, serán rotulados con carteles indicadores del lugar y clase de incendio en que deben emplearse. Los extintores serán revisados periódicamente y cargados, según los fabricantes, inmediatamente después de usarlos. Esta tarea será realizada por empresas autorizadas.
--	Prohibiciones: En las dependencias y lugares de trabajo con alto riesgo de incendio se prohibirá terminantemente fumar o introducir cerillas, mecheros o útiles de ignición. Esta prohibición se indicará con carteles visibles a la entrada y en los espacios libres de tales lugares o dependencias. Se prohibirá igualmente al personal introducir o emplear útiles de trabajo no autorizados por la empresa y que puedan ocasionar chispas por contacto o proximidad a sustancias inflamables.
+-	Extintores portátiles: En la proximidad de los puestos de trabajo con mayor riesgo de incendio y colocados en sitio visible y de fácil acceso, se dispondrán extintores portátiles o móviles sobre ruedas, de espuma física o química, mezcla de ambas o polvos secos, anhídrido carbónico o agua, según convenga a la posible causa determinante del fuego a extinguir. 
+  En concreto será necesario colocar un extintor junto a los inversores y otro dentro de los vestuarios. 
+  Cuando se empleen distintos tipos de extintores, serán rotulados con carteles indicadores del lugar y clase de incendio en que deben emplearse. 
+  Los extintores serán revisados periódicamente y cargados, según los fabricantes, inmediatamente después de usarlos. 
+  Esta tarea será realizada por empresas autorizadas.
+-	Prohibiciones: En las dependencias y lugares de trabajo con alto riesgo de incendio se prohibirá terminantemente fumar o introducir cerillas, mecheros o útiles de ignición. 
+  Esta prohibición se indicará con carteles visibles a la entrada y en los espacios libres de tales lugares o dependencias. 
+  Se prohibirá igualmente al personal introducir o emplear útiles de trabajo no autorizados por la empresa y que puedan ocasionar chispas por contacto o proximidad a sustancias inflamables.
 
 Otras actuaciones:
 
@@ -1486,7 +1607,7 @@ Primeros auxilios:
 Medidas de higiene personales e instalaciones:
 -	Actualmente el local ya dispone de aseos de la propia nave, habilitándose un espacio para vestuarios.
 
-== Concusión
+== Conclusión
 
 Con lo anteriormente expuesto, estimamos que queda suficientemente aclarado el alcance del presente Slan de Seguridad y Salud
 
@@ -1496,15 +1617,14 @@ El autor del P.S.S.
 
 autorPSS.firma
 
-#pagebreak()
 
 
-= II Evaluación de riesgos <evaluacionRiesgos>
+= Evaluación de riesgos <evaluacionRiesgos>
 
-#pagebreak()
+//Sergio.codigo:
 
 #let start = <evaluacionRiesgos>
-// el siguiente capítulo real (el próximo "=")
+// el siguiente capítulo real (es decir, el próximo "=")
 #let end = heading.where(level: 1).after(start, inclusive: false)
 
 // Título visual (NO es heading, así no “interfiere”)
@@ -1518,7 +1638,7 @@ autorPSS.firma
   depth: none, // o 10, pero none = todos
 )
 
-#pagebreak()
+
 
 == Identificación de riesgos
 
@@ -1530,7 +1650,7 @@ Se distinguirán dos categorías, riesgos generales (los que afectan a todas las
 
 Aquellos que afectan tanto a las tareas de instalación como a las de mantenimiento y conservación de paneles solares para obtención de energía eléctrica y térmica.
 
-*INSERTAR TABLAS DE RIESGOS Y SEÑALES*
+//*INSERTAR TABLAS DE RIESGOS Y SEÑALES*
 
 === Riesgos específicos
 
@@ -1538,7 +1658,7 @@ Además de los generales anteriormente citados, existen riesgos específicos en 
 
 ==== Instalaciones fotovoltaicas
 
-*INSERTAR TABLAS DE RIESGOS Y SEÑALES*
+//*INSERTAR TABLAS DE RIESGOS Y SEÑALES*
 
 == Medidas preventivas
 
@@ -1554,7 +1674,7 @@ Se define protección colectiva como cualquier elemento o dispositivo de segurid
 La protección colectiva es la primera que se debe adoptar frente a un riesgo. 
 La mayoría de las protecciones colectivas evitan el riesgo, otras solo lo reducen y controlan, evitando la lesión después de materializarse el riesgo.
 
-*INSERTAR TABLAS DE MEDIDAS DE PROTECCIÓN*
+//*INSERTAR TABLAS DE MEDIDAS DE PROTECCIÓN*
 
 === Equipos de protección individual
 
@@ -1563,13 +1683,13 @@ Una vez evaluadas las medidas de protección colectiva para la eliminación o re
 *Equipo de Protección Individual (EPI)*, es cualquier equipo destinado a ser llevado o sujetado por el trabajador para que le proteja de uno o varios riesgos que puedan amenazar su seguridad o su salud, así como cualquier complemento o accesorio destinado a tal fin. 
 Se excluyen de esta definición:
 
-- La ropa de trabajo corriente y los uniformes que no estén destinados a proteger la seguridad o la salud del trabajador. 
-- Los equipos de los servicios de socorro y salvamento. 
-- Los EPI´s de los militares, de los policías y de las personas de los servicios de mantenimiento del orden. 
-- Los EPI´s de los medios de transporte por carretera. 
-- El material de deporte. 
-- El material de autodefensa o de disuasión. 
-- Los aparatos portátiles para la detección y señalización de los riesgos y de los factores de molestia. 
+- La ropa de trabajo corriente y los uniformes que no estén destinados a proteger la seguridad o la salud del trabajador.
+- Los equipos de los servicios de socorro y salvamento.
+- Los EPI´s de los militares, de los policías y de las personas de los servicios de mantenimiento del orden.
+- Los EPI´s de los medios de transporte por carretera.
+- El material de deporte.
+- El material de autodefensa o de disuasión.
+- Los aparatos portátiles para la detección y señalización de los riesgos y de los factores de molestia.
 - Los Equipos de Protección Individual se clasifican en tres categorías, siendo el proyectista y/o fabricante del EPI y/o su delegado establecido en la Comunidad Económica Europea, el responsable de su clasificación:
 
 *TABLA DE CLASIFICACIÓN DE EPI*
@@ -1578,11 +1698,16 @@ El proceso de fabricación y comercialización de los Equipos de Protección Ind
 
 + Las normas UNE-EN establecen las características técnicas de diseño, resistencia y pruebas a las que deben someterse los equipos por parte de los organismos de control autorizados.
 + Los fabricantes de EPI´s, siguiendo las pautas establecidas por las normas UNE-EN, diseñan un prototipo ajustado a esas normas, sometiéndolo a pruebas internas para comprobar que cumple las exigencias.
-+ Se presenta el prototipo ante el organismo de control autorizado para realizar las pruebas de comprobación para su homologación. Dichas pruebas vienen definidas en la norma UNE-EN. En caso de que el resultado sea satisfactorio, el fabricante o marca comercial obtiene la declaración de conformidad CЄ (“conforme a exigencias”).
-+ A partir de ese momento, el fabricante queda autorizado a fabricar y comercializar el EPI ya homologado. El fabricante debe incluir en el marcado del propio EPI las siglas CЄ, y el código que identifica al organismo de control certificador.
-+ El fabricante deberá incluir en el sistema productivo del EPI, un sistema de garantía de calidad CЄ de vigilancia de la producción. Se debe garantizar al usuario que toda la producción reúne las mismas cualidades de diseño, calidad y resistencia.
++ Se presenta el prototipo ante el organismo de control autorizado para realizar las pruebas de comprobación para su homologación. 
+  Dichas pruebas vienen definidas en la norma UNE-EN. 
+  En caso de que el resultado sea satisfactorio, el fabricante o marca comercial obtiene la declaración de conformidad CЄ (“conforme a exigencias”).
++ A partir de ese momento, el fabricante queda autorizado a fabricar y comercializar el EPI ya homologado. 
+  El fabricante debe incluir en el marcado del propio EPI las siglas CЄ, y el código que identifica al organismo de control certificador.
++ El fabricante deberá incluir en el sistema productivo del EPI, un sistema de garantía de calidad CЄ de vigilancia de la producción. 
+  Se debe garantizar al usuario que toda la producción reúne las mismas cualidades de diseño, calidad y resistencia.
 
-Los Equipos de Protección Individual proporcionarán una protección eficaz frente a los riesgos que motivan su uso, sin suponer por sí mismos u ocasionar riesgos adicionales ni molestias innecesarias. A tal efecto deberán:
+Los Equipos de Protección Individual proporcionarán una protección eficaz frente a los riesgos que motivan su uso, sin suponer por sí mismos u ocasionar riesgos adicionales ni molestias innecesarias. 
+A tal efecto deberán:
 -	Responder a las condiciones existentes en el lugar de trabajo.
 -	Tener en cuenta las condiciones anatómicas y fisiológicas y el estado de salud del trabajador.
 -	Adecuarse al portador, tras los ajustes necesarios.
@@ -1596,7 +1721,7 @@ Los epi deberán utilizarse cuando existan riesgos para la seguridad y salud de 
 
 En función de los riesgos establecidos y como complemento a las medidas de protección colectiva, los EPI a utilizar para cada uno de ellos son:
 
-*INSERTAR TABLAS DE EPI'S A UTILIZAR*
+//*INSERTAR TABLAS DE EPI'S A UTILIZAR*
 
 == Procedimiento de trabajo seguro
 
@@ -1613,24 +1738,28 @@ Cualquier cambio en el proyecto se informará previamente al coordinador y a las
 
 ==== Aspectos generales
 
--	En trabajos a la intemperie, los trabajadores han de estar protegidos contra las inclemencias atmosféricas (ropa de trabajo y equipos acordes con las condiciones atmosféricas). Se prohibirán los trabajos con climatología extrema.
+-	En trabajos a la intemperie, los trabajadores han de estar protegidos contra las inclemencias atmosféricas (ropa de trabajo y equipos acordes con las condiciones atmosféricas). 
+  Se prohibirán los trabajos con climatología extrema.
 -	Los equipos de trabajo y las herramientas deben almacenarse en los lugares establecidos por la empresa (contrata), siguiendo sus indicaciones en cuanto a partes de incidencias, limpieza y conservación de los equipos al final de la jornada.
 -	Los paquetes de redondos deben almacenarse en los lugares indicados y en posición horizontal (nunca en posición vertical) sobre durmientes de madera, hasta alturas no superiores a 1,50m.
 -	Junto a los paquetes de redondos se almacenan también los paquetes de cercos o estribos, alambres, varillas, y demás material.
 -	Para evitar pinchazos, tropiezos y caídas, se barrerá alrededor de la zona de trabajo y retirarán los restos de material que hayan caído al suelo, como puntas, trozos de redondos, alambres, etc…
 -	Los desperdicios de hierro, acero, cobre, madera y plástico, se almacenarán en el lugar señalado, para su retirada posterior.
--	Todas las eslingas y cadenas que se utilicen deberán estar homologadas con etiqueta o chapa identificativa con la carga máxima que soportan. (Marcado CЄ).
+-	Todas las eslingas y cadenas que se utilicen deberán estar homologadas con etiqueta o chapa identificativa con la carga máxima que soportan. 
+  (Marcado CЄ).
 -	Los ganchos utilizados, tanto los auxiliares como los de la grúa móvil o grúa torre deberán tener pestillo de seguridad.
 -	Todos los equipos de trabajo utilizados en obra deberán cumplir las condiciones mínimas de seguridad establecidas en la normativa vigente, (partes móviles protegidas, partes peligrosas protegidas contra contactos eléctricos, etc…)
 -	Todos los equipos de trabajo utilizados en obra y fabricados a partir de 1995, deben llevar el marcado CE y poseer el Certificado de Conformidad.
 -	Las máquinas de “apantallar” o “bivalvas” estarán dotadas de un extintor de polvo químico seco.
 -	Los operarios de conducción y auxilio a la máquina, utilizarán cascos protectores acústicos.
 -	Queda prohibido el uso de escaleras de mano de construcción improvisada.
--	Los apoyos de escaleras de mano, deberán asentarse sólidamente, de manera estable, resistente e inmóvil, y de forma que los travesaños queden en posición horizontal. Las escaleras de mano simples se colocarán formando un ángulo aproximado de 75º con la horizontal.
+-	Los apoyos de escaleras de mano, deberán asentarse sólidamente, de manera estable, resistente e inmóvil, y de forma que los travesaños queden en posición horizontal. 
+  Las escaleras de mano simples se colocarán formando un ángulo aproximado de 75º con la horizontal.
 -	Para fines de acceso, las escaleras de mano deberán tener la longitud necesaria para sobresalir al menos un metro del plano de trabajo al que se accede.
 -	Para evitar accidentes, las puntas de ferralla de forjados, pilares y muros deben taparse mediante elementos tipo “seta”.
 -	Se instalarán pasarelas de tableros de 60cm de ancho mínimo que permitan la circulación sobre la ferralla colocada en forjados, soleras y losas de cimentación, para evitar caídas al mismo nivel.
--	Cuando sea necesario crear pasos sobre los muretes guía o bataches se instalarán pasarelas de un mínimo de 60cm de anchura. Está completamente prohibido cruzarlos saltando de un lado al otro.
+-	Cuando sea necesario crear pasos sobre los muretes guía o bataches se instalarán pasarelas de un mínimo de 60cm de anchura. 
+  Está completamente prohibido cruzarlos saltando de un lado al otro.
 -	Cuando exista riesgo de caída por suelos deslizantes (lodos, fangos, agua, etc. se utilizarán unas plataformas de trabajo de 25 a 50cm de altura desde las que realizar los trabajos.
 
 ==== Señalización
@@ -1646,13 +1775,15 @@ Cualquier cambio en el proyecto se informará previamente al coordinador y a las
 -	Una vez finalizados los trabajos, deberán retirarse inmediatamente las señales de obra.
 -	La maquinaria que esté averiada deberá señalizarse para que no sea utilizada.
 -	Se dispondrá de señalización de recambio, para poder cambiar las señales deterioradas inmediatamente.
--	Se acotarán y señalizarán las zanjas y vaciados con cintas de balizado, dispuestas a una distancia de 2m del borde. También se podrá utilizar malla naranja para realizar dicho balizado.
+-	Se acotarán y señalizarán las zanjas y vaciados con cintas de balizado, dispuestas a una distancia de 2m del borde. 
+  También se podrá utilizar malla naranja para realizar dicho balizado.
 -	Se protegerán las zonas de ferralla saliente mediante setas de plástico rojo.
 -	Se señalizarán claramente en los puntos donde haya que utilizar arnés.
 -	Si se establece una zona de almacenamiento de productos químicos deberá ser acotada y se señalizarán sus riesgos (consultar ficha “Productos Químicos”).
--	Cuando se utilicen mesas de corte, se colocará señalización de uso de protectores auditivos y protectores oculares. Es habitual que esta señalización venga establecida en la propia mesa, aunque es conveniente instalar otras señales que sean más grandes.
+-	Cuando se utilicen mesas de corte, se colocará señalización de uso de protectores auditivos y protectores oculares. 
+  Es habitual que esta señalización venga establecida en la propia mesa, aunque es conveniente instalar otras señales que sean más grandes.
 -	Las herramientas manuales llevarán la señalización con los equipos de protección individual que es obligatorio utilizar durante el manejo de dichas herramientas. 
-También llevarán señalizada la existencia de un manual de instrucciones que es necesario leer y conocer.
+  También llevarán señalizada la existencia de un manual de instrucciones que es necesario leer y conocer.
 -	Tanto en las plataformas de carga y descarga como en andamios y plataformas de trabajo que se instalen o utilicen, deberá colocarse señalización que advierta del riesgo de caída en altura y del uso obligatorio del arnés anticaídas o cinturón de sujeción.
 -	Si se establece una zona de almacenamiento de productos químicos deberá ser acotada y se señalizarán sus riesgos.
 -	Se señalizarán las vías y las salidas de evacuación.
@@ -1660,11 +1791,13 @@ También llevarán señalizada la existencia de un manual de instrucciones que e
 === Armado con ferralla
 
 -	Los acopios de redondos de ferralla se situarán cerca de la zona de montaje (menor distancia, menor riesgo de caída de la carga).
--	Depositar el material en el lugar establecido, sobre tablones de reparto, por cada capa de material; será más fácil manipularla. Se eliminan riesgos por atrapamiento y golpes.
+-	Depositar el material en el lugar establecido, sobre tablones de reparto, por cada capa de material; será más fácil manipularla. 
+  Se eliminan riesgos por atrapamiento y golpes.
 -	Al manipular material pesado, solicite al Encargado que le entregue un cinturón contra sobreesfuerzos, con el fin de evitar lumbalgias y lesiones de espalda.
 -	Clasificar y separar el material por diámetro y longitud.
 -	El izado de cargas se guiará con cuerdas de control seguro para evitar movimientos pendulares, oscilaciones, giros y choques con elementos de la obra.
--	El transporte de paquetes de armaduras mediante gancho de grúa, debe ejecutarse en posición horizontal, suspendiendo la carga mediante eslingas de dos puntos separados. El ángulo superior, el que forman los dos ramales de la eslinga en el gancho, será igual o menor que 90º.
+-	El transporte de paquetes de armaduras mediante gancho de grúa, debe ejecutarse en posición horizontal, suspendiendo la carga mediante eslingas de dos puntos separados. 
+  El ángulo superior, el que forman los dos ramales de la eslinga en el gancho, será igual o menor que 90º.
 -	El transporte de los paquetes de ferralla se realizará con eslingas que abracen directamente los paquetes, nunca se atarán las eslingas a los alambres de agrupamiento colocados en el taller para el transporte.
 -	Las juntas de alambre para atado en ferralla elaborada, se doblarán o remacharán para evitar en lo posible cortes y heridas.
 -	Se utilizará cinturón portaherramientas.
@@ -1682,7 +1815,8 @@ También llevarán señalizada la existencia de un manual de instrucciones que e
 -	Para las operaciones de hormigonado y vibrado desde posiciones sobre la cimentación se establecerán plataformas o pasarelas de trabajo móviles, formadas por un mínimo de tres tablones que se dispondrán perpendicularmente al eje de la zanja o zapata.
 -	Se seguirán recomendaciones de ferrallado, encofrado y elevación de cargas.
 -	Se seguirán las recomendaciones dadas para manejo y manipulación de cargas.
--	Se tendrá especial cuidado en evitar las quemaduras que pudieran producirse al estar en contacto directo con los hormigones. Eliminar cualquier rastro de salpicaduras de este tipo.
+-	Se tendrá especial cuidado en evitar las quemaduras que pudieran producirse al estar en contacto directo con los hormigones. 
+  Eliminar cualquier rastro de salpicaduras de este tipo.
 -	Los acopios del material deben estar bien definidos, y planificados para crear accesos seguros, y evitar caídas.
 -	El desencofrado de los muretes guía, se realizará con la ayuda de uñas metálicas; se prohibirá la permanencia de operarios ajenos a la excavación en un entorno de 10m, alrededor de la “cuchara bivalva”.
 -	Procurar verter el hormigón en muros desde suelo firme.
@@ -1696,15 +1830,20 @@ También llevarán señalizada la existencia de un manual de instrucciones que e
 -	Antes de iniciar el vertido del hormigón del camión hormigonera, inmovilizar mediante cuñas o topes antideslizamiento, las ruedas del camión hormigonera.
 -	Los operarios no se situarán detrás de los camiones hormigonera en maniobras de marcha atrás; estas maniobras siempre deberán ser dirigidas, desde fuera del vehículo, por uno de los trabajadores.
 -	Para facilitar el paso seguro del personal encargado de montar, desmontar y realizar trabajos con la canaleta de vertido de hormigón por taludes hasta el cimiento, se colocarán escaleras reglamentarias.
--	Se prohíbe el cambio de posición del camión hormigonera al mismo tiempo que se vierte el hormigón. Esta maniobra deberá efectuarse en su caso con la canaleta fija para evitar movimientos incontrolados.
+-	Se prohíbe el cambio de posición del camión hormigonera al mismo tiempo que se vierte el hormigón. 
+  Esta maniobra deberá efectuarse en su caso con la canaleta fija para evitar movimientos incontrolados.
 -	Los camiones hormigonera no se aproximarán a menos de 2m de los cortes del terreno.
 -	No se llenará el cubilote por encima de la carga máxima admisible de la grúa.
--	Se señalizará expresamente el nivel de llenado equivalente al peso máximo que se mantendrá visible. Se prohíbe permanecer debajo de las cargas suspendidas por las grúas para evitar golpes por fragmentos desprendidos.
+-	Se señalizará expresamente el nivel de llenado equivalente al peso máximo que se mantendrá visible. 
+  Se prohíbe permanecer debajo de las cargas suspendidas por las grúas para evitar golpes por fragmentos desprendidos.
 -	Se obligará a los operarios en contacto con los cubilotes al uso de guantes protectores para su guía y accionamiento de los mecanismos de apertura o cierre.
--	Los cubilotes se controlarán durante el transporte, con cuerdas de control, que impidan golpes o desequilibrios a las personas. Nunca recibir el cubilote directamente con las manos, evitaremos caídas debido a la inercia de la carga.
+-	Los cubilotes se controlarán durante el transporte, con cuerdas de control, que impidan golpes o desequilibrios a las personas. 
+  Nunca recibir el cubilote directamente con las manos, evitaremos caídas debido a la inercia de la carga.
 -	El personal encargado del manejo de la bomba de hormigón estará formado y especializado en este trabajo.
--	Antes de hormigonar con bomba, se lavará y limpiará el interior de los tubos, se lubricarán las tuberías, enviando masas de mortero de pobre dosificación para, posteriormente, bombear el hormigón con la dosificación requerida. Después de hormigonar se lavará y limpiará el interior de los tubos.
--	Hay que evitar los "tapones" porque son riesgo de accidente al desmontar la tubería. Evitar los codos de pequeño radio.
+-	Antes de hormigonar con bomba, se lavará y limpiará el interior de los tubos, se lubricarán las tuberías, enviando masas de mortero de pobre dosificación para, posteriormente, bombear el hormigón con la dosificación requerida. 
+  Después de hormigonar se lavará y limpiará el interior de los tubos.
+-	Hay que evitar los "tapones" porque son riesgo de accidente al desmontar la tubería. 
+  Evitar los codos de pequeño radio.
 -	La manguera de salida será guiada por dos operarios para evitar las caídas por golpe de la manguera.
 -	Un trabajador será el encargado permanentemente de cambiar de posición los tableros de apoyo sobre las parrillas de los que manejan la manga de vertido del hormigón para evitar las posibles caídas.
 -	El comienzo y cese del bombeo, será avisado con antelación a los operarios que manejan la manguera de vertido, para prevenir los accidentes por los movimientos bruscos.
@@ -1715,12 +1854,14 @@ También llevarán señalizada la existencia de un manual de instrucciones que e
 -	Se deberán revisar periódicamente los conductos de aceite a presión de la bomba de hormigonado, y se cumplirá con las operaciones de mantenimiento expuesta por el fabricante.
 -	Mientras se realiza el vertido del hormigón, se prestará atención al comportamiento de los taludes para detectar los riegos por vuelco de vehículos.
 -	Se mantendrán las zonas de trabajo limpias y ordenadas mediante una cuadrilla de limpieza.
--	Se habilitarán caminos de acceso a los tajos, estableciéndose pasarelas para poder atravesar las zanjas o caminos. Las pasarelas a más de 2m de altura estarán limitadas por barandillas.
+-	Se habilitarán caminos de acceso a los tajos, estableciéndose pasarelas para poder atravesar las zanjas o caminos. 
+  Las pasarelas a más de 2m de altura estarán limitadas por barandillas.
 -	Se hará una revisión previa de las excavaciones entibadas antes de proceder al vertido del hormigón.
 -	Se señalizarán y protegerán las excavaciones con vallas metálicas o de madera, pintada a bandas amarillas y negras ubicadas a 2m del borde.
 -	Antes de comenzar el vertido del hormigón, revisar los refuerzos de los encofrados para prevenir posibles reventones o derrames sobre los trabajadores.
 -	Mientras se realiza el vertido se vigilará atentamente el comportamiento de los encofrados, parándose los trabajos en caso de fallo para evitar accidentes.
--	El vertido de hormigón en los encofrados se efectuará uniformemente repartido. Esta operación se efectuará desde andamios corridos a uno o ambos lados del muro a construir, dotados de barandilla de 90cm, listón intermedio y rodapié.
+-	El vertido de hormigón en los encofrados se efectuará uniformemente repartido. 
+  Esta operación se efectuará desde andamios corridos a uno o ambos lados del muro a construir, dotados de barandilla de 90cm, listón intermedio y rodapié.
 -	El acceso a estos andamios se efectuará desde el terreno, mediante pasarelas dotadas de barandillas reglamentarias, y desde el suelo a través de escaleras de mano, firmemente sujetas en los apoyos superior e inferior.
 -	Se dispondrán consolas de trabajo en la coronación de los muros, para facilitar la operación de vertido y el paso y estancia de los trabajadores.
 
@@ -1731,11 +1872,13 @@ También llevarán señalizada la existencia de un manual de instrucciones que e
 -	Comprobar el estado inicial de la superficie de instalación (terreno, cubiertas, tejados, terrazas, etc…), nivelación y compactación, capacidad resistente, presencia de zanjas y fosos, presencia de huecos y tragaluces.
 -	Definir las áreas de almacenamiento, acopio y de chatarreos y sobrantes de material.
 -	Establecer procedimientos de orden y limpieza de las zonas de trabajo.
--	Detectar la existencia de líneas y redes de alta y baja tensión. Comprobar la existencia y estado de tomas de tierra y protecciones diferenciales, así como del estado de los cables y herramientas y máquinas a utilizar.
+-	Detectar la existencia de líneas y redes de alta y baja tensión. 
+  Comprobar la existencia y estado de tomas de tierra y protecciones diferenciales, así como del estado de los cables y herramientas y máquinas a utilizar.
 
 ==== Maquinaria, útiles y herramientas
 
--	En los equipos de elevación de cargas y trabajadores (grúas sobre camión, plataformas elevadoras de tijera o articuladas, etc…) comprobar la capacidad de carga, altura de elevación, libros de mantenimiento, estado de cables, ganchos, plataformas, estabilizadores hidráulicos, funcionamiento de elementos de seguridad (detectores de nivel, alarmas acústicas, luces girofaro, etc..), y marcado CЄ, o certificado de adecuación de máquinas en su defecto. Para los operadores de grúa solicitar carnet.
+-	En los equipos de elevación de cargas y trabajadores (grúas sobre camión, plataformas elevadoras de tijera o articuladas, etc…) comprobar la capacidad de carga, altura de elevación, libros de mantenimiento, estado de cables, ganchos, plataformas, estabilizadores hidráulicos, funcionamiento de elementos de seguridad (detectores de nivel, alarmas acústicas, luces girofaro, etc..), y marcado CЄ, o certificado de adecuación de máquinas en su defecto. 
+  Para los operadores de grúa solicitar carnet.
 -	Para los equipos de soldadura (arco eléctrico, MIG, sopletes), comprobar el estado de las tierras, pinzas, cables, tubos, bombonas, válvulas, electrodos y marcado CЄ o certificado de adecuación de máquinas.
 -	Para la pequeña maquinaria y herramientas manuales (sierras circulares, dobladoras, taladros, esmeriles, atornilladores etc…), comprobar el estado de conservación, conexiones, cables, fijación de mangos, protecciones de partes móviles y homologación y marcado CЄ.
 -	Antes de utilizar aparejos de elevación (eslingas, cinchas, cables, cadenas, ganchos, mordazas, mosquetones, etc…) comprobar la capacidad de carga, pestillos de seguridad, estado de conservación y marcado CЄ.
@@ -1746,12 +1889,16 @@ También llevarán señalizada la existencia de un manual de instrucciones que e
 -	En operaciones de soldadura, comprobar la puesta a tierra de la pieza a soldar, estado de las pinzas, cables y conexiones.
 -	Utilizar los equipos de protección individual establecidos: casco, guantes, pantalla de soldadura, ropa de protección, botas, y para trabajos en altura: arnés de seguridad o cinturón de sujeción.
 -	Para trabajos en altura, hacer un correcto uso de plataformas elevadoras, andamios y escaleras de mano.
--	En operaciones de atornillado, utilizar llaves dinamométricas para comprobar el par de apriete, cuando éste se realice de forma manual. Cuando se utilicen atornilladotas de alta resistencia, comprobar conexiones y cables.
--	Acabada la tarea, comprobar que todos los tornillos han quedado apretados. Comprobar que no se dejan olvidados materiales o herramientas sobre la estructura.
+-	En operaciones de atornillado, utilizar llaves dinamométricas para comprobar el par de apriete, cuando éste se realice de forma manual. 
+  Cuando se utilicen atornilladotas de alta resistencia, comprobar conexiones y cables.
+-	Acabada la tarea, comprobar que todos los tornillos han quedado apretados. 
+  Comprobar que no se dejan olvidados materiales o herramientas sobre la estructura.
 -	No desplazarse sobre la estructura sin utilizar líneas de vida y arnés de seguridad.
--	Utilizar los equipos de protección individual establecidos: casco, guantes, botas, gafas y ropa de trabajo. Para trabajos en altura, arnés de seguridad o cinturón de sujeción.
+-	Utilizar los equipos de protección individual establecidos: casco, guantes, botas, gafas y ropa de trabajo. 
+  Para trabajos en altura, arnés de seguridad o cinturón de sujeción.
 -	Asegurar las herramientas y equipos de trabajo para evitar la caída de objetos en altura sobre otros trabajadores o equipos.
--	Asegurar los extremos de los elementos estructurales antes de su unión (soldadura o atornillado) mediante fijaciones provisionales (mordazas, atado o equipos de elevación de cargas), para evitar caídas o desprendimientos. Proceder a su liberación una vez concluida la tarea.
+-	Asegurar los extremos de los elementos estructurales antes de su unión (soldadura o atornillado) mediante fijaciones provisionales (mordazas, atado o equipos de elevación de cargas), para evitar caídas o desprendimientos. 
+  Proceder a su liberación una vez concluida la tarea.
 
 === Trabajos de manipulación, movimiento y transporte de materiales y equipos
 ==== Aspectos generales
@@ -1761,7 +1908,8 @@ También llevarán señalizada la existencia de un manual de instrucciones que e
 -	Antes de su utilización, se inspeccionarán cuidadosamente las eslingas para comprobar que se encuentran en buen estado.
 -	Nunca deben sobrecargarse las eslingas, por lo que se elegirán las adecuadas en función de la carga a soportar.
 -	Siempre que sea posible, el ángulo entre ramales no deberá superar los 90º, para lo que se elegirá la longitud adecuada.
--	La carga quedará sujeta de manera que no pueda deslizarse, debiendo emplear distanciadotes si es preciso. Para cargas de gran longitud se emplearán pórticos.
+-	La carga quedará sujeta de manera que no pueda deslizarse, debiendo emplear distanciadotes si es preciso. 
+  Para cargas de gran longitud se emplearán pórticos.
 -	Se evitará subir a las cargas para su amarre.
 -	Los ramales de eslingas distintas no montarán uno sobre otro en el gancho.
 -	Las eslingas no deben apoyar nunca sobre aristas vivas, por lo que se emplearán cantoneras o escuadras de protección.
@@ -1773,13 +1921,15 @@ También llevarán señalizada la existencia de un manual de instrucciones que e
 -	Comprobar que se ha separado de la carga lo suficiente, y de que no hay personas en sus proximidades.
 -	Comprobar que no hay sobre la carga piezas sueltas que pudieran caerse al elevarla.
 -	Comprobar que el gancho de la grúa está nivelado y se encuentra centrado sobre la carga, para evitar giros al elevar ésta.
--	Antes de proceder al transporte de la carga, elevaremos ésta a un palmo del suelo para comprobar su correcta estabilidad, buena sujeción y dejar que se tensen los ramales. Si se observa que la carga no está correctamente colocada, desliza o se inclina un ángulo mayor de 10º con respecto a la horizontal, descenderemos la carga y procederemos a su correcto eslingado.
+-	Antes de proceder al transporte de la carga, elevaremos ésta a un palmo del suelo para comprobar su correcta estabilidad, buena sujeción y dejar que se tensen los ramales. 
+  Si se observa que la carga no está correctamente colocada, desliza o se inclina un ángulo mayor de 10º con respecto a la horizontal, descenderemos la carga y procederemos a su correcto eslingado.
 -	Elevar la carga a una altura suficiente para evitar obstáculos.
 
 ==== Transporte de cargas
 
 -	Todos los desplazamientos de las cargas se realizarán lentamente evitando movimientos bruscos.
--	Las cargas se desplazarán a la menos altura posible. Los movimientos sin carga se realizarán con el gancho elevado.
+-	Las cargas se desplazarán a la menos altura posible. 
+  Los movimientos sin carga se realizarán con el gancho elevado.
 -	La elevación y descenso de cargas se realizará siempre en sentido vertical, es decir, con el cable perpendicular al plano horizontal. Si no es posible, se tomarán las medidas adicionales precisas para evitar riesgos, como la utilización de cuerdas guía.
 -	Está totalmente prohibido el transporte de cargas por encima de personas.
 -	Se prohíbe el paso o la permanencia de personas bajo cargas izadas.
@@ -1790,7 +1940,8 @@ También llevarán señalizada la existencia de un manual de instrucciones que e
 
 -	Comprobar que la superficie donde se depositará la carga sea estable, plana y en lo posible, libre de obstáculos.
 -	Colocar durmientes de apoyo o calzos de madera, en lugares de depósito de las piezas para su almacenamiento seguro.
--	No apilar materiales en alturas mayores de 1´5 m. Verificar la estabilidad de la carga apilada.
+-	No apilar materiales en alturas mayores de 1´5 m. 
+  Verificar la estabilidad de la carga apilada.
 -	Efectuar el descenso de manera suave y lenta.
 -	Soltar los amarres, elevarlos y controlarlos hasta que no representen un riesgo para nada ni nadie.
 -	Al acabar el trabajo, las eslingas, cuerdas, cadenas y demás elementos se almacenarán correctamente enrolladas y en lugares establecidos a tal efecto. No deben dejarse tiradas en lugares sucios y húmedos, en zonas de paso o de circulación de vehículos, ya que pueden presentar un riesgo o causar deterioro para las propias eslingas.
@@ -1812,11 +1963,14 @@ También llevarán señalizada la existencia de un manual de instrucciones que e
 -	A la hora de desconectar, nunca hacerlo tirando del conductor.
 -	Siempre que sea posible, el cableado de las instalaciones provisionales de la obra se pasará colgado del techo, evitando zonas de paso y zonas húmedas.
 -	Las mangueras de los cables tienen que ser antihumedad y con protección mecánica en instalaciones a la intemperie.
--	No deben permitirse, en ningún caso, las conexiones a la base del enchufe con terminales pelados. Deben utilizarse las clavijas de conexión correspondientes.
+-	No deben permitirse, en ningún caso, las conexiones a la base del enchufe con terminales pelados. 
+  Deben utilizarse las clavijas de conexión correspondientes.
 -	Se evitará realizar empalmes improvisados en mangueras eléctricas.
--	Los aparatos portátiles de alumbrado, serán de doble aislamiento, con distintivo, tendrán sus piezas metálicas bajo tensión protegidas contra la caída vertical de agua, (IP A1C). Los portalámparas, pantallas y rejillas, serán de material aislante.
+-	Los aparatos portátiles de alumbrado, serán de doble aislamiento, con distintivo, tendrán sus piezas metálicas bajo tensión protegidas contra la caída vertical de agua, (IP A1C). 
+  Los portalámparas, pantallas y rejillas, serán de material aislante.
 -	Las herramientas eléctricas portátiles y las lámparas eléctricas portátiles estarán alimentadas por una tensión no superior a 24 V.
--	Las herramientas manuales portátiles accionadas por motor eléctrico, alimentadas a más de 50 V, deberán disponer de doble aislamiento. Si no es así, el conductor de alimentación, dispondrá de toma a tierra, estando la carcasa de la herramienta conectada a ella.
+-	Las herramientas manuales portátiles accionadas por motor eléctrico, alimentadas a más de 50 V, deberán disponer de doble aislamiento. 
+  Si no es así, el conductor de alimentación, dispondrá de toma a tierra, estando la carcasa de la herramienta conectada a ella.
 
 ==== Grupos electrógenos portátiles
 
@@ -1825,21 +1979,26 @@ También llevarán señalizada la existencia de un manual de instrucciones que e
 -	Comprobar los niveles de aceite y combustible del equipo.
 -	Leer las instrucciones del fabricante, así como la placa de características del equipo para conocer la potencia que suministra, tipo de corriente (monofásica, trifásica), voltaje (230V, 400V), frecuencia, combustible y sistema de arranque.
 -	Cebar la bomba de combustible y proceder al arranque del motor (eléctrico o retroceso).
--	Antes de realizar cualquier conexión, comprobar el estado de las clavijas de conexión así como el estado del cable. Conectar y desconectar las clavijas con cuidado. 
+-	Antes de realizar cualquier conexión, comprobar el estado de las clavijas de conexión así como el estado del cable. 
+  Conectar y desconectar las clavijas con cuidado. 
   No tirar del cable para su desconexión.
 
 === Trabajos en altura
 ==== Aspectos generales
 
 -	En todo trabajo en altura en ausencia de protección colectiva y con peligro de caída eventual, será obligatorio el uso de cinturón o arnés de seguridad.
--	Los trabajos sobre tejados requerirán un examen previo de éstos y se les pondrá puntos sólidos de amarre para las cuerdas de los cinturones de seguridad. A este personal se le instruirá especialmente.
+-	Los trabajos sobre tejados requerirán un examen previo de éstos y se les pondrá puntos sólidos de amarre para las cuerdas de los cinturones de seguridad. 
+  A este personal se le instruirá especialmente.
 -	Para trabajar y circular sobre tejados frágiles, por ejemplo, de fibrocemento, vidrio o materiales plásticos, deben utilizarse pasarelas de tablones que distribuyan el peso.
 -	Las plataformas de trabajo deben estar protegidas del vacío en todo su perímetro libre, por una barandilla que impida la caída de personas y materiales.
 -	Además de andamios y plataformas de trabajo, en casos especiales con peligro de caída de altura, se usarán redes de seguridad.
 -	En todos los trabajos en altura, se acotarán y señalizarán las zonas de paso de los niveles inferiores para evitar daños por posibles caídas de objetos, materiales o herramientas.
--	Los medios de protección contra las caídas deben colocarse correctamente y mantenerse en buen estado, y no deben ser manipulados, modificados, ni mucho menos eliminados. Si por algún motivo alguna vez hubiera que retirar esas protecciones, deberán ser instaladas tan pronto como sea posible.
+-	Los medios de protección contra las caídas deben colocarse correctamente y mantenerse en buen estado, y no deben ser manipulados, modificados, ni mucho menos eliminados. 
+  Si por algún motivo alguna vez hubiera que retirar esas protecciones, deberán ser instaladas tan pronto como sea posible.
 -	El cinturón de seguridad como equipo de protección individual que es, debe utilizarse cuando el riesgo presente de caída de altura en el puesto de trabajo no se evite con medios de protección colectiva o técnicos.
--	En tejados, cubiertas y planos inclinados en altura: 1) nunca pise directamente sobre cubiertas de escasa resistencia. 2) Recuerde que el riesgo aumenta al crecer la inclinación. 3) No realice trabajos en altura cuando las condiciones meteorológicas sean adversas.
+-	En tejados, cubiertas y planos inclinados en altura: 1) nunca pise directamente sobre cubiertas de escasa resistencia. 
+  2) Recuerde que el riesgo aumenta al crecer la inclinación. 
+  3) No realice trabajos en altura cuando las condiciones meteorológicas sean adversas.
 
 ==== Sistemas de protección anticaídas (arneses, cinturones de sujección, redes, etc ...)
 
@@ -1847,13 +2006,16 @@ También llevarán señalizada la existencia de un manual de instrucciones que e
 -	Su aplicación será sólo para trabajos breves.
 -	Para los sistemas empleados con sus componentes ha de existir una declaración de conformidad y una información de usuario del fabricante.
 -	El equipo de protección personal anticaída ha de estar marcado con la identificación CE.
--	Los sistemas sólo pueden utilizarse por personas especialmente instruidas. La instrucción se ha de realizar antes del primer uso y según necesidad, pero como mínimo una vez al año.
+-	Los sistemas sólo pueden utilizarse por personas especialmente instruidas. 
+  La instrucción se ha de realizar antes del primer uso y según necesidad, pero como mínimo una vez al año.
 -	El empresario ha de elaborar instrucciones de funcionamiento para el empleo del equipo de protección personal anticaída.
 -	Antes de cada uso se ha de comprobar el estado reglamentario y el correcto funcionamiento del equipo de protección personal anticaída mediante inspección ocular.
 -	El empresario ha de encargar a un perito con la comprobación del perfecto estado del equipo de protección anticaída, según necesidad y de acuerdo con las condiciones de su empleo y las circunstancias del funcionamiento, aunque como mínimo una vez por año.
 -	Los componentes individuales de los sistemas han de ser compatibles entre ellos.
 -	Para una identificación inequívoca, el equipo de protección personal anticaída está marcado de manera bien legible y resistente.
--	Cualquier componente desmontable refleja como mínimo los siguientes datos: 1) denominación de tipo. 2) Año de construcción, nombre, marca del fabricante o proveedor. 3) Número de serie o fabricación del componente.
+-	Cualquier componente desmontable refleja como mínimo los siguientes datos: 1) denominación de tipo. 
+  2) Año de construcción, nombre, marca del fabricante o proveedor. 
+  3) Número de serie o fabricación del componente.
 -	En equipos de salvamento se requiere adicionalmente la advertencia “sólo para fines de salvamento”.
 -	Recomendaciones para el uso de arnés anticaídas: 
   + Recomendable que sea con un amortiguador de energía. 
@@ -1869,18 +2031,23 @@ También llevarán señalizada la existencia de un manual de instrucciones que e
   + Todo arnés que haya experimentado una caída, un esfuerzo, o una inspección visual que haya hecho dudar de su buen estado, no dude en reemplazarlo. 
   + Ninguna modificación se realizará sobre el arnés, tanto sea en las costuras, cintas y bandas.
 
--	El cinturón de sujeción debe llevar como anexo una cinta llamada cabo de vida, que tiene un largo de 1,5 a 2 m y se asegura por medio de un gancho o mosquetón de fácil apertura. Cuando alguien tiene que trabajar en lo alto de una escalera o en el borde de un techo es recomendable asegurar el extremo de ese cabo al hierro superior de la escalera o a algún sector seguro de la terraza.
--	Las redes de protección son una medida con efecto indirecto para la protección contra la caída de altura. Se pueden emplear para la retención de personas en caída, si por razones técnicas laborales no se pueden utilizar protecciones anticaída. Las redes de protección se emplean para la retención de personas en caída durante trabajos, entre otros, debajo de cubiertas de naves.
+-	El cinturón de sujeción debe llevar como anexo una cinta llamada cabo de vida, que tiene un largo de 1,5 a 2 m y se asegura por medio de un gancho o mosquetón de fácil apertura. 
+  Cuando alguien tiene que trabajar en lo alto de una escalera o en el borde de un techo es recomendable asegurar el extremo de ese cabo al hierro superior de la escalera o a algún sector seguro de la terraza.
+-	Las redes de protección son una medida con efecto indirecto para la protección contra la caída de altura. 
+  Se pueden emplear para la retención de personas en caída, si por razones técnicas laborales no se pueden utilizar protecciones anticaída. 
+  Las redes de protección se emplean para la retención de personas en caída durante trabajos, entre otros, debajo de cubiertas de naves.
 -	También existen otros accesorios de seguridad para este tipo de labores: casco con linterna frontal, descensores (autofrenantes para cuerda simple, para grandes descensos), tirantes regulables sujetadores de la cintura, ganchos adaptables para cascos, cabos de amarre, bloqueadores centrales, protectores para cuerdas, y casco de escalada regulable.
 
 ==== Andamios
 
 -	Un andamio es un sistema universal compuesto por caños y accesorios que, por su gran versatilidad, permiten acceder a todo tipo de frentes y plantas.
--	Los andamios deben ser construidos con superficie, funcionalidad y resistencia acordes con la labor para la cual están destinados. De ese modo podrán brindar una seguridad comparable a la del trabajo efectuado a nivel del suelo.
+-	Los andamios deben ser construidos con superficie, funcionalidad y resistencia acordes con la labor para la cual están destinados. 
+  De ese modo podrán brindar una seguridad comparable a la del trabajo efectuado a nivel del suelo.
 -	Debe facilitarse a los trabajadores un número suficiente de andamios para todos los trabajos que deban efectuarse en altura.
 -	Siempre que sea posible debe sustituirse la utilización de escaleras móviles, de mano u otros medios peligrosos para trabajar en altura.
 -	Nunca utilice, para trabajar en altura; tambores, cajones o caballetes.
--	Los andamios deben estar construidos bajo la supervisión de personal especializado. Es responsabilidad de la supervisión a cargo del trabajo, verificar que el andamio esta armado según norma.
+-	Los andamios deben estar construidos bajo la supervisión de personal especializado. 
+  Es responsabilidad de la supervisión a cargo del trabajo, verificar que el andamio esta armado según norma.
 -	Los andamios construidos en zonas de tránsito de vehículos o peatones deben estar señalizados con banderas y/o cintas durante el día y con luces alimentadas con tensión de seguridad, durante la noche.
 -	Cuando deba trabajarse cerca de líneas con tensión, o lugares con eventuales riesgos eléctricos, se solicitará la intervención del personal responsable del área, que determinará las medidas a tomar, para minimizar los riesgos.
 -	Antes de iniciar el armado del andamio, se deberá inspeccionar los materiales a utilizar.
@@ -1888,18 +2055,22 @@ También llevarán señalizada la existencia de un manual de instrucciones que e
 -	Los tablones metálicos deberán ser antideslizantes.
 -	No depositar violentamente pesos sobre los andamios, podrían dañarse o desequilibrarse.
 -	Los andamios, debido generalmente a su deficiente construcción, son causa de numerosos vuelcos o caídas por fallo del pescante, por rotura de la plataforma, del cable, etc.
--	Todos los elementos de un andamio serán revisados antes de la puesta en servicio. Si se usan tablones, éstos serán de madera de buena calidad, sin pintar, sin grietas, ni cualquier otro defecto que pueda afectar a su resistencia.
+-	Todos los elementos de un andamio serán revisados antes de la puesta en servicio. 
+  Si se usan tablones, éstos serán de madera de buena calidad, sin pintar, sin grietas, ni cualquier otro defecto que pueda afectar a su resistencia.
 -	En el manejo de tablones o similares será preceptivo el uso de guantes.
 -	No se abandonarán en las plataformas de los andamios, materiales o herramientas que puedan caer sobre las personas o hacerles tropezar y caer al caminar sobre ellas.
 -	La evacuación de materiales, herramientas u otros objetos desde un andamio hasta el suelo firme, se hará por medios mecánicos (poleas, polipastos, etc.), sin lanzarlos desde el andamio, o de un andamio a otro.
 -	La distancia de separación entre un andamio y el parámetro vertical de trabajo, no será superior a 30 cm. para evitar posibles caídas.
--	El uso del cinturón de seguridad es obligatorio siempre que se tengan que realizar trabajos en andamios que no dispongan de todas las protecciones colectivas. A alturas superiores a dos metros, se sujetará por el mosquetón a puntos resistentes distintos del andamio.
+-	El uso del cinturón de seguridad es obligatorio siempre que se tengan que realizar trabajos en andamios que no dispongan de todas las protecciones colectivas. 
+  A alturas superiores a dos metros, se sujetará por el mosquetón a puntos resistentes distintos del andamio.
 -	La plataforma del andamio tendrá una anchura mínima de 60 cm, se mantendrá horizontal y estará protegida por una barandilla de 90 cm de altura mínima con listón intermedio y rodapié de 15 cm de altura.
--	La distancia entre los apoyos no debe ser mayor de 3,50 m. Los tablones deben ser gruesos (mínimo 4 cm. de espesor) y anchos (mínimo 60 cm).
+-	La distancia entre los apoyos no debe ser mayor de 3,50 m. 
+  Los tablones deben ser gruesos (mínimo 4 cm. de espesor) y anchos (mínimo 60 cm).
 -	Las pasarelas, plataformas o pisos, construidos de tablones se sujetarán con travesaños clavados, al objeto de que formen una sola pieza y en el peor de los casos, formados al menos por tres tablones bien atados entre sí y al propio andamio.
 -	Todo andamio, pasarela, plataforma, etc., construidos de tablones, tendrá barandillas adecuadas y seguras, sujetadas firmemente a la propia estructura del andamio.
 -	No se retirará o desmontará ningún elemento o pieza componente de un andamio, mientras se esté utilizando.
--	Si hay que depositar materiales sobre la plataforma de un andamio se hará con orden, cuidando no golpear sobre ésta. Asimismo, se caminará sin saltar sobre el andamio, o sin saltar a otro andamio.
+-	Si hay que depositar materiales sobre la plataforma de un andamio se hará con orden, cuidando no golpear sobre ésta. 
+  Asimismo, se caminará sin saltar sobre el andamio, o sin saltar a otro andamio.
 -	Se señalizarán los alrededores de todo andamio, para evitar el paso por debajo.
 -	Los soportes deben estar apoyados sobre superficies firmes y parejas.
 -	Asegurar que los caballetes sean resistentes.
@@ -1908,7 +2079,8 @@ También llevarán señalizada la existencia de un manual de instrucciones que e
 ==== Escaleras de mano
 
 -	La parte superior de una escalera apropiada debe sobresalir por lo menos 1,00 metro por encima del techo o del punto de la altura por donde usted deba dejar la escalera para tener acceso al techo o nivel de la estructura, para que le sirva de punto de apoyo manual.
--	Al transportar sobre el hombro, tómela del centro y llévela con la parte delantera por encima de la altura de su cabeza, para evitar lesionar a otra persona, transportarla en forma horizontal con la con la parte delantera hacia delante. No utilizarlas para transportar materiales.
+-	Al transportar sobre el hombro, tómela del centro y llévela con la parte delantera por encima de la altura de su cabeza, para evitar lesionar a otra persona, transportarla en forma horizontal con la con la parte delantera hacia delante. 
+  No utilizarlas para transportar materiales.
 -	Solo transportar escaleras simples o de tijera con peso máximo de 55Kg.
 -	No hacerlas pivotar, no transportarlas sobre la espalda, etc.
 -	No arrastrar las cuerdas de las escaleras por el suelo.
@@ -1917,31 +2089,43 @@ También llevarán señalizada la existencia de un manual de instrucciones que e
 -	No situarla en lugar de paso para evitar todo riesgo de colisión con peatones o vehículos, y si es el caso situar una persona que avise de la circunstancia.
 -	La superficie de apoyo debe ser plana, resistente y no deslizante.
 -	No se debe situar sobre elementos instalables o móviles.
--	Levantamiento de escaleras por una persona: a) Situar la escalera sobre el suelo de forma que los pies se apoyen sobre un obstáculo suficientemente resistente para que no se deslice. b) Elevar la extremidad opuesta de la escalera levantando lentamente sobre el extremo pasando de escalón en escalón.
--	Levantamiento de escaleras por dos personas: a) Una persona se sitúa agachada sobre el primer escalón en la parte inferior y con las manos sobre el tercer escalón. b) La segunda persona eleva la extremidad opuesta de la escalera avanzando lentamente, pasando de escalón en escalón hasta que esté en posición vertical.
+-	Levantamiento de escaleras por una persona: 
+  + Situar la escalera sobre el suelo de forma que los pies se apoyen sobre un obstáculo suficientemente resistente para que no se deslice. 
+  + Elevar la extremidad opuesta de la escalera levantando lentamente sobre el extremo pasando de escalón en escalón.
+-	Levantamiento de escaleras por dos personas: 
+  + Una persona se sitúa agachada sobre el primer escalón en la parte inferior y con las manos sobre el tercer escalón. 
+  + La segunda persona eleva la extremidad opuesta de la escalera avanzando lentamente, pasando de escalón en escalón hasta que esté en posición vertical.
 -	El Angulo que se forma entre la escalera y el suelo debe estar comprendido entre 70.5º y 75.5º.
 -	El ángulo de abertura de una escalera de tijera debe ser de 30º como máximo.
 -	A la hora de apoyar, sujetar e inmovilizar escaleras, éstas deben estar dotadas de zapatas antideslizantes abrasivas de caucho o neopreno, o hincas en las zonas de apoyo y ganchos o abrazaderas en las zonas superiores de apoyo.
--	Antes de usar una escalera de mano nos aseguraremos de su buen estado observando que no tiene defectos. Se rechazarán las que tengan: largueros con empalmes, peldaños flojos o rotos, peldaños clavados en vez de machihembrados, carecer de dispositivos antideslizantes y cualquier otro defecto.
+-	Antes de usar una escalera de mano nos aseguraremos de su buen estado observando que no tiene defectos. 
+  Se rechazarán las que tengan: largueros con empalmes, peldaños flojos o rotos, peldaños clavados en vez de machihembrados, carecer de dispositivos antideslizantes y cualquier otro defecto.
 -	No deben ser utilizadas por personas que sufran algún tipo de vértigo o similares.
 -	Llevar el calzado que sujete bien los pies con la suelas limpias de grasa, aceite u otras sustancias deslizantes.
 -	Respetar la carga máxima recomendada de la escalera: madera 95 kg. y metálica 150 kg.
 -	El ascenso y descenso se debe hacer siempre de cara a la escalera con las manos libre para poder sujetarse en los peldaños, no en los largueros.
--	Si es necesario transportar objetos estos se deben sujetar al cuerpo o a la cintura. O bien utilice una bolsa o mochila para transportar los productos esto le permitirá tener las manos libre.
--	No trabajar a menos de 5 m de una línea de A.T., en caso imprescindible utilizar escalera de fibra de vidrio aislada. Nunca se emplearán escaleras metálicas en trabajos eléctricos.
+-	Si es necesario transportar objetos estos se deben sujetar al cuerpo o a la cintura. 
+  O bien utilice una bolsa o mochila para transportar los productos esto le permitirá tener las manos libre.
+-	No trabajar a menos de 5 m de una línea de A.T., en caso imprescindible utilizar escalera de fibra de vidrio aislada. 
+  Nunca se emplearán escaleras metálicas en trabajos eléctricos.
 -	Si se tiene que colocar una escalera próxima a conductores eléctricos desnudos, deberá cortarse la corriente poniendo un cartel de aviso en el interruptor.
 -	Situar la escalera cerca del punto de operación de forma que no haya que estirarse o colgarse.
--	Se trabajará colocándose en el escalón apropiado (nunca en los últimos escalones) de forma que la distancia del cuerpo al punto de trabajo sea suficiente. No deberá tratar de alcanzar puntos que obliguen a posturas muy forzadas que puedan hacer perder el equilibrio. Lo seguro es desplazar la escalera tantas veces como sea preciso.
--	Siempre que sea posible no utilizar la escalera la escalera manual para trabajar. Utilizar plataforma de trabajo.
+-	Se trabajará colocándose en el escalón apropiado (nunca en los últimos escalones) de forma que la distancia del cuerpo al punto de trabajo sea suficiente. 
+  No deberá tratar de alcanzar puntos que obliguen a posturas muy forzadas que puedan hacer perder el equilibrio. 
+  Lo seguro es desplazar la escalera tantas veces como sea preciso.
+-	Siempre que sea posible no utilizar la escalera la escalera manual para trabajar. 
+  Utilizar plataforma de trabajo.
 -	Si los pies están a más de 2 metros del suelo utilizar cinturón de seguridad, el cual deberá estar atado a la línea de vida.
 -	Fijar el extremo o parte superior de la escalera.
 -	Para trabajos de cierta duración se pueden utilizar dispositivos tales como reposapiés que se acoplan a la escalera.
 -	Nunca las apoye sobre cajas, bidones…
 -	No las coloque cerca de conductores eléctricos o delante de una puerta sin señalizarlo.
--	No trate de alcanzar objetos alejados de la escalera. Si necesita moverse lateralmente baje de la escalera y desplácela.
+-	No trate de alcanzar objetos alejados de la escalera. 
+  Si necesita moverse lateralmente baje de la escalera y desplácela.
 -	Utilice solo escaleras con dispositivos antideslizantes y tirantes si es de tijera.
 -	Las escaleras no deben usarse para construir andamios, ni como soporte ni como pasarela, ni tampoco se usarán en aplicaciones para las que no han sido diseñadas.
--	Las escaleras deben apoyarse con la inclinación correcta. Esta inclinación es aquella en que la relación entre la longitud de la escalera y la separación horizontal en la base sea de 4 a 1.
+-	Las escaleras deben apoyarse con la inclinación correcta. 
+  Esta inclinación es aquella en que la relación entre la longitud de la escalera y la separación horizontal en la base sea de 4 a 1.
 -	Cuando se emplee la escalera para subir a plataformas, andamios, techos, etc., ésta deberá sobrepasarlos como mínimo en un metro.
 -	Si las condiciones de trabajo lo exigen se usarán sistemas de seguridad anticaídas.
 -	El transporte de la escalera se hará con precaución para evitar golpear a otras personas o tropezar con obstáculos.
@@ -1953,9 +2137,12 @@ También llevarán señalizada la existencia de un manual de instrucciones que e
 
 ==== Plataformas elevadoras móviles de personal (PEMP)
 
--	Antes de utilizar la plataforma se debe inspeccionar para detectar posibles defectos o fallos que puedan afectar a su seguridad. La inspección debe consistir en lo siguiente: inspección visual de soldaduras deterioradas u otros defectos estructurales, escapes de circuitos hidráulicos, daños en cables diversos, estado de conexiones eléctricas, estado de neumáticos, frenos y baterías, etc…, y comprobar el funcionamiento de los controles de operación para asegurarse que funcionan correctamente.
--	Cualquier defecto debe ser evaluado por personal cualificado y determinar si constituye un riesgo para la seguridad del equipo. Todos los defectos detectados que puedan afectar a la seguridad deben ser corregidos antes de utilizar el equipo.
--	Comprobar la posible existencia de conducciones eléctricas de A.T. en la vertical del equipo. Hay que mantener una distancia mínima de seguridad, aislarlos o proceder al corte de la corriente mientras duren los trabajos en sus proximidades.
+-	Antes de utilizar la plataforma se debe inspeccionar para detectar posibles defectos o fallos que puedan afectar a su seguridad. 
+  La inspección debe consistir en lo siguiente: inspección visual de soldaduras deterioradas u otros defectos estructurales, escapes de circuitos hidráulicos, daños en cables diversos, estado de conexiones eléctricas, estado de neumáticos, frenos y baterías, etc…, y comprobar el funcionamiento de los controles de operación para asegurarse que funcionan correctamente.
+-	Cualquier defecto debe ser evaluado por personal cualificado y determinar si constituye un riesgo para la seguridad del equipo. 
+  Todos los defectos detectados que puedan afectar a la seguridad deben ser corregidos antes de utilizar el equipo.
+-	Comprobar la posible existencia de conducciones eléctricas de A.T. en la vertical del equipo. 
+  Hay que mantener una distancia mínima de seguridad, aislarlos o proceder al corte de la corriente mientras duren los trabajos en sus proximidades.
 -	Comprobar el estado y nivelación de la superficie de apoyo del equipo.
 -	Comprobar que el peso total situado sobre la plataforma no supera la carga máxima de utilización.
 -	Si se utilizan estabilizadores, se debe comprobar que se han desplegado de acuerdo con las normas dictadas por el fabricante y que no se puede actuar sobre ellos mientras la plataforma de trabajo no esté en posición de transporte o en los límites de posición.
@@ -1963,14 +2150,17 @@ También llevarán señalizada la existencia de un manual de instrucciones que e
 -	Comprobar que los cinturones de seguridad de los ocupantes de la plataforma están anclados adecuadamente.
 -	Delimitar la zona de trabajo para evitar que personas ajenas a los trabajos permanezcan o circulen por las proximidades.
 -	Comprobar que no hay ningún obstáculo en la dirección de movimiento y que la superficie de apoyo es resistente y sin desniveles.
--	Mantener la distancia de seguridad con obstáculos, escombros, desniveles, agujeros, rampas, etc., que comprometan la seguridad. Lo mismo se debe hacer con obstáculos situados por encima de la plataforma de trabajo.
+-	Mantener la distancia de seguridad con obstáculos, escombros, desniveles, agujeros, rampas, etc., que comprometan la seguridad. 
+  Lo mismo se debe hacer con obstáculos situados por encima de la plataforma de trabajo.
 -	La velocidad máxima de traslación con la plataforma ocupada no sobrepasará los siguientes valores: 1,5 m/s para las PEMP sobre vehículo portador cuando el movimiento de traslación se mande desde la cabina del portador; 3,0 m/s para las PEMP sobre raíles y 0,7 m/s para todas las demás PEMP de los diferentes tipos.
 -	No se debe elevar o conducir la plataforma con viento o condiciones meteorológicas adversas.
 -	No manejar la PEMP de forma temeraria o distraída.
 -	No sobrecargar la plataforma de trabajo.
--	No utilizar la plataforma como grúa. No sujetar la plataforma o el operario de la misma a estructuras fijas.
+-	No utilizar la plataforma como grúa. 
+  No sujetar la plataforma o el operario de la misma a estructuras fijas.
 -	Está prohibido añadir elementos que pudieran aumentar la carga debida al viento sobre la PEMP, por ejemplo, paneles de anuncios, ya que podrían quedar modificadas la carga máxima de utilización, carga estructural, carga debida al viento o fuerza manual, según el caso.
--	Cuando se esté trabajando sobre la plataforma el o los operarios deberán mantener siempre los dos pies sobre la misma. Además, deberán utilizar los cinturones de seguridad o arnés debidamente anclados.
+-	Cuando se esté trabajando sobre la plataforma el o los operarios deberán mantener siempre los dos pies sobre la misma. 
+  Además, deberán utilizar los cinturones de seguridad o arnés debidamente anclados.
 -	No se deben utilizar elementos auxiliares situados sobre la plataforma para ganar altura.
 -	Cualquier anomalía detectada por el operario que afecte a su seguridad o la del equipo debe ser comunicada inmediatamente y subsanada antes de continuar los trabajos.
 -	Está prohibido alterar, modificar o desconectar los sistemas de seguridad del equipo.
@@ -1978,21 +2168,29 @@ También llevarán señalizada la existencia de un manual de instrucciones que e
 -	No utilizar plataformas en el interior de recintos cerrados, salvo que estén bien ventilados.
 -	Al finalizar el trabajo, se debe aparcar la máquina convenientemente.
 -	Cerrar todos los contactos y verificar la inmovilización, falcando las ruedas si es necesario.
--	Limpiar la plataforma de grasa, aceites, etc., depositados sobre la misma durante el trabajo. Tener precaución con el agua para que no afecten a cables o partes eléctricas del equipo.
+-	Limpiar la plataforma de grasa, aceites, etc., depositados sobre la misma durante el trabajo. 
+  Tener precaución con el agua para que no afecten a cables o partes eléctricas del equipo.
 -	En caso de avería, dejar un indicador de fuera de servicio y retirar las llaves de contacto depositándolas en el lugar habilitado para ello.
 -	No se deben rellenar los depósitos de combustible (PEMP con motor de combustión) con el motor en marcha.
 -	Las baterías deben cargarse en zonas abiertas, bien ventiladas y lejos de posibles llamas, chispas, fuegos y con prohibición de fumar.
 -	No se deben hacer modificaciones de cualquier tipo en todo el conjunto de las PEMP.
--	Sólo las personas preparadas y autorizadas, mayores de 18 años, estarán autorizadas para operar las plataformas elevadoras móviles de personal. Para ello y antes de estar autorizado para utilizar la plataforma, el operador debe: 1) ser formado por una persona cualificada sobre los símbolos y funciones de cada uno de los instrumentos de control; 2) leer y comprender las instrucciones y normas de seguridad recogidas en los manuales de funcionamiento entregados por el fabricante y 3) leer y comprender los símbolos situados sobre la plataforma de trabajo con la ayuda de personal cualificado.
+-	Sólo las personas preparadas y autorizadas, mayores de 18 años, estarán autorizadas para operar las plataformas elevadoras móviles de personal. 
+  Para ello y antes de estar autorizado para utilizar la plataforma, el operador debe: 
+  + Ser formado por una persona cualificada sobre los símbolos y funciones de cada uno de los instrumentos de control.
+  + Leer y comprender las instrucciones y normas de seguridad recogidas en los manuales de funcionamiento entregados por el fabricante. 
+  + Leer y comprender los símbolos situados sobre la plataforma de trabajo con la ayuda de personal cualificado.
 
 === Trabajos en instalaciones de presión
 
-No se prevé realizar esta tarea en esta instalación. Si fuese necesario realizar alguna actividad de las recogidas en este apartado, por cambios en el proyecto durante la ejecución de obra, se seguirá este procedimiento. Cualquier cambio en el proyecto se informará previamente al coordinador y a las empresas y trabajadores afectados.
+No se prevé realizar esta tarea en esta instalación. 
+Si fuese necesario realizar alguna actividad de las recogidas en este apartado, por cambios en el proyecto durante la ejecución de obra, se seguirá este procedimiento. 
+Cualquier cambio en el proyecto se informará previamente al coordinador y a las empresas y trabajadores afectados.
 
 ==== Aspectos generales
 
 -	Los trabajadores involucrados en tareas de instalaciones térmicas de edificios, deberán estar en posesión de los carnés profesionales exigidos por la ley. (R.D. 1027/2007).
--	Durante la fase de montaje se evitará la entrada de materiales extraños. En la puesta en marcha se realizará una limpieza y desinfección.
+-	Durante la fase de montaje se evitará la entrada de materiales extraños. 
+  En la puesta en marcha se realizará una limpieza y desinfección.
 -	Las instalaciones térmicas deben diseñarse y calcularse, ejecutarse, mantenerse y utilizarse de tal forma que se prevenga y reduzca a límites aceptables el riesgo de sufrir accidentes y siniestros capaces de producir daños o perjuicios a las personas, flora, fauna, bienes o al medio ambiente, así como de otros hechos susceptibles de producir en los usuarios molestias o enfermedades.
 -	Verificar y utilizar correctamente los EPI suministrados por la empresa para la realización de la instalación térmica de agua caliente.
 -	Evitar contactos con superficies húmedas en presencia de líneas de conducción eléctrica.
@@ -2003,17 +2201,26 @@ No se prevé realizar esta tarea en esta instalación. Si fuese necesario realiz
 -	Comprobar el marcado CЄ de todos los equipos y herramientas que deban emplearse en las labores de montaje.
 -	Rodear con barandillas o cubrir los huecos presentes en el forjado o cubierta donde se realicen éstas labores.
 -	Establecer procedimientos de orden y limpieza en los lugares de trabajo para evitar los riesgos de caídas, tropiezos y resbalones.
--	Está prohibido soldar con plomo en lugares cerrados. Así mismo las bombonas de gas para soldadura de acetileno, no deben permanecer al sol mientras se efectúan tareas de soldadura y corte. El transporte de las mismas debe realizarse sobre carros portabotellas.
--	Nunca utilizar como toma de tierra las canalizaciones de las instalaciones de agua caliente sanitaria. Los equipos deben de conectarse a tomas de tierra normalizadas.
--	Utilizarlas herramientas de mano para sus fines específicos. Revisarlas y mantenerlas periódicamente, retirando de uso las que presenten deficiencias.
--	Nunca transportarlas en bolsillos, utilizar cinturones portaherramientas. Cuando no se utilicen, depositarlas en lugares que no representen riesgo de accidente.
--	En la utilización de escaleras de mano, comprobar su homologación y resistencia, así como su correcto estado de conservación y longitud suficiente. Asegurar su estabilidad antes de su empleo.
--	Cuando se utilicen herramientas eléctricas, comprobar marcado CЄ y su estado de conservación, sobre todo cables y clavijas de conexión. Leer los manuales de características y uso proporcionados por el fabricante.
+-	Está prohibido soldar con plomo en lugares cerrados. 
+  Así mismo las bombonas de gas para soldadura de acetileno, no deben permanecer al sol mientras se efectúan tareas de soldadura y corte. 
+  El transporte de las mismas debe realizarse sobre carros portabotellas.
+-	Nunca utilizar como toma de tierra las canalizaciones de las instalaciones de agua caliente sanitaria. 
+  Los equipos deben de conectarse a tomas de tierra normalizadas.
+-	Utilizarlas herramientas de mano para sus fines específicos. 
+  Revisarlas y mantenerlas periódicamente, retirando de uso las que presenten deficiencias.
+-	Nunca transportarlas en bolsillos, utilizar cinturones portaherramientas. 
+  Cuando no se utilicen, depositarlas en lugares que no representen riesgo de accidente.
+-	En la utilización de escaleras de mano, comprobar su homologación y resistencia, así como su correcto estado de conservación y longitud suficiente. 
+  Asegurar su estabilidad antes de su empleo.
+-	Cuando se utilicen herramientas eléctricas, comprobar marcado CЄ y su estado de conservación, sobre todo cables y clavijas de conexión. 
+  Leer los manuales de características y uso proporcionados por el fabricante.
 
 ==== Soldadura
 
--	En operaciones de soldadura, comprobar el correcto estado de los sopletes, bombonas de gas, válvulas y tubos de conexión. Está totalmente prohibido fumar durante la realización de estos trabajos. Utilizar los EPI asignados para ello.
--	Antes de realizar operaciones de soldadura, realizar una limpieza de la boquilla del soplete, ya que puede producir retornos de llama. No encender el soplete mediante llama, utilizar un encendedor de chispa.
+-	En operaciones de soldadura, comprobar el correcto estado de los sopletes, bombonas de gas, válvulas y tubos de conexión. Está totalmente prohibido fumar durante la realización de estos trabajos. 
+  Utilizar los EPI asignados para ello.
+-	Antes de realizar operaciones de soldadura, realizar una limpieza de la boquilla del soplete, ya que puede producir retornos de llama. 
+  No encender el soplete mediante llama, utilizar un encendedor de chispa.
 -	No colocar nunca el soplete sobre las bombonas, ni aún estando apagado.
 -	Se prohíben los trabajos de soldadura y corte, en locales donde se almacenen materiales inflamables, combustibles, donde exista riesgo de explosión o en el interior de recipientes que hayan contenido sustancias inflamables.
 -	Si una bombona de gas se calienta por cualquier motivo, puede explosionar; cuando se detecte esta circunstancia se debe cerrar el grifo y enfriarla con agua, si es preciso durante horas.
@@ -2039,19 +2246,26 @@ No se prevé realizar esta tarea en esta instalación. Si fuese necesario realiz
 -	A la hora de desconectar, nunca hacerlo tirando del conductor.
 -	Siempre que sea posible, el cableado de las instalaciones provisionales de la obra se pasará colgado del techo, evitando zonas de paso y zonas húmedas.
 -	Los cables manguera tienen que ser antihumedad y con protección mecánica en instalaciones a la intemperie.
--	No deben permitirse, en ningún caso, las conexiones a la base del enchufe con terminales pelados. Deben utilizarse las clavijas de conexión correspondientes.
+-	No deben permitirse, en ningún caso, las conexiones a la base del enchufe con terminales pelados. 
+  Deben utilizarse las clavijas de conexión correspondientes.
 -	Se evitará realizar empalmes improvisados en mangueras eléctricas.
--	Los aparatos portátiles de alumbrado, serán de doble aislamiento, con distintivo, tendrán sus piezas metálicas bajo tensión protegidas contra la caída vertical de agua, (IP A1C). Los portalámparas, pantallas y rejillas, serán de material aislante.
+-	Los aparatos portátiles de alumbrado, serán de doble aislamiento, con distintivo, tendrán sus piezas metálicas bajo tensión protegidas contra la caída vertical de agua, (IP A1C). 
+  Los portalámparas, pantallas y rejillas, serán de material aislante.
 -	Las herramientas eléctricas portátiles y las lámparas eléctricas portátiles estarán alimentadas por una tensión no superior a 24 V.
--	Las herramientas manuales portátiles accionadas por motor eléctrico, alimentadas a más de 50 V, deberán disponer de doble aislamiento. Si no es así, el conductor de alimentación, dispondrá de toma a tierra, estando la carcasa de la herramienta conectada a ella.
+-	Las herramientas manuales portátiles accionadas por motor eléctrico, alimentadas a más de 50 V, deberán disponer de doble aislamiento. 
+  Si no es así, el conductor de alimentación, dispondrá de toma a tierra, estando la carcasa de la herramienta conectada a ella.
 -	Seguir procedimientos de orden y limpieza a la hora de realizar montajes, canalizaciones o apertura de rozas.
--	Utilizar herramientas manuales protegidas con aislante. Utilizar escaleras de mano de tijera, fabricadas en madera o fibra de carbono y con zapatas antideslizantes.
--	A la hora de realizar pruebas de funcionamiento, realizar previamente una comprobación de empalmes, mecanismos y protecciones. Comunicar y avisar a todo el personal la realización de dichas pruebas.
--	Las partes metálicas de todo equipo eléctrico dispondrá de toma de tierra, excepto aquellos equipos que estén dotados de doble aislamiento. Así mismo la instalación se ajustará al REBT.
+-	Utilizar herramientas manuales protegidas con aislante. 
+  Utilizar escaleras de mano de tijera, fabricadas en madera o fibra de carbono y con zapatas antideslizantes.
+-	A la hora de realizar pruebas de funcionamiento, realizar previamente una comprobación de empalmes, mecanismos y protecciones. 
+  Comunicar y avisar a todo el personal la realización de dichas pruebas.
+-	Las partes metálicas de todo equipo eléctrico dispondrá de toma de tierra, excepto aquellos equipos que estén dotados de doble aislamiento. 
+  Así mismo la instalación se ajustará al REBT.
 -	En locales y superficies húmedas es preceptivo la utilización de tensiones de seguridad (24 v).
 -	Los cuadros eléctricos estarán ubicados en lugares de fácil acceso y no peligrosos.
 -	Se deberán señalizar todos los cuadros, máquinas, objetos, susceptibles de provocar riesgo de contacto eléctrico.
--	Todas las masas en tensión estarán puestas a tierra. En el caso de utilización de grupos electrógenos se cumplirá lo anteriormente indicado.
+-	Todas las masas en tensión estarán puestas a tierra. 
+  En el caso de utilización de grupos electrógenos se cumplirá lo anteriormente indicado.
 -	La puesta a tierra de las masas irá asociada al corte o apertura automática del circuito mediante dispositivos de protección como interruptores diferenciales de sensibilidad adecuada.
 
 ==== Alta tensión
@@ -2061,22 +2275,31 @@ Si fuese necesario realizar alguna actividad de las recogidas en este apartado, 
 Cualquier cambio en el proyecto se informará previamente al coordinador y a las empresas y trabajadores afectados.
 
 -	Los trabajos de corte (antes de iniciar el «trabajo sin tensión»), y reposición de la tensión, las realizarán trabajadores autorizados que, en el caso de instalaciones de alta tensión, deberán ser trabajadores cualificados.
--	Una vez identificados la zona y los elementos de la instalación donde se va a realizar el trabajo, y salvo que existan razones esenciales para hacerlo de otra forma, se seguirá el proceso que se describe a continuación, que se desarrolla secuencialmente en cinco etapas: 1.ª Desconectar. 2.ª Prevenir cualquier posible realimentación. 3.ª Verificar la ausencia de tensión. 4.ª Poner a tierra y en cortocircuito. 5.ª Proteger frente a elementos próximos en tensión, en su caso, y establecer una señalización de seguridad para delimitar la zona de trabajo.
--	Hasta que no se hayan completado las cinco etapas no podrá autorizarse el inicio del trabajo sin tensión y se considerará en tensión la parte de la instalación afectada. Sin embargo, para establecer la señalización de seguridad indicada en la quinta etapa podrá considerarse que la instalación está sin tensión si se han completado las cuatro etapas anteriores y no pueden invadirse zonas de peligro de elementos próximos en tensión.
+-	Una vez identificados la zona y los elementos de la instalación donde se va a realizar el trabajo, y salvo que existan razones esenciales para hacerlo de otra forma, se seguirá el proceso que se describe a continuación, que se desarrolla secuencialmente en cinco etapas: 
+  + Desconectar. 
+  + Prevenir cualquier posible realimentación. 
+  + Verificar la ausencia de tensión. 
+  + Poner a tierra y en cortocircuito. 
+  + Proteger frente a elementos próximos en tensión, en su caso, y establecer una señalización de seguridad para delimitar la zona de trabajo.
+-	Hasta que no se hayan completado las cinco etapas no podrá autorizarse el inicio del trabajo sin tensión y se considerará en tensión la parte de la instalación afectada. 
+  Sin embargo, para establecer la señalización de seguridad indicada en la quinta etapa podrá considerarse que la instalación está sin tensión si se han completado las cuatro etapas anteriores y no pueden invadirse zonas de peligro de elementos próximos en tensión.
 -	El personal no especializado que realice trabajos próximos a partes conductoras de líneas de alta tensión y utilicen herramientas, aparatos o equipos, no podrá trabajar a una distancia inferior a: 3 metros, en instalaciones hasta 66.000 Voltios y 5 metros, en instalaciones superiores a 66.000 Voltios.
 -	En la ejecución de zanjas, con proximidad de canalizaciones eléctricas subterráneas, se tendrán en cuenta las siguientes recomendaciones: 1) la ejecución de tareas con retroexcavadora, puede realizarse hasta 1 m de la conducción; 2) con martillo rompedor hasta 0,5 m ; 3) con herramientas manuales, sin golpear, pero arrastrando los materiales hasta alcanzar su ubicación.
 -	Si las distancias de seguridad no pudieran mantenerse, se procederá al descargado de la línea, por parte de la Cía. propietaria de la línea y consistirá, en dejar la línea fuera de servicio con todos sus conductores en cortocircuito y puestos a tierra.
 -	Si la descarga no es viable, se procederá a la retirada de la línea o conversión en subterránea, condicionada a la aprobación de la Cía propietaria de la línea, quien bajo el acuerdo que se establezca deberá encargarse de su realización.
 -	El aislamiento de los conductores de la línea, es otra medida alternativa, que, para el caso de líneas de Baja Tensión, es posible aislar los conductores: mediante vainas y caperuzas aislantes ó sustituyéndolos por conductores aislados de 1.000 V de tensión nominal.
--	Instalar dispositivos de seguridad en los equipos y máquinas para reducir la zona de alcance del elemento móvil de altura, limita el riesgo de contacto directo instalando dispositivos de seguridad que limiten el recorrido de sus partes móviles. Estos dispositivos suelen ser eléctricos, mecánicos o hidráulicos.
+-	Instalar dispositivos de seguridad en los equipos y máquinas para reducir la zona de alcance del elemento móvil de altura, limita el riesgo de contacto directo instalando dispositivos de seguridad que limiten el recorrido de sus partes móviles. 
+  Estos dispositivos suelen ser eléctricos, mecánicos o hidráulicos.
 -	Instalar protecciones entorno a la línea de alta, es otra medida para impedir la invasión de su zona de seguridad por equipos, herramientas, máquinas o las cargas que se transportan.
 -	Todas estas medidas pueden ser complementadas mediante elementos de señalización y balizamiento como: cintas o banderolas de color rojo, señales de peligro o indicadores de altura máxima o alumbrado de señalización para trabajos nocturnos.
--	Una vez concluidos los trabajos, tanto si se trata de instalaciones de alta como de baja tensión, el responsable de los mismos debe constatar que todo el personal ha salido de la zona de trabajo y se han retirado los equipos y herramientas utilizados, de forma que la instalación quede apta para restablecer la tensión sin riesgo para los trabajadores. En general, para restablecer la tensión se seguirá el proceso inverso al empleado para suprimir la tensión.
+-	Una vez concluidos los trabajos, tanto si se trata de instalaciones de alta como de baja tensión, el responsable de los mismos debe constatar que todo el personal ha salido de la zona de trabajo y se han retirado los equipos y herramientas utilizados, de forma que la instalación quede apta para restablecer la tensión sin riesgo para los trabajadores. 
+  En general, para restablecer la tensión se seguirá el proceso inverso al empleado para suprimir la tensión.
 
 === Desplazamientos a obra
 ==== Aspectos generales
 
--	El desplazamiento hasta la instalación se hará respetando en todo momento las normas de circulación, teniendo en cuenta el tipo de vehículo que se maneja y la carga que se transporta. Si el desplazamiento conlleva más de dos horas, se realizará una pequeña parada para descansar o turnarse los conductores, si procede.
+-	El desplazamiento hasta la instalación se hará respetando en todo momento las normas de circulación, teniendo en cuenta el tipo de vehículo que se maneja y la carga que se transporta. 
+  Si el desplazamiento conlleva más de dos horas, se realizará una pequeña parada para descansar o turnarse los conductores, si procede.
 -	Bajo ningún concepto se conducirá bajo el efecto de alcohol u otras sustancias que afecten a la capacidad de conducción.
 -	Si por cualquier motivo el conductor se sintiera fatigado, parará el vehículo de forma segura y será sustituido por otro compañero habilitado para la conducción.
 -	Antes de proceder al uso de los vehículos estos serán revisados por el conductor en cuanto a seguridad se refiere, (correcto funcionamiento de luces, señalizaciones, niveles de fluidos, y combustible, alarmas de funcionamiento, …etc..)
@@ -2097,7 +2320,7 @@ Para la evaluación de los riesgos se utiliza el concepto "Grado de Riesgo" obte
 
 Se han establecido cinco niveles de grado de riesgo de las diferentes combinaciones de la probabilidad y severidad, las cuales se indican en la tabla siguiente:
 
-*INSERTAR TABLA COMBINACIONES RIESGOS*
+//*INSERTAR TABLA COMBINACIONES RIESGOS*
 
 La probabilidad se valora teniendo en cuenta las medidas de prevención existentes y su adecuación a los requisitos legales, a las normas técnicas y a los objetos sobre prácticas correctas. 
 La severidad se valora en base a las más probables consecuencias de accidente o enfermedad profesional.
@@ -2108,37 +2331,34 @@ Los niveles bajo, medio y alto de severidad pueden asemejarse a la clasificació
 -	Peligro Clase C: condición o práctica capaz de causar lesiones leves no incapacitantes, y/o una pérdida material leve.
 -	Alta: Cuando la frecuencia posible estimada del daño es elevada.
 -	Media: Cuando la frecuencia posible estimada es ocasional.
--	Baja: Cuando la ocurrencia es rara. Se estima que puede suceder el daño pero es difícil que ocurra.
+-	Baja: Cuando la ocurrencia es rara. 
+  Se estima que puede suceder el daño pero es difícil que ocurra.
 
 == Planificación de la acción preventiva
 
 Tras el análisis de las características de los trabajos y del personal expuesto a los riesgos se establecen las medidas y acciones necesarias para llevarse a cabo por parte de las empresas instaladoras, para tratar cada uno de los riesgos de accidente de trabajo y/o enfermedad profesional detectados. 
 (Ley 31/1995, de 8 de noviembre, sobre Prevención de Riesgos Laborales).
 
-*INSERTAR TABLAS VARIAS*
+//*INSERTAR TABLAS VARIAS*
 
 == Conclusión
 
 Con lo anteriormente expuesto, estimamos que queda suficientemente aclarado el alcance de la presente EVALUACIÓN DE RIESGOS.
 
-*INSERTAR FIRMA, FECHA Y DEMÁS*
-
-#pagebreak()
+//*INSERTAR FIRMA, FECHA Y DEMÁS*
 
 
-= III PRESPUESTO
 
-#pagebreak()
 
-*INSERTAR PRESUPUESTO*
+= Presupuesto
 
-#pagebreak()
 
-= ANEXO I PLANNING DE OBRA
 
-#pagebreak()
 
-*INSERTAR PLANNING DE OBRA*
+
+
+//Sergio: dejo en todos los anexos la enumeración "Anexo I, II, ...", ¿ ves bien dejarlo así ? o hago una función que cada vez que aparezca en el texto aumente el número del anexo y podamos elegir si escribir "Anexo" o "Anejo"
+= Anexo I Planning de obra
 
 
 
@@ -2156,11 +2376,14 @@ Con lo anteriormente expuesto, estimamos que queda suficientemente aclarado el a
 
 
 
-#pagebreak()
+
+
+
+
 
 = Anexo II Procedimientos de mantenimiento, medición y seguridad en la instalación fotovoltaica <anexoII>
 
-#pagebreak()
+//Sergio.codigo:
 
 #let start = <anexoII>
 #let end =  heading.where(level: 1).after(start, inclusive: false);
@@ -2173,7 +2396,7 @@ Con lo anteriormente expuesto, estimamos que queda suficientemente aclarado el a
     .before(end, inclusive: false)
 );
 
-#pagebreak()
+
 
 == Objeto
 
@@ -2243,12 +2466,15 @@ Si se tienen dudas de la existencia de voltajes provenientes de otros cuadros (i
 Sólo está permitido trabajar con tensión en una instalación eléctrica en la medición de inversores, localización de averías de funcionamiento y después de tomar las siguientes medidas de prevención:
 -	Comprobar el buen estado de los aislantes de las herramientas, equipos de medida, prolongadores eléctricos, etc. que se vayan a utilizar.
 -	Utilizar los equipos de protección individual adecuados (botas aislantes, guantes aislantes, casco con pantalla facial, alfombra aislante, arnés de seguridad).
--	Utilizar equipos de medida adecuados a la operación a realizar para detectar la avería, poniéndolos inicialmente en el rango mayor para evitar riesgos de explosión por selección inadecuada de escala o función. El uso de lámparas portátiles y puentes está prohibido para detectar averías.
+-	Utilizar equipos de medida adecuados a la operación a realizar para detectar la avería, poniéndolos inicialmente en el rango mayor para evitar riesgos de explosión por selección inadecuada de escala o función. 
+  El uso de lámparas portátiles y puentes está prohibido para detectar averías.
 -	Identificar los componentes con tensión que no estén protegidos contra contacto accidental (bornas, relés, etc.) para extremar la precaución y minimizar el riesgo, si es posible se deberán proteger.
--	Situarse en una posición de trabajo estable y segura que evite caídas al suelo o contra la instalación eléctrica por reacciones inesperadas debido a: arcos eléctricos, cortocircuitos, etc. Si detecta riesgo tome medidas para evitarlos.
+-	Situarse en una posición de trabajo estable y segura que evite caídas al suelo o contra la instalación eléctrica por reacciones inesperadas debido a: arcos eléctricos, cortocircuitos, etc. 
+  Si detecta riesgo tome medidas para evitarlos.
 -	En cuadros que tenga bornas o componentes con tensión sin proteger, se deben usar guantes aislantes y el resto de equipos de protección individual (botas aislantes, casco con pantalla facial, alfombra aislante).
 -	Utilizar escaleras portátiles aislantes si se está cerca de equipos o cables con riesgo de contacto accidental.
--	Los fusibles deben ser del tamaño, tipo y capacidad adecuada. Está prohibido sustituir fusibles por hilos.
+-	Los fusibles deben ser del tamaño, tipo y capacidad adecuada. 
+  Está prohibido sustituir fusibles por hilos.
 
 En esta situación está prohibido:
 -	Llevar objetos metálicos en el cuerpo que puedan causar contactos directos con elementos bajo tensión (relojes, cadenas, gafas metálicas, etc.).
@@ -2290,8 +2516,10 @@ El procedimiento será el siguiente:
 +	Pulsar la parada de emergencia del inversor.
 +	Colocar el seccionador de continua off y a continuación el seccionador de alterna.
 +	Abrir la puerta del inversor.
-+	Una vez seccionado el inversor se secciona el cuadro de corriente alterna. A continuación, se secciona el de corriente continua.
-+	Se debe esperar el tiempo suficiente para que no haya nada de corriente continua en el variador. Tiempo de espera mínimo de 15 minutos.
++	Una vez seccionado el inversor se secciona el cuadro de corriente alterna. 
+  A continuación, se secciona el de corriente continua.
++	Se debe esperar el tiempo suficiente para que no haya nada de corriente continua en el variador. 
+  Tiempo de espera mínimo de 15 minutos.
 +	Comprobar siempre la ausencia de corriente y de tensión.
 +	Proceder a la comprobación de ausencia de corriente continua con la pinza amperimétrica.
 +	Se deberán utilizar los equipos de protección mientras no se verifique la ausencia de corriente y tensión.
@@ -2300,16 +2528,20 @@ El procedimiento será el siguiente:
 
 +	Como continuación de lo descrito anteriormente, antes de proceder a la limpieza, el trabajador utilizará los equipos de protección adecuados a este tipo de tareas: gafas de protección, protector auditivo y mascarilla de seguridad.
 +	Proceder previo al soplado un aspirado inicial en aras de evitar excesiva polvareda.
-+	Encender el compresor portátil y mediante soplado realizar la limpieza del interior del inversor. Para el exterior usar un cepillo o gamuza en caso necesario.
-+	Finalizada la limpieza se revisará visualmente que no haya ningún desperfecto en la instalación. En caso de algún desperfecto se seguirá lo indicado en el procedimiento de reparación de averías, además se comunicará la avería al responsable de los trabajos.
-+	Si no hay desperfectos se cerrará la puerta del inversor. Se volverán a utilizar los equipos de protección individual descritos inicialmente (botas aislantes, casco con pantalla facial, guantes aislantes, arnés de seguridad, alfombra aislante).
++	Encender el compresor portátil y mediante soplado realizar la limpieza del interior del inversor. 
+  Para el exterior usar un cepillo o gamuza en caso necesario.
++	Finalizada la limpieza se revisará visualmente que no haya ningún desperfecto en la instalación. 
+  En caso de algún desperfecto se seguirá lo indicado en el procedimiento de reparación de averías, además se comunicará la avería al responsable de los trabajos.
++	Si no hay desperfectos se cerrará la puerta del inversor. 
+  Se volverán a utilizar los equipos de protección individual descritos inicialmente (botas aislantes, casco con pantalla facial, guantes aislantes, arnés de seguridad, alfombra aislante).
 +	Conectar la corriente continua.
 +	Conectar la corriente alterna.
 +	Verificar el rearme automático.
 +	Conectar el seccionador de corriente continua del inversor y a continuación el seccionador de corriente alterna.
 +	Finalmente se quita la parada de emergencia.
 +	Registro del trabajo realizado en el parte de trabajo:
-+	Inmediatamente después de finalizar el trabajo, el responsable de trabajo cumplimentará el parte de trabajo y albarán de material, indicando el trabajo realizado, las incidencias ocurridas. Al final de la jornada, el parte de trabajo y albarán de material será entregado a la empresa.
++	Inmediatamente después de finalizar el trabajo, el responsable de trabajo cumplimentará el parte de trabajo y albarán de material, indicando el trabajo realizado, las incidencias ocurridas. 
+  Al final de la jornada, el parte de trabajo y albarán de material será entregado a la empresa.
 
 == Procedimiento de reparación de averías
 === Acceso a estructura
@@ -2410,15 +2642,13 @@ Al final de la jornada, el parte de trabajo y albarán de material será entrega
 
 == Conclusión
 
-La aplicación del presente procedimiento deberá llevar consigo el obligado cumplimiento del Real Decreto 614/2001, de 8 de junio, sobre disposiciones mínimas para la protección de la salud y seguridad de los trabajadores frente al riesgo eléctrico. BOE nº 148 21-06-2001 y la Guía Técnica para la Evaluación y Prevención del riesgo eléctrico.
+La aplicación del presente procedimiento deberá llevar consigo el obligado cumplimiento del Real Decreto 614/2001, de 8 de junio, sobre disposiciones mínimas para la protección de la salud y seguridad de los trabajadores frente al riesgo eléctrico. 
+BOE nº 148 21-06-2001 y la Guía Técnica para la Evaluación y Prevención del riesgo eléctrico.
 
 *FIRMA, FECHA Y DEMÁS*
 
-#pagebreak()
 
 = Anexo V Nombramiento de recursos preventivos
-
-#pagebreak()
 
 == Nombramiento del recurso preventivo
 
@@ -2440,13 +2670,12 @@ Como normas generales de actuación, los recursos preventivos tendrán que:
 -	Informar y proporcionar las instrucciones adecuadas a los trabajadores autónomos sobre todas las medidas que hayan de adoptarse en lo que se refiere a su seguridad y salud en la obra.
 -	Atender las indicaciones y cumplir las instrucciones del coordinador en materia de seguridad y de salud durante la ejecución de la obra o, en su caso, de la dirección facultativa.
 
-*CUADRADOS CON FIRMAS *
+//*CUADRADOS CON FIRMAS *
 
-#pagebreak()
+
 
 = Anexo VI Nombramiento de jefe de obra
 
-#pagebreak()
 
 == Designación del jefe de obra
 
@@ -2470,7 +2699,8 @@ Funciones del jefe de trabajo
   -	Comprobar que los trabajadores se colocan los equipos de protección individual.
 
 + Durante la ejecución de los trabajos:
-  -	Estar presente durante todo el trabajo. Cuando se realicen trabajos de especial peligrosidad dirigiéndolo y/o ejecutándolo.
+  -	Estar presente durante todo el trabajo. 
+    Cuando se realicen trabajos de especial peligrosidad dirigiéndolo y/o ejecutándolo.
   -	Controlar el cumplimiento de todas las medidas de seguridad.
   -	Controlar el correcto uso de las protecciones colectivas e individuales.
   -	Controlar la correcta utilización de los equipos y herramientas requeridos.
@@ -2484,13 +2714,13 @@ Funciones del jefe de trabajo
 
 Debiendo de estar presente en obra durante la ejecución de los trabajos, o bien designar un sustituto en caso de ausentarse de la zona de los trabajos.
 
-*CUADRADOS CON FIRMAS*
+//*CUADRADOS CON FIRMAS*
 
-#pagebreak()
+
 
 = Anexo VII Nombramiento de supervisor manejo de cargas
 
-#pagebreak()
+
 
 == Nombramiento del supervisor del manejo de cargas
 
@@ -2507,13 +2737,13 @@ Como normas generales de actuación tendrá que:
   -	Supervisión en el izado y bajada de materiales en obra, asegurándose que se realiza cumpliendo todas las medidas de seguridad.
   -	Comprobación del estado de los medios de elevación de las cargas.
 
-*CUADRADOS CON FIRMAS*
+//*CUADRADOS CON FIRMAS*
 
-#pagebreak()
+
 
 = Anexo VIII Protocolo uso de plataformas elevadoras <anexoVIII>
 
-#pagebreak()
+//Sergio.codigo:
 
 #let start = (<anexoVIII>)
 #let end = heading.where(level: 1).after(start, inclusive: false)
@@ -2526,8 +2756,6 @@ Como normas generales de actuación tendrá que:
     .before(end, inclusive: false)
 )
 
-
-#pagebreak()
 
 == Objeto
 
@@ -2642,14 +2870,16 @@ Todos los defectos detectados que puedan afectar a la seguridad deben ser correg
 === Previas a la elevación de la plataforma
 
 Previamente a la elevación de la plataforma se deben realizar las siguientes operaciones:
--	Comprobar la posible existencia de conducciones eléctricas de A.T. en la vertical del equipo. Hay que mantener una distancia mínima de seguridad, aislarlos o proceder al corte de la corriente mientras duren los trabajos en sus proximidades.
+-	Comprobar la posible existencia de conducciones eléctricas de A.T. en la vertical del equipo. 
+  Hay que mantener una distancia mínima de seguridad, aislarlos o proceder al corte de la corriente mientras duren los trabajos en sus proximidades.
 -	No exceder la carga nominal de la PEMP.
 -	Revisar el lugar de trabajo en el que se situará la PEMP antes de cada uso.
 -	Utilizar los estabilizadores de acuerdo con las indicaciones del fabricante y que no se puede actuar sobre los mismos mientras la plataforma de trabajo no esté en posición de transporte.
 -	Bajar o cerrar la barandilla o puerta de acceso a la plataforma, antes de operar el equipo.
 -	Repartir las cargas y si es posible situarlas en el centro de la plataforma de trabajo.
 -	Los operadores que se encuentran en la cesta de trabajo deben utilizar los arneses (de cuerpo completo y eslinga ajustable) anclados a los puntos específicos previstos para ello (retención), así como los EPI correspondientes a los riesgos de la tarea prevista a desarrollar (casco, guantes, etc...).
--	Los operadores se deben mantener siempre dentro de la cesta de trabajo, con los pies en el suelo de la misma. Está prohibido sentarse o subirse a las barandillas de protección.
+-	Los operadores se deben mantener siempre dentro de la cesta de trabajo, con los pies en el suelo de la misma. 
+  Está prohibido sentarse o subirse a las barandillas de protección.
 -	Delimitar la zona de trabajo para evitar que personas ajenas a los trabajos permanezcan o circulen por las proximidades.
 
 === Movimiento del equipo con la PEMP elevada
@@ -2664,7 +2894,8 @@ Durante el movimiento del equipo con la plataforma elevada se debe cumplir:
 -	No manejar la PEMP de forma temeraria o distraída, comprobando en todo momento que no hay trabajadores en sus proximidades.
 -	Evitar situarse sobre superficies frágiles o inestables debiendo evaluar previamente las condiciones del terreno.
 -	Si la PEMP está averiada dejar un indicador de fuera de servicio y retirar las llaves de contacto depositándolas en el lugar habilitado para ello.
--	Utilizar placas de apoyo en caso necesario, de modo que se aumente la superficie de apoyo y disminuya la presión sobre el suelo. Hay que tener en cuenta que aumentando 3 veces la superficie de apoyo, disminuye 10 veces la presión que se ejerce en el suelo.
+-	Utilizar placas de apoyo en caso necesario, de modo que se aumente la superficie de apoyo y disminuya la presión sobre el suelo. 
+  Hay que tener en cuenta que aumentando 3 veces la superficie de apoyo, disminuye 10 veces la presión que se ejerce en el suelo.
 -	No desplazar la PEMP a gran velocidad en zonas estrechas o con obstáculos.
 -	Verificar la presencia de obstáculos por encima del operador y determinar la necesidad de acoplar sistemas antiatrapamiento.
 
@@ -2770,11 +3001,11 @@ Debe haber al menos 2 trabajadores capacitados para el manejo de la plataforma p
 
 *FIRMA, FECHA Y DEMÁS*
 
-#pagebreak()
+
 
 = Anexo IX Protocolo de rescate en caso de accidente <anexoIX>
 
-#pagebreak()
+//Sergio.codigo:
 
 #let start = (<anexoIX>)
 #let end = heading.where(level: 1).after(start, inclusive: false)
@@ -2786,8 +3017,6 @@ Debe haber al menos 2 trabajadores capacitados para el manejo de la plataforma p
     .after(start, inclusive: false)
     .before(end, inclusive: false)
 )
-
-#pagebreak()
 
 == Objeto
 
@@ -2810,8 +3039,10 @@ La formación adecuada en dichas técnicas y conocimientos en materia de primero
 
 Este método es el más rápido de realizar, ya que los pasos a seguir son menos elaborados que en otras técnicas.
 + Verificaremos la gravedad en la que se encuentra el operario (lesiones, si está consciente o inconsciente).
-+ Nos acercaremos a él por medio de las técnicas que tengamos más a mano o las que nosotros valoremos más convenientes para después seguir realizando el rescate. Siempre es conveniente tener un tendido de cuerda para una más rápida evacuación.
-+ Con nuestros cabos de anclaje nos uniremos al accidentado, colocando dichos cabos en las anillas del arnés que consideremos más apropiadas para la comodidad tanto del accidentado como nuestra, y para evitar empeorar las lesiones que pueda tener. A veces es conveniente colocar un cabo en la anilla de la espalda y otra en la anilla central delantera, para que se le pueda bajar verticalmente y así evitar la colisión de los pies con las estructuras.
++ Nos acercaremos a él por medio de las técnicas que tengamos más a mano o las que nosotros valoremos más convenientes para después seguir realizando el rescate. 
+  Siempre es conveniente tener un tendido de cuerda para una más rápida evacuación.
++ Con nuestros cabos de anclaje nos uniremos al accidentado, colocando dichos cabos en las anillas del arnés que consideremos más apropiadas para la comodidad tanto del accidentado como nuestra, y para evitar empeorar las lesiones que pueda tener. 
+  A veces es conveniente colocar un cabo en la anilla de la espalda y otra en la anilla central delantera, para que se le pueda bajar verticalmente y así evitar la colisión de los pies con las estructuras.
 + Una vez unidos nos aseguramos de que los cabos de anclaje estén tensos de tal manera que notemos el peso del accidentado.
 + Posteriormente desengancharemos al accidentado y si fuese necesario cortaremos los elementos a los que esta enganchado (cuerda, cabos de anclaje, cintas, etc) para que de esta manera su peso se traslade a nuestro arnés y sistema de descenso.
 + Descenderemos al accidentado hasta la base de la zona de trabajo siempre con el máximo cuidado y atención.
@@ -2820,8 +3051,10 @@ Este método es el más rápido de realizar, ya que los pasos a seguir son menos
 
 + Verificamos el estado del accidentado, como se encuentra, las lesiones y el estado de las mismas, y si fuera necesario aplicar los conocimientos de primeros auxilios.
 + Nos acercaremos al accidentado por el método adecuado.
-+ Montaremos las cuerdas de rescate con el sistema de doble anclaje. Puede estar acompañado desde su inicio con un sistema de polipasto si fuera necesario elevar al accidentado para liberarlo de su sistema de seguridad (si está colgando en el vacío).
-+ Ataremos al accidentado de las anillas de seguridad del arnés. Verificar que las cuerdas llegan hasta el suelo.
++ Montaremos las cuerdas de rescate con el sistema de doble anclaje. 
+  Puede estar acompañado desde su inicio con un sistema de polipasto si fuera necesario elevar al accidentado para liberarlo de su sistema de seguridad (si está colgando en el vacío).
++ Ataremos al accidentado de las anillas de seguridad del arnés. 
+  Verificar que las cuerdas llegan hasta el suelo.
 + Situaremos al accidentado en la vertical y le desengancharemos del sistema de seguridad al que esté sujeto.
 + Lo descenderemos hasta la base de la zona de trabajo con cuidado y si fuese necesario con la ayuda de un tercer operario desde el suelo y una cuerda auxiliar que lo irá separando de la estructura.
 
@@ -2833,26 +3066,30 @@ Se entiende por primeros auxilios el conjunto de actuaciones o técnicas que per
 Consejos generales:
 + Conservar la calma; No perder los nervios es básico para poder actuar de forma correcta, evitando errores irremediables.
 + Evitar aglomeraciones; No se debe permitir que el accidente se transforme en espectáculo.
-+ No mover al herido; Como norma básica y elemental no se debe mover a nadie que haya sufrido un accidente, hasta estar seguro de que se pueden realizar movimientos sin riesgo de empeorar las lesiones existentes. No obstante, existen situaciones en las que la movilización debe ser inmediata, ya que el accidentado sigue estando expuesto a una situación de riesgo.
-+ Examinar al herido; Se debe efectuar una evaluación primaria, que consistirá en comprobar si el accidentado está consciente, si respira y si tiene pulso. Posteriormente se realizará una evaluación donde se comprobará que tipo de lesiones posee el accidentado (fracturas, cortes, golpes, etc.). Es importante realizar un correcto examen del herido para facilitar la mayor información posible a los servicios de emergencia.
++ No mover al herido; Como norma básica y elemental no se debe mover a nadie que haya sufrido un accidente, hasta estar seguro de que se pueden realizar movimientos sin riesgo de empeorar las lesiones existentes. 
+  No obstante, existen situaciones en las que la movilización debe ser inmediata, ya que el accidentado sigue estando expuesto a una situación de riesgo.
++ Examinar al herido; Se debe efectuar una evaluación primaria, que consistirá en comprobar si el accidentado está consciente, si respira y si tiene pulso. 
+  Posteriormente se realizará una evaluación donde se comprobará que tipo de lesiones posee el accidentado (fracturas, cortes, golpes, etc.). 
+    Es importante realizar un correcto examen del herido para facilitar la mayor información posible a los servicios de emergencia.
 + Tranquilizar al herido; Los accidentados suelen estar asustados, desconocen las lesiones que sufren y necesitan a alguien en quien confíen en esos momentos de angustia.
-+ Mantener al herido caliente; Cuando el organismo humano recibe una agresión se activan los mecanismos de autodefensa, implicando, en muchas ocasiones, la perdida de calor corporal. Esta situación se acentúa cuando existe pérdida de sangre. Por lo tanto es vital mantener caliente al accidentado.
++ Mantener al herido caliente; Cuando el organismo humano recibe una agresión se activan los mecanismos de autodefensa, implicando, en muchas ocasiones, la perdida de calor corporal. 
+  Esta situación se acentúa cuando existe pérdida de sangre. 
+  Por lo tanto es vital mantener caliente al accidentado.
 + Avisar al personal sanitario; Una vez realizada la evaluación del accidentado se avisará a los servicios de emergencia Tlf 112.
 + No medicar; No se debe dar ningún medicamento al accidentado.
 
-La rápida actuación ante un accidente puede salvar la vida de una persona, o evitar el empeoramiento de las lesiones q padezca. Para atender a un accidentado hay recordar tres actuaciones básicas:
+La rápida actuación ante un accidente puede salvar la vida de una persona, o evitar el empeoramiento de las lesiones que padezca. 
+Para atender a un accidentado hay recordar tres actuaciones básicas:
 + Proteger.
 + Avisar.
 + Socorrer.
 
 *FIRMA, FECHA Y DEMÁS*
 
-#pagebreak()
 
 = Anexo X Plan de acción frente a fenómenos meteorológicos adversos <anexoX>
 
-#pagebreak()
-
+//Sergio.codigo:
 
 #let start = (<anexoX>)
 #let end = heading.where(level: 1).after(start, inclusive: false)
@@ -2866,7 +3103,6 @@ La rápida actuación ante un accidente puede salvar la vida de una persona, o e
     .before(end, inclusive: false)
 )
 
-#pagebreak()
 
 == Objeto
 
@@ -2882,12 +3118,18 @@ Aunque sus consecuencias son inevitables, los fenómenos meteorológicos adverso
 
 Temporales de viento, lluvias, nevadas, olas de frío y de calor, tormentas, etc., son fenómenos que pueden producirse en España, a lo largo del año, con mayor o menor incidencia según la zona geográfica y la estación:
 -	TEMPERATURAS EXTREMAS: FRÍO Y CALOR.- Entre todos los factores que se relacionan en este apartado, los que tienen un mayor impacto son los relacionados con la temperatura, que conlleva riesgos de sufrir las consecuencias derivadas de la exposición al calor, como son la deshidratación, golpe de calor, etc., así como los relacionados con la exposición al frío, de la que se pueden derivar problemas reumáticos, circulatorios, hipotermia, etc…
--	RADIACIONES SOLARES.- La exposición a las radiaciones solares puede tener efectos adversos sobre la salud, especialmente en el caso de las personas que, por trabajar a la intemperie, están mucho más tiempo expuestas. Las consecuencias pueden variar desde quemaduras solares a otras enfermedades, como el melanoma, cáncer cutáneo, cataratas, etc., cuyos efectos están causados por la radiación ultravioleta. Para prevenir la aparición de estos daños en el ámbito laboral será necesario adoptar medidas preventivas.
--	VIENTO.- Es importante valorar la velocidad del viento cuando, por ejemplo, se utilizan equipos de elevación de cargas, por el peligro de vuelco de estos aparatos y desprendimiento de las cargas, así como cuando los trabajadores realizan trabajos en altura, sobre andamios, plataformas, escaleras, etc... Por encima de unos determinados límites de velocidad del viento, deberán suspenderse los trabajos.
--	LLUVIA, NIEVE Y GRANIZO.- Si se producen precipitaciones de lluvia, nieve o granizo, los trabajos pueden verse afectados haciéndose más complejos y, en muchos casos, más peligrosos. Se reduce la visibilidad, se dificulta el tránsito de vehículos y trabajadores, etc. Además, cuando ocurren de forma persistente pueden producir el deslizamiento o desprendimiento del terreno, lo que afecta especialmente a trabajos de movimiento de tierras (excavaciones, terraplenados, etc…)
+-	RADIACIONES SOLARES.- La exposición a las radiaciones solares puede tener efectos adversos sobre la salud, especialmente en el caso de las personas que, por trabajar a la intemperie, están mucho más tiempo expuestas. 
+  Las consecuencias pueden variar desde quemaduras solares a otras enfermedades, como el melanoma, cáncer cutáneo, cataratas, etc., cuyos efectos están causados por la radiación ultravioleta. 
+  Para prevenir la aparición de estos daños en el ámbito laboral será necesario adoptar medidas preventivas.
+-	VIENTO.- Es importante valorar la velocidad del viento cuando, por ejemplo, se utilizan equipos de elevación de cargas, por el peligro de vuelco de estos aparatos y desprendimiento de las cargas, así como cuando los trabajadores realizan trabajos en altura, sobre andamios, plataformas, escaleras, etc... 
+  Por encima de unos determinados límites de velocidad del viento, deberán suspenderse los trabajos.
+-	LLUVIA, NIEVE Y GRANIZO.- Si se producen precipitaciones de lluvia, nieve o granizo, los trabajos pueden verse afectados haciéndose más complejos y, en muchos casos, más peligrosos. 
+  Se reduce la visibilidad, se dificulta el tránsito de vehículos y trabajadores, etc. 
+  Además, cuando ocurren de forma persistente pueden producir el deslizamiento o desprendimiento del terreno, lo que afecta especialmente a trabajos de movimiento de tierras (excavaciones, terraplenados, etc…)
 -	NIEBLA.- Provoca una disminución de la percepción de las señales y del entorno en general, dificultando las condiciones de visibilidad necesarias para la conducción de vehículos o maquinaria, manejo mecánico de cargas, distinción de las zonas de acopio de materiales, etc…
 -	TORMENTAS.- Cuando se realizan trabajos a la intemperie con tormentas eléctricas, existe riesgo de caída de rayos en la zona de trabajo, con la consiguiente posibilidad de que se produzcan daños, tanto para los trabajadores como para las instalaciones eléctricas.
--	HIELO.- Con bajas temperaturas pueden formarse placas que generan superficies deslizantes. También existe el riesgo de desprendimientos de placas de hielo.
+-	HIELO.- Con bajas temperaturas pueden formarse placas que generan superficies deslizantes. 
+  También existe el riesgo de desprendimientos de placas de hielo.
 
 == Efectos de las condiciones climatológicas sobre la salud de los trabajadores
 === Calor
@@ -2930,11 +3172,25 @@ El exceso de calor corporal puede también agravar dolencias previas como enferm
 
 Cuando las condiciones de calor persisten y los trabajadores continúan acumulando calor, pueden producirse una serie de daños relacionados con el calor, que podrán ser más o menos graves según la cantidad de calor acumulado. 
 Estos daños son:
--	DESHIDRATACIÓN Y PÉRDIDA DE ELECTROLITOS.- Como consecuencia de las altas temperaturas y la regulación térmica que el cuerpo lleva a cabo, a través de la sudoración se pierden líquidos y sales minerales de forma constante, mientras dura esa exposición, por lo que debe prestarse atención a los signos de deshidratación. Cuando el trabajador nota sed, significa que el nivel de hidratación ya está bajo y se hace necesario reponer los líquidos perdidos, para evitar empeorar la situación. Por ello es recomendable ingerir constantemente líquidos (agua y/o bebidas isotónicas), mejor en pequeños sorbos, antes incluso de que aparezca la sed. Otros síntomas asociados a la deshidratación son el dolor de cabeza ligero, sensación leve de mareo, sequedad en la boca y falta de orina.
--	ERUPCIÓN CUTÁNEA.- Cuando se produce una sudoración excesiva y el sudor es retenido en la piel, en lugar de salir a través de los poros, como consecuencia de la obstrucción de los conductos de las glándulas sudoríparas, se produce esta alteración cutánea, que se presenta como un enrojecimiento de la piel, sobre todo de las zonas cubiertas con la ropa o con equipos de protección que dificultan la evaporación del sudor. Además de ese enrojecimiento, las erupciones producen irritación, picor o quemazón. En ocasiones pueden aparecer vesículas llenas de líquido. Para prevenir la erupción, es aconsejable mantener el cuerpo lo más fresco posible, utilizar ropa ligera y recurrir a duchas frecuentes o lavados regulares, con jabones suaves.
--	CALAMBRES POR CALOR.- Es una de las primeras manifestaciones que se producen en las personas que realizan una actividad física en condiciones ambientales de calor, generalmente durante los primeros días de actividad, cuando aún no se está acostumbrado. Se deben a la pérdida de sales por una sudoración intensa y se caracteriza por contracciones musculares dolorosas y espasmos intensos en los músculos que se encuentran fatigados por un trabajo intenso. Normalmente se presentan al final de la jornada, cuando ya los músculos se han enfriado. La recuperación requiere reposar en un ambiente fresco y beber agua o soluciones con cloruro sódico y potásico, para reponer las sales perdidas. Es importante tomar medidas cuando se perciben síntomas, ya que continuar trabajando en tales circunstancias podría llevar al agotamiento por calor, que se trata de un trastorno de mayor seriedad.
--	SÍNCOPE POR CALOR.- Se trata de una pérdida de conocimiento que ocurre de forma súbita, debido a una vasodilatación cutánea que produce una bajada de la tensión arterial, con disminución del caudal sanguíneo que llega al cerebro. Puede ocurrir por estar de pie e inmóvil durante mucho tiempo, en un sitio caluroso, con un cambio rápido de postura (por ejemplo, ponerse de pie demasiado rápido). Es más fácil que se presente en trabajadores no aclimatados, al principio de la exposición. Los síntomas del síncope incluyen desvanecimiento, visión borrosa, mareo, debilidad, pulso débil, piel fría y húmeda. La recuperación suele ser rápida y completa cuando se traslada al trabajador a un ambiente más fresco.
--	AGOTAMIENTO POR CALOR.- Se trata de un cuadro más importante, producido por la pérdida excesiva de líquidos y sales, como consecuencia del calor. Los síntomas característicos que presentará el trabajador son:
+-	DESHIDRATACIÓN Y PÉRDIDA DE ELECTROLITOS.- Como consecuencia de las altas temperaturas y la regulación térmica que el cuerpo lleva a cabo, a través de la sudoración se pierden líquidos y sales minerales de forma constante, mientras dura esa exposición, por lo que debe prestarse atención a los signos de deshidratación. 
+  Cuando el trabajador nota sed, significa que el nivel de hidratación ya está bajo y se hace necesario reponer los líquidos perdidos, para evitar empeorar la situación. 
+  Por ello es recomendable ingerir constantemente líquidos (agua y/o bebidas isotónicas), mejor en pequeños sorbos, antes incluso de que aparezca la sed. 
+  Otros síntomas asociados a la deshidratación son el dolor de cabeza ligero, sensación leve de mareo, sequedad en la boca y falta de orina.
+-	ERUPCIÓN CUTÁNEA.- Cuando se produce una sudoración excesiva y el sudor es retenido en la piel, en lugar de salir a través de los poros, como consecuencia de la obstrucción de los conductos de las glándulas sudoríparas, se produce esta alteración cutánea, que se presenta como un enrojecimiento de la piel, sobre todo de las zonas cubiertas con la ropa o con equipos de protección que dificultan la evaporación del sudor. 
+  Además de ese enrojecimiento, las erupciones producen irritación, picor o quemazón. 
+  En ocasiones pueden aparecer vesículas llenas de líquido. Para prevenir la erupción, es aconsejable mantener el cuerpo lo más fresco posible, utilizar ropa ligera y recurrir a duchas frecuentes o lavados regulares, con jabones suaves.
+-	CALAMBRES POR CALOR.- Es una de las primeras manifestaciones que se producen en las personas que realizan una actividad física en condiciones ambientales de calor, generalmente durante los primeros días de actividad, cuando aún no se está acostumbrado. 
+  Se deben a la pérdida de sales por una sudoración intensa y se caracteriza por contracciones musculares dolorosas y espasmos intensos en los músculos que se encuentran fatigados por un trabajo intenso. 
+  Normalmente se presentan al final de la jornada, cuando ya los músculos se han enfriado. 
+  La recuperación requiere reposar en un ambiente fresco y beber agua o soluciones con cloruro sódico y potásico, para reponer las sales perdidas. 
+  Es importante tomar medidas cuando se perciben síntomas, ya que continuar trabajando en tales circunstancias podría llevar al agotamiento por calor, que se trata de un trastorno de mayor seriedad.
+-	SÍNCOPE POR CALOR.- Se trata de una pérdida de conocimiento que ocurre de forma súbita, debido a una vasodilatación cutánea que produce una bajada de la tensión arterial, con disminución del caudal sanguíneo que llega al cerebro. 
+  Puede ocurrir por estar de pie e inmóvil durante mucho tiempo, en un sitio caluroso, con un cambio rápido de postura (por ejemplo, ponerse de pie demasiado rápido). 
+  Es más fácil que se presente en trabajadores no aclimatados, al principio de la exposición. 
+  Los síntomas del síncope incluyen desvanecimiento, visión borrosa, mareo, debilidad, pulso débil, piel fría y húmeda. 
+  La recuperación suele ser rápida y completa cuando se traslada al trabajador a un ambiente más fresco.
+-	AGOTAMIENTO POR CALOR.- Se trata de un cuadro más importante, producido por la pérdida excesiva de líquidos y sales, como consecuencia del calor. 
+  Los síntomas característicos que presentará el trabajador son:
   - Debilidad y fatiga.
   -	Dolor de cabeza.
   -	Sensación de mareo, visión borrosa.
@@ -2948,7 +3204,15 @@ Si está completamente alerta y sin náuseas, proporcionarle líquidos por vía 
 Si presenta calambres, se incrementará el aporte de sales. 
 El agotamiento puede preceder a un golpe de calor, considerado de mayor gravedad, por lo que es fundamental actuar de inmediato cuando aparecen los primeros síntomas.
 
--	GOLPE DE CALOR.- El golpe de calor es uno de los casos más graves de hipertermia. Consiste en un sobrecalentamiento del cuerpo, como consecuencia de la exposición a altas temperaturas, que se origina cuando la termorregulación ha sido superada porque todos los mecanismos de disipación del calor han fallado. Cuando se produce un golpe de calor, la temperatura interna del cuerpo sobrepasa los 40,5 ºC y la sudoración se detiene, lo que hace que la temperatura suba aún más. La falta de hidratación ocasiona que diversos órganos dejen de funcionar como lo hacen de forma habitual. También las funciones mentales pueden verse afectadas y pueden producirse daños neuronales irreversibles, e incluso la muerte. Se trata de una urgencia médica extrema, porque tanto su aparición como su evolución, son muy rápidas. Si no se recibe la asistencia sanitaria necesaria, puede producirse la muerte en menos de 24 horas. La presencia de piel muy caliente, seca, enrojecida y sin ninguna evidencia de sudor es una de las señales más importantes para distinguir el golpe de calor de otros daños causados por el calor. Además, existen otros síntomas que evidencian que estamos ante un golpe de calor, entre los que se encuentran:
+-	GOLPE DE CALOR.- El golpe de calor es uno de los casos más graves de hipertermia. 
+  Consiste en un sobrecalentamiento del cuerpo, como consecuencia de la exposición a altas temperaturas, que se origina cuando la termorregulación ha sido superada porque todos los mecanismos de disipación del calor han fallado. 
+  Cuando se produce un golpe de calor, la temperatura interna del cuerpo sobrepasa los 40,5 ºC y la sudoración se detiene, lo que hace que la temperatura suba aún más. 
+  La falta de hidratación ocasiona que diversos órganos dejen de funcionar como lo hacen de forma habitual. 
+  También las funciones mentales pueden verse afectadas y pueden producirse daños neuronales irreversibles, e incluso la muerte. 
+  Se trata de una urgencia médica extrema, porque tanto su aparición como su evolución, son muy rápidas. 
+  Si no se recibe la asistencia sanitaria necesaria, puede producirse la muerte en menos de 24 horas. 
+  La presencia de piel muy caliente, seca, enrojecida y sin ninguna evidencia de sudor es una de las señales más importantes para distinguir el golpe de calor de otros daños causados por el calor. 
+  Además, existen otros síntomas que evidencian que estamos ante un golpe de calor, entre los que se encuentran:
   -	Síntomas generales:
     -	Dolor de cabeza y mareos.
     -	Náuseas y vómitos.
@@ -2962,12 +3226,14 @@ El agotamiento puede preceder a un golpe de calor, considerado de mayor gravedad
   -	Síntomas neurosensoriales:
     -	Agitación, confusión.
     -	Disminución o pérdida del nivel de consciencia, confusión y desmayo.
-El tratamiento debe orientarse a reducir rápidamente la temperatura central, para lo que deben tomarse medidas para enfriar el cuerpo, rociándolo o mojándolo con agua fresca y ventilación, en un lugar sombrío. Estas medidas se deben mantener durante el traslado del enfermo a un hospital.
+El tratamiento debe orientarse a reducir rápidamente la temperatura central, para lo que deben tomarse medidas para enfriar el cuerpo, rociándolo o mojándolo con agua fresca y ventilación, en un lugar sombrío. 
+Estas medidas se deben mantener durante el traslado del enfermo a un hospital.
 
 ==== Planificar medidas con antelación
 
 Es conveniente anticiparse a la llegada de las temperaturas extremas y planificar una serie de medidas antes de la temporada de calor, entre las que podrían incluirse:
--	Elaborar una lista de las provisiones necesarias: agua, recursos para proporcionar sombra, cremas de protección solar, etc. También se deben determinar las cantidades necesarias en función del número de trabajadores y la duración de la obra.
+-	Elaborar una lista de las provisiones necesarias: agua, recursos para proporcionar sombra, cremas de protección solar, etc. 
+  También se deben determinar las cantidades necesarias en función del número de trabajadores y la duración de la obra.
 -	Programar, cuando sea posible, la adaptación de los horarios de trabajo, turnos, etc..., y planificar los ciclos de trabajo/descanso que, en su caso, sean necesarios.
 -	Proporcionar a los trabajadores la formación e información necesarias, en relación con la exposición al calor.
 
@@ -2980,13 +3246,16 @@ Además, se tendrá en cuenta que:
 -	Tanto el agua como cualquier otra bebida, se deben situar en lugares fácilmente accesibles desde cada puesto de trabajo.
 -	Se debe animar a los trabajadores a beber agua de forma periódica, aun cuando no sientan sed.
 -	Es más conveniente tomar agua en pequeñas cantidades y con mayor frecuencia, que hacerlo en gran cantidad en pocas ocasiones.
--	Preferiblemente se suministrarán bebidas a temperaturas comprendidas en torno a los 15 ºC. Las bebidas excesivamente frías pueden producir calambres estomacales.
+-	Preferiblemente se suministrarán bebidas a temperaturas comprendidas en torno a los 15 ºC. 
+  Las bebidas excesivamente frías pueden producir calambres estomacales.
 -	No son adecuadas las bebidas con alcohol, cafeína, gaseosas o con alto contenido de sal o azúcar.
 
 ==== Organización y adaptación del trabajo
 
 Para reducir el estrés térmico y prevenir los daños derivados de la exposición al calor, son de especial interés las medidas de tipo organizativo, como:
-- Reducir la carga física del trabajo. Se trata de adecuar la actividad física desarrollada a los parámetros ambientales de cada momento. Se recomienda, siempre que sea posible:
+- Reducir la carga física del trabajo. 
+  Se trata de adecuar la actividad física desarrollada a los parámetros ambientales de cada momento. 
+  Se recomienda, siempre que sea posible:
   - Limitar ciertas tareas en el horario de mayor estrés térmico y programar las tareas más duras y pesadas durante los periodos menos calurosos de cada turno de trabajo.
     -	Modificar siempre que sea posible los procesos de trabajo para eliminar o reducir el esfuerzo físico excesivo, proporcionando ayudas mecánicas.
     -	Repartir las tareas de mayor carga física entre un mayor número de trabajadores.
@@ -2995,7 +3264,8 @@ Para reducir el estrés térmico y prevenir los daños derivados de la exposici�
 
 Para un determinado nivel de temperatura los riesgos pueden ser más o menos graves en función del tipo de trabajo realizado: ligero, moderado o pesado. 
 Hay que tener en cuenta también el incremento del riesgo que produce la humedad relativa, así como las variaciones de temperatura que produce un día despejado o cubierto.
-- Programar descansos que permitan la recuperación de la fatiga y de la posible sobrecarga térmica del trabajador. Se trata de establecer unos ciclos de trabajo y descanso, determinando la duración de cada periodo y la frecuencia con que deben repetirse esos ciclos para que el organismo elimine el exceso de calor y disminuya la frecuencia cardíaca.
+- Programar descansos que permitan la recuperación de la fatiga y de la posible sobrecarga térmica del trabajador. 
+  Se trata de establecer unos ciclos de trabajo y descanso, determinando la duración de cada periodo y la frecuencia con que deben repetirse esos ciclos para que el organismo elimine el exceso de calor y disminuya la frecuencia cardíaca.
 
 Para determinar estos ciclos se deben tomar en consideración aspectos como las tareas realizadas y el esfuerzo físico requerido, así como los equipos de protección individual que deban utilizarse. 
 Los trabajadores recibirán información detallada y precisa de la implantación de esta medida y los supervisores y mandos intermedios deberán garantizar que se cumple lo planificado. 
@@ -3074,9 +3344,19 @@ Respecto a los trabajadores, es fundamental que estén informados y entrenados p
 
 Cuando las condiciones de frío persisten, pueden producirse una serie de daños relacionados con el mismo, que podrán ser más o menos graves según la cantidad de frío acumulado. 
 Estos daños son:
--	Estrés por frío: Se define como la carga térmica negativa (pérdida de calor excesiva) a la que están expuestos los trabajadores y que resulta del efecto combinado de factores físicos y climáticos que afectan al intercambio de calor: condiciones ambientales, actividad física y ropa de trabajo. El estrés por frío depende de diversos factores climáticos, como son la temperatura ambiental, velocidad del viento, humedad, etc., y también de la capacidad de termorregulación del cuerpo y la conducta del trabajador. Este último aspecto tiene mucha importancia en la respuesta del ser humano al frío, en el sentido de que el uso de prendas adecuadas adquiere mucha más relevancia en condiciones de frío que de calor. Cuando el flujo de calor cedido por el cuerpo al ambiente es superior al calor recibido o producido mediante el metabolismo basal y del trabajo, la temperatura del cuerpo desciende y aparece el riesgo de estrés por frío. Para evitar esa hipotermia (descenso de la temperatura), el cuerpo activa unos mecanismos destinados a aumentar la generación interna de calor y a disminuir su pérdida. Estos mecanismos son:
-  -	Vasoconstricción: la disminución del flujo de sangre a la superficie del cuerpo dificulta la disipación del calor al ambiente y permite mantener los órganos internos, como el corazón, con mayor temperatura. Este efecto, sin embargo, hace que los miembros más alejados del núcleo central del organismo, como las manos y los pies, vean disminuido el flujo de sangre y por tanto reducida su temperatura, lo que aumenta el riesgo de sufrir congelación.
-  -	Aumento involuntario de la actividad metabólica: escalofríos. A medida que el cuerpo se enfría, se activa esta segunda línea de defensa. Consiste en una contracción involuntaria de los músculos que genera energía y por tanto, aumenta la producción de calor. Una tiritona intensa, en una persona en reposo, puede aumentar su temperatura interna en 0,50 ºC. Cuanta más grasa corporal posea una persona, más se retarda la aparición de los escalofríos.
+-	Estrés por frío: Se define como la carga térmica negativa (pérdida de calor excesiva) a la que están expuestos los trabajadores y que resulta del efecto combinado de factores físicos y climáticos que afectan al intercambio de calor: condiciones ambientales, actividad física y ropa de trabajo. 
+  El estrés por frío depende de diversos factores climáticos, como son la temperatura ambiental, velocidad del viento, humedad, etc., y también de la capacidad de termorregulación del cuerpo y la conducta del trabajador. 
+  Este último aspecto tiene mucha importancia en la respuesta del ser humano al frío, en el sentido de que el uso de prendas adecuadas adquiere mucha más relevancia en condiciones de frío que de calor. 
+  Cuando el flujo de calor cedido por el cuerpo al ambiente es superior al calor recibido o producido mediante el metabolismo basal y del trabajo, la temperatura del cuerpo desciende y aparece el riesgo de estrés por frío. 
+  Para evitar esa hipotermia (descenso de la temperatura), el cuerpo activa unos mecanismos destinados a aumentar la generación interna de calor y a disminuir su pérdida. 
+  Estos mecanismos son:
+  -	Vasoconstricción: la disminución del flujo de sangre a la superficie del cuerpo dificulta la disipación del calor al ambiente y permite mantener los órganos internos, como el corazón, con mayor temperatura. 
+    Este efecto, sin embargo, hace que los miembros más alejados del núcleo central del organismo, como las manos y los pies, vean disminuido el flujo de sangre y por tanto reducida su temperatura, lo que aumenta el riesgo de sufrir congelación.
+  -	Aumento involuntario de la actividad metabólica: escalofríos. 
+    A medida que el cuerpo se enfría, se activa esta segunda línea de defensa. 
+    Consiste en una contracción involuntaria de los músculos que genera energía y por tanto, aumenta la producción de calor. 
+    Una tiritona intensa, en una persona en reposo, puede aumentar su temperatura interna en 0,50 ºC. 
+    Cuanta más grasa corporal posea una persona, más se retarda la aparición de los escalofríos.
 
   Teniendo en cuenta los efectos principales del frío sobre la salud, hipotermia y congelación, el estrés por frío se puede clasificar en dos grupos:
   -	Estrés por enfriamiento general del cuerpo.
@@ -3095,14 +3375,36 @@ Entre los efectos agudos, el más evidente y directo es el enfriamiento inmediat
 Los ambientes fríos también causan distracción, puesto que se necesita mayor esfuerzo mental para evitar el enfriamiento, adoptar medidas de protección, etc…
 
 Efectos sobre la salud:
--	Efectos respiratorios: La inhalación de aire muy frío enfría las mucosas del tracto respiratorio superior y, con el tiempo, puede causar irritación, reacciones micro- inflamatorias y bronco-espasmo. Este último, especialmente pronunciado en personas asmáticas y con vías respiratorias hipersensibles.
--	Efectos cardiovasculares: El frío puede tener efectos cardiorrespiratorios significativos, a través del incremento de la presión sanguínea, de manera puntual o crónica. Este incremento se produce como consecuencia de la vasoconstricción periférica y además por el enfriamiento facial. El frío puede agravar los síntomas asociados con diferentes tipos de enfermedades cardiovasculares, como el síndrome de Raynaud. En particular, las personas con angina de pecho a menudo sienten molestias y dolor con la exposición al frío.
--	Enfermedades musculo-esqueléticas: Los trastornos músculo esqueléticos son aquellos que afectan a los nervios, músculos y tendones, cuyas dolencias más habituales son dolor, hinchazón, rigidez, debilidad muscular, etc. Muchos estudios sugieren que algunos de estos trastornos, como ciertos dolores de espalda, cuello, hombros, etc., están asociados con el trabajo a la intemperie en entornos fríos.
--	Enfermedades de la piel: La respuesta anormal de la piel se produce cuando los trabajadores se exponen al frío durante periodos prolongados. Si se padecen enfermedades crónicas de la piel puede aumentar la sensibilidad al frío y ocasionar dolor. Los problemas de la piel seca pueden empeorar con el frío. La urticaria por frío implica hipersensibilidad al mismo, que se manifiesta con hinchazón de la piel, ronchas y lesiones urticantes. También pueden producirse sabañones, que afectan a porciones desprotegidas de la piel.
+-	Efectos respiratorios: La inhalación de aire muy frío enfría las mucosas del tracto respiratorio superior y, con el tiempo, puede causar irritación, reacciones micro- inflamatorias y bronco-espasmo. 
+  Este último, especialmente pronunciado en personas asmáticas y con vías respiratorias hipersensibles.
+-	Efectos cardiovasculares: El frío puede tener efectos cardiorrespiratorios significativos, a través del incremento de la presión sanguínea, de manera puntual o crónica. 
+  Este incremento se produce como consecuencia de la vasoconstricción periférica y además por el enfriamiento facial. 
+  El frío puede agravar los síntomas asociados con diferentes tipos de enfermedades cardiovasculares, como el síndrome de Raynaud. 
+  En particular, las personas con angina de pecho a menudo sienten molestias y dolor con la exposición al frío.
+-	Enfermedades musculo-esqueléticas: Los trastornos músculo esqueléticos son aquellos que afectan a los nervios, músculos y tendones, cuyas dolencias más habituales son dolor, hinchazón, rigidez, debilidad muscular, etc. 
+  Muchos estudios sugieren que algunos de estos trastornos, como ciertos dolores de espalda, cuello, hombros, etc., están asociados con el trabajo a la intemperie en entornos fríos.
+-	Enfermedades de la piel: La respuesta anormal de la piel se produce cuando los trabajadores se exponen al frío durante periodos prolongados. Si se padecen enfermedades crónicas de la piel puede aumentar la sensibilidad al frío y ocasionar dolor. 
+  Los problemas de la piel seca pueden empeorar con el frío. 
+  La urticaria por frío implica hipersensibilidad al mismo, que se manifiesta con hinchazón de la piel, ronchas y lesiones urticantes. 
+  También pueden producirse sabañones, que afectan a porciones desprotegidas de la piel.
 -	Lesiones por frío: Cuando se trabaja expuesto al frío, existe el riesgo de sufrir daños locales (congelación) o daños generales (hipotermia).
-  -	Lesiones por frío sin congelación: Este tipo de lesiones se produce cuando las extremidades se exponen a bajas temperaturas, pero no llega a congelarse la piel. Las bajas temperaturas, junto con la humedad y la inmovilidad de las extremidades son los principales factores de riesgo. El principal efecto consiste en una disfunción vascular y celular que puede llegar a ser irreversible.
-  -	Lesiones por frío con congelación: Puede producirse una congelación local de la capa superficial de la piel, que ocasiona una zona blanquecina en la piel, o una congelación que afecta a los tejidos más profundos de la piel. En este caso se forman cristales de hielo y la piel se vuelve dura al tacto, con sensación de insensibilidad en la zona afectada. La gravedad del daño producido dependerá del grado de enfriamiento, el tiempo de exposición, la superficie afectada y el proceso de recalentamiento. Las personas con problemas de circulación tienen mayor riesgo de sufrir congelación. La congelación se localiza preferentemente en la periferia del cuerpo, siendo las zonas más vulnerables la cara, las orejas y los dedos de las manos y los pies.
--	Hipotermia: Se produce hipotermia cuando la temperatura interna del organismo desciende por debajo de los 35 ºC. Inicialmente se producen escalofríos pero, a medida que desciende la temperatura corporal, estos cesan y los movimientos se vuelven lentos y torpes, por lo que se reduce el rendimiento y la capacidad de trabajo físico. También se altera la capacidad mental, lo que hace aumentar el tiempo de reacción y sufrir confusión mental y alteraciones en el juicio. También la frecuencia cardíaca y respiratoria se vuelve más lenta y débil. Se trata de síntomas que se desarrollan de forma gradual y, con frecuencia, el propio afectado no percibe lo que está sucediendo, por lo que la asistencia externa puede ser la única alternativa para interrumpir la exposición. Cuanto más desciende la temperatura mayor es el riesgo de muerte. En los casos extremos en los que la temperatura interna desciende por debajo de los -28 ºC existe un riesgo importante de fibrilación cardíaca. A menos que la temperatura haya descendido demasiado, es posible la recuperación. El recalentamiento y recuperación de las víctimas de hipotermia profunda debe tratarse en un hospital con personal especializado.
+  -	Lesiones por frío sin congelación: Este tipo de lesiones se produce cuando las extremidades se exponen a bajas temperaturas, pero no llega a congelarse la piel. 
+    Las bajas temperaturas, junto con la humedad y la inmovilidad de las extremidades son los principales factores de riesgo. 
+    El principal efecto consiste en una disfunción vascular y celular que puede llegar a ser irreversible.
+  -	Lesiones por frío con congelación: Puede producirse una congelación local de la capa superficial de la piel, que ocasiona una zona blanquecina en la piel, o una congelación que afecta a los tejidos más profundos de la piel. 
+    En este caso se forman cristales de hielo y la piel se vuelve dura al tacto, con sensación de insensibilidad en la zona afectada. 
+    La gravedad del daño producido dependerá del grado de enfriamiento, el tiempo de exposición, la superficie afectada y el proceso de recalentamiento. 
+    Las personas con problemas de circulación tienen mayor riesgo de sufrir congelación. 
+    La congelación se localiza preferentemente en la periferia del cuerpo, siendo las zonas más vulnerables la cara, las orejas y los dedos de las manos y los pies.
+-	Hipotermia: Se produce hipotermia cuando la temperatura interna del organismo desciende por debajo de los 35 ºC. 
+  Inicialmente se producen escalofríos pero, a medida que desciende la temperatura corporal, estos cesan y los movimientos se vuelven lentos y torpes, por lo que se reduce el rendimiento y la capacidad de trabajo físico. 
+  También se altera la capacidad mental, lo que hace aumentar el tiempo de reacción y sufrir confusión mental y alteraciones en el juicio. 
+  También la frecuencia cardíaca y respiratoria se vuelve más lenta y débil. 
+  Se trata de síntomas que se desarrollan de forma gradual y, con frecuencia, el propio afectado no percibe lo que está sucediendo, por lo que la asistencia externa puede ser la única alternativa para interrumpir la exposición. 
+  Cuanto más desciende la temperatura mayor es el riesgo de muerte. 
+  En los casos extremos en los que la temperatura interna desciende por debajo de los -28 ºC existe un riesgo importante de fibrilación cardíaca. 
+  A menos que la temperatura haya descendido demasiado, es posible la recuperación. 
+  El recalentamiento y recuperación de las víctimas de hipotermia profunda debe tratarse en un hospital con personal especializado.
 -	Otras lesiones relacionadas con el frío: El pie de trinchera.
 
 Aunque cada vez es menos frecuente, pueden darse casos de pie de trinchera, o pie de inmersión. 
@@ -3127,11 +3429,21 @@ También es importante que cumpla con los requisitos ergonómicos de trabajo (mo
 
 En la evaluación de riesgos se deberá determinar el tipo de ropa requerida, en función del riesgo y el uso previsto. 
 Las principales prestaciones que consideran son:
--	La resistencia térmica. Oposición que los materiales ofrecen al paso de un flujo de calor. Depende de la composición y características del material.
--	El aislamiento térmico. No sólo está en función de la resistencia que el material ofrece al paso de un flujo de calor, sino también del ajuste de la prenda al cuerpo, de las partes que cubre o de los cierres y costuras, entre otros factores. Depende del aire que queda atrapado dentro de las fibras y los tejidos y del aire atrapado entre la ropa y la piel. Este aire actúa como una capa aislante muy efectiva.
--	La permeabilidad al aire. La penetración de aire a través del tejido de la prenda reduce notablemente el aislamiento térmico. Se mide como la cantidad de aire que pasa por minuto por una superficie determinada del tejido.
--	La penetración de agua. Cuando se trabaja en exteriores lluviosos o existe, en general, la posibilidad de entrar en contacto con agua, es recomendable utilizar prendas cuyas costuras y capas más superficiales sean resistentes a la penetración de agua.
--	La resistencia al vapor de agua. Debe ser evaluada solamente cuando la ropa de protección sea resistente a la penetración de agua, para así garantizar la evacuación del posible vapor de agua generado (sudoración). La acumulación del sudor en el interior de la ropa tiene efectos negativos puesto que disminuye el aislamiento de la ropa y puede generar riesgo de sobrecalentamiento si el cuerpo no puede eliminar el sudor.
+-	La resistencia térmica. 
+  Oposición que los materiales ofrecen al paso de un flujo de calor. 
+  Depende de la composición y características del material.
+-	El aislamiento térmico. 
+  No sólo está en función de la resistencia que el material ofrece al paso de un flujo de calor, sino también del ajuste de la prenda al cuerpo, de las partes que cubre o de los cierres y costuras, entre otros factores. 
+  Depende del aire que queda atrapado dentro de las fibras y los tejidos y del aire atrapado entre la ropa y la piel. 
+  Este aire actúa como una capa aislante muy efectiva.
+-	La permeabilidad al aire. 
+  La penetración de aire a través del tejido de la prenda reduce notablemente el aislamiento térmico. 
+  Se mide como la cantidad de aire que pasa por minuto por una superficie determinada del tejido.
+-	La penetración de agua. 
+  Cuando se trabaja en exteriores lluviosos o existe, en general, la posibilidad de entrar en contacto con agua, es recomendable utilizar prendas cuyas costuras y capas más superficiales sean resistentes a la penetración de agua.
+-	La resistencia al vapor de agua. 
+  Debe ser evaluada solamente cuando la ropa de protección sea resistente a la penetración de agua, para así garantizar la evacuación del posible vapor de agua generado (sudoración). 
+  La acumulación del sudor en el interior de la ropa tiene efectos negativos puesto que disminuye el aislamiento de la ropa y puede generar riesgo de sobrecalentamiento si el cuerpo no puede eliminar el sudor.
 
 La ropa de protección frente al frío ofrecerá:
 -	Aislamiento térmico, para evitar la pérdida de calor corporal.
@@ -3147,13 +3459,16 @@ que se indicará la norma de referencia que cumplen y los niveles de prestación
 
 Para prevenir los daños derivados de la exposición al frío son de especial interés las medidas de tipo organizativo, como:
 - Planificar los trabajos a la intemperie teniendo en cuenta la previsión meteorológica, considerando factores como la temperatura, humedad, viento, precipitaciones, etc...
-  -	Planificar los periodos de trabajo y descanso en función de las condiciones climáticas existentes en cada turno. Son preferibles pausas largas y menos frecuentes, que cortas y frecuentes.
+  -	Planificar los periodos de trabajo y descanso en función de las condiciones climáticas existentes en cada turno. 
+    Son preferibles pausas largas y menos frecuentes, que cortas y frecuentes.
 -	Cuando sea posible, se alternarán diferentes tareas para reducir el tiempo de exposición.
 -	Evitar un ritmo de trabajo tan elevado que haga sudar fuertemente, para evitar que se humedezca la ropa.
--	Favorecer el trabajo en equipo y disponer de sistemas de comunicación y control de los trabajadores expuestos. Cuando los trabajadores realicen tareas en solitario y aislados, se instalarán dispositivos “hombre muerto” (para enviar señales de alarma en caso de inmovilización prolongada) cuando sea necesario.
+-	Favorecer el trabajo en equipo y disponer de sistemas de comunicación y control de los trabajadores expuestos. 
+  Cuando los trabajadores realicen tareas en solitario y aislados, se instalarán dispositivos “hombre muerto” (para enviar señales de alarma en caso de inmovilización prolongada) cuando sea necesario.
 -	Evitar el mantenimiento de posturas estáticas prolongadas.
 -	Tener en cuenta la interacción con el frío de herramientas y equipos vibratorios que puedan agravar los daños para el trabajador.
--	Adaptar el trabajo a cada persona, considerando factores individuales: características personales del trabajador, edad, estado de salud, etc. Deben adoptarse medidas especiales para controlar la exposición de trabajadores que padezcan enfermedades o consuman alguna medicación que afecte a la regulación normal de la temperatura corporal.
+-	Adaptar el trabajo a cada persona, considerando factores individuales: características personales del trabajador, edad, estado de salud, etc. 
+  Deben adoptarse medidas especiales para controlar la exposición de trabajadores que padezcan enfermedades o consuman alguna medicación que afecte a la regulación normal de la temperatura corporal.
 -	Realizar pausas para descansar, ingerir bebidas calientes y recuperar la temperatura en locales acondicionados.
 
 == Primeros auxilios
@@ -3167,36 +3482,48 @@ En estas situaciones, hay que tener en cuenta que, entre los primeros síntomas,
 A continuación se aportan algunas pautas de actuación en función del tipo de dolencia producida:
 -	Deshidratación:
   -	Mantener al trabajador en reposo, tumbado con la cabeza algo más baja que el cuerpo.
-  - Si no presenta náuseas, proporcionar líquidos para hidratarlo. Beber pequeñas cantidades de agua, zumos de frutas o bebidas energéticas para recuperar electrolitos.
+  - Si no presenta náuseas, proporcionar líquidos para hidratarlo. 
+    Beber pequeñas cantidades de agua, zumos de frutas o bebidas energéticas para recuperar electrolitos.
 -	Erupción cutánea:
   -	Limpiar la piel y secarla.
   -	Cambiar la ropa húmeda, en su caso, y sustituirla por ropa seca.
   -	No aplicar pomadas ni cremas en las áreas con sarpullido, puesto que el calor y la humedad pueden empeorar el estado de la piel.
 -	Calambres:
   -	Trasladar al trabajador a un lugar fresco y ventilado para descansar.
-  -	Si está completamente alerta y sin náuseas, proporcionarle bebidas, como agua con sales o bebidas isotónicas. No bebidas alcohólicas o con cafeína.
+  -	Si está completamente alerta y sin náuseas, proporcionarle bebidas, como agua con sales o bebidas isotónicas. 
+    No bebidas alcohólicas o con cafeína.
   -	Hacer ejercicios suaves de estiramientos y frotar el músculo afectado.
-  -	No realizar actividad física hasta 2 horas después de que hayan desparecido los calambres. Seguir trabajando en esas circunstancias podría evolucionar hacia el agotamiento por calor, con mayor gravedad. Si no desaparecen en una hora, avisar al médico.
+  -	No realizar actividad física hasta 2 horas después de que hayan desparecido los calambres. 
+    Seguir trabajando en esas circunstancias podría evolucionar hacia el agotamiento por calor, con mayor gravedad. 
+    Si no desaparecen en una hora, avisar al médico.
 -	Síncope:
-  -	Mantener a la persona afectada tumbada, con las piernas levantadas y en lugar fresco. Cuando recupere la consciencia, proporcionar líquidos para hidratarla.
+  -	Mantener a la persona afectada tumbada, con las piernas levantadas y en lugar fresco. 
+    Cuando recupere la consciencia, proporcionar líquidos para hidratarla.
   -	Aunque no es grave, en muchas ocasiones su inicio no se diferencia de un golpe de calor, por lo que es necesario valorar todos los casos.
 -	Agotamiento:
   -	Trasladar al trabajador a un lugar fresco.
   -	Mantenerlo tumbado, o recostado, con las piernas levantadas por encima del nivel del corazón.
   -	Aflojar o retirar la ropa apretada.
   -	Refrescarlo rociándolo con agua, con una esponja húmeda, etc... y abanicarlo.
-  -	Si está completamente alerta y sin náuseas, proporcionarle bebidas como agua con sales o bebidas isotónicas. No bebidas alcohólicas o con cafeína.
-  -	Generalmente se aprecia mejoría en un tiempo breve. No obstante, es conveniente que el trabajador sea trasladado a un centro médico para que sea revisado por un especialista.
+  -	Si está completamente alerta y sin náuseas, proporcionarle bebidas como agua con sales o bebidas isotónicas. 
+    No bebidas alcohólicas o con cafeína.
+  -	Generalmente se aprecia mejoría en un tiempo breve. 
+    No obstante, es conveniente que el trabajador sea trasladado a un centro médico para que sea revisado por un especialista.
 -	Golpe de calor:
-  -	El trabajador afectado por un golpe de calor debe ser atendido de forma inmediata por profesionales, en un centro sanitario, puesto que se trata de una urgencia médica con una alta tasa de mortalidad. Mientras tanto, es importante que los trabajadores presentes en la obra sepan identificar los síntomas principales y cómo deben actuar para evitar que la situación se agrave y la víctima sufra daños mayores.
+  -	El trabajador afectado por un golpe de calor debe ser atendido de forma inmediata por profesionales, en un centro sanitario, puesto que se trata de una urgencia médica con una alta tasa de mortalidad. 
+    Mientras tanto, es importante que los trabajadores presentes en la obra sepan identificar los síntomas principales y cómo deben actuar para evitar que la situación se agrave y la víctima sufra daños mayores.
   -	Lo primero que debe hacerse es trasladar al trabajador afectado a un lugar alejado del sol, en sombra y lo más fresco y ventilado posible, puesto que es fundamental intentar bajar su temperatura corporal.
   -	Colocarlo tumbado boca arriba (salvo que esté vomitando o tenga convulsiones), con las piernas ligeramente elevadas para favorecer la circulación.
   -	Retirar o aligerar la ropa.
-  -	Empaparlo en agua fría para disminuir la temperatura corporal: aplicar compresas de agua fría (pero no demasiado, para evitar un cambio excesivamente brusco) en zonas como la cabeza, el pecho, las axilas y las ingles, o rociarlo con agua, mojarlo con una esponja, etc. También es eficaz envolverlo en una tela, sábana o toalla mojada.
+  -	Empaparlo en agua fría para disminuir la temperatura corporal: aplicar compresas de agua fría (pero no demasiado, para evitar un cambio excesivamente brusco) en zonas como la cabeza, el pecho, las axilas y las ingles, o rociarlo con agua, mojarlo con una esponja, etc. 
+    También es eficaz envolverlo en una tela, sábana o toalla mojada.
   -	Proporcionarle aire, abanicándolo.
-  -	Si el trabajador está consciente, y sin náuseas, se le ofrecerán líquidos, como agua o bebidas isotónicas para ayudar a reponer sales, en pequeños sorbos. En caso de que no esté consciente, no se le debe proporcionar ninguna bebida.
+  -	Si el trabajador está consciente, y sin náuseas, se le ofrecerán líquidos, como agua o bebidas isotónicas para ayudar a reponer sales, en pequeños sorbos. 
+    En caso de que no esté consciente, no se le debe proporcionar ninguna bebida.
   -	Si se producen convulsiones colocar bajo su cabeza algún objeto blando para evitar que se lesione, y no intentar controlarlas, puesto que podrían producirse lesiones musculares o articulares importantes.
-  -	Observar constantemente su evolución, controlando su temperatura corporal. Siempre debe haber alguien alerta vigilando al trabajador, hasta que sea atendido por profesionales. Mientras tanto, continuar enfriándolo.
+  -	Observar constantemente su evolución, controlando su temperatura corporal. 
+    Siempre debe haber alguien alerta vigilando al trabajador, hasta que sea atendido por profesionales. 
+    Mientras tanto, continuar enfriándolo.
 
 === Primeros auxiliios por exposición al frío
 
@@ -3205,15 +3532,19 @@ Cuando un trabajador se encuentra expuesto al frío y presenta hipotermia o cong
 
   Cuando se padecen síntomas de congelación, las actuaciones a realizar son:
   -	Trasladar a la víctima a un lugar cubierto, protegido y cálido, con cuidado para evitar empeorar los daños, y evitando que camine si tiene lesiones en los pies.
-  -	Aflojar las ropas ajustadas y retirar la ropa húmeda. Secarlo y abrigarlo con mantas, toallas o ropa seca.
+  -	Aflojar las ropas ajustadas y retirar la ropa húmeda. 
+    Secarlo y abrigarlo con mantas, toallas o ropa seca.
   -	Si está consciente, proporcionar bebidas calientes y suaves (sin cafeína).
   -	Colocar vendajes o gasas secas, limpias y desinfectadas sobre las zonas congeladas, entre los dedos de las manos y los pies, y tapando las heridas.
   -	Hasta que la víctima pueda recibir asistencia médica, se intentará la recuperación de las partes congeladas con agua tibia, sumergiendo manos y pies en un recipiente o aplicando suavemente paños empapados sobre las zonas afectadas.
   A continuación, se exponen algunos consejos sobre lo que NO debe hacerse en caso de congelación:
-  -	No friccionar ni masajear las áreas afectadas. Las zonas congeladas son muy delicadas y podrían agravarse las lesiones producidas por el frío.
+  -	No friccionar ni masajear las áreas afectadas. 
+    Las zonas congeladas son muy delicadas y podrían agravarse las lesiones producidas por el frío.
   -	No descongelar miembros o zonas si hay posibilidad de nueva congelación, puesto que esto provocaría daños aún mayores en los tejidos.
-  -	No descongelar utilizando agua caliente. Los miembros congelados son muy frágiles y presentan poca sensibilidad al frío y al calor, por lo que con agua muy caliente podrían producirse graves quemaduras.
-  -	No aplicar calor directo, como radiadores, aire caliente, estufas, etc., para evitar quemar los tejidos. El calor debe ser ambiental y no dirigido hacia las heridas o quemaduras producidas por la congelación.
+  -	No descongelar utilizando agua caliente. 
+    Los miembros congelados son muy frágiles y presentan poca sensibilidad al frío y al calor, por lo que con agua muy caliente podrían producirse graves quemaduras.
+  -	No aplicar calor directo, como radiadores, aire caliente, estufas, etc., para evitar quemar los tejidos. 
+    El calor debe ser ambiental y no dirigido hacia las heridas o quemaduras producidas por la congelación.
   -	No se deben ofrecer bebidas alcohólicas.
   -	En caso de que se hayan producido ampollas por congelación, no deberán reventarse.
 -	Hipotermia: Para saber si una persona sufre hipotermia, y determinar en qué grado, es fundamental saber reconocer los síntomas para tratar la situación de forma correcta.
@@ -3223,10 +3554,14 @@ Cuando un trabajador se encuentra expuesto al frío y presenta hipotermia o cong
     -	Si tiene una temperatura inferior a 28 ºC, se trata de una hipotermia aguda.
   -	Se deben comprobar también los signos característicos de la hipotermia para identificar el grado que sufre el trabajador afectado:
     -	Hipotermia leve: piel pálida y fría, temblor constante y sensación de cansancio.
-    -	Hipotermia moderada: piel pálida y fría, confusión o somnolencia, sensación de cansancio, respiración lenta y poco profunda. El temblor generalmente cesa, y presenta dificultades para hablar y alteraciones en el juicio. Estos síntomas indican un agravamiento de la situación.
+    -	Hipotermia moderada: piel pálida y fría, confusión o somnolencia, sensación de cansancio, respiración lenta y poco profunda. 
+      El temblor generalmente cesa, y presenta dificultades para hablar y alteraciones en el juicio. 
+      Estos síntomas indican un agravamiento de la situación.
     -	Hipotermia aguda: flacidez muscular, dilatación de pupilas, dificultad respiratoria, inconsciencia, latidos muy débiles y fibrilación ventricular.
-Cuando aparece alguno de los síntomas descritos es necesario recibir atención médica, incluso aunque se trate de una hipotermia leve, para evitar que empeore, si no se trata adecuadamente, y derive en un cuadro más grave. Mientras tanto, se tendrán en cuenta las siguientes recomendaciones:
-    -	Se debe proteger al trabajador de cualquier fuente de frío, colocándolo siempre que sea posible en un lugar cubierto, y con temperatura apropiada, o protegido del viento y arropado. Si está en el suelo, es conveniente poner mantas, toallas o cualquier prenda de ropa para protegerlo y aislarlo del contacto directo con el suelo frío.
+Cuando aparece alguno de los síntomas descritos es necesario recibir atención médica, incluso aunque se trate de una hipotermia leve, para evitar que empeore, si no se trata adecuadamente, y derive en un cuadro más grave. 
+  Mientras tanto, se tendrán en cuenta las siguientes recomendaciones:
+    -	Se debe proteger al trabajador de cualquier fuente de frío, colocándolo siempre que sea posible en un lugar cubierto, y con temperatura apropiada, o protegido del viento y arropado. 
+      Si está en el suelo, es conveniente poner mantas, toallas o cualquier prenda de ropa para protegerlo y aislarlo del contacto directo con el suelo frío.
     -	Es importante proteger especialmente la cabeza y el cuello, cubriéndolos para retener el calor corporal.
     -	Si su ropa está mojada se debe quitar, y sustituir esas prendas por otras secas o bien cubrirlo con mantas, toallas, etc.
     -	Se debe calentar gradualmente la parte central de cuerpo, mediante la aplicación de compresas calientes en el cuello, el pecho y las ingles, o bien utilizando botellas de agua caliente envueltas.
@@ -3237,8 +3572,12 @@ Cuando aparece alguno de los síntomas descritos es necesario recibir atención 
     -	Cuando se atenúen los síntomas y aumente la temperatura, mantener al trabajador seco y caliente hasta que pueda ser atendido por un profesional.
     -	Permanecer en todo momento junto al trabajador para vigilar sus signos vitales.
 -	Pie de trinchera:
-  -	El tratamiento de esta afección consiste en quitarse el calzado y los calcetines húmedos, lavar los pies, si están sucios, y secarlos muy bien. Deben mantenerse elevados por encima del nivel del corazón mientras se recalientan.
-  -	Para calentarlos no se deben frotar ni masajear. Tampoco se colocarán cerca de fuentes de calor intenso, como estufas. En caso de que se hayan producido ampollas, no se deben reventar para evitar infecciones. No utilizar cremas ni lociones.
+  -	El tratamiento de esta afección consiste en quitarse el calzado y los calcetines húmedos, lavar los pies, si están sucios, y secarlos muy bien. 
+    Deben mantenerse elevados por encima del nivel del corazón mientras se recalientan.
+  -	Para calentarlos no se deben frotar ni masajear. 
+    Tampoco se colocarán cerca de fuentes de calor intenso, como estufas. 
+    En caso de que se hayan producido ampollas, no se deben reventar para evitar infecciones. 
+    No utilizar cremas ni lociones.
   -	Evitar caminar para no dañar los tejidos y solicitar ayuda médica.
 
 === Primeros auxilios por caída de un rayo
@@ -3286,7 +3625,7 @@ En la identificación de los riesgos se ha utilizado la lista de “Riesgos de a
 -	Ruidos y/o vibraciones.
 -	Otros.
 
-*INSERTAR TABLA DE PROBABILIDAD / SEVERIDAD*
+//*INSERTAR TABLA DE PROBABILIDAD / SEVERIDAD*
 
 === Medidas preventivas
 
@@ -3300,8 +3639,10 @@ Protección contra el calor:
 -	Usar crema de protección solar.
 
 Protección contra el frío:
--	Utilizar ropa y calzado adecuados, proteger las manos con guantes y usar pasamontañas si es necesario. En caso de humedad elevada o lluvia, se utilizarán prendas y calzado impermeables.
--	Incrementar el consumo de líquidos por pérdida de los mismos. Es aconsejable tomar bebidas templadas, dulces y evitar el consumo de alcohol.
+-	Utilizar ropa y calzado adecuados, proteger las manos con guantes y usar pasamontañas si es necesario. 
+  En caso de humedad elevada o lluvia, se utilizarán prendas y calzado impermeables.
+-	Incrementar el consumo de líquidos por pérdida de los mismos. 
+  Es aconsejable tomar bebidas templadas, dulces y evitar el consumo de alcohol.
 -	La dieta ha de ser equilibrada y suficiente para contrarrestar el gasto derivado del esfuerzo físico.
 -	Evitar, en la medida de lo posible, posturas estáticas y especialmente forzadas.
 
@@ -3320,13 +3661,11 @@ Accidentes causados por seres vivos:
 -	Utilizar repelentes de insectos en la época de mosquitos.
 -	En presencia de animales (perros, ganado..) no dar nunca la espalda y no realizar movimientos bruscos en su presencia.
 
-*FIRMA, FECHA Y DEMÁS*
+//*FIRMA, FECHA Y DEMÁS*
 
-#pagebreak()
 
 = Anexo XI Especificaciones técnicas de los EPI
 
-#pagebreak()
 
 Listado de principales EPIS usados en obra y sus especificaciones técnicas mínimas.
 
@@ -3405,7 +3744,8 @@ En caso de ser así deben cumplir con las especificaciones mínimas de esta list
   -	Nivel 2: 7 KA / 0,5 s / 300 mm
   -	Guantes dieléctricos para riesgos eléctricos.
   -	Para trabajos a media y baja tensión.
-  -	Protege del paso de corriente eléctrica a través del cuerpo humano (choque eléctrico), producido por el contacto físico con un elemento conductor, a diferente tensión. (No protege de corrientes eléctricas inducidas en el cuerpo humano por campos electromagnéticos fuertes o cualquier otro riesgo derivado de la energía eléctrica).
+  -	Protege del paso de corriente eléctrica a través del cuerpo humano (choque eléctrico), producido por el contacto físico con un elemento conductor, a diferente tensión. 
+    (No protege de corrientes eléctricas inducidas en el cuerpo humano por campos electromagnéticos fuertes o cualquier otro riesgo derivado de la energía eléctrica).
   -	CLASE: Número (00, 0, 1, 2, 3 y 4) que indica el valor de tensión máxima de trabajo.
   -	Fabricados en látex natural.
   -	Los guantes se deben almacenar en su embalaje.
@@ -3430,13 +3770,11 @@ En caso de ser así deben cumplir con las especificaciones mínimas de esta list
   -	Peso: 0,517kg
   -	Es obligatoria la revisión anual de los dispositivos contra caídas después del primer uso
 
-*FIRMA, FECHA Y DEMÁS*
+//*FIRMA, FECHA Y DEMÁS*
 
-#pagebreak()
 
 = Anexo XII Normativa de aplicación al proyecto
 
-#pagebreak()
 
 #table(
   columns: (auto, auto, auto, auto),
@@ -3689,7 +4027,8 @@ ESTATALES:
 
 *Comunidad Autónoma de Andalucía*
 
--	Decreto 50/2025. Reglamento para la preservación de la calidad acústica en Andalucía.
+-	Decreto 50/2025.
+  Reglamento para la preservación de la calidad acústica en Andalucía.
 -	Decreto 37/2025. Reglamento de protección frente a la contaminación lumínica en Andalucía.
 -	Ley 3/2023, de Economía Circular de Andalucía.
 -	Decreto-ley 3/2024. Medidas de simplificación y racionalización administrativa para la mejora de las relaciones de los ciudadanos con la Administración de la Junta de Andalucía y el impulso de la actividad económica en Andalucía.
@@ -3762,11 +4101,11 @@ Normas NTE que les sean de aplicación, según fase de obra.
 
 Normas UNE que les sean de aplicación.
 
-*FIRMA, FECHA Y DEMÁS*
+//*FIRMA, FECHA Y DEMÁS*
 
-#pagebreak()
 
-= IV Planos
+
+= Planos
 
 
 

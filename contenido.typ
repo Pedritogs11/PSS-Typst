@@ -4,11 +4,8 @@
 
 #let data = json("data.json")
 
-// #show heading.where(level: 1): it => [
-//   #pagebreak()
-//   #it
-//   #pagebreak()
-// ]
+//Sergio:
+//Codigo:
 
 
 // =======================
@@ -21,7 +18,7 @@
   [DESCRIPCIÓN], [#data.proyecto.titulo],
   [PROMOTOR], [#data.promotor.nombre],
   [SITUACIÓN OBRA], [#data.proyecto.localizacion.situacion],
-  [INSTALADORA], [#data.instaladora.representante, #data.instaladora.nombre],
+  [INSTALADORA], [#data.instaladora.responsable, #data.instaladora.nombre],
   [AUTOR DEL PLAN DE SEGURIDAD Y SALUD], [#for (_, valor) in data.autor_pss [#valor \ ]],
   [DIRECCIÓN FACULTATIVA], [#for (_, valor) in data.direccion_facultativa [#valor \ ]],
   [COORDINADOR DE SEGURIDAD Y SALUD], [#for (_, valor) in data.coordinador_pss [#valor \ ]],
@@ -60,14 +57,14 @@ ejecución de la obra deberá desarrollar las siguientes funciones:
 + Adoptar las medidas necesarias para que sólo las personas autorizadas puedan acceder a la obra. 
   La dirección facultativa asumirá esta función cuando no fuera necesaria la designación de coordinador.
 
-instaladora.nombre, como contratista, colaborará en todo lo posible con el coordinador de seguridad para que éste pueda cumplir con sus atribuciones de la forma más eficiente posible.
+#data.instaladora.nombre, como contratista, colaborará en todo lo posible con el coordinador de seguridad para que éste pueda cumplir con sus atribuciones de la forma más eficiente posible.
 
 
 
 = Memoria descriptiva
 
 
-//Sergio.codigo:
+//Codigo:
 #outline(title: "Índice de la memoria")
 
 
@@ -75,10 +72,11 @@ instaladora.nombre, como contratista, colaborará en todo lo posible con el coor
 == Introducción
 === Antecedentes
 //Sergio: el 99% de los proyectos de FV a los que les he hecho un PSS son sobre una cubierta de una nave, pero si llega un contratista que quiere el plan y la ejecución de la obra no es sobre una nave, este texto no sirve, ¿lo guardo como variable?
+//
 #data.promotor.nombre como promotor de la instalación encarga a #data.instaladora.nombre para la ejecución de *una planta fotovoltaica sobre la cubierta de su nave*.
 
 Con tal motivo, se encarga a #data.instaladora.nombre, la realización del “#data.proyecto.titulo” situada en #data.proyecto.localizacion.situacion, con el fin de que sirva de base al instalador para su ejecución, así como para solicitar de los Organismos Competentes de la Administración las preceptivas autorizaciones de instalación y puesta en servicio. 
-La empresa instaladora designada por #data.promotor.nombre es instaladora.nombre instaladora.responsable, como responsable de dicha empresa, redacta el presente Plan de Seguridad y Salud con el fin de analizar, estudiar, desarrollar y complementar, en función del propio sistema de ejecución del contratista las previsiones respecto a la prevención del riesgo de accidentes laborales y enfermedades profesionales, las instalaciones preceptivas de higiene y bienestar y demás prescripciones reglamentarias, así como las contenidas en el Estudio Básico de Seguridad y Salud del Proyecto redactado por instaladora.nombre
+La empresa instaladora designada por #data.promotor.nombre es #data.instaladora.nombre, #data.instaladora.responsable, como responsable de dicha empresa, redacta el presente Plan de Seguridad y Salud con el fin de analizar, estudiar, desarrollar y complementar, en función del propio sistema de ejecución del contratista las previsiones respecto a la prevención del riesgo de accidentes laborales y enfermedades profesionales, las instalaciones preceptivas de higiene y bienestar y demás prescripciones reglamentarias, así como las contenidas en el Estudio Básico de Seguridad y Salud del Proyecto redactado por #data.instaladora.nombre
 
 === Objeto del plan de seguridad y salud
 
@@ -91,21 +89,21 @@ El presente trabajo consiste en la redacción de un "Plan de Seguridad y Salud" 
 El objeto de este "Plan de Seguridad y Salud", es diseñar el conjunto de sistemas que permiten abordar de forma integral la seguridad, diseñando la línea de prevención recomendable a cada situación potencial de riesgo, siguiendo las directrices y definiciones del "Estudio de Seguridad y Salud", en el que se inspira para evitar los accidentes laborales y de otra índole durante la duración de los trabajos. 
 Este "Plan de Seguridad y Salud" se redacta recogiendo lo preceptuado en el Real Decreto 1627/97, nacido de la transposición de la Directiva 92/57/CEE, de 24 de JULIO, por el que se establece las disposiciones mínimas de seguridad y salud que deben aplicarse en las obras de construcción temporales y móviles y en el que se implanta, mediante la transposición al Derecho español a través del citado Real Decreto la obligatoriedad de inclusión de un "Estudio de Seguridad y Salud" en cualquier obra, pública o privada, en las que se realicen trabajos de construcción o ingeniería civil.
 
-Por lo que antecede y en aplicación de lo contemplado en el artículo 4 del citado Real Decreto que establece la obligatoriedad, por parte del promotor, de elaborar un estudio de seguridad y salud en los proyectos de obras en los que el presupuesto de ejecución por contrata incluido en el proyecto sea igual o superior a los 450.759,08 euros, que la duración estimada de la obra sea superior a 30 días laborales, empleándose en algún momento a más de 20 trabajadores simultáneamente o también que los días detrabajo del total de los trabajadores en la obra, sea superior a 500, o en las obras de túneles, galerías, conducciones subterráneas o presas, y a elaborar un Estudio Básico de Seguridad y Salud en el caso de que no se den ninguno de los supuestos anteriores, y de la aplicación del artículo 5 por el que se establecen los mínimos documentos que deben contener los estudios de seguridad y salud, nace la obligatoriedad por parte de instaladora.nombre, según preceptúa el artículo 7 del Real Decreto 1627 de elaborar un Plan de Seguridad y Salud.
+Por lo que antecede y en aplicación de lo contemplado en el artículo 4 del citado Real Decreto que establece la obligatoriedad, por parte del promotor, de elaborar un estudio de seguridad y salud en los proyectos de obras en los que el presupuesto de ejecución por contrata incluido en el proyecto sea igual o superior a los 450.759,08 euros, que la duración estimada de la obra sea superior a 30 días laborales, empleándose en algún momento a más de 20 trabajadores simultáneamente o también que los días detrabajo del total de los trabajadores en la obra, sea superior a 500, o en las obras de túneles, galerías, conducciones subterráneas o presas, y a elaborar un Estudio Básico de Seguridad y Salud en el caso de que no se den ninguno de los supuestos anteriores, y de la aplicación del artículo 5, por el que se establecen los mínimos documentos que deben contener los estudios de seguridad y salud, nace la obligatoriedad por parte de #data.instaladora.nombre, según preceptúa el artículo 7 del Real Decreto 1627 de elaborar un Plan de Seguridad y Salud.
 
-En aplicación de lo preceptuado en el artículo citado en el punto anterior, instaladora.nombre redacta este Plan de Seguridad y Salud en el que se analiza, estudia, desarrolla, y complementa las previsiones contenidas en el Estudio Básico de Seguridad y Salud.
+En aplicación de lo preceptuado en el artículo citado en el punto anterior, #data.instaladora.nombre redacta este Plan de Seguridad y Salud en el que se analiza, estudia, desarrolla, y complementa las previsiones contenidas en el Estudio Básico de Seguridad y Salud.
 
 Por lo anterior, este "Plan de Seguridad y Salud" se redacta considerando los riesgos detectables a surgir en el transcurso de esta obra, adaptando a nuestra tecnología las previsiones realizadas en el "Estudio Básico de Seguridad y Salud" del proyecto. 
 Esto no quiere decir que no puedan surgir otros riesgos que serán elevados, por el jefe de obra o encargado, al Servicio de Seguridad y Salud de #data.instaladora.nombre, para su estudio de la forma más profunda posible en colaboración estrecha con el Coordinador de Seguridad y Salud durante la ejecución de la obra.
 
-En el desarrollo de esta Memoria, se han identificado los riesgos de las diferentes Unidades de Obra, Máquinas y Equipos, evaluando la eficacia de las protecciones previstas a partir de los datos aportados por el Estudio Seguridad y Salud, siempre aplicando los métodos propios de #data.instaladora.nombre. 
+En el desarrollo de esta Memoria, se han identificado los riesgos de las diferentes Unidades de Obra, Máquinas y Equipos, evaluando la eficacia de las protecciones previstas a partir de los datos aportados por el Estudio Seguridad y Salud, siempre aplicando los métodos propios de #data.instaladora.nombre. //Sergio: Aquí por ejemplo, acaba la frase y la última palabra es el nombre de la instaladora, con lo cual es posible que termine en S.L.U. por ejemplo, habiendo dos puntos al final en vez de uno solo, sin embargo, más arriba y más abajo esto no ocurre, con lo cual tampoco podríamos suprimir el último punto del nombre, pues quedaría incompleto,¿ no ?
 En definitiva, se pretende cumplir con lo legislado y eliminar de la obra la siniestralidad laboral y la enfermedad profesional, elevando así el nivel de las condiciones de trabajo de esta construcción.
 
-Previo al inicio de los trabajos instaladora.nombre entregará al Coordinador de Seguridad y Salud una planificación de los trabajos, comunicando cualquier cambio, notificará si va a subcontratar algún trabajo y efectuará un acta previa al inicio de las obras avisando de la fecha de inicio.
+Previo al inicio de los trabajos #data.instaladora.nombre entregará al Coordinador de Seguridad y Salud una planificación de los trabajos, comunicando cualquier cambio, notificará si va a subcontratar algún trabajo y efectuará un acta previa al inicio de las obras avisando de la fecha de inicio.
 
 
 === Emplazamiento
-
+//Sergio: Otra vez se menciona que la instalción se ejecutará en la cubierta de una nave
 La planta solar fotovoltaica que se trata se ubicará en la cubierta de la nave con los siguientes datos:
 
 Propiedad: #data.proyecto.empresa.nombre
@@ -114,11 +112,9 @@ Dirección: #data.proyecto.localizacion.situacion
 
 Ubicación google maps: #data.proyecto.empresa.enlace_maps
 
-*empresa.foto*
+//*empresa.foto*
 
 === Datos generales
-
-Las actuaciones tendrán lugar en la zona sur del aparcamiento de la residencia y en la parcela contigua ocupada por olivar, ambas zonas propiedad de 
 
 #table(
   columns: (auto, auto),
@@ -137,7 +133,7 @@ Las actuaciones tendrán lugar en la zona sur del aparcamiento de la residencia 
   [Nº TRABAJADORES PREVISTOS],[Máxima concentración de personal de obra: #data.proyecto.trabajadores.totales operarios. Personal medio de obra: #data.proyecto.trabajadores.media operarios.]
 )
 
--	La empresa contratista, instaladora.nombre, ha adoptado como modalidad preventiva la contratación de servicio de prevención ajeno, teniendo contratado dicho servicio con #data.sys.subcontrata_modelo_preventivo.
+-	La empresa contratista, #data.instaladora.nombre, ha adoptado como modalidad preventiva la contratación de servicio de prevención ajeno, teniendo contratado dicho servicio con #data.sys.subcontrata_modelo_preventivo.
 -	Relación de empresas subcontratistas y trabajadores autónomos. 
   Cumplimiento de la Ley 32/2006 y 1109/2007 del 24 de agosto desarrollando al anterior. 
   Será obligado el cumplimiento de la Ley 32/2006 DE 18 DE OCTUBRE REGULADORA DE LA SUBCONTRATACIÓN EN EL SECTOR DE LA CONSTRUCCION y el RD. 1109/2007 de 24 DE AGOSTO.
@@ -170,7 +166,7 @@ Ubicación: #data.sys.centro_salud.direccion
 
 #data.sys.centro_salud.enlace_maps
 
-centroSalud.foto
+//centroSalud.foto
 
 En los planos se detalla el recorrido a seguir desde la obra en caso de ser necesario. 
 El citado plano, deberá estar situado en un lugar visible y accesible a la totalidad de los trabajadores de la obra.
@@ -203,7 +199,7 @@ Previo el inicio de los trabajos y durante todo el transcurso de la obra se disp
 
 === Control de accesos a la obra
 
-El procedimiento por parte de instaladora.nombre para el control de acceso a la obra de trabajadores de la contrata como de las subcontratas es el siguiente:
+El procedimiento por parte de #data.instaladora.nombre para el control de acceso a la obra de trabajadores de la contrata como de las subcontratas es el siguiente:
 
 -	El listado de trabajadores será remitido al CSS previo a la ejecución de la obra.
 -	Se evitará el acceso de toda persona ajena a la obra.
@@ -298,7 +294,7 @@ Se instalarán las canalizaciones consistentes en:
 - Las medidas de protección colectivas a emplear en esta fase de la obra serán las colocadas, es decir, arnés con doble anclaje y puntos de anclaje en estructura.
 -	Bajada de la bandeja a inversor, por fachada de la nave.
 -	Se prevé la realización de trabajos de albañilería, los cuáles, aunque son de poca envergadura deben de evaluarse. 
-  Se incluyen en esta fase los pequeños trabajos  tales como apertura y cierre de rozas y pasos de muro, recibido a fábricas de soportes, pinturas, etc…
+  Se incluyen en esta fase los pequeños trabajos tales como apertura y cierre de rozas y pasos de muro, recibido a fábricas de soportes, pinturas, etc…
 
 ==== Fase 4: Montaje de inversores y ejecución de la instalación eléctrica
 
@@ -419,7 +415,8 @@ Estas traducciones correrán a cargo del contratista afectado.
   Recuerde que las citadas protecciones tienen una caducidad, pasada la cual no garantizan su efectividad.
 -	Puesto que los trabajos se desarrollan principalmente en altura toda persona que trabaje bajo esta circunstancia deberá de tener la formación necesaria para realizar los trabajos en altura correspondientes.
 -	Nunca debe pisar un tablón o trozo de madera que esté dejado en el suelo. Podría tener algún clavo dejado por olvido o por estar limpiándolo en ese momento y clavárselo.
--	En caso de ver una señalización de peligro que corte el paso debe evitar el cruzarla. Dicha señalización está indicando una zona de acceso restringido o prohibido. 
+-	En caso de ver una señalización de peligro que corte el paso debe evitar el cruzarla. 
+  Dicha señalización está indicando una zona de acceso restringido o prohibido. 
   Si tiene necesidad de cruzarla consúltele a nuestro recurso preventivo, le indicarán cuál es la forma correcta de hacerlo.
 -	Haga caso de los carteles indicadores existentes por la obra.
 - No quite, bajo ningún concepto, una protección colectiva sin antes haberlo consultado y advertido a nuestro recurso preventivo, pues deberá/n tomar las medidas preventivas necesarias antes de dejar la zona desprotegida. 
@@ -465,11 +462,11 @@ Para la definición de cada trabajo, se ha adoptado la forma indicada a continua
   Igual que en los puntos anteriores, la identificación de los riesgos de cada tipo de maquinaria o herramienta, así como las medidas preventivas y protecciones técnicas a adoptar vendrán indicadas en el apartado correspondiente a medios auxiliares, por lo que deberá atenderse a lo citado en los mismos.
 -	Identificación de riesgos: se aportará una relación de los riesgos propios del trabajo a realizar, sin incluir los pertenecientes a la utilización de medios auxiliares, maquinaria o materiales, puesto que ya se definen en los apartados correspondientes. 
   Dentro de este epígrafe se define, para cada riesgo, lo siguiente:
--	Protecciones colectivas: en caso de utilizar unas protecciones colectivas particulares para la realización de los trabajos que no estén indicadas en el apartado de “Protecciones colectivas a utilizar durante el proceso constructivo” del presente Plan de seguridad, se indican en este punto, en caso contrario no se mencionan.
--	Protecciones individuales: se indica qué protecciones individuales particulares será necesario utilizar para cada una de las actividades intervinientes en cada procedimiento de trabajo. 
-  No se incluyen las necesarias para la utilización de los medios auxiliares, maquinaria ni materiales, puesto que ya se definen en los apartados correspondientes.
--	Medidas preventivas: se citan las normas preventivas intrínsecas a la realización de los trabajos, así como (si procede) los procedimientos de trabajo seguro. 
-  No se incluyen las necesarias para la utilización de los medios auxiliares, maquinaria ni materiales, puesto que ya se definen en los apartados correspondientes.
+  -	Protecciones colectivas: en caso de utilizar unas protecciones colectivas particulares para la realización de los trabajos que no estén indicadas en el apartado de “Protecciones colectivas a utilizar durante el proceso constructivo” del presente Plan de seguridad, se indican en este punto, en caso contrario no se mencionan.
+  -	Protecciones individuales: se indica qué protecciones individuales particulares será necesario utilizar para cada una de las actividades intervinientes en cada procedimiento de trabajo. 
+    No se incluyen las necesarias para la utilización de los medios auxiliares, maquinaria ni materiales, puesto que ya se definen en los apartados correspondientes.
+  -	Medidas preventivas: se citan las normas preventivas intrínsecas a la realización de los trabajos, así como (si procede) los procedimientos de trabajo seguro. 
+    No se incluyen las necesarias para la utilización de los medios auxiliares, maquinaria ni materiales, puesto que ya se definen en los apartados correspondientes.
 
 === Trabajos al aire
 
@@ -523,8 +520,8 @@ Los materiales necesarios para la ejecución de estos trabajos serán únicament
 Maquinaria de obra y herramientas:
 
 La maquinaria a utilizar en los citados trabajos será:
--	Radial, para cortar los perfiles auxiliares y realizar pequeñas modificaciones
-  Taladro, para agujerear y atornillar los elementos a la estructura y entre sí.
+-	Radial, para cortar los perfiles auxiliares y realizar pequeñas modificaciones.
+- Taladro, para agujerear y atornillar los elementos a la estructura y entre sí.
 -	Pequeña herramienta de mano, tipo tenaza, martillo, destornillador..., para labores varias.
 -	Camión pluma.
 
@@ -534,7 +531,7 @@ Durante la ejecución del montaje de la instalación, se identifican los siguien
 - R01: Caídas a distinto nivel.
 - R02: Caídas al mismo nivel por falta de orden y limpieza.
 - R03: Desplome de material mal apilado.
-- R04: Caídas de objetos (En su manipulación)
+- R04: Caídas de objetos (En su manipulación).
 - R05: Golpes y cortes con elementos desprendidos y con el propio material.
 - R06: Golpes y cortes con herramientas.
 - R07: Atrapamiento por equipo de elevación de cargas.
@@ -543,8 +540,8 @@ Durante la ejecución del montaje de la instalación, se identifican los siguien
 - R10: Proyección de fragmentos o partículas.
 - R11: Exposición al ruido.
 - R12: Daños a terceros o por terceros.
-- R13: Pisadas sobre superficies de tránsito
-- RP: Recurso preventivo
+- R13: Pisadas sobre superficies de tránsito.
+- RP: Recurso preventivo.
 
 === Conexión del cableado y puesta en marcha de la instalación
 
@@ -569,10 +566,10 @@ La maquinaria a utilizar en los citados trabajos será:
 Identificación de riesgos:
 
 Durante la ejecución del montaje de la instalación en cubierta, se identifican los siguientes riesgos particulares inherentes al propio trabajo.
-- R14: Caídas desde altura durante las operaciones de cableado.
 - R02: Caídas al mismo nivel por falta de orden y limpieza.
 - R06: Golpes y cortes con herramientas.
 - R10: Proyección de fragmentos o partículas.
+- R14: Caídas desde altura durante las operaciones de cableado.
 - R15: Contactos eléctricos directos e indirectos.
 - R16: Riesgo de incendio.
 - RP: Recurso preventivo.
@@ -691,70 +688,52 @@ Deberán vigilar el cumplimiento de las actividades preventivas, debiendo perman
 - Caídas desde la cubierta al ubicar estructura y paneles y al realizar el montaje de bandejas y cableado: este riesgo existe puesto que los paneles y la estructura se colocarán sobre la cubierta , siendo necesario desplazarse por la misma, al igual que durante el montaje del cableado.
 
 Protecciones colectivas e individuales:
-
-El acceso a la cubierta sólo se realizará cuando se garantice que se ha minimizado el riesgo de caídas a distinto nivel de los operarios. 
-En este caso se usará la propia estructura metálica de la nave para sujetar los dispositivos de anclaje de la línea de vida provisional.
-
-Todos los trabajos que se realicen en altura se realizarán haciendo uso de calzado de seguridad antideslizante y puntera reforzada.
-
-La manipulación de cargas se efectuará mediante el uso de guantes de protección mecánica.
+- El acceso a la cubierta sólo se realizará cuando se garantice que se ha minimizado el riesgo de caídas a distinto nivel de los operarios. 
+  En este caso se usará la propia estructura metálica de la nave para sujetar los dispositivos de anclaje de la línea de vida provisional.
+- Todos los trabajos que se realicen en altura se realizarán haciendo uso de calzado de seguridad antideslizante y puntera reforzada.
+- La manipulación de cargas se efectuará mediante el uso de guantes de protección mecánica.
 
 Medidas preventivas:
-
-Todo el personal que deba acceder a la obra habrá recibido la información correspondiente a la circulación por la misma. 
-Nuestro recurso preventivo deberá/n dejar constancia de ello.
-
-Se prohíbe subir a la estructura durante tiempo lluvioso y tras un periodo de lluvia se examinará el estado de la misma por parte del recurso preventivo, asegurándose que no resbale de la superficie de tránsito.
-
-Antes de acceder a la estructura, en periodo invernal, se comprobará la inexistencia de hielo en la misma.
+- Todo el personal que deba acceder a la obra habrá recibido la información correspondiente a la circulación por la misma. 
+  Nuestro recurso preventivo deberá/n dejar constancia de ello.
+- Se prohíbe subir a la estructura durante tiempo lluvioso y tras un periodo de lluvia se examinará el estado de la misma por parte del recurso preventivo, asegurándose que no resbale de la superficie de tránsito.
+- Antes de acceder a la estructura, en periodo invernal, se comprobará la inexistencia de hielo en la misma.
 
 ==== R02: Caída de personas al mismo nivel, por falta de orden y limpieza
 
 Medidas preventivas:
-- Mantener la zona de trabajo lo más ordenada y limpia posible
-  Retirar inmediatamente cualquier elemento que obstaculice las zonas de paso.
+- Mantener la zona de trabajo lo más ordenada y limpia posible.
+- Retirar inmediatamente cualquier elemento que obstaculice las zonas de paso.
 
 ==== R03: Desplome de material mal apilado
 
 Medidas preventivas:
-
-El material se apilará adecuadamente, evitando generar pilas inestables. 
-La altura de apilamiento tampoco será excesiva.
-
-El acopio de material en cubierta se realizará sobre elementos estructurales, evitando sobrecargas en la cubierta que superen los 220 kg/m2.
-
-Se evitará asimismo el acopio de materiales junto a los bordes de cubierta.
-
-El acopio de material se realizará de manera progresiva, repartiendo los palets a medida que se vayan subiendo.
+- El material se apilará adecuadamente, evitando generar pilas inestables. 
+  La altura de apilamiento tampoco será excesiva.
+- El acopio de material en cubierta se realizará sobre elementos estructurales, evitando sobrecargas en la cubierta que superen los 220 kg/m2.
+- Se evitará asimismo el acopio de materiales junto a los bordes de cubierta.
+- El acopio de material se realizará de manera progresiva, repartiendo los palets a medida que se vayan subiendo.
 
 ==== R04: Caída de objetos (en su manipulación)
 
 Protecciones individuales:
-
-Todos los trabajos que se realicen en altura se realizarán haciendo uso de calzado de seguridad antideslizante y puntera reforzada.
-
-La manipulación de cargas se efectuará mediante el uso de guantes de protección mecánica.
-
-Durante el transcurso de toda la obra será obligatorio el uso de casco de seguridad con barbuquejo.
+- Todos los trabajos que se realicen en altura se realizarán haciendo uso de calzado de seguridad antideslizante y puntera reforzada.
+- La manipulación de cargas se efectuará mediante el uso de guantes de protección mecánica.
+- Durante el transcurso de toda la obra será obligatorio el uso de casco de seguridad con barbuquejo.
 
 Protecciones colectivas:
-
-En el perímetro de la zona de trabajo, donde abajo existen accesos de personal con el consiguiente tránsito de personas, para impedir la posible caída de objetos sobre personas, se balizará impidiendo el paso durante los trabajos en altura. 
-No obstante, se vigilará por recurso preventivo en planta baja la zona de trabajo durante el izado de materiales.
+- En el perímetro de la zona de trabajo, donde abajo existen accesos de personal con el consiguiente tránsito de personas, para impedir la posible caída de objetos sobre personas, se balizará impidiendo el paso durante los trabajos en altura. 
+  No obstante, se vigilará por recurso preventivo en planta baja la zona de trabajo durante el izado de materiales.
 
 Medidas preventivas:
-
-Solo podrán manipular cargas con maquinaria auxiliar aquellas personas que hayan recibido formación e información específica para la mencionada tarea, y hayan sido debidamente autorizadas por la empresa.
-
-Las tareas de manipulación manual de placas fotovoltaicas se realizarán siempre por 2 trabajadores, y de la manera más mecanizada posible para prevenir la caída de las mismas. 
-No se ubicarán los pies debajo de la carga a manipular.
-
-Se evitará situarse por debajo de placas no convenientemente fijadas a la estructura.
+- Solo podrán manipular cargas con maquinaria auxiliar aquellas personas que hayan recibido formación e información específica para la mencionada tarea, y hayan sido debidamente autorizadas por la empresa.
+- Las tareas de manipulación manual de placas fotovoltaicas se realizarán siempre por 2 trabajadores, y de la manera más mecanizada posible para prevenir la caída de las mismas. 
+  No se ubicarán los pies debajo de la carga a manipular.
+- Se evitará situarse por debajo de placas no convenientemente fijadas a la estructura.
 
 ==== R05: Golpes y cortes con elementos desprendidos y con el propio material
 
 Durante las operaciones de izado de cargas se prohibirá el paso a toda persona ajena a los trabajos, balizando la zona de trabajo (como mínimo cinta de balizamiento, señal de prohibido el paso y señal labores de montaje e instalación).
-
 
 Protecciones individuales:
 -	Guantes de protección mecánica. 
@@ -810,9 +789,6 @@ Protecciones individuales:
 Medidas preventivas:
 -	Se tendrá especial precaución, con la posición de las manos al depositar las placas sobre los soportes, a fin de prevenir aplastamientos.
 
-Medidas preventivas:
--	Se tendrá especial precaución, con la posición de las manos al depositar las placas sobre los soportes, a fin de prevenir aplastamientos.
-
 ==== R11: Exposición al ruido
 
 Protecciones individuales:
@@ -839,12 +815,10 @@ Protecciones individuales:
 -	Todos los trabajos que se realicen en cubierta se realizarán haciendo uso de calzado de seguridad antideslizante y puntera reforzada.
 
 Medidas preventivas:
--	Nuestro recurso preventivo deberá comprobar en todo momento el estado de las protecciones colectivas, encargándose de que sean repuestas en caso de detectar alguna 
-  anomalía, dejando constancia escrita de ello, y prohibiendo al resto de trabajadores el acceso a la zona hasta que quede subsanada.
+-	Nuestro recurso preventivo deberá comprobar en todo momento el estado de las protecciones colectivas, encargándose de que sean repuestas en caso de detectar alguna anomalía, dejando constancia escrita de ello, y prohibiendo al resto de trabajadores el acceso a la zona hasta que quede subsanada.
 -	Todo el personal que deba acceder a la obra habrá recibido la información correspondiente a la circulación por la misma. 
   Nuestro recurso preventivo deberá/n dejar constancia de ello.
--	Se prohíbe subir a la cubierta durante tiempo lluvioso y tras un periodo de lluvia se examinará el estado de la misma por parte del recurso preventivo, asegurándose 
-  que no resbale de la superficie de tránsito.
+-	Se prohíbe subir a la cubierta durante tiempo lluvioso y tras un periodo de lluvia se examinará el estado de la misma por parte del recurso preventivo, asegurándose que no resbale de la superficie de tránsito.
 
 ==== R15: Contactos eléctricos directos e indirectos
 
@@ -870,12 +844,12 @@ Protecciones individuales:
 Medidas preventivas:
 -	Nuestro recurso preventivo deberá comprobar en todo momento el estado de las protecciones colectivas, encargándose de que sean repuestas en caso de detectar alguna anomalía, dejando constancia escrita de ello, y prohibiendo al resto de trabajadores el acceso a la zona hasta que quede subsanada.
 -	Para realizar la conexión de las series en el cuadro de corriente continua se necesarios realizar los siguientes pasos:
-  -	Quitar los fusibles del cuadro de corriente continua.
-  -	Conectar las series en los fusibles o en las bornas de entrada.
-  -	Medir mediante pinza amperimétrica la tensión de cada una de las series.
-  -	La tensión debe ser siempre la misma en función del número de módulos y la tensión en circuito abierto.
-  -	Siempre se debe medir con el polo positivo en la pinza positiva y la pinza negativa con el polo negativo de forma que siempre debe salir la tensión positiva, si tuviéramos una tensión negativa significa que hemos conectado al revés y debemos modificar la conexión.
-  - Una vez tengamos todas las tensiones positivas y con el mismo valor se pueden poner los fusibles.
+  +	Quitar los fusibles del cuadro de corriente continua.
+  +	Conectar las series en los fusibles o en las bornas de entrada.
+  +	Medir mediante pinza amperimétrica la tensión de cada una de las series.
+  +	La tensión debe ser siempre la misma en función del número de módulos y la tensión en circuito abierto.
+  +	Siempre se debe medir con el polo positivo en la pinza positiva y la pinza negativa con el polo negativo de forma que siempre debe salir la tensión positiva, si tuviéramos una tensión negativa significa que hemos conectado al revés y debemos modificar la conexión.
+  + Una vez tengamos todas las tensiones positivas y con el mismo valor se pueden poner los fusibles.
 
 == Identificación de riesgos y medidas preventivas a adoptar en los diferentes medios auxiliares intervinientes en la obra
 
@@ -914,7 +888,7 @@ Está previsto que puedan ser utilizadas en obra todo tipo de escaleras de mano 
 
 Cuando se utilice, se tendrá en cuenta el siguiente esquema:
 
-*FOTO*
+//*FOTO*
 
 -	Respecto a los materiales de los que están compuestas, preveo que se podrán utilizarse de madera, acero o aluminio.
   -	Maquinaria y herramientas necesarias: Las herramientas a utilizar serán:
@@ -1000,15 +974,16 @@ Medidas preventivas:
 -	Atrapamiento entre objetos de algún miembro producido al desencajar los herrajes de ensamblaje de las cabezas de una escalera de tijera o transformable o al desplegar una escalera extensible. 
   Es un riesgo evitable.
 
-Medidas preventivas:
+  Medidas preventivas:
 
-Las escaleras de tijera deberán tener en su articulación superior unos topes de seguridad de apertura.
--	Atrapamiento entre objetos de algún miembro al producirse la rotura de la cuerda de maniobra en una escalera extensible, cuerda mal atada, tanto en el plegado como en el desplegado
+  - Las escaleras de tijera deberán tener en su articulación superior unos topes de seguridad de apertura.
+
+-	Atrapamiento entre objetos de algún miembro al producirse la rotura de la cuerda de maniobra en una escalera extensible, cuerda mal atada, tanto en el plegado como en el desplegado.
   Es un riesgo evitable.
 
-Medidas preventivas:
+  Medidas preventivas:
 
-Nuestro recurso preventivo revisará antes del comienzo de los trabajos y diariamente todas las escaleras de tijera de la obra, desechando u ocupándose de que sean reparadas las que se encuentren en mal estado.
+  - Nuestro recurso preventivo revisará antes del comienzo de los trabajos y diariamente todas las escaleras de tijera de la obra, desechando u ocupándose de que sean reparadas las que se encuentren en mal estado.
 
 === Contactos eléctricos directos o indirectos al utilizar una escalera metálica
 
@@ -1033,7 +1008,7 @@ Medidas preventivas:
 En principio no debe utilizarse una escalera manual para trabajar, pero en caso de ser necesario y siempre que no sea posible utilizar una plataforma de trabajo se deberán adoptar las protecciones y medidas preventivas que siguen a continuación:
 
 Protecciones individuales:
--	En caso de que los pies del operario se encuentres a más de 2 m del suelo, debe utilizarse un cinturón de seguridad anclado a un punto sólido y resistente
+-	En caso de que los pies del operario se encuentres a más de 2 m del suelo, debe utilizarse un cinturón de seguridad anclado a un punto sólido y resistente.
   Nuestro recurso preventivo deberá comprobar su eficacia, paralizando los trabajos ante cualquier anomalía y poniéndola en conocimiento del contratista, el servicio de prevención y el coordinador de seguridad para que puedan dar una solución.
 -	Para trabajos de cierta duración deben utilizarse dispositivos que favorezcan la estabilidad y comodidad tales como reposapies que se acoplan a la escalera.
 
@@ -1095,11 +1070,11 @@ Se llevará un registro de las máquinas y herramientas al día, realizándose u
 Para la definición de cada maquinaria o herramienta, se ha adoptado la forma indicada a continuación:
 -	Descripción de la maquinaria o herramienta: se describe la maquinaria o herramienta tipo a utilizar, teniendo en cuenta que cada contratista deberá definirla más concretamente en su plan de seguridad.
 -	Identificación de riesgos: se aporta una relación de los riesgos propios de la utilización de la maquinaria y herramienta. 
-  Dentro de este epígrafe se define, para cada riesgo, lo siguiente
--	Protecciones colectivas: en caso de utilizar unas protecciones colectivas particulares para la realización de los trabajos que no estén indicadas en el apartado de “Protecciones colectivas a utilizar durante el proceso constructivo” del presente Plan de seguridad, se indican en este punto, en caso contrario no mencionan.
--	Protecciones individuales: se indica qué protecciones individuales particulares será necesario emplear para la correcta utilización del medio auxiliar.
--	Medidas preventivas: se citan las normas preventivas necesarias para la utilización de la maquinaria y herramienta.
--	Comprobaciones a realizar antes de la utilización de la maquinaria o herramienta (si procede).
+  Dentro de este epígrafe se define, para cada riesgo, lo siguiente:
+  -	Protecciones colectivas: en caso de utilizar unas protecciones colectivas particulares para la realización de los trabajos que no estén indicadas en el apartado de “Protecciones colectivas a utilizar durante el proceso constructivo” del presente Plan de seguridad, se indican en este punto, en caso contrario no mencionan.
+  -	Protecciones individuales: se indica qué protecciones individuales particulares será necesario emplear para la correcta utilización del medio auxiliar.
+  -	Medidas preventivas: se citan las normas preventivas necesarias para la utilización de la maquinaria y herramienta.
+  -	Comprobaciones a realizar antes de la utilización de la maquinaria o herramienta (si procede).
 
 === Pequeña herramienta eléctrica (tipo taladro, radial, ...)
 
@@ -1432,7 +1407,7 @@ Medidas preventivas y protecciones colectivas:
 -	El esfuerzo será soportado siempre por la garganta del gancho, nunca por el pico.
 -	En los trabajos de izado de cargas el personal que los ejecute dispondrá permanentemente de cinturón de seguridad anclado a elemento seguro y estable distinto de cualquier elemento de la maquinaria de elevación.
 
-*FOTO*
+//*FOTO*
 
 == Materiales
 
@@ -1621,7 +1596,7 @@ autorPSS.firma
 
 = Evaluación de riesgos <evaluacionRiesgos>
 
-//Sergio.codigo:
+//Codigo:
 
 #let start = <evaluacionRiesgos>
 // el siguiente capítulo real (es decir, el próximo "=")
@@ -2358,6 +2333,7 @@ Con lo anteriormente expuesto, estimamos que queda suficientemente aclarado el a
 
 
 //Sergio: dejo en todos los anexos la enumeración "Anexo I, II, ...", ¿ ves bien dejarlo así ? o hago una función que cada vez que aparezca en el texto aumente el número del anexo y podamos elegir si escribir "Anexo" o "Anejo"
+//Además, tras leer todos los anexos y la memoria, considero que son anexos del PSS y no de la memoria en concreto, por tanto dejaría cada título con "="
 = Anexo I Planning de obra
 
 
@@ -2383,7 +2359,7 @@ Con lo anteriormente expuesto, estimamos que queda suficientemente aclarado el a
 
 = Anexo II Procedimientos de mantenimiento, medición y seguridad en la instalación fotovoltaica <anexoII>
 
-//Sergio.codigo:
+//Codigo:
 
 #let start = <anexoII>
 #let end =  heading.where(level: 1).after(start, inclusive: false);
@@ -2743,7 +2719,7 @@ Como normas generales de actuación tendrá que:
 
 = Anexo VIII Protocolo uso de plataformas elevadoras <anexoVIII>
 
-//Sergio.codigo:
+//Codigo:
 
 #let start = (<anexoVIII>)
 #let end = heading.where(level: 1).after(start, inclusive: false)
@@ -3005,7 +2981,7 @@ Debe haber al menos 2 trabajadores capacitados para el manejo de la plataforma p
 
 = Anexo IX Protocolo de rescate en caso de accidente <anexoIX>
 
-//Sergio.codigo:
+//Codigo:
 
 #let start = (<anexoIX>)
 #let end = heading.where(level: 1).after(start, inclusive: false)
@@ -3089,7 +3065,7 @@ Para atender a un accidentado hay recordar tres actuaciones básicas:
 
 = Anexo X Plan de acción frente a fenómenos meteorológicos adversos <anexoX>
 
-//Sergio.codigo:
+//Codigo:
 
 #let start = (<anexoX>)
 #let end = heading.where(level: 1).after(start, inclusive: false)
@@ -3133,8 +3109,8 @@ Temporales de viento, lluvias, nevadas, olas de frío y de calor, tormentas, etc
 
 == Efectos de las condiciones climatológicas sobre la salud de los trabajadores
 === Calor
-
-*REVISAR ESTO PORQUE ESTÁ MAL*
+//Cambiar
+*REVISAR ESTO PORQUE ESTÁ MAL EN EL PSS QUE NOS DAN*
 
 Las caídas a distinto nivel pueden ser debidas a:
 -	Basculamiento del conjunto del equipo al estar situado sobre una superficie inclinada o en mal estado, falta de estabilizadores, etc.
@@ -4106,6 +4082,3 @@ Normas UNE que les sean de aplicación.
 
 
 = Planos
-
-
-

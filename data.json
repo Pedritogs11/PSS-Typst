@@ -36,7 +36,7 @@
     "provincia": "Jaén"
   },
   "instaladora": {
-    "representante": "representante de la instaladora",
+    "responsable": "responsable de la instaladora",
     "nombre": "instaladora",
     "cif": "B654564",
     "domicilio_social": "Polígono Industrial Los Olivares",

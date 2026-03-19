@@ -17,15 +17,15 @@
   columns: 2,
   [DESCRIPCIÓN], [#data.proyecto.titulo],
   [PROMOTOR], [#data.promotor.nombre],
-  [SITUACIÓN OBRA], [#data.proyecto.localizacion.situacion],
+  [SITUACIÓN OBRA], [#data.proyecto.localizacion.situacion, #data.proyecto.localizacion.localidad, #data.proyecto.localizacion.provincia],
   [INSTALADORA], [#data.instaladora.responsable, #data.instaladora.nombre],
-  [AUTOR DEL PLAN DE SEGURIDAD Y SALUD], [#for (_, valor) in data.autor_pss [#valor \ ]],
+  [AUTOR DEL PLAN DE SEGURIDAD Y SALUD], [#for (k, valor) in data.autor_pss [#if k != "localidad" [#valor \ ]]],
   [DIRECCIÓN FACULTATIVA], [#for (_, valor) in data.direccion_facultativa [#valor \ ]],
   [COORDINADOR DE SEGURIDAD Y SALUD], [#for (_, valor) in data.coordinador_pss [#valor \ ]],
   [ENCARGADO DEL RECURSO PREVENTIVO], [#data.sys.encargado_recurso_preventivo]
 )
 
-*TABLA RESUMEN DE LAS FASES DE OBRA*
+*Tabla resumen de las fases de obra.*
 
 #table(
   columns: 5, 
@@ -38,8 +38,7 @@
 )
 
 
-
-*OBLIGACIONES DEL COORDINADOR DE SYS EN FASE DE EJECUCIÓN DE LA OBRA.*
+*Obligaciones del coordinador de sys en fase de ejecución de la obra.*
 
 Según el artículo 9 del RD 1627/1997, el Coordinador en materia de Seguridad y Salud durante la 
 ejecución de la obra deberá desarrollar las siguientes funciones:
@@ -71,12 +70,13 @@ ejecución de la obra deberá desarrollar las siguientes funciones:
 
 == Introducción
 === Antecedentes
-//Sergio: el 99% de los proyectos de FV a los que les he hecho un PSS son sobre una cubierta de una nave, pero si llega un contratista que quiere el plan y la ejecución de la obra no es sobre una nave, este texto no sirve, ¿lo guardo como variable?
-//
+//Sergio: el 99% de los proyectos de FV a los que les he hecho un PSS son sobre una cubierta de una nave, pero si llega un contratista que quiere el plan y la ejecución de la obra no es sobre una nave, este texto no sirve.
 #data.promotor.nombre como promotor de la instalación encarga a #data.instaladora.nombre para la ejecución de *una planta fotovoltaica sobre la cubierta de su nave*.
 
-Con tal motivo, se encarga a #data.instaladora.nombre, la realización del “#data.proyecto.titulo” situada en #data.proyecto.localizacion.situacion, con el fin de que sirva de base al instalador para su ejecución, así como para solicitar de los Organismos Competentes de la Administración las preceptivas autorizaciones de instalación y puesta en servicio. 
+//Sergio: En el primer punto de antecedentes, el segundo párrafo que menciona "Con tal motivo se encarga a INSTALADORA la realización del 'Proyecto de instalación ...'". Si el nombre del proyecto comienza con proyecto, el texto concuerda con el artículo, sin embargo, si el nombre del proyecto fuera 'Instalación solar fotovoltaica...', no sería correcto, pues instalación no es masculino y del es un pronombre masculino. La solución que se me ocurre es directamente suprimir el artículo, quedando como "... la realización de 'Proyecto de instalación/Instalación solar fotovoltaica'. Así resulta natural al leerlo y nos evitamos de buscar una solución que elija si poner "del" o "de la", a mi parecer simplificando las cosas.
+Con tal motivo, se encarga a #data.instaladora.nombre, la realización del “#data.proyecto.titulo” situada en #data.proyecto.localizacion.situacion, #data.proyecto.localizacion.localidad, #data.proyecto.localizacion.provincia, con el fin de que sirva de base al instalador para su ejecución, así como para solicitar de los Organismos Competentes de la Administración las preceptivas autorizaciones de instalación y puesta en servicio. 
 La empresa instaladora designada por #data.promotor.nombre es #data.instaladora.nombre, #data.instaladora.responsable, como responsable de dicha empresa, redacta el presente Plan de Seguridad y Salud con el fin de analizar, estudiar, desarrollar y complementar, en función del propio sistema de ejecución del contratista las previsiones respecto a la prevención del riesgo de accidentes laborales y enfermedades profesionales, las instalaciones preceptivas de higiene y bienestar y demás prescripciones reglamentarias, así como las contenidas en el Estudio Básico de Seguridad y Salud del Proyecto redactado por #data.instaladora.nombre
+//Sergio: En el final del anterior párrafo ocurre el problema del nombre de la instaladora, si acaba en S.L.U. como tiene un punto al final entonces el párrafo tiene su punto final, pero si no, el párrafo no tendría su punto final y, en caso de ponerlo, podría quedar duplicado.
 
 === Objeto del plan de seguridad y salud
 
@@ -108,7 +108,7 @@ La planta solar fotovoltaica que se trata se ubicará en la cubierta de la nave 
 
 Propiedad: #data.proyecto.empresa.nombre
 
-Dirección: #data.proyecto.localizacion.situacion
+Dirección: #data.proyecto.localizacion.situacion, #data.proyecto.localizacion.localidad, #data.proyecto.localizacion.provincia
 
 Ubicación google maps: #data.proyecto.empresa.enlace_maps
 
@@ -120,9 +120,9 @@ Ubicación google maps: #data.proyecto.empresa.enlace_maps
   columns: (auto, auto),
   [DESCRIPCIÓN], [#data.proyecto.titulo],
   [PROMOTOR],[#data.promotor.nombre],
-  [SITUACIÓN OBRA], [#data.proyecto.localizacion.situacion],
-  [INSTALADORA],[instaladora.nombre, instaladora.cif],
-  [AUTOR DEL PLAN DE SEGURIDAD Y SALUD],[#data.autor_pss.nombre, #data.empresa_redactora.nombre],
+  [SITUACIÓN OBRA], [#data.proyecto.localizacion.situacion, #data.proyecto.localizacion.localidad, #data.proyecto.localizacion.provincia],
+  [INSTALADORA],[#data.instaladora.nombre, #data.instaladora.cif],
+  [AUTOR DEL PLAN DE SEGURIDAD Y SALUD],[#for (k, valor) in data.autor_pss [#if k != "localidad" [#valor \ ]]],
   [DIRECCIÓN FACULTATIVA],[#for (_, valor) in data.direccion_facultativa [#valor \ ]],
   [COORDINADOR DE SEGURIDAD Y SALUD], [#for (_, valor) in data.coordinador_pss [#valor \ ]],
   [ENCARGADO / RECURSO PREVENTIVO],[#data.sys.encargado_recurso_preventivo],
@@ -2628,7 +2628,7 @@ Como normas generales de actuación, los recursos preventivos tendrán que:
 = Anexo VI Nombramiento de jefe de obra
 == Designación del jefe de obra
 
-#data.instaladora.nombre con CIF #data.instaladora.cif nombra al Sr D.  con DNI  jefe de obra para la obra #data.proyecto.titulo.
+#data.instaladora.nombre con CIF #data.instaladora.cif nombra al Sr D.  con DNI  jefe de obra para la obra: #data.proyecto.titulo.
 
 Funciones del jefe de trabajo
 

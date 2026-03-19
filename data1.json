@@ -6,15 +6,15 @@
     "firma": "Firma"
   },
   "proyecto": {
-    "titulo": "Proyecto de instalación solar fotovoltaica de autoconsumo coletivo con 119,6 kWp de generador y 100 kW nominales, conectado a red, sin acumulación, en red interior del suministro con CUPS ES0031101434580001HT0F en Priego de Córdoba, Córdoba",
-    "fecha": "2026-02-09",
+    "titulo": "Instalación solar fotovoltaica de autoconsumo coletivo con 87,4 kWp de generador y 80 kW nominales, conectado a red, sin acumulación, en red interior del suministro con CUPS ES0031105039378001QL0F en La Carlota, Córdoba",
+    "fecha": "2026-02-10",
     "empresa": {
-      "nombre": "Bolsas Luis Serrano",
-      "enlace_maps": "https://maps.app.goo.gl/NyDPvREjhG4xucsP8"
+      "nombre": "Talleres MYG 2016 S.L.",
+      "enlace_maps": "https://maps.app.goo.gl/GH56XJhUxmYgG4f19"
     },
     "localizacion": {
-      "situacion": "Poligono Industrial las Salinillas, nº14, 14800",
-      "localidad": "Priego de Córdoba",
+      "situacion": "C/ Ingeniero Alfonso de Churruca, 20 14100",
+      "localidad": "La Carlota",
       "provincia": "Córdoba",
       "lat": "37.5623",
       "lon": "-4.2356",
@@ -77,24 +77,24 @@
     "subcontrata_modelo_preventivo": "Quirónprevención, S.L.U.",
     "encargado_recurso_preventivo": "José Matías García Molino",
     "centro_salud": {
-      "nombre": "Centro Salud Priego de Córdoba",
-      "direccion": "Calle Dr. Balbino Povedano Ruiz, 28, 14800, Priego de Córdoba, Córdoba",
-      "telefono": "957 55 95 17",
-      "enlace_maps": "https://maps.app.goo.gl/XSXiDhCncBkDsiVWA",
-      "distancia": 1400,
+      "nombre": "Centro Salud La Carlota",
+      "direccion": "Av. de la Paz, s/n, 14100 La Carlota, Córdoba",
+      "telefono": "957 30 75 73",
+      "enlace_maps": "https://maps.app.goo.gl/hn8W7Enk1HFQ5xt56",
+      "distancia": 550,
       "ud_distancia": "metros",
-      "tiempo": 5,
+      "tiempo": 2,
       "ud_tiempo": "minutos"
     },
     "telefonos": {
-      "urgencias": "957 00 17 37",
-      "bomberos": "957 70 00 80",
-      "policia_local": "957 70 17 27",
-      "guardia_civil": "957 54 00 48"
+      "urgencias": "957 30 75 73",
+      "bomberos": "957 30 30 80",
+      "policia_local": "957 30 05 98",
+      "guardia_civil": "957 30 13 11"
     }
   },
   "presupuesto": {
-    "pem": 63750,
+    "pem": 50180,
     "p_pss": 2500,
     "ud": {
       "protecciones_colectivas": {

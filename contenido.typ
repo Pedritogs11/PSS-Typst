@@ -166,7 +166,7 @@ Ubicación: #data.sys.centro_salud.direccion
 
 #data.sys.centro_salud.enlace_maps
 
-//centroSalud.foto
+//foto de la ruta de evacuación
 
 En los planos se detalla el recorrido a seguir desde la obra en caso de ser necesario. 
 El citado plano, deberá estar situado en un lugar visible y accesible a la totalidad de los trabajadores de la obra.
@@ -1915,7 +1915,7 @@ Cualquier cambio en el proyecto se informará previamente al coordinador y a las
 
 -	Comprobar que la superficie donde se depositará la carga sea estable, plana y en lo posible, libre de obstáculos.
 -	Colocar durmientes de apoyo o calzos de madera, en lugares de depósito de las piezas para su almacenamiento seguro.
--	No apilar materiales en alturas mayores de 1´5 m. 
+-	No apilar materiales en alturas mayores de 1,5 m. 
   Verificar la estabilidad de la carga apilada.
 -	Efectuar el descenso de manera suave y lenta.
 -	Soltar los amarres, elevarlos y controlarlos hasta que no representen un riesgo para nada ni nadie.
@@ -2598,8 +2598,7 @@ Al final de la jornada, el parte de trabajo y albarán de material será entrega
 La aplicación del presente procedimiento deberá llevar consigo el obligado cumplimiento del Real Decreto 614/2001, de 8 de junio, sobre disposiciones mínimas para la protección de la salud y seguridad de los trabajadores frente al riesgo eléctrico. 
 BOE nº 148 21-06-2001 y la Guía Técnica para la Evaluación y Prevención del riesgo eléctrico.
 
-*FIRMA, FECHA Y DEMÁS*
-
+//*FIRMA, FECHA Y DEMÁS*
 
 = Anexo V Nombramiento de recursos preventivos
 
@@ -2664,8 +2663,6 @@ Funciones del jefe de trabajo
 Debiendo de estar presente en obra durante la ejecución de los trabajos, o bien designar un sustituto en caso de ausentarse de la zona de los trabajos.
 
 //*CUADRADOS CON FIRMAS*
-
-
 
 = Anexo VII Nombramiento de supervisor manejo de cargas
 == Nombramiento del supervisor del manejo de cargas
@@ -2879,7 +2876,7 @@ Una vez vista la información de riesgos y medidas preventivas descritas y previ
 - Existencia de antecedentes, es decir, si se ha realizado ese trabajo anteriormente con PEMP.
 
 == Uso correcto del arnés en la plataforma
-//Sergio: Justo aquí, en este apartado aparece una foto qeu describe el uso del arnés en la plataforma, esta foto no cambia, entonces, ¿añado directamente la foto aquí, ya que es contenido?. El formato de la misma por supuesto que no tendría que determinarlo aquí, sino en el propio archivo de formato.
+//Sergio: Justo aquí, en este apartado aparece una foto que describe el uso del arnés en la plataforma, esta foto no cambia, entonces, ¿añado directamente la foto aquí, ya que es contenido?. El formato de la misma por supuesto que no tendría que determinarlo aquí, sino en el propio archivo de formato.
 //*FOTO DEL USO DEL ARNÉS*
 
 == Consideraciones sobre la plataforma y su operador

@@ -1258,7 +1258,7 @@ Prendas de protección personal recomendables:
 -	Cinturón lumbo-abdominal.
 
 Normas preventivas y protecciones colectivas:
--	Las carretillas automotoras elevadoras utilizadas dispondrán de marcado CE.
+-	Las carretillas automotoras elevadoras utilizadas dispondrán de marcado CЄ.
 -	Antes de iniciar la jornada, el conductor debe realizar una inspección de la carretilla  que contemple las ruedas, la fijación y estado de los brazos de la horquilla, la inexistencia de fugas en el circuito hidráulico, niveles de aceite, mandos en servicio, protectores y dispositivos de seguridad, frenos de pie y de mano, etc. 
   En caso de avería o deficiencia, la carretilla quedará fuera de uso, advirtiéndolo mediante una adecuada señalización.
 -	El conductor de la carretilla será una persona autorizada para ello, y no se permitirá que ninguna otra persona suba, expresamente durante el trabajo.
@@ -1694,9 +1694,9 @@ Las normas sobre seguridad, en cuanto a elección, utilización y mantenimiento 
 
 Los EPI deberán utilizarse cuando existan riesgos para la seguridad y salud de los trabajadores, que no hayan podido evitarse o limitarse suficientemente por medios técnicos de protección colectiva o mediante medidas, métodos o procedimientos de organización del trabajo.
 
-En función de los riesgos establecidos y como complemento a las medidas de protección colectiva, los EPI a utilizar para cada uno de ellos son:
+En función de los riesgos establecidos y como complemento a las medidas de protección colectiva, los EPIs a utilizar para cada uno de ellos son:
 
-//*INSERTAR TABLAS DE EPI'S A UTILIZAR*
+//*INSERTAR TABLAS DE EPIs A UTILIZAR*
 
 == Procedimiento de trabajo seguro
 
@@ -1704,7 +1704,7 @@ Analizadas las medidas preventivas a establecer, tanto colectivas como equipos d
 
 Algunas de estas tareas no está previsto que se realicen en esta instalación, no obstante, si debido a algún cambio en el proyecto que pudiera producirse durante la ejecución de la obra hubiera que realizarse alguna tarea no prevista se incluyen éstas en el presente plan de seguridad, especificando que tareas no están previstas. 
 En caso de que alguna tarea no prevista se llegara a realizar, se informará previamente al coordinador de seguridad indicando si está o no recogida la misma en el plan de seguridad.
-
+//Sergio: Aquí se contempla el posible caso de que haya que hacer trabajos de construcción, mas se menciona que no se prevé. Pero en caso de que sí se redacte en el proyecto este texto no sería coherente.
 === Trabajos de excavación, cimentación y hormigonado
 
 No se prevé realizar esta tarea en esta instalación. 
@@ -1971,9 +1971,10 @@ Cualquier cambio en el proyecto se informará previamente al coordinador y a las
 -	Los medios de protección contra las caídas deben colocarse correctamente y mantenerse en buen estado, y no deben ser manipulados, modificados, ni mucho menos eliminados. 
   Si por algún motivo alguna vez hubiera que retirar esas protecciones, deberán ser instaladas tan pronto como sea posible.
 -	El cinturón de seguridad como equipo de protección individual que es, debe utilizarse cuando el riesgo presente de caída de altura en el puesto de trabajo no se evite con medios de protección colectiva o técnicos.
--	En tejados, cubiertas y planos inclinados en altura: 1) nunca pise directamente sobre cubiertas de escasa resistencia. 
-  2) Recuerde que el riesgo aumenta al crecer la inclinación. 
-  3) No realice trabajos en altura cuando las condiciones meteorológicas sean adversas.
+-	En tejados, cubiertas y planos inclinados en altura: 
+  + Nunca pise directamente sobre cubiertas de escasa resistencia. 
+  + Recuerde que el riesgo aumenta al crecer la inclinación. 
+  + No realice trabajos en altura cuando las condiciones meteorológicas sean adversas.
 
 ==== Sistemas de protección anticaídas (arneses, cinturones de sujección, redes, etc ...)
 
@@ -1988,9 +1989,10 @@ Cualquier cambio en el proyecto se informará previamente al coordinador y a las
 -	El empresario ha de encargar a un perito con la comprobación del perfecto estado del equipo de protección anticaída, según necesidad y de acuerdo con las condiciones de su empleo y las circunstancias del funcionamiento, aunque como mínimo una vez por año.
 -	Los componentes individuales de los sistemas han de ser compatibles entre ellos.
 -	Para una identificación inequívoca, el equipo de protección personal anticaída está marcado de manera bien legible y resistente.
--	Cualquier componente desmontable refleja como mínimo los siguientes datos: 1) denominación de tipo. 
-  2) Año de construcción, nombre, marca del fabricante o proveedor. 
-  3) Número de serie o fabricación del componente.
+-	Cualquier componente desmontable refleja como mínimo los siguientes datos: 
+  - Denominación de tipo. 
+  - Año de construcción, nombre, marca del fabricante o proveedor. 
+  - Número de serie o fabricación del componente.
 -	En equipos de salvamento se requiere adicionalmente la advertencia “sólo para fines de salvamento”.
 -	Recomendaciones para el uso de arnés anticaídas: 
   + Recomendable que sea con un amortiguador de energía. 
@@ -2080,7 +2082,7 @@ Cualquier cambio en el proyecto se informará previamente al coordinador y a las
 -	Respetar la carga máxima recomendada de la escalera: madera 95 kg. y metálica 150 kg.
 -	El ascenso y descenso se debe hacer siempre de cara a la escalera con las manos libre para poder sujetarse en los peldaños, no en los largueros.
 -	Si es necesario transportar objetos estos se deben sujetar al cuerpo o a la cintura. 
-  O bien utilice una bolsa o mochila para transportar los productos esto le permitirá tener las manos libre.
+  O bien utilice una bolsa o mochila para transportar los productos esto le permitirá tener las manos libres.
 -	No trabajar a menos de 5 m de una línea de A.T., en caso imprescindible utilizar escalera de fibra de vidrio aislada. 
   Nunca se emplearán escaleras metálicas en trabajos eléctricos.
 -	Si se tiene que colocar una escalera próxima a conductores eléctricos desnudos, deberá cortarse la corriente poniendo un cartel de aviso en el interruptor.
@@ -2088,8 +2090,7 @@ Cualquier cambio en el proyecto se informará previamente al coordinador y a las
 -	Se trabajará colocándose en el escalón apropiado (nunca en los últimos escalones) de forma que la distancia del cuerpo al punto de trabajo sea suficiente. 
   No deberá tratar de alcanzar puntos que obliguen a posturas muy forzadas que puedan hacer perder el equilibrio. 
   Lo seguro es desplazar la escalera tantas veces como sea preciso.
--	Siempre que sea posible no utilizar la escalera la escalera manual para trabajar. 
-  Utilizar plataforma de trabajo.
+-	Siempre que sea posible no utilizar la escalera la escalera manual para trabajar, utilizar plataforma de trabajo.
 -	Si los pies están a más de 2 metros del suelo utilizar cinturón de seguridad, el cual deberá estar atado a la línea de vida.
 -	Fijar el extremo o parte superior de la escalera.
 -	Para trabajos de cierta duración se pueden utilizar dispositivos tales como reposapiés que se acoplan a la escalera.
@@ -2156,7 +2157,7 @@ Cualquier cambio en el proyecto se informará previamente al coordinador y a las
   + Leer y comprender los símbolos situados sobre la plataforma de trabajo con la ayuda de personal cualificado.
 
 === Trabajos en instalaciones de presión
-
+//Sergio: Aquí ocurre lo mismo que con los trabajos relacionados con cimentación y demás.
 No se prevé realizar esta tarea en esta instalación. 
 Si fuese necesario realizar alguna actividad de las recogidas en este apartado, por cambios en el proyecto durante la ejecución de obra, se seguirá este procedimiento. 
 Cualquier cambio en el proyecto se informará previamente al coordinador y a las empresas y trabajadores afectados.
@@ -2259,7 +2260,10 @@ Cualquier cambio en el proyecto se informará previamente al coordinador y a las
 -	Hasta que no se hayan completado las cinco etapas no podrá autorizarse el inicio del trabajo sin tensión y se considerará en tensión la parte de la instalación afectada. 
   Sin embargo, para establecer la señalización de seguridad indicada en la quinta etapa podrá considerarse que la instalación está sin tensión si se han completado las cuatro etapas anteriores y no pueden invadirse zonas de peligro de elementos próximos en tensión.
 -	El personal no especializado que realice trabajos próximos a partes conductoras de líneas de alta tensión y utilicen herramientas, aparatos o equipos, no podrá trabajar a una distancia inferior a: 3 metros, en instalaciones hasta 66.000 Voltios y 5 metros, en instalaciones superiores a 66.000 Voltios.
--	En la ejecución de zanjas, con proximidad de canalizaciones eléctricas subterráneas, se tendrán en cuenta las siguientes recomendaciones: 1) la ejecución de tareas con retroexcavadora, puede realizarse hasta 1 m de la conducción; 2) con martillo rompedor hasta 0,5 m ; 3) con herramientas manuales, sin golpear, pero arrastrando los materiales hasta alcanzar su ubicación.
+-	En la ejecución de zanjas, con proximidad de canalizaciones eléctricas subterráneas, se tendrán en cuenta las siguientes recomendaciones: 
+  + La ejecución de tareas con retroexcavadora, puede realizarse hasta 1 m de la conducción. 
+  + Con martillo rompedor hasta 0,5 m. 
+  + Con herramientas manuales, sin golpear, pero arrastrando los materiales hasta alcanzar su ubicación.
 -	Si las distancias de seguridad no pudieran mantenerse, se procederá al descargado de la línea, por parte de la Cía. propietaria de la línea y consistirá, en dejar la línea fuera de servicio con todos sus conductores en cortocircuito y puestos a tierra.
 -	Si la descarga no es viable, se procederá a la retirada de la línea o conversión en subterránea, condicionada a la aprobación de la Cía propietaria de la línea, quien bajo el acuerdo que se establezca deberá encargarse de su realización.
 -	El aislamiento de los conductores de la línea, es otra medida alternativa, que, para el caso de líneas de Baja Tensión, es posible aislar los conductores: mediante vainas y caperuzas aislantes ó sustituyéndolos por conductores aislados de 1.000 V de tensión nominal.
@@ -2284,12 +2288,12 @@ Cualquier cambio en el proyecto se informará previamente al coordinador y a las
 
 == Identificación y valoración de riesgos
 
-Hay que identificar los factores de riesgo, los riesgos de accidente de trabajo y/o enfermedad profesional derivados de los mismos, procediendo a su posterior evaluación, de manera que sirva de base a la posterior planificación de la acción preventiva en la cual se determinarán las medidas y acciones necesarias para sucorrección (Ley 31/1995, de 8 de noviembre, sobre Prevención de Riesgos Laborales).
+Hay que identificar los factores de riesgo, los riesgos de accidente de trabajo y/o enfermedad profesional derivados de los mismos, procediendo a su posterior evaluación, de manera que sirva de base a la posterior planificación de la acción preventiva en la cual se determinarán las medidas y acciones necesarias para su corrección (Ley 31/1995, de 8 de noviembre, sobre Prevención de Riesgos Laborales).
 
 Tras el análisis de las características de la instalación y del personal expuesto a los riesgos se han determinado los riesgos que afectan al conjunto de la obra, a los trabajadores de una sección o zona de la obra y a los de un puesto de trabajo determinado.
 
 La metodología utilizada en el presente informe consiste en identificar el factor de riesgo y asociarle los riesgos derivados de su presencia. 
-En la identificación de los riesgos se ha utilizado la lista de " Riesgos de accidente y enfermedad profesional ", basada en la clasificación oficial de formas de accidente y en el cuadro de enfermedades profesionales de la Seguridad Social.
+En la identificación de los riesgos se ha utilizado la lista de "Riesgos de accidente y enfermedad profesional", basada en la clasificación oficial de formas de accidente y en el cuadro de enfermedades profesionales de la Seguridad Social.
 
 Para la evaluación de los riesgos se utiliza el concepto "Grado de Riesgo" obtenido de la valoración conjunta de la probabilidad de que se produzca el daño y la severidad de las consecuencias del mismo.
 
@@ -2322,40 +2326,11 @@ Con lo anteriormente expuesto, estimamos que queda suficientemente aclarado el a
 
 //*INSERTAR FIRMA, FECHA Y DEMÁS*
 
-
-
-
 = Presupuesto
-
-
-
-
-
 
 //Sergio: dejo en todos los anexos la enumeración "Anexo I, II, ...", ¿ ves bien dejarlo así ? o hago una función que cada vez que aparezca en el texto aumente el número del anexo y podamos elegir si escribir "Anexo" o "Anejo"
 //Además, tras leer todos los anexos y la memoria, considero que son anexos del PSS y no de la memoria en concreto, por tanto dejaría cada título con "="
 = Anexo I Planning de obra
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 = Anexo II Procedimientos de mantenimiento, medición y seguridad en la instalación fotovoltaica <anexoII>
 
@@ -2372,13 +2347,15 @@ Con lo anteriormente expuesto, estimamos que queda suficientemente aclarado el a
     .before(end, inclusive: false)
 );
 
-
-
 == Objeto
 
-Establecer procedimientos de trabajo para verificar las corrientes y tensiones de las series de las placas fotovoltaicas en los cuadros eléctricos de corriente continua situados en la estructura.
+Establecer procedimientos de trabajo para:
+- La verificación de las corrientes y tensiones de las series de las placas fotovoltaicas en los cuadros eléctricos de corriente continua situados en la estructura.
+- La comprobación de que la medición del display del inversor coincide con las mediciones realizadas en corriente continua y alterna.
+- La limpieza de los inversores.
+- La detección y reparación de averías en las instalaciones.
 
-Establecer las disposiciones mínimas de seguridad para la protección de los trabajadores frente al riesgo eléctrico en los lugares de trabajo.
+Asimismo, establecer las disposiciones mínimas de seguridad necesarias para la protección de los trabajadores frente al riesgo eléctrico en los lugares de trabajo.
 
 == Ámbito de aplicación
 
@@ -2648,14 +2625,10 @@ Como normas generales de actuación, los recursos preventivos tendrán que:
 
 //*CUADRADOS CON FIRMAS *
 
-
-
 = Anexo VI Nombramiento de jefe de obra
-
-
 == Designación del jefe de obra
 
-instaladora.nombre con CIF instaladora.cif nombra al Sr D.  con DNI  jefe de obra para la obra proyecto.nombre.
+#data.instaladora.nombre con CIF #data.instaladora.cif nombra al Sr D.  con DNI  jefe de obra para la obra #data.proyecto.titulo.
 
 Funciones del jefe de trabajo
 
@@ -2695,12 +2668,9 @@ Debiendo de estar presente en obra durante la ejecución de los trabajos, o bien
 
 
 = Anexo VII Nombramiento de supervisor manejo de cargas
-
-
-
 == Nombramiento del supervisor del manejo de cargas
 
-instaladora.nombre con CIF instaladora.cif nombra al Sr D.  con DNI  Supervisor de manejo de cargas para la obra: proyecto.nombre. 
+#data.instaladora.nombre con CIF #data.instaladora.cif nombra al Sr D.  con DNI  Supervisor de manejo de cargas para la obra: #data.proyecto.titulo. 
 Para la realización de esta obra, se procederá al nombramiento del supervisor del manejo de cargas en la obra mediante la presente acta.
 
 Como normas generales de actuación tendrá que:
@@ -2714,8 +2684,6 @@ Como normas generales de actuación tendrá que:
   -	Comprobación del estado de los medios de elevación de las cargas.
 
 //*CUADRADOS CON FIRMAS*
-
-
 
 = Anexo VIII Protocolo uso de plataformas elevadoras <anexoVIII>
 
@@ -2732,12 +2700,11 @@ Como normas generales de actuación tendrá que:
     .before(end, inclusive: false)
 )
 
-
 == Objeto
 
 La utilización de plataformas elevadoras móviles de personal (PEMP) para efectuar trabajos en altura de distinta índole, junto con el hecho de que la mayor parte de estos equipos son de alquiler, hace necesario establecer un protocolo en instaladora.nombre a modo de guía de gestión preventiva de estos equipos de trabajo, ya que, a los riesgos propios y asociados a su utilización, se añaden los derivados del desconocimiento de las normas de utilización segura que deben de aplicarse.
 
-Este protocolo establece los requisitos de seguridad de instaladora.nombre para trabajos en altura con PEMP.
+Este protocolo establece los requisitos de seguridad de #data.instaladora.nombre para trabajos en altura con PEMP.
 
 === Ámbito
 
@@ -2745,7 +2712,7 @@ No se prevé el uso de este tipo de equipos en la obra objeto del plan, pero ant
 
 Los trabajos que se podrían realizar con PEMP para la obra objeto del Plan son los siguientes:
 -	Instalación fotovoltaica sobre estructura elevada, incluyendo:
-  -	Montaje y revisión de canalizaciones y cableado
+  -	Montaje y revisión de canalizaciones y cableado.
   -	Repasos de aprietes de paneles.
 
 == Información de riesgos asociados al uso de las PEMP
@@ -2908,19 +2875,19 @@ Se recomienda aplicar las siguientes recomendaciones de seguridad complementaria
 
 == Valoración previa de los trabajos
 
-Una vez vista la información de riesgos y medidas preventivas descritas y previamente a la realización de los trabajos, instaladora.nombre valorará:
+Una vez vista la información de riesgos y medidas preventivas descritas y previamente a la realización de los trabajos, #data.instaladora.nombre valorará:
 - Existencia de antecedentes, es decir, si se ha realizado ese trabajo anteriormente con PEMP.
 
 == Uso correcto del arnés en la plataforma
+//Sergio: Justo aquí, en este apartado aparece una foto qeu describe el uso del arnés en la plataforma, esta foto no cambia, entonces, ¿añado directamente la foto aquí, ya que es contenido?. El formato de la misma por supuesto que no tendría que determinarlo aquí, sino en el propio archivo de formato.
+//*FOTO DEL USO DEL ARNÉS*
 
-*FOTO DEL USO DEL ARNÉS*
-
-== Consideeraciones sobre la plataforma y su operador
+== Consideraciones sobre la plataforma y su operador
 === Documentación
 
 El operador de la PEMP deberá comprobar que se dispone de la siguiente documentación legalmente exigible:
 -	Manual de instrucciones del fabricante.
--	Marcado CE y Declaración de conformidad.
+-	Marcado CЄ y Declaración de conformidad.
 -	Documentación justificativa de la última comprobación de que la PEMP ha sido revisada e inspeccionada, según art. 4.4 del RD. 1215/1997.
 
 Se debe comprobar que la PEMP dispone de pegatinas o placas con las instrucciones relativas a la utilización, reglaje y mantenimiento, siempre que ello sea necesario en orden a garantizar la salud y la seguridad de las personas.
@@ -2929,7 +2896,7 @@ Se debe comprobar que la PEMP dispone de pegatinas o placas con las instruccione
 
 Toda PEMP debe llevar un Manual de Instrucciones del Fabricante en castellano, que incluya de forma separada las instrucciones para las operaciones de mantenimiento que únicamente las podrán realizar personal de mantenimiento especializado. 
 Contendrá, entre otros aspectos:
--	La declaración CE de conformidad o un documento que exponga el contenido de dicha declaración y en el que figuren las indicaciones de la máquina.
+-	La declaración CЄ de conformidad o un documento que exponga el contenido de dicha declaración y en el que figuren las indicaciones de la máquina.
 -	Descripción general de la máquina.
 -	Los planos, diagramas, descripciones y explicaciones necesarias para el uso, el mantenimiento y la reparación de la máquina, así como para comprobar su correcto funcionamiento.
 -	Descripción de los puestos de trabajo que puedan ocupar los operadores.
@@ -2975,9 +2942,7 @@ Debe haber al menos 2 trabajadores capacitados para el manejo de la plataforma p
 -	Vigilar y evitar la circulación de las máquinas y peatones alrededor de la barquilla.
 -	Guiar al conductor de la barquilla si fuera necesario.
 
-*FIRMA, FECHA Y DEMÁS*
-
-
+//*FIRMA, FECHA Y DEMÁS*
 
 = Anexo IX Protocolo de rescate en caso de accidente <anexoIX>
 
@@ -3040,19 +3005,19 @@ Todos podemos tener un accidente.
 La formación y organización de los primeros auxilios no es más que una manera de prepararse para actuar ante situaciones excepcionales. 
 Se entiende por primeros auxilios el conjunto de actuaciones o técnicas que permiten la atención inmediata de un accidentado, hasta que llegue la asistencia médica profesional, para que las lesiones sufridas no empeoren.
 Consejos generales:
-+ Conservar la calma; No perder los nervios es básico para poder actuar de forma correcta, evitando errores irremediables.
-+ Evitar aglomeraciones; No se debe permitir que el accidente se transforme en espectáculo.
-+ No mover al herido; Como norma básica y elemental no se debe mover a nadie que haya sufrido un accidente, hasta estar seguro de que se pueden realizar movimientos sin riesgo de empeorar las lesiones existentes. 
++ Conservar la calma. No perder los nervios es básico para poder actuar de forma correcta, evitando errores irremediables.
++ Evitar aglomeraciones. No se debe permitir que el accidente se transforme en espectáculo.
++ No mover al herido. Como norma básica y elemental no se debe mover a nadie que haya sufrido un accidente, hasta estar seguro de que se pueden realizar movimientos sin riesgo de empeorar las lesiones existentes. 
   No obstante, existen situaciones en las que la movilización debe ser inmediata, ya que el accidentado sigue estando expuesto a una situación de riesgo.
-+ Examinar al herido; Se debe efectuar una evaluación primaria, que consistirá en comprobar si el accidentado está consciente, si respira y si tiene pulso. 
++ Examinar al herido. Se debe efectuar una evaluación primaria, que consistirá en comprobar si el accidentado está consciente, si respira y si tiene pulso. 
   Posteriormente se realizará una evaluación donde se comprobará que tipo de lesiones posee el accidentado (fracturas, cortes, golpes, etc.). 
-    Es importante realizar un correcto examen del herido para facilitar la mayor información posible a los servicios de emergencia.
-+ Tranquilizar al herido; Los accidentados suelen estar asustados, desconocen las lesiones que sufren y necesitan a alguien en quien confíen en esos momentos de angustia.
-+ Mantener al herido caliente; Cuando el organismo humano recibe una agresión se activan los mecanismos de autodefensa, implicando, en muchas ocasiones, la perdida de calor corporal. 
+  Es importante realizar un correcto examen del herido para facilitar la mayor información posible a los servicios de emergencia.
++ Tranquilizar al herido. Los accidentados suelen estar asustados, desconocen las lesiones que sufren y necesitan a alguien en quien confíen en esos momentos de angustia.
++ Mantener al herido caliente. Cuando el organismo humano recibe una agresión se activan los mecanismos de autodefensa, implicando, en muchas ocasiones, la perdida de calor corporal. 
   Esta situación se acentúa cuando existe pérdida de sangre. 
   Por lo tanto es vital mantener caliente al accidentado.
-+ Avisar al personal sanitario; Una vez realizada la evaluación del accidentado se avisará a los servicios de emergencia Tlf 112.
-+ No medicar; No se debe dar ningún medicamento al accidentado.
++ Avisar al personal sanitario. Una vez realizada la evaluación del accidentado se avisará a los servicios de emergencia Tlf. 112.
++ No medicar. No se debe dar ningún medicamento al accidentado.
 
 La rápida actuación ante un accidente puede salvar la vida de una persona, o evitar el empeoramiento de las lesiones que padezca. 
 Para atender a un accidentado hay recordar tres actuaciones básicas:
@@ -3060,8 +3025,7 @@ Para atender a un accidentado hay recordar tres actuaciones básicas:
 + Avisar.
 + Socorrer.
 
-*FIRMA, FECHA Y DEMÁS*
-
+//*FIRMA, FECHA Y DEMÁS*
 
 = Anexo X Plan de acción frente a fenómenos meteorológicos adversos <anexoX>
 
@@ -3079,10 +3043,9 @@ Para atender a un accidentado hay recordar tres actuaciones básicas:
     .before(end, inclusive: false)
 )
 
-
 == Objeto
 
-Al realizar gran parte de los trabajos al aire libre, se hace necesario establecer un plan de acción frente fenómenos meteorológicos adversos en instaladora.nombre a modo de guía de gestión preventiva ya que, a los riesgos propios de la instalación se añaden los derivados de la climatización.
+Al realizar gran parte de los trabajos al aire libre, se hace necesario establecer un plan de acción frente fenómenos meteorológicos adversos en #data.instaladora.nombre a modo de guía de gestión preventiva ya que, a los riesgos propios de la instalación se añaden los derivados de la climatización.
 
 == Condiciones climatológicas adversas en la obra
 
@@ -3093,18 +3056,25 @@ Una actuación correcta exige una planificación que tenga en cuenta las condici
 Aunque sus consecuencias son inevitables, los fenómenos meteorológicos adversos pueden ser previstos, en su mayoría, con antelación suficiente, por lo que también podrán anticiparse medidas destinadas a paliar los efectos que la exposición a esas condiciones pueden tener sobre los trabajadores y el desarrollo general de la obra.
 
 Temporales de viento, lluvias, nevadas, olas de frío y de calor, tormentas, etc., son fenómenos que pueden producirse en España, a lo largo del año, con mayor o menor incidencia según la zona geográfica y la estación:
--	TEMPERATURAS EXTREMAS: FRÍO Y CALOR.- Entre todos los factores que se relacionan en este apartado, los que tienen un mayor impacto son los relacionados con la temperatura, que conlleva riesgos de sufrir las consecuencias derivadas de la exposición al calor, como son la deshidratación, golpe de calor, etc., así como los relacionados con la exposición al frío, de la que se pueden derivar problemas reumáticos, circulatorios, hipotermia, etc…
--	RADIACIONES SOLARES.- La exposición a las radiaciones solares puede tener efectos adversos sobre la salud, especialmente en el caso de las personas que, por trabajar a la intemperie, están mucho más tiempo expuestas. 
+-	Temperaturas extremas: Frío y calor.
+  - Entre todos los factores que se relacionan en este apartado, los que tienen un mayor impacto son los relacionados con la temperatura, que conlleva riesgos de sufrir las consecuencias derivadas de la exposición al calor, como son la deshidratación, golpe de calor, etc., así como los relacionados con la exposición al frío, de la que se pueden derivar problemas reumáticos, circulatorios, hipotermia, etc…
+-	Radiaciones solares.
+  - La exposición a las radiaciones solares puede tener efectos adversos sobre la salud, especialmente en el caso de las personas que, por trabajar a la intemperie, están mucho más tiempo expuestas. 
   Las consecuencias pueden variar desde quemaduras solares a otras enfermedades, como el melanoma, cáncer cutáneo, cataratas, etc., cuyos efectos están causados por la radiación ultravioleta. 
   Para prevenir la aparición de estos daños en el ámbito laboral será necesario adoptar medidas preventivas.
--	VIENTO.- Es importante valorar la velocidad del viento cuando, por ejemplo, se utilizan equipos de elevación de cargas, por el peligro de vuelco de estos aparatos y desprendimiento de las cargas, así como cuando los trabajadores realizan trabajos en altura, sobre andamios, plataformas, escaleras, etc... 
+-	Viento.
+  - Es importante valorar la velocidad del viento cuando, por ejemplo, se utilizan equipos de elevación de cargas, por el peligro de vuelco de estos aparatos y desprendimiento de las cargas, así como cuando los trabajadores realizan trabajos en altura, sobre andamios, plataformas, escaleras, etc... 
   Por encima de unos determinados límites de velocidad del viento, deberán suspenderse los trabajos.
--	LLUVIA, NIEVE Y GRANIZO.- Si se producen precipitaciones de lluvia, nieve o granizo, los trabajos pueden verse afectados haciéndose más complejos y, en muchos casos, más peligrosos. 
+-	Lluvia, nieve y granizo.
+  - Si se producen precipitaciones de lluvia, nieve o granizo, los trabajos pueden verse afectados haciéndose más complejos y, en muchos casos, más peligrosos. 
   Se reduce la visibilidad, se dificulta el tránsito de vehículos y trabajadores, etc. 
-  Además, cuando ocurren de forma persistente pueden producir el deslizamiento o desprendimiento del terreno, lo que afecta especialmente a trabajos de movimiento de tierras (excavaciones, terraplenados, etc…)
--	NIEBLA.- Provoca una disminución de la percepción de las señales y del entorno en general, dificultando las condiciones de visibilidad necesarias para la conducción de vehículos o maquinaria, manejo mecánico de cargas, distinción de las zonas de acopio de materiales, etc…
--	TORMENTAS.- Cuando se realizan trabajos a la intemperie con tormentas eléctricas, existe riesgo de caída de rayos en la zona de trabajo, con la consiguiente posibilidad de que se produzcan daños, tanto para los trabajadores como para las instalaciones eléctricas.
--	HIELO.- Con bajas temperaturas pueden formarse placas que generan superficies deslizantes. 
+  Además, cuando ocurren de forma persistente pueden producir el deslizamiento o desprendimiento del terreno, lo que afecta especialmente a trabajos de movimiento de tierras (excavaciones, terraplenados, etc…).
+-	Niebla.
+  - Provoca una disminución de la percepción de las señales y del entorno en general, dificultando las condiciones de visibilidad necesarias para la conducción de vehículos o maquinaria, manejo mecánico de cargas, distinción de las zonas de acopio de materiales, etc…
+-	Tormentas.
+  - Cuando se realizan trabajos a la intemperie con tormentas eléctricas, existe riesgo de caída de rayos en la zona de trabajo, con la consiguiente posibilidad de que se produzcan daños, tanto para los trabajadores como para las instalaciones eléctricas.
+-	Hielo.
+  - Con bajas temperaturas pueden formarse placas que generan superficies deslizantes. 
   También existe el riesgo de desprendimientos de placas de hielo.
 
 == Efectos de las condiciones climatológicas sobre la salud de los trabajadores
@@ -3148,62 +3118,68 @@ El exceso de calor corporal puede también agravar dolencias previas como enferm
 
 Cuando las condiciones de calor persisten y los trabajadores continúan acumulando calor, pueden producirse una serie de daños relacionados con el calor, que podrán ser más o menos graves según la cantidad de calor acumulado. 
 Estos daños son:
--	DESHIDRATACIÓN Y PÉRDIDA DE ELECTROLITOS.- Como consecuencia de las altas temperaturas y la regulación térmica que el cuerpo lleva a cabo, a través de la sudoración se pierden líquidos y sales minerales de forma constante, mientras dura esa exposición, por lo que debe prestarse atención a los signos de deshidratación. 
-  Cuando el trabajador nota sed, significa que el nivel de hidratación ya está bajo y se hace necesario reponer los líquidos perdidos, para evitar empeorar la situación. 
-  Por ello es recomendable ingerir constantemente líquidos (agua y/o bebidas isotónicas), mejor en pequeños sorbos, antes incluso de que aparezca la sed. 
+-	Deshidratación y pérdida de electrolitos.
+  - Como consecuencia de las altas temperaturas y la regulación térmica que el cuerpo lleva a cabo, a través de la sudoración se pierden líquidos y sales minerales de forma constante, mientras dura esa exposición, por lo que debe prestarse atención a los signos de deshidratación. 
+    Cuando el trabajador nota sed, significa que el nivel de hidratación ya está bajo y se hace necesario reponer los líquidos perdidos, para evitar empeorar la situación. 
+    Por ello es recomendable ingerir constantemente líquidos (agua y/o bebidas isotónicas), mejor en pequeños sorbos, antes incluso de que aparezca la sed. 
   Otros síntomas asociados a la deshidratación son el dolor de cabeza ligero, sensación leve de mareo, sequedad en la boca y falta de orina.
--	ERUPCIÓN CUTÁNEA.- Cuando se produce una sudoración excesiva y el sudor es retenido en la piel, en lugar de salir a través de los poros, como consecuencia de la obstrucción de los conductos de las glándulas sudoríparas, se produce esta alteración cutánea, que se presenta como un enrojecimiento de la piel, sobre todo de las zonas cubiertas con la ropa o con equipos de protección que dificultan la evaporación del sudor. 
-  Además de ese enrojecimiento, las erupciones producen irritación, picor o quemazón. 
-  En ocasiones pueden aparecer vesículas llenas de líquido. Para prevenir la erupción, es aconsejable mantener el cuerpo lo más fresco posible, utilizar ropa ligera y recurrir a duchas frecuentes o lavados regulares, con jabones suaves.
--	CALAMBRES POR CALOR.- Es una de las primeras manifestaciones que se producen en las personas que realizan una actividad física en condiciones ambientales de calor, generalmente durante los primeros días de actividad, cuando aún no se está acostumbrado. 
-  Se deben a la pérdida de sales por una sudoración intensa y se caracteriza por contracciones musculares dolorosas y espasmos intensos en los músculos que se encuentran fatigados por un trabajo intenso. 
-  Normalmente se presentan al final de la jornada, cuando ya los músculos se han enfriado. 
-  La recuperación requiere reposar en un ambiente fresco y beber agua o soluciones con cloruro sódico y potásico, para reponer las sales perdidas. 
-  Es importante tomar medidas cuando se perciben síntomas, ya que continuar trabajando en tales circunstancias podría llevar al agotamiento por calor, que se trata de un trastorno de mayor seriedad.
--	SÍNCOPE POR CALOR.- Se trata de una pérdida de conocimiento que ocurre de forma súbita, debido a una vasodilatación cutánea que produce una bajada de la tensión arterial, con disminución del caudal sanguíneo que llega al cerebro. 
-  Puede ocurrir por estar de pie e inmóvil durante mucho tiempo, en un sitio caluroso, con un cambio rápido de postura (por ejemplo, ponerse de pie demasiado rápido). 
-  Es más fácil que se presente en trabajadores no aclimatados, al principio de la exposición. 
-  Los síntomas del síncope incluyen desvanecimiento, visión borrosa, mareo, debilidad, pulso débil, piel fría y húmeda. 
-  La recuperación suele ser rápida y completa cuando se traslada al trabajador a un ambiente más fresco.
--	AGOTAMIENTO POR CALOR.- Se trata de un cuadro más importante, producido por la pérdida excesiva de líquidos y sales, como consecuencia del calor. 
-  Los síntomas característicos que presentará el trabajador son:
-  - Debilidad y fatiga.
-  -	Dolor de cabeza.
-  -	Sensación de mareo, visión borrosa.
-  -	Náuseas y vómitos.
-  -	Sudoración.
-
-En estos casos, es característico que el trabajador esté pálido y sudoroso, pero su temperatura suele ser normal o ligeramente elevada. 
-La presencia de sudor es un factor muy importante porque a menudo es la única forma de distinguir el agotamiento del golpe de calor, caracterizado precisamente por la ausencia de sudor. 
-El tratamiento requiere mantener al paciente en reposo, tumbado y con los pies elevados, en un lugar fresco y rehidratarlo. 
-Si está completamente alerta y sin náuseas, proporcionarle líquidos por vía oral. 
-Si presenta calambres, se incrementará el aporte de sales. 
-El agotamiento puede preceder a un golpe de calor, considerado de mayor gravedad, por lo que es fundamental actuar de inmediato cuando aparecen los primeros síntomas.
-
--	GOLPE DE CALOR.- El golpe de calor es uno de los casos más graves de hipertermia. 
-  Consiste en un sobrecalentamiento del cuerpo, como consecuencia de la exposición a altas temperaturas, que se origina cuando la termorregulación ha sido superada porque todos los mecanismos de disipación del calor han fallado. 
-  Cuando se produce un golpe de calor, la temperatura interna del cuerpo sobrepasa los 40,5 ºC y la sudoración se detiene, lo que hace que la temperatura suba aún más. 
-  La falta de hidratación ocasiona que diversos órganos dejen de funcionar como lo hacen de forma habitual. 
-  También las funciones mentales pueden verse afectadas y pueden producirse daños neuronales irreversibles, e incluso la muerte. 
-  Se trata de una urgencia médica extrema, porque tanto su aparición como su evolución, son muy rápidas. 
-  Si no se recibe la asistencia sanitaria necesaria, puede producirse la muerte en menos de 24 horas. 
-  La presencia de piel muy caliente, seca, enrojecida y sin ninguna evidencia de sudor es una de las señales más importantes para distinguir el golpe de calor de otros daños causados por el calor. 
-  Además, existen otros síntomas que evidencian que estamos ante un golpe de calor, entre los que se encuentran:
-  -	Síntomas generales:
-    -	Dolor de cabeza y mareos.
+-	Erupción cutánea.
+  - Cuando se produce una sudoración excesiva y el sudor es retenido en la piel, en lugar de salir a través de los poros, como consecuencia de la obstrucción de los conductos de las glándulas sudoríparas, se produce esta alteración cutánea, que se presenta como un enrojecimiento de la piel, sobre todo de las zonas cubiertas con la ropa o con equipos de protección que dificultan la evaporación del sudor. 
+    Además de ese enrojecimiento, las erupciones producen irritación, picor o quemazón. 
+    En ocasiones pueden aparecer vesículas llenas de líquido. Para prevenir la erupción, es aconsejable mantener el cuerpo lo más fresco posible, utilizar ropa ligera y recurrir a duchas frecuentes o lavados regulares, con jabones suaves.
+-	Calambres por calor.
+  - Es una de las primeras manifestaciones que se producen en las personas que realizan una actividad física en condiciones ambientales de calor, generalmente durante los primeros días de actividad, cuando aún no se está acostumbrado. 
+    Se deben a la pérdida de sales por una sudoración intensa y se caracteriza por contracciones musculares dolorosas y espasmos intensos en los músculos que se encuentran fatigados por un trabajo intenso. 
+    Normalmente se presentan al final de la jornada, cuando ya los músculos se han enfriado. 
+    La recuperación requiere reposar en un ambiente fresco y beber agua o soluciones con cloruro sódico y potásico, para reponer las sales perdidas. 
+    Es importante tomar medidas cuando se perciben síntomas, ya que continuar trabajando en tales circunstancias podría llevar al agotamiento por calor, que se trata de un trastorno de mayor seriedad.
+-	Síncope por calor.
+  - Se trata de una pérdida de conocimiento que ocurre de forma súbita, debido a una vasodilatación cutánea que produce una bajada de la tensión arterial, con disminución del caudal sanguíneo que llega al cerebro. 
+    Puede ocurrir por estar de pie e inmóvil durante mucho tiempo, en un sitio caluroso, con un cambio rápido de postura (por ejemplo, ponerse de pie demasiado rápido). 
+    Es más fácil que se presente en trabajadores no aclimatados, al principio de la exposición. 
+    Los síntomas del síncope incluyen desvanecimiento, visión borrosa, mareo, debilidad, pulso débil, piel fría y húmeda. 
+    La recuperación suele ser rápida y completa cuando se traslada al trabajador a un ambiente más fresco.
+-	Agotamiento por calor.
+  - Se trata de un cuadro más importante, producido por la pérdida excesiva de líquidos y sales, como consecuencia del calor. 
+    Los síntomas característicos que presentará el trabajador son:
+    - Debilidad y fatiga.
+    -	Dolor de cabeza.
+    -	Sensación de mareo, visión borrosa.
     -	Náuseas y vómitos.
-    -	Crisis convulsiva.
-    -	Aumento en la frecuencia cardiaca y respiratoria.
-    -	Pulso irregular.
-    -	Temperatura interna superior a 40,5 ºC.
-    -	Síntomas cutáneos:
-    -	Piel muy caliente, seca y enrojecida.
-    -	Ausencia de sudor.
-  -	Síntomas neurosensoriales:
-    -	Agitación, confusión.
-    -	Disminución o pérdida del nivel de consciencia, confusión y desmayo.
-El tratamiento debe orientarse a reducir rápidamente la temperatura central, para lo que deben tomarse medidas para enfriar el cuerpo, rociándolo o mojándolo con agua fresca y ventilación, en un lugar sombrío. 
-Estas medidas se deben mantener durante el traslado del enfermo a un hospital.
+    -	Sudoración.
+
+    En estos casos, es característico que el trabajador esté pálido y sudoroso, pero su temperatura suele ser normal o ligeramente elevada. 
+    La presencia de sudor es un factor muy importante porque a menudo es la única forma de distinguir el agotamiento del golpe de calor, caracterizado precisamente por la ausencia de sudor. 
+    El tratamiento requiere mantener al paciente en reposo, tumbado y con los pies elevados, en un lugar fresco y rehidratarlo. 
+    Si está completamente alerta y sin náuseas, proporcionarle líquidos por vía oral. 
+    Si presenta calambres, se incrementará el aporte de sales. 
+    El agotamiento puede preceder a un golpe de calor, considerado de mayor gravedad, por lo que es fundamental actuar de inmediato cuando aparecen los primeros síntomas.
+
+-	Golpe de calor.
+  - El golpe de calor es uno de los casos más graves de hipertermia. 
+    Consiste en un sobrecalentamiento del cuerpo, como consecuencia de la exposición a altas temperaturas, que se origina cuando la termorregulación ha sido superada porque todos los mecanismos de disipación del calor han fallado. 
+    Cuando se produce un golpe de calor, la temperatura interna del cuerpo sobrepasa los 40,5 ºC y la sudoración se detiene, lo que hace que la temperatura suba aún más. 
+    La falta de hidratación ocasiona que diversos órganos dejen de funcionar como lo hacen de forma habitual. 
+    También las funciones mentales pueden verse afectadas y pueden producirse daños neuronales irreversibles, e incluso la muerte. 
+    Se trata de una urgencia médica extrema, porque tanto su aparición como su evolución, son muy rápidas. 
+    Si no se recibe la asistencia sanitaria necesaria, puede producirse la muerte en menos de 24 horas. 
+    La presencia de piel muy caliente, seca, enrojecida y sin ninguna evidencia de sudor es una de las señales más importantes para distinguir el golpe de calor de otros daños causados por el calor. 
+    Además, existen otros síntomas que evidencian que estamos ante un golpe de calor, entre los que se encuentran:
+    -	Síntomas generales:
+      -	Dolor de cabeza y mareos.
+      -	Náuseas y vómitos.
+      -	Crisis convulsiva.
+      -	Aumento en la frecuencia cardiaca y respiratoria.
+      -	Pulso irregular.
+      -	Temperatura interna superior a 40,5 ºC.
+      -	Síntomas cutáneos:
+      -	Piel muy caliente, seca y enrojecida.
+      -	Ausencia de sudor.
+    -	Síntomas neurosensoriales:
+      -	Agitación, confusión.
+      -	Disminución o pérdida del nivel de consciencia, confusión y desmayo.
+    El tratamiento debe orientarse a reducir rápidamente la temperatura central, para lo que deben tomarse medidas para enfriar el cuerpo, rociándolo o mojándolo con agua fresca y ventilación, en un lugar sombrío. 
+    Estas medidas se deben mantener durante el traslado del enfermo a un hospital.
 
 ==== Planificar medidas con antelación
 
@@ -3238,15 +3214,14 @@ Para reducir el estrés térmico y prevenir los daños derivados de la exposici�
     -	Rotar los puestos con riesgo para que los trabajadores puedan alternar la exposición al calor con otras tareas.
     -	Permitir a los trabajadores regular su propio ritmo de trabajo.
 
-Para un determinado nivel de temperatura los riesgos pueden ser más o menos graves en función del tipo de trabajo realizado: ligero, moderado o pesado. 
-Hay que tener en cuenta también el incremento del riesgo que produce la humedad relativa, así como las variaciones de temperatura que produce un día despejado o cubierto.
+  Para un determinado nivel de temperatura los riesgos pueden ser más o menos graves en función del tipo de trabajo realizado: ligero, moderado o pesado. 
+  Hay que tener en cuenta también el incremento del riesgo que produce la humedad relativa, así como las variaciones de temperatura que produce un día despejado o cubierto.
 - Programar descansos que permitan la recuperación de la fatiga y de la posible sobrecarga térmica del trabajador. 
   Se trata de establecer unos ciclos de trabajo y descanso, determinando la duración de cada periodo y la frecuencia con que deben repetirse esos ciclos para que el organismo elimine el exceso de calor y disminuya la frecuencia cardíaca.
-
-Para determinar estos ciclos se deben tomar en consideración aspectos como las tareas realizadas y el esfuerzo físico requerido, así como los equipos de protección individual que deban utilizarse. 
-Los trabajadores recibirán información detallada y precisa de la implantación de esta medida y los supervisores y mandos intermedios deberán garantizar que se cumple lo planificado. 
-En temporadas de olas de calor, será necesario aumentar la frecuencia y/o la duración de las pausas. 
-Estos descansos deben realizarse en lugares con un ambiente más fresco y seco, por lo que se habilitarán zonas de sombra o locales con aire acondicionado para el descanso de los trabajadores.
+  Para determinar estos ciclos se deben tomar en consideración aspectos como las tareas realizadas y el esfuerzo físico requerido, así como los equipos de protección individual que deban utilizarse. 
+  Los trabajadores recibirán información detallada y precisa de la implantación de esta medida y los supervisores y mandos intermedios deberán garantizar que se cumple lo planificado. 
+  En temporadas de olas de calor, será necesario aumentar la frecuencia y/o la duración de las pausas. 
+  Estos descansos deben realizarse en lugares con un ambiente más fresco y seco, por lo que se habilitarán zonas de sombra o locales con aire acondicionado para el descanso de los trabajadores.
 
 ==== Ropa de trabajo
 
@@ -3261,11 +3236,11 @@ Es recomendable elegir aquellos cascos que sean lo más ligeros posible y cuente
 
 Gafas de protección para uso laboral:
 
-Los EPI deberán utilizarse cuando existan riesgos que no hayan podido evitarse o limitarse suficientemente por otros medios de protección colectiva o mediante procedimientos de organización de trabajo. 
+Los EPIs deberán utilizarse cuando existan riesgos que no hayan podido evitarse o limitarse suficientemente por otros medios de protección colectiva o mediante procedimientos de organización de trabajo. 
 Generalmente en la evaluación de riesgos se determinará la necesidad de utilizar equipos de protección para controlar los riesgos identificados. 
 El empresario está obligado a determinar los puestos de trabajo en los que debe recurrirse a la protección individual, elegir los equipos adecuados, proporcionarlos gratuitamente a los trabajadores y velar por su correcta utilización y mantenimiento. 
 Por su parte, los trabajadores deben utilizarlos y cuidarlos según las instrucciones recibidas e informar de cualquier anomalía detectada. 
-Los protectores oculares que protegen únicamente contra la radiación solar son de Categoría I (son de esta categoría  los EPI de diseño sencillo, destinado a proteger contra riesgos leves que pueden ser detectados a tiempo por el usuario y no ofrezcan un riesgo alto para la salud). 
+Los protectores oculares que protegen únicamente contra la radiación solar son de Categoría I (son de esta categoría los EPIs de diseño sencillo, destinado a proteger contra riesgos leves que pueden ser detectados a tiempo por el usuario y no ofrezcan un riesgo alto para la salud). 
 Si el protector incorpora otra característica protectora, por ejemplo, contra impactos de partículas, el protector será de Categoría II. 
 Los filtros solares tienen como finalidad proteger el ojo humano contra una radiación solar excesiva y aumentar la comodidad y la percepción visuales. 
 Los filtros solares de uso laboral deben presentar absorción de las radiaciones visible, UV e IR. 
@@ -3302,7 +3277,6 @@ Cuando hace calor, los trabajadores deberán:
 Especialmente en temporadas de calor intenso, siempre que sea posible, se debe evitar el trabajo individual (en solitario), planificando el trabajo en equipo para facilitar la supervisión mutua de los trabajadores y poder actuar de forma inmediata cuando se reconozcan señales de sobrecarga térmica.
 
 Además, es necesaria una comunicación efectiva entre los trabajadores (bien por observación, teléfono móvil u otros dispositivos) y comprobar periódicamente que el sistema previsto funciona eficazmente.
-
 
 === Frío
 
@@ -3382,12 +3356,11 @@ Efectos sobre la salud:
   A menos que la temperatura haya descendido demasiado, es posible la recuperación. 
   El recalentamiento y recuperación de las víctimas de hipotermia profunda debe tratarse en un hospital con personal especializado.
 -	Otras lesiones relacionadas con el frío: El pie de trinchera.
-
-Aunque cada vez es menos frecuente, pueden darse casos de pie de trinchera, o pie de inmersión. 
-El pie de trinchera ocurre cuando el trabajador ha permanecido durante mucho tiempo con los pies mojados y fríos, aunque no hayan llegado a congelarse. 
-La humedad provoca la pérdida de calor y el ablandamiento de los tejidos, y esto puede desacelerar el flujo sanguíneo y dañar los tejidos musculares y los nervios. 
-Se trata de una afección muy dolorosa, que presenta una serie de síntomas característicos como sensación de hormigueo, entumecimiento, hinchazón, manchas en la piel, picor y, en casos extremos, gangrena. 
-Para prevenir esta afección, se deben mantener los pies secos y calientes, para lo que será necesario utilizar calcetines y calzado adecuados, con suficiente aislamiento, y cambiarlos cuando se hayan mojado.
+  Aunque cada vez es menos frecuente, pueden darse casos de pie de trinchera, o pie de inmersión. 
+  El pie de trinchera ocurre cuando el trabajador ha permanecido durante mucho tiempo con los pies mojados y fríos, aunque no hayan llegado a congelarse. 
+  La humedad provoca la pérdida de calor y el ablandamiento de los tejidos, y esto puede desacelerar el flujo sanguíneo y dañar los tejidos musculares y los nervios. 
+  Se trata de una afección muy dolorosa, que presenta una serie de síntomas característicos como sensación de hormigueo, entumecimiento, hinchazón, manchas en la piel, picor y, en casos extremos, gangrena. 
+  Para prevenir esta afección, se deben mantener los pies secos y calientes, para lo que será necesario utilizar calcetines y calzado adecuados, con suficiente aislamiento, y cambiarlos cuando se hayan mojado.
 
 ==== Formación e información a los trabajadores
 
@@ -3426,8 +3399,7 @@ La ropa de protección frente al frío ofrecerá:
 -	Protección frente a la humedad, para proteger frente a la lluvia.
 -	Permeabilidad al aire y vapor de agua, para permitir la transpiración y disipación de parte del calor que se genera al trabajar.
 
-En cuanto al marcado de la ropa de protección contra el frio, tendrá el marcado general (CE) y un marcado específico, basado en pictogramas de riesgos, junto al 
-que se indicará la norma de referencia que cumplen y los niveles de prestación que ofrecen para cada ensayo.
+En cuanto al marcado de la ropa de protección contra el frio, tendrá el marcado general (CЄ) y un marcado específico, basado en pictogramas de riesgos, junto al que se indicará la norma de referencia que cumplen y los niveles de prestación que ofrecen para cada ensayo.
 -	Deben protegerse las zonas más expuestas y sensibles al frío, como la cabeza y el cuello, los pies y las manos.
 -	La ropa deberá cambiarse cuando se encuentre húmeda para no reducir su capacidad aislante.
 
@@ -3457,47 +3429,47 @@ En estas situaciones, hay que tener en cuenta que, entre los primeros síntomas,
 
 A continuación se aportan algunas pautas de actuación en función del tipo de dolencia producida:
 -	Deshidratación:
-  -	Mantener al trabajador en reposo, tumbado con la cabeza algo más baja que el cuerpo.
-  - Si no presenta náuseas, proporcionar líquidos para hidratarlo. 
+  +	Mantener al trabajador en reposo, tumbado con la cabeza algo más baja que el cuerpo.
+  + Si no presenta náuseas, proporcionar líquidos para hidratarlo. 
     Beber pequeñas cantidades de agua, zumos de frutas o bebidas energéticas para recuperar electrolitos.
 -	Erupción cutánea:
-  -	Limpiar la piel y secarla.
-  -	Cambiar la ropa húmeda, en su caso, y sustituirla por ropa seca.
-  -	No aplicar pomadas ni cremas en las áreas con sarpullido, puesto que el calor y la humedad pueden empeorar el estado de la piel.
+  +	Limpiar la piel y secarla.
+  +	Cambiar la ropa húmeda, en su caso, y sustituirla por ropa seca.
+  +	No aplicar pomadas ni cremas en las áreas con sarpullido, puesto que el calor y la humedad pueden empeorar el estado de la piel.
 -	Calambres:
-  -	Trasladar al trabajador a un lugar fresco y ventilado para descansar.
-  -	Si está completamente alerta y sin náuseas, proporcionarle bebidas, como agua con sales o bebidas isotónicas. 
+  +	Trasladar al trabajador a un lugar fresco y ventilado para descansar.
+  +	Si está completamente alerta y sin náuseas, proporcionarle bebidas, como agua con sales o bebidas isotónicas. 
     No bebidas alcohólicas o con cafeína.
-  -	Hacer ejercicios suaves de estiramientos y frotar el músculo afectado.
-  -	No realizar actividad física hasta 2 horas después de que hayan desparecido los calambres. 
+  +	Hacer ejercicios suaves de estiramientos y frotar el músculo afectado.
+  +	No realizar actividad física hasta 2 horas después de que hayan desparecido los calambres. 
     Seguir trabajando en esas circunstancias podría evolucionar hacia el agotamiento por calor, con mayor gravedad. 
     Si no desaparecen en una hora, avisar al médico.
 -	Síncope:
-  -	Mantener a la persona afectada tumbada, con las piernas levantadas y en lugar fresco. 
+  +	Mantener a la persona afectada tumbada, con las piernas levantadas y en lugar fresco. 
     Cuando recupere la consciencia, proporcionar líquidos para hidratarla.
-  -	Aunque no es grave, en muchas ocasiones su inicio no se diferencia de un golpe de calor, por lo que es necesario valorar todos los casos.
+  +	Aunque no es grave, en muchas ocasiones su inicio no se diferencia de un golpe de calor, por lo que es necesario valorar todos los casos.
 -	Agotamiento:
-  -	Trasladar al trabajador a un lugar fresco.
-  -	Mantenerlo tumbado, o recostado, con las piernas levantadas por encima del nivel del corazón.
-  -	Aflojar o retirar la ropa apretada.
-  -	Refrescarlo rociándolo con agua, con una esponja húmeda, etc... y abanicarlo.
-  -	Si está completamente alerta y sin náuseas, proporcionarle bebidas como agua con sales o bebidas isotónicas. 
+  +	Trasladar al trabajador a un lugar fresco.
+  +	Mantenerlo tumbado, o recostado, con las piernas levantadas por encima del nivel del corazón.
+  +	Aflojar o retirar la ropa apretada.
+  +	Refrescarlo rociándolo con agua, con una esponja húmeda, etc... y abanicarlo.
+  +	Si está completamente alerta y sin náuseas, proporcionarle bebidas como agua con sales o bebidas isotónicas. 
     No bebidas alcohólicas o con cafeína.
-  -	Generalmente se aprecia mejoría en un tiempo breve. 
+  +	Generalmente se aprecia mejoría en un tiempo breve. 
     No obstante, es conveniente que el trabajador sea trasladado a un centro médico para que sea revisado por un especialista.
 -	Golpe de calor:
-  -	El trabajador afectado por un golpe de calor debe ser atendido de forma inmediata por profesionales, en un centro sanitario, puesto que se trata de una urgencia médica con una alta tasa de mortalidad. 
+  +	El trabajador afectado por un golpe de calor debe ser atendido de forma inmediata por profesionales, en un centro sanitario, puesto que se trata de una urgencia médica con una alta tasa de mortalidad. 
     Mientras tanto, es importante que los trabajadores presentes en la obra sepan identificar los síntomas principales y cómo deben actuar para evitar que la situación se agrave y la víctima sufra daños mayores.
-  -	Lo primero que debe hacerse es trasladar al trabajador afectado a un lugar alejado del sol, en sombra y lo más fresco y ventilado posible, puesto que es fundamental intentar bajar su temperatura corporal.
-  -	Colocarlo tumbado boca arriba (salvo que esté vomitando o tenga convulsiones), con las piernas ligeramente elevadas para favorecer la circulación.
-  -	Retirar o aligerar la ropa.
-  -	Empaparlo en agua fría para disminuir la temperatura corporal: aplicar compresas de agua fría (pero no demasiado, para evitar un cambio excesivamente brusco) en zonas como la cabeza, el pecho, las axilas y las ingles, o rociarlo con agua, mojarlo con una esponja, etc. 
+  +	Lo primero que debe hacerse es trasladar al trabajador afectado a un lugar alejado del sol, en sombra y lo más fresco y ventilado posible, puesto que es fundamental intentar bajar su temperatura corporal.
+  +	Colocarlo tumbado boca arriba (salvo que esté vomitando o tenga convulsiones), con las piernas ligeramente elevadas para favorecer la circulación.
+  +	Retirar o aligerar la ropa.
+  +	Empaparlo en agua fría para disminuir la temperatura corporal: aplicar compresas de agua fría (pero no demasiado, para evitar un cambio excesivamente brusco) en zonas como la cabeza, el pecho, las axilas y las ingles, o rociarlo con agua, mojarlo con una esponja, etc. 
     También es eficaz envolverlo en una tela, sábana o toalla mojada.
-  -	Proporcionarle aire, abanicándolo.
-  -	Si el trabajador está consciente, y sin náuseas, se le ofrecerán líquidos, como agua o bebidas isotónicas para ayudar a reponer sales, en pequeños sorbos. 
+  +	Proporcionarle aire, abanicándolo.
+  +	Si el trabajador está consciente, y sin náuseas, se le ofrecerán líquidos, como agua o bebidas isotónicas para ayudar a reponer sales, en pequeños sorbos. 
     En caso de que no esté consciente, no se le debe proporcionar ninguna bebida.
-  -	Si se producen convulsiones colocar bajo su cabeza algún objeto blando para evitar que se lesione, y no intentar controlarlas, puesto que podrían producirse lesiones musculares o articulares importantes.
-  -	Observar constantemente su evolución, controlando su temperatura corporal. 
+  +	Si se producen convulsiones colocar bajo su cabeza algún objeto blando para evitar que se lesione, y no intentar controlarlas, puesto que podrían producirse lesiones musculares o articulares importantes.
+  +	Observar constantemente su evolución, controlando su temperatura corporal. 
     Siempre debe haber alguien alerta vigilando al trabajador, hasta que sea atendido por profesionales. 
     Mientras tanto, continuar enfriándolo.
 
@@ -3505,14 +3477,13 @@ A continuación se aportan algunas pautas de actuación en función del tipo de 
 
 Cuando un trabajador se encuentra expuesto al frío y presenta hipotermia o congelación se tendrán en cuenta las siguientes recomendaciones:
 - Congelación: Las zonas más vulnerables son las manos, pies, nariz y orejas.
-
   Cuando se padecen síntomas de congelación, las actuaciones a realizar son:
-  -	Trasladar a la víctima a un lugar cubierto, protegido y cálido, con cuidado para evitar empeorar los daños, y evitando que camine si tiene lesiones en los pies.
-  -	Aflojar las ropas ajustadas y retirar la ropa húmeda. 
+  +	Trasladar a la víctima a un lugar cubierto, protegido y cálido, con cuidado para evitar empeorar los daños, y evitando que camine si tiene lesiones en los pies.
+  +	Aflojar las ropas ajustadas y retirar la ropa húmeda. 
     Secarlo y abrigarlo con mantas, toallas o ropa seca.
-  -	Si está consciente, proporcionar bebidas calientes y suaves (sin cafeína).
-  -	Colocar vendajes o gasas secas, limpias y desinfectadas sobre las zonas congeladas, entre los dedos de las manos y los pies, y tapando las heridas.
-  -	Hasta que la víctima pueda recibir asistencia médica, se intentará la recuperación de las partes congeladas con agua tibia, sumergiendo manos y pies en un recipiente o aplicando suavemente paños empapados sobre las zonas afectadas.
+  +	Si está consciente, proporcionar bebidas calientes y suaves (sin cafeína).
+  +	Colocar vendajes o gasas secas, limpias y desinfectadas sobre las zonas congeladas, entre los dedos de las manos y los pies, y tapando las heridas.
+  +	Hasta que la víctima pueda recibir asistencia médica, se intentará la recuperación de las partes congeladas con agua tibia, sumergiendo manos y pies en un recipiente o aplicando suavemente paños empapados sobre las zonas afectadas.
   A continuación, se exponen algunos consejos sobre lo que NO debe hacerse en caso de congelación:
   -	No friccionar ni masajear las áreas afectadas. 
     Las zonas congeladas son muy delicadas y podrían agravarse las lesiones producidas por el frío.
@@ -3534,7 +3505,7 @@ Cuando un trabajador se encuentra expuesto al frío y presenta hipotermia o cong
       El temblor generalmente cesa, y presenta dificultades para hablar y alteraciones en el juicio. 
       Estos síntomas indican un agravamiento de la situación.
     -	Hipotermia aguda: flacidez muscular, dilatación de pupilas, dificultad respiratoria, inconsciencia, latidos muy débiles y fibrilación ventricular.
-Cuando aparece alguno de los síntomas descritos es necesario recibir atención médica, incluso aunque se trate de una hipotermia leve, para evitar que empeore, si no se trata adecuadamente, y derive en un cuadro más grave. 
+  Cuando aparece alguno de los síntomas descritos es necesario recibir atención médica, incluso aunque se trate de una hipotermia leve, para evitar que empeore, si no se trata adecuadamente, y derive en un cuadro más grave. 
   Mientras tanto, se tendrán en cuenta las siguientes recomendaciones:
     -	Se debe proteger al trabajador de cualquier fuente de frío, colocándolo siempre que sea posible en un lugar cubierto, y con temperatura apropiada, o protegido del viento y arropado. 
       Si está en el suelo, es conveniente poner mantas, toallas o cualquier prenda de ropa para protegerlo y aislarlo del contacto directo con el suelo frío.
@@ -3628,20 +3599,18 @@ Protección en caso de fuerte viento y tormentas:
 -	Si se encuentra en un descampado, y si es posible, tiéndase en el suelo y cúbrase con un plástico hasta que escampe.
 
 Caída de personas al mismo o distinto nivel y pisadas de objetos:
--	Utilizar los pasos y vías existentes
--	Mantener orden y limpieza en la zona de trabajo
--	Utilizar el calzado adecuado
+-	Utilizar los pasos y vías existentes.
+-	Mantener orden y limpieza en la zona de trabajo.
+-	Utilizar el calzado adecuado.
 
 Accidentes causados por seres vivos:
--	Vestir la ropa de trabajo correctamente
+-	Vestir la ropa de trabajo correctamente.
 -	Utilizar repelentes de insectos en la época de mosquitos.
 -	En presencia de animales (perros, ganado..) no dar nunca la espalda y no realizar movimientos bruscos en su presencia.
 
 //*FIRMA, FECHA Y DEMÁS*
 
-
-= Anexo XI Especificaciones técnicas de los EPI
-
+= Anexo XI Especificaciones técnicas de los EPIs
 
 Listado de principales EPIs usados en obra y sus especificaciones técnicas mínimas.
 
@@ -3662,7 +3631,7 @@ En caso de ser así deben cumplir con las especificaciones mínimas de esta list
   -	Incluye barboquejo para sujeción.
   -	Sin visera.
 
-+	*PROFI 3 ARNES ANTICAIDA EN358/361*
++	*PROFI 3 arnés anticaída EN358/361*
   -	Arnés para cubrir los riesgos básicos de trabajos en alturas de más de 2 metros
   -	Certificado Riesgos Irreversibles EPI Cat III SEGÚN EN 358 y EN 361
   -	Características
@@ -3676,14 +3645,14 @@ En caso de ser así deben cumplir con las especificaciones mínimas de esta list
   -	10 años de vida útil Es obligatorio su revisión anual después del primer uso
   -	Etiqueta informativa protegida con gancho y bucle.
 
-+ *MOSQUETON ALU.AUT. EN362-B/12275-B-H*
++ *Mosquetón ALU.AUT. EN362-B/12275-B-H*
   -	Certificado Riesgos Irreversibles
   -	EPI Cat III
   -	SEGÚN EN 362-B/12275-B-H
   -	Tres acciones para abrir
   -	Es obligatoria la revisión anual de los dispositivos contra caídas después del primer uso
 
-+ *RETRACTIL AUTOMATICO ANTICAIDA HSG10K 10M HSG10 ANTICAIDA RETRÁCTIL ACERO 10M*
++ *Retráctil automático anticaída HSG10K 10M HSG10 anticaída retráctil acero 10M*
   -	Certificados Riesgos Irreversibles EPI Cat. III SEGÚN EN 360
   -	Para uso horizontal y vertical
   -	Carcasa realizada en plástico.
@@ -3694,40 +3663,40 @@ En caso de ser así deben cumplir con las especificaciones mínimas de esta list
   -	Proteger el dispositivo de productos químicos y temperaturas extremas.
   -	Es obligatorio hacer controles anuales para la seguridad del dispositivo, después del primer uso.
 
-+ *GAFAS PROTECCIÓN*
++ *Gafas protección*
   -	Certificado riesgos intermedios EPI Cat.II según EN166:2001.
   -	Protección100% UV (por encima de 380 nm).
   -	Capa exterior e interior resistente a rayadas.
   -	Inserciones de goma suave antideslizantes en el puente de la nariz.
   -	Peso: 24g.
 
-+ *GUANTES DE PIEL LIGEROS*
++ *Guantes de piel ligeros*
   -	Guantes de piel flor ligeros. Certificado Riesgos Intermedios EPI Cat. II SEGÚN EN ISO 21420:2020, EN 388:2016+A1:2018 (2122X).
-  -	Realizado en piel de cabra de color gris
-  -	Grosor de la piel: 0,5 a 0,9mm
-  -	Parte superior realizada en algodón poliéster
-  -	Ajustable en la muñeca por medio de una banda de goma situada en la parte superior
-  -	Contenido en Cromo inferior a 2mg/kg
-  -	Certificado de Riesgos Intermedios EPI Cat II EN 388:2016
+  -	Realizado en piel de cabra de color gris.
+  -	Grosor de la piel: 0,5 a 0,9mm.
+  -	Parte superior realizada en algodón poliéster.
+  -	Ajustable en la muñeca por medio de una banda de goma situada en la parte superior.
+  -	Contenido en Cromo inferior a 2mg/kg.
+  -	Certificado de Riesgos Intermedios EPI Cat II EN 388:2016.
 
-+	*GUANTES AISLANTES CLASE 0*
-  -	Certificado Riesgos Complejos EPI Cat. III SEGÚN EN 60903:2014
-  -	Guantes homologados para trabajos con voltaje de hasta 1000 V/AC
++	*Guantes aislantes clase 0*
+  -	Certificado Riesgos Complejos EPI Cat. III SEGÚN EN 60903:2014.
+  -	Guantes homologados para trabajos con voltaje de hasta 1000 V/AC.
   -	Grosor de la capa según el estándar máximo de 1 + 0,6 mm.
   -	Se suministra en una bolsa de PE resistente a los rayos UV.
-  -	EN 61482-1 + 2
-  -	Nivel 1: 4 KA / 0,5 s / 300 mm
-  -	Nivel 2: 7 KA / 0,5 s / 300 mm
+  -	EN 61482-1 + 2.
+  -	Nivel 1: 4 KA / 0,5 s / 300 mm.
+  -	Nivel 2: 7 KA / 0,5 s / 300 mm.
   -	Guantes dieléctricos para riesgos eléctricos.
   -	Para trabajos a media y baja tensión.
   -	Protege del paso de corriente eléctrica a través del cuerpo humano (choque eléctrico), producido por el contacto físico con un elemento conductor, a diferente tensión. 
     (No protege de corrientes eléctricas inducidas en el cuerpo humano por campos electromagnéticos fuertes o cualquier otro riesgo derivado de la energía eléctrica).
-  -	CLASE: Número (00, 0, 1, 2, 3 y 4) que indica el valor de tensión máxima de trabajo.
+  -	Clase: Número (00, 0, 1, 2, 3 y 4) que indica el valor de tensión máxima de trabajo.
   -	Fabricados en látex natural.
   -	Los guantes se deben almacenar en su embalaje.
   -	Se tendrá cuidado de que los guantes no se aplasten, ni doblen, ni se coloquen en las proximidades de radiadores u otras fuentes de calor artificial o se expongan directamente a los rayos del sol, a la luz artificial o a fuentes de ozono.
 
-+ *ZAPATO DE SEGURIDAD. PUNTERA DE FIBRA DE CARBONO.*
++ *Zapato de seguridad. Puntera de fibra de carbono.*
   -	Parte superior textil con refuerzos de TPU.
   -	Puntera muy ligera en FIBRA DE CARBONO.
   -	Plantilla antiperforación muy ligera en PET 100% reciclado, fresco y flexible.
@@ -3735,22 +3704,20 @@ En caso de ser así deben cumplir con las especificaciones mínimas de esta list
   -	ESD Clase 1, Horma ancha Mondopoint 11.
   -	Sin partes metálicas.
 
-+ *CUERDA DE SUJECIÓN*
-  -	Certificado Riesgos Irreversibles
-  -	EPI Cat III
-  -	SEGÚN EN 358, EN 353-2
-  -	Cuerda de 2m de longitud, Ø12mm de grosor y con los extremos cosidos y protegidos con casquillo termo retráctil
-  -	Mosquetón de acero con seguro roscado Ø10 mm
++ *Cuerda de sujección*
+  -	Certificado Riesgos Irreversibles.
+  -	EPI Cat III.
+  -	SEGÚN EN 358, EN 353-2.
+  -	Cuerda de 2m de longitud, Ø12mm de grosor y con los extremos cosidos y protegidos con casquillo termo retráctil.
+  -	Mosquetón de acero con seguro roscado Ø10 mm.
   -	Deslizante de aluminio accionado por resorte con orificio de Ø16mm
-  -	Color: blanco, naranja y rojo
-  -	Peso: 0,517kg
-  -	Es obligatoria la revisión anual de los dispositivos contra caídas después del primer uso
+  -	Color: blanco, naranja y rojo.
+  -	Peso: 0,517kg.
+  -	Es obligatoria la revisión anual de los dispositivos contra caídas después del primer uso.
 
 //*FIRMA, FECHA Y DEMÁS*
 
-
 = Anexo XII Normativa de aplicación al proyecto
-
 
 #table(
   columns: (auto, auto, auto, auto),
@@ -3865,9 +3832,9 @@ En caso de ser así deben cumplir con las especificaciones mínimas de esta list
 
 
 
-*NORMATIVAS ESPECÍFICAS*
+*Normativas específicas*
 
-ESTATALES:
+Estatales:
 -	CTE (R.D. 314/2006) y las exigencias básicas desarrolladas en sus Documentos Básicos "DB SE (Seguridad Estructural): DB-SE-AE: Acciones en la Edificación, DB-SE-C: Cimientos, DB-SE- A: Acero, DB-SE-F: Fábrica, DB-SE M: Madera". "DB SI (Seguridad en caso de incendio)". "DB SUA (Seguridad de utilización y accesibilidad)". "DB HS (Salubridad)". "DB HR (Protección frente al ruido)". "DB HE (Ahorro de energía)" y modificaciones en el R.D. 1371/2007, R.D. 1675/2008, Orden VIV/984/2009, R.D. 173/2010, Orden FOM/1635/2013, Orden FOM/588/2017, R.D. 732/2019 y R.D. 450/2022.
 
 

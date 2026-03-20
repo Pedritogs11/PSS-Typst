@@ -59,15 +59,11 @@ ejecución de la obra deberá desarrollar las siguientes funciones:
 
 #data.instaladora.nombre, como contratista, colaborará en todo lo posible con el coordinador de seguridad para que éste pueda cumplir con sus atribuciones de la forma más eficiente posible.
 
-
-
 = Memoria descriptiva
 
 
 //Codigo:
 #outline(title: "Índice de la memoria")
-
-
 
 == Introducción
 === Antecedentes
@@ -102,7 +98,6 @@ En definitiva, se pretende cumplir con lo legislado y eliminar de la obra la sin
 
 Previo al inicio de los trabajos #data.instaladora.nombre entregará al Coordinador de Seguridad y Salud una planificación de los trabajos, comunicando cualquier cambio, notificará si va a subcontratar algún trabajo y efectuará un acta previa al inicio de las obras avisando de la fecha de inicio.
 
-
 === Emplazamiento
 //Sergio: Otra vez se menciona que la instalción se ejecutará en la cubierta de una nave
 La planta solar fotovoltaica que se trata se ubicará en la cubierta de la nave con los siguientes datos:
@@ -113,7 +108,8 @@ Dirección: #data.proyecto.localizacion.situacion, #data.proyecto.localizacion.l
 
 Ubicación google maps: #data.proyecto.empresa.enlace_maps
 
-//*empresa.foto*
+//ubicacion empresa
+#image(data.proyecto.empresa.imagen_maps)
 
 === Datos generales
 
@@ -168,6 +164,7 @@ Ubicación: #data.sys.centro_salud.direccion
 #data.sys.centro_salud.enlace_maps
 
 //foto de la ruta de evacuación
+#image(data.sys.centro_salud.imagen_maps)
 
 En los planos se detalla el recorrido a seguir desde la obra en caso de ser necesario. 
 El citado plano, deberá estar situado en un lugar visible y accesible a la totalidad de los trabajadores de la obra.
@@ -2591,9 +2588,7 @@ Al final de la jornada, el parte de trabajo y albarán de material será entrega
 La aplicación del presente procedimiento deberá llevar consigo el obligado cumplimiento del Real Decreto 614/2001, de 8 de junio, sobre disposiciones mínimas para la protección de la salud y seguridad de los trabajadores frente al riesgo eléctrico. 
 BOE nº 148 21-06-2001 y la Guía Técnica para la Evaluación y Prevención del riesgo eléctrico.
 
-//*FIRMA, FECHA Y DEMÁS*
-
-= Anexo V Nombramiento de recursos preventivos
+= Anexo III Nombramiento de recursos preventivos
 
 == Nombramiento del recurso preventivo
 
@@ -2617,7 +2612,7 @@ Como normas generales de actuación, los recursos preventivos tendrán que:
 
 //*CUADRADOS CON FIRMAS *
 
-= Anexo VI Nombramiento de jefe de obra
+= Anexo IV Nombramiento de jefe de obra
 == Designación del jefe de obra
 
 #data.instaladora.nombre con CIF #data.instaladora.cif nombra al Sr D.  con DNI  jefe de obra para la obra: #data.proyecto.titulo.
@@ -2657,7 +2652,7 @@ Debiendo de estar presente en obra durante la ejecución de los trabajos, o bien
 
 //*CUADRADOS CON FIRMAS*
 
-= Anexo VII Nombramiento de supervisor manejo de cargas
+= Anexo V Nombramiento de supervisor manejo de cargas
 == Nombramiento del supervisor del manejo de cargas
 
 #data.instaladora.nombre con CIF #data.instaladora.cif nombra al Sr D.  con DNI  Supervisor de manejo de cargas para la obra: #data.proyecto.titulo. 
@@ -2675,14 +2670,14 @@ Como normas generales de actuación tendrá que:
 
 //*CUADRADOS CON FIRMAS*
 
-= Anexo VIII Protocolo uso de plataformas elevadoras <anexoVIII>
+= Anexo VI Protocolo uso de plataformas elevadoras <anexoVI>
 
 //Codigo:
 
-#let start = (<anexoVIII>)
+#let start = (<anexoVI>)
 #let end = heading.where(level: 1).after(start, inclusive: false)
 
-*Índice del Anexo VIII*
+*Índice del Anexo VI*
 #outline(
   title: none,
   target: selector(heading)
@@ -2932,16 +2927,14 @@ Debe haber al menos 2 trabajadores capacitados para el manejo de la plataforma p
 -	Vigilar y evitar la circulación de las máquinas y peatones alrededor de la barquilla.
 -	Guiar al conductor de la barquilla si fuera necesario.
 
-//*FIRMA, FECHA Y DEMÁS*
-
-= Anexo IX Protocolo de rescate en caso de accidente <anexoIX>
+= Anexo VII Protocolo de rescate en caso de accidente <anexoVII>
 
 //Codigo:
 
-#let start = (<anexoIX>)
+#let start = (<anexoVII>)
 #let end = heading.where(level: 1).after(start, inclusive: false)
 
-*Índice del Anexo IX*
+*Índice del Anexo VII*
 #outline(
   title: none,
   target: selector(heading)
@@ -3015,16 +3008,14 @@ Para atender a un accidentado hay recordar tres actuaciones básicas:
 + Avisar.
 + Socorrer.
 
-//*FIRMA, FECHA Y DEMÁS*
-
-= Anexo X Plan de acción frente a fenómenos meteorológicos adversos <anexoX>
+= Anexo VIII Plan de acción frente a fenómenos meteorológicos adversos <anexoVIII>
 
 //Codigo:
 
-#let start = (<anexoX>)
+#let start = (<anexoVIII>)
 #let end = heading.where(level: 1).after(start, inclusive: false)
 
-*Índice del Anexo X*
+*Índice del Anexo VIII*
 
 #outline(
   title: none,
@@ -3069,7 +3060,6 @@ Temporales de viento, lluvias, nevadas, olas de frío y de calor, tormentas, etc
 
 == Efectos de las condiciones climatológicas sobre la salud de los trabajadores
 === Calor
-//Cambiar
 
 La exposición al calor puede tener efectos adversos en la salud de los trabajadores. 
 Por tanto, debe considerarse como un riesgo laboral que requiere una gestión adecuada del mismo, comenzando, como primer paso para su control, por la identificación de las situaciones que se van a considerar de riesgo.
@@ -3593,9 +3583,7 @@ Accidentes causados por seres vivos:
 -	Utilizar repelentes de insectos en la época de mosquitos.
 -	En presencia de animales (perros, ganado..) no dar nunca la espalda y no realizar movimientos bruscos en su presencia.
 
-//*FIRMA, FECHA Y DEMÁS*
-
-= Anexo XI Especificaciones técnicas de los EPIs
+= Anexo IX Especificaciones técnicas de los EPIs
 
 Listado de principales EPIs usados en obra y sus especificaciones técnicas mínimas.
 
@@ -3700,9 +3688,7 @@ En caso de ser así deben cumplir con las especificaciones mínimas de esta list
   -	Peso: 0,517kg.
   -	Es obligatoria la revisión anual de los dispositivos contra caídas después del primer uso.
 
-//*FIRMA, FECHA Y DEMÁS*
-
-= Anexo XII Normativa de aplicación al proyecto
+= Anexo X Normativa de aplicación al proyecto
 
 #table(
   columns: (auto, auto, auto, auto),
@@ -4028,9 +4014,5 @@ Norma Básica de la Edificación:
 Normas NTE que les sean de aplicación, según fase de obra.
 
 Normas UNE que les sean de aplicación.
-
-//*FIRMA, FECHA Y DEMÁS*
-
-
 
 = Planos

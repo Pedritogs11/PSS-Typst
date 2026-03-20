@@ -10,7 +10,8 @@
     "fecha": "2026-02-09",
     "empresa": {
       "nombre": "Bolsas Luis Serrano",
-      "enlace_maps": "https://maps.app.goo.gl/NyDPvREjhG4xucsP8"
+      "enlace_maps": "https://maps.app.goo.gl/NyDPvREjhG4xucsP8",
+      "imagen_maps": "images/ubicacion_empresa.jpg"
     },
     "localizacion": {
       "situacion": "Poligono Industrial las Salinillas, nº14, 14800",
@@ -84,7 +85,8 @@
       "distancia": 1400,
       "ud_distancia": "metros",
       "tiempo": 5,
-      "ud_tiempo": "minutos"
+      "ud_tiempo": "minutos",
+      "imagen_maps": "images/ruta_evacuacion.jpg"
     },
     "telefonos": {
       "urgencias": "957 00 17 37",

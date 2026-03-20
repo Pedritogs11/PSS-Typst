@@ -1826,6 +1826,49 @@ Los EPI deberán utilizarse cuando existan riesgos para la seguridad y salud de 
 
 En función de los riesgos establecidos y como complemento a las medidas de protección colectiva, los EPIs a utilizar para cada uno de ellos son:
 
+#table(
+  table.header([Listado de Equipos de Protección Individual para la instalación y mantenimiento de paneles de energía solar]),
+  columns: 2,
+  [Riesgo], [Equipo de Protección Individual],
+  table.cell(rowspan: 3, [Caídas de personas a distinto nivel]), [Arnés de seguridad],
+  [Cinturón de sujección],
+  [Dispositivos anticaídas con amortiguación],
+  table.cell(rowspan: 4, [Proyección de partículas o fragmentos]), [Pantallas faciales],
+  [Gafas de cazoleta],
+  [Guantes de protección mecánica],
+  [Mandil de protección mecánica],
+  [Sobreesfuerzos], [Faja o cinturón de protección lumbar],
+  table.cell(rowspan: 3, [Atrapamientos, golpes o cortes con herramientas u objetos]), [Guantes de proteccion mecánica],
+  [Calzado de seguridad],
+  [Rodilleras y coderas],
+  table.cell(rowspan: 2, [Caída de objetos en manipulación o desprendidos]), [Casco contra choques e impactos],
+  [Calzado de seguridad],
+  [Pisadas sobre objetos punzantes], [Calzado de seguridad con suela antipenetración],
+  table.cell(rowspan: 5, [Contactos eléctricos]), [Casco de seguridad],
+  [Gafas de cazoleta],
+  [Guantes contra riesgos eléctricos],
+  [Calzado de seguridad con suela dieléctrica],
+  [Ropa de trabajo],
+  table.cell(rowspan: 2, [Ruido]), [Cascos antirruido],
+  [Protección auditiva],
+  [Contactos térmicos], [Guantes contra riesgos térmicos],
+  [Estrés térmico], [Ropa de protección contra bajas temperaturas],
+  table.cell(rowspan: 4, [Contactos con sustancias cáusticas y corrosivas]), [Pantalla facial],
+  [Guantes contra riesgo químico],
+  [Ropa de protección química],
+  [Equipos filtrantes contra gases y vapores],
+  table.cell(rowspan: 4, [Contacto con sustancias nocivas y peligrosas]), [Pantalla facial],
+  [Guantes contra riesgo químico],
+  [Ropa de protección química],
+  [Equipos filtrantes contra gases y vapores],
+  table.cell(rowspan: 4,[Biológico(legionela)]), [Ropa de protección especial],
+  [Protectores integrales para cabeza],
+  [Guantes de protección],
+  [Equipos filtrantes contra riesgo biológico]
+)
+
+
+
 //*INSERTAR TABLAS DE EPIs A UTILIZAR*
 
 == Procedimiento de trabajo seguro

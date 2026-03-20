@@ -15,7 +15,7 @@
   #table(
     columns: (auto, auto, auto, auto),
     table.header(
-      [TIPO], [RIESGO], [TAREAS], [SEÑAL]
+      [Tipo], [Riesgo], [Tareas], [Señal]
     ),
     ..filas
       .map(f => (

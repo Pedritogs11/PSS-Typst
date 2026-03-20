@@ -1608,7 +1608,7 @@ Se distinguirán dos categorías, riesgos generales (los que afectan a todas las
 Aquellos que afectan tanto a las tareas de instalación como a las de mantenimiento y conservación de paneles solares para obtención de energía eléctrica y térmica.
 
 #tabla-riesgos(
-  "OPERACIONES DE MONTAJE Y COLOCACIÓN",
+  "Operaciones de montaje y colocación:",
   data.riesgos_montaje_generales
 )
 
@@ -1619,7 +1619,7 @@ Además de los generales anteriormente citados, existen riesgos específicos en 
 ==== Instalaciones fotovoltaicas
 
 #tabla-riesgos(
-  "OPERACIONES DE MONTAJE Y COLOCACIÓN",
+  "Operaciones de montaje y colocación:",
   data.riesgos_montaje_especificos
 )
 
@@ -1637,7 +1637,143 @@ Se define protección colectiva como cualquier elemento o dispositivo de segurid
 La protección colectiva es la primera que se debe adoptar frente a un riesgo. 
 La mayoría de las protecciones colectivas evitan el riesgo, otras solo lo reducen y controlan, evitando la lesión después de materializarse el riesgo.
 
-//*INSERTAR TABLAS DE MEDIDAS DE PROTECCIÓN*
+- Caída de personas al mismo nivel.
+  - Medidas de orden y limpieza en el puesto de trabajo:
+    - Orden y limpieza: 
+      
+      Para evitar pinchazos, tropiezos y caídas, se barrerá alrededor del lugar de trabajo y retirarán los restos de material que hayan caído al suelo, como puntas, trozos de redondos, alambres, etc…
+
+    - Almacenamiento de desperdicios y sobrantes: 
+      
+      Los desperdicios de hierro y acero se almacenarán en el lugar señalado, para su retirada posterior. 
+      De igual manera se dispondrá de más zonas para materiales como madera, cobre, embalajes, etc…
+
+    - Almacenamiento de equipos y herramientas: 
+      
+      Los equipos de trabajo y las herramientas deben almacenarse en los lugares establecidos por la jefatura de obra, siguiendo sus indicaciones en cuanto a partes de incidencias, limpieza y conservación de los equipos al final de la jornada.
+
+    - Almacenamiento y acopio de material: 
+      
+      Los paquetes de perfiles metálicos deben almacenarse en posición horizontal (nunca en posición vertical) sobre durmientes de madera, hasta alturas no superiores a 1,50 m. 
+      Estos almacenamientos deben hacerse en el lugar que indique el plano de la obra, pero siempre cerca del lugar de montaje, tratando de no interferir con otros acopios o trabajos. 
+      Junto a los paquetes de perfiles, se almacenan también los palets de materiales diversos así como elementos de las instalaciones como paneles, equipos eléctricos y de presión, etc...
+
+- Caída de personas a distinto nivel.
+  - Colocación de barandillas: 
+    
+    Una barandilla es un elemento que tiene por objeto proteger contra los riesgos de caída fortuita al vacío de personas trabajando o circulando junto al mismo. 
+    Las aberturas o desniveles que supongan un riesgo de caídas de personas se protegerán mediante barandillas u otros sistemas de protección de seguridad equivalente, que podrán tener partes móviles cuando sea necesario disponer de acceso a la abertura. 
+    Las plataformas, andamios y pasarelas, así como los desniveles, huecos y aberturas existentes en las obras que supongan para los trabajadores un riesgo de caída de altura superior a 2 metros, se protegerán mediante barandillas u otro sistema de protección colectiva de seguridad equivalente.
+    Las barandillas serán resistentes, tendrán una altura mínima de 90 cm, dispondrán de un rodapié de 15 cm, pasamanos y una protección intermedia, a 45 cm del suelo, que impidan el paso o deslizamiento de los trabajadores.
+
+  - Colocación de redes de seguridad: 
+    
+    Las redes de seguridad son una de las protecciones que se pueden utilizar para evitar o disminuir el efecto de la caída de las personas a distinto nivel. 
+    Las redes pueden tener por objeto impedir la caída de personas u objetos y, cuando esto no sea posible, limitar la caída de personas y objetos. 
+    Las redes se pueden utilizar, fundamentalmente, para evitar la caída de operarios y materiales en trabajos realizados sobre cubiertas o medios auxiliares para la realización de trabajos en altura como andamios, plataformas, etc… Constan de una red de fibras, cuya altura mínima será de 1,25 m, dos cuerdas del mismo material de 12 mm de diámetro, una en su parte superior y otra en la inferior, atadas a los pilares para que la red quede convenientemente tensa, de tal manera que pueda soportar en el centro un esfuerzo de hasta 150 Kgs. 
+    Las redes pueden ser horizontales y verticales. Van sujetas a unos soportes verticales o al forjado. La puesta en obra de la red debe hacerse de manera práctica y fácil. 
+    Es necesario dejar un espacio de seguridad entre la red y el suelo, o entre la red y cualquier obstáculo, en razón de la elasticidad de la misma. 
+    La cuerda perimetral de la red debe recibir en diferentes puntos (aproximadamente cada metro) los medios de fijación o soportes previstos para la puesta en obra de la red y deberá estar obligatoriamente conforme a la legislación vigente y ser de un material de características análogas al de la red que se utiliza. Las redes se fijarán a los soportes desde diversos puntos de la cuerda límite o perimetral, con la ayuda de estribos adecuados, u otros medios de fijación que ofrezcan las mismas garantías, tal como tensores, mosquetones con cierre de seguridad, etc.La red se elabora con cuerdas de fibras normalmente sintéticas como por ejemplo poliéster, poliamida, polietileno y polipropileno. 
+    La red debe estar circundada, enmarcada o sujeta a un elemento que se denomina soporte. 
+    El conjunto red-soporte hay que anclarlo a elementos fijos de la construcción, para que proporcione una adecuada protección.
+
+  - Colocación de líneas de vida: 
+    
+    Las Líneas de Vida son un sistema de protección compuesto por un cable o raíl que va fijado a la pared o estructura mediante unos anclajes y una pieza corredera llamada carro que está diseñada de forma que no pueda salirse del sistema. 
+    Pueden ser horizontales y verticales. 
+    Las líneas de vida horizontales ofrecen una gran libertad de movimientos ya que están diseñadas para que el carro pueda desplazarse libremente por la totalidad de su longitud sin necesidad de intervención manual. 
+    La persona va sujeta al carro mediante un elemento de amarre del cual no puede soltarse en ningún momento por accidente o descuido. 
+    Las líneas de vida horizontales se instalan como sistema anticaída en el cual, la línea de vida actúa una vez que se ha producido la caída, o bien, como sistema de limitación de movimiento para evitar que el trabajador pueda llegar a la zona de riesgo de caída. 
+    Las principales instalaciones de líneas horizontales las encontramos en cubiertas, terrazas, fachadas, estructuras elevadas, etc. 
+    Las líneas de vida verticales son un sistema de protección compuesto por un cable o raíl que va fijado a la estructura de la escalera y un dispositivo llamado anticaídas que se desliza libremente por el cable o raíl pero que se bloquea en el momento en que se produce una caída. 
+    Las líneas de vida verticales con el raíl permiten la conexión con el raíl horizontal mediante unas piezas especiales. 
+    En la gran mayoría de accesos verticales las caídas suponen un grave peligro. 
+    Las líneas de vida verticales eliminan cualquier riesgo para el trabajador que las utilice. 
+    Las líneas de vida verticales son una eficaz solución por su funcionalidad y facilidad de manejo para accesos y salidas verticales en escaleras, es en torres de telecomunicaciones, aerogeneradores, chimeneas, etc., en las que no se dispone de sistema anticaídas. 
+    Las líneas de vida móviles o temporales, son un buen sistema de protección antiácidas pensado para trabajos temporales ya que se instalan y se desinstalan con facilidad y rapidez. 
+    Las horizontales, constan de una bolsa totalmente equipada para poder realizar el montaje y permiten el aseguramiento de dos personas. 
+    Las líneas temporales verticales constan de una cuerda con un dispositivo anticaídas para cuerda y los elementos de sujeción de la cuerda a la estructura y permiten el aseguramiento de una persona. 
+    Durante la ejecución de obras o en trabajos muy ocasionales no es operativo instalar líneas de vida permanentes. 
+    En estos casos las líneas temporales son la mejor solución ya que permiten tener al personal protegido ante las caídas en situaciones diversas.
+
+- Proyeccioines de partículas, golpes, cortes y atrapamientos por herramientas.
+  - Resguardos de máquinas: 
+    
+    Los resguardos se deben considerar como la primera medida de protección a tomar para el control de los peligros mecánicos en máquinas, entendiendo como resguardo "un medio de protección que impide o dificulta el acceso de las personas o de sus miembros al punto o zona de peligro de una máquina". 
+    Un resguardo es un elemento de una máquina utilizado específicamente para garantizar la protección mediante una barrera material. 
+    Dependiendo de su forma, un resguardo puede ser denominado carcasa, cubierta, pantalla, puerta, etc. Pueden ser fijos, móviles o regulables. 
+    
+    Resguardos Fijos: los que se mantienen en su posición, es decir, cerrados, ya sea de forma permanente (por soldadura, etc.) o bien por medio de elementos de fijación (tornillos, etc.) que impiden que puedan ser retirados/abiertos sin el empleo de una herramienta. 
+    Los resguardos fijos, a su vez, se pueden clasificar en: envolventes (encierran completamente la zona peligrosa) y distanciadotes (no encierran totalmente la zona peligrosa, pero, por sus dimensiones y distancia a la zona, la hace inaccesible). 
+    Resguardos Móviles: articulados o guiados, que es posible abrir sin herramientas. 
+    Para garantizar su eficacia protectora deben ir asociados a un dispositivo de enclavamiento, con o sin bloqueo. 
+    
+    Regulables: son resguardos fijos o móviles que son regulables en su totalidad o que incorporan partes regulables. 
+    Cuando se ajustan a una cierta posición, sea manualmente (reglaje manual) o automáticamente (autorreglable), permanecen en ella durante una operación determinada. 
+    Las situaciones peligrosas se deberán evitar mediante resguardos regulables. 
+    En la selección de tales resguardos serán preferibles y preferentes los de ajuste automático (autorregulables) a los de regulación manual. 
+    Los requisitos generales que deben cumplir los resguardos son: ser de fabricación sólida y resistente; no ocasionar peligros suplementarios; no poder ser puestos fuera de funcionamiento con facilidad; estar situados a suficiente distancia de la zona peligrosa; no limitar más de lo imprescindible la observación del ciclo de trabajo; permitir las intervenciones indispensables para la colocación y/o sustitución de las herramientas, así como para los trabajos de mantenimiento, limitando el acceso al sector donde deba realizarse el trabajo, y ello, a ser posible, sin desmontar el resguardo y retener/captar, tanto como sea posible, las proyecciones (fragmentos, astillas, polvo,...) sean de la propia máquina o del material que se trabaja.
+
+- Contactos eléctricos.
+  - Conexión a tierra de cuadros y equipos de suministro de energía eléctrica:
+
+    Comprobar la correcta instalación a tierra de cuadros generales de protección así como de los equipos portátiles de suministro de energía eléctrica (grupos electrógenos). 
+    La conexión a tierra hace referencia al potencial de la superficie terrestre. 
+    Para hacer la conexión de este potencial de tierra a un circuito eléctrico se usa un electrodo de tierra, que puede ser algo tan simple como una barra metálica (usualmente de cobre) anclada el suelo, a veces humedecida para una mejor conducción. 
+    La conexión a tierra es un concepto vinculado a la seguridad de las personas, porque éstas se hallan a su mismo potencial por estar pisando el suelo. 
+    Si cualquier aparato está a ese mismo potencial no habrá diferencia entre el aparato y la persona, por lo que no habrá descarga eléctrica peligrosa.
+
+  - Protección diferencial o contra derivaciones:
+
+    Comprobar la existencia de interruptores diferenciales tanto en cuadros generales de protección como en equipos eléctricos de relevancia. 
+    Éstos sirven para detectar las corrientes de defectos a tierra, que eventualmente pudieran producirse en algún punto de la instalación, cortando automáticamente, dentro de un tiempo compatible con la seguridad de las personas, y proporcionando la seguridad de que no se produzca un contacto indirecto. 
+    El fundamento del interruptor diferencial está basado en el hecho de que la corriente eléctrica necesita un cable de ida y otro de regreso.
+    El valor de la corriente de ida, tiene que ser igual a la corriente de regreso; cuando el camino de la corriente de regreso encuentra un fallo de aislamiento, por este fallo se deriva una cantidad de corriente más o menos grande; dando lugar a una diferencia de corriente entre el conductor de ida y la de regreso, este diferencia se llama corriente de defecto.
+
+  - Protección contra sobrecarga y controcircuitos:
+
+    Comprobar la existencia de interruptores de corte magnetotérmicos y su correcto funcionamiento, para cada una de las líneas de trabajo. 
+    El interruptor magnetotérmico es un dispositivo de protección contra sobrecarga y cortocircuito, que actúa de dos formas: por la acción magnética de una bobina sobre un núcleo de hierro; y también, por la acción térmica de la corriente al pasar por un conductor compuesto por dos metales distintos. 
+    Los interruptores magnetotérmicos, están construidos de forma, que, estos dos sistemas, actúan individualmente, sobre distintos resortes, para abrir el interruptor; bien porque, el bimetal, alcance su temperatura de disparo, o bien, porque la bobina haya creado el campo magnético suficiente. 
+    Cuando se cierra un interruptor magnetotérmico, por medio del mando manual; se actúa sobre una articulación, que comprimen unos muelles; con lo que queda listo para ser "disparado" con cualquier pequeña fuerza, como es la del bimetal o la de la bobina. 
+    La operación de volver a cerrar un interruptor que se ha disparado se llama "rearme" o "reposición" del interruptor.
+
+  - Cuadros generales de mando:
+
+    Los cuadros de mando han de ir protegidos en armarios o cajas estancas, blindadas, con puerta, cerradura y llave. 
+    Cuando están a la intemperie, protegidos por tejadillo o vierteaguas de la lluvia. Cada cuadro eléctrico va provisto de su toma de tierra y de una señal normalizada de advertencia de riesgo eléctrico. 
+    Para casos de incendio, el cuadro eléctrico debe disponer, en sus inmediaciones, de un extintor de CO2 debidamente señalizado.
+
+- Atropellos, choques y vuelcos con maquinaria pesada.
+  - Señalización y balizamiento de la obra:
+
+    Una señalización (horizontal o vertical) que, referida a un objeto, actividad o situación determinadas, proporcione una indicación o una obligación relativa a la seguridad o la salud en el trabajo mediante una señal en forma de panel, un color, una señal luminosa o acústica, una comunicación verbal o una señal gestual, según proceda. La señalización de seguridad y salud en el trabajo deberá utilizarse donde el factor de riesgo exista, y siempre que se ponga de manifiesto la necesidad de: llamar la atención de los trabajadores sobre la existencia de determinados riesgos, prohibiciones u obligaciones; alertar a los trabajadores cuando se produzca una determinada situación de emergencia; facilitar a los trabajadores la localización e identificación de determinados medios o instalaciones de protección, evacuación, emergencia o primeros auxilios y orientar o guiar a los trabajadores que realicen determinadas maniobras peligrosas. 
+    La señalización no debe considerarse una medida sustitutoria de las medidas de protección colectiva ni de la formación e información de los trabajadores en materia de seguridad y salud en el trabajo. 
+    La elección del tipo de señal y del número y emplazamiento de éstas se realizará de forma que la señalización resulte lo más eficaz (clara) posible. 
+    La señalización deberá permanecer en tanto persista la situación de riesgo que la motiva. Los medios y dispositivos de señalización deberán ser, mantenidos y verificados regularmente, y reparados o sustituidos cuando sea necesario.
+
+- Derrumbe o sepultamiento.
+  - Entibación y perfilado de taludes, fosos y zanjas:
+
+    Tarea que consiste en apuntalar o reforzar con diferentes sistemas (elementos metálicos o de madera), las excavaciones que ofrecen riesgo de hundimiento. Los trabajos a realizar implican el montaje de de medios mecánicos o físicos a lo largo de las paredes de la excavación, que servirán, de manera temporal, para impedir que una zanja excavada modifique sus dimensiones (geometría) en virtud al empuje de tierras. Los factores que determinan el tipo de entibación son: la profundidad de la zanja; la naturaleza del terreno; el nivel freático; las sobrecargas debidas al tráfico, acopio de materiales en las proximidades, edificaciones próximas, etc, y las dimensiones de la zanja.
+
+- Incendios y explosiones. 
+  - Protección y control del fuego:
+
+    Los objetivos más básicos de protección contra incendio son controlar los peligros de incendio significativos y cumplir con los requerimientos legales de protección contra incendio. 
+    Las estrategias conceptuales para lograr los objetivos de protección contra incendio están divididas en dos categorías: impedir la ignición del fuego y manejar el impacto del fuego. 
+    El impedir la ignición del fuego se puede lograr por la sustitución de materiales y procesos no peligrosos. La minimización de este peligro se puede obtener mediante el uso de materiales menos peligrosos, por la reducción de la cantidad de material peligroso en un lugar dado y por el uso de sistemas inherentemente de bajo nivel de energía. Manejar el impacto del fuego es la estrategia de reducir los peligros asociados con el crecimiento y propagación del fuego mediante un proceso de control de combustión, supresión del fuego y control del fuego por construcción. 
+    Incluye el manejo de expuestos que es la coordinación de medidas para proteger los objetivos de gente, propiedad, actividades u otras consideraciones valiosas. 
+    Esto se logra ya sea limitando la cantidad de expuesto o salvaguardando el expuesto. Según las características de la obra, los equipos presentes, las características físicas y químicas de las sustancias o materiales que se hallen presentes así como el número máximo de personas que puedan hallarse en ellos, se deberá prever un número suficiente de dispositivos apropiados de lucha contra incendios y, si fuera necesario, de detectores de incendios y de sistemas de alarma. Como mínimo, deberemos disponer de un extintor de CO2 cerca del cuadro eléctrico provisional de la obra y otro, de polvo polivalente, localizado en las proximidades del lugar de trabajo. 
+    Ambos deberán estar convenientemente señalizados y mantenidos.
+
+  - Protección contra explosiones:
+
+    El riesgo de explosión puede estar presente en muchas de las actividades realizadas en el mundo laboral, y puede ser debido a tres motivos fundamentales: la utilización de materiales explosivos; la presencia de gases, vapores, nieblas o nubes de polvos en el aire que pueden crear una atmósfera potencialmente explosiva, y la existencia de recipientes, tuberías, etc, sometidos a presiones elevadas que, por esta causa, puedan reventar. 
+    En particular, se debe abordar el riesgo de explosión por atmósferas explosivas, normalmente conocidas como ATEX. 
+    Se entiende por atmósfera explosiva (ATEX) la mezcla con el aire, en condiciones atmosféricas (c. normales), de sustancias inflamables en forma de gases, vapores, nieblas o polvos, en la que, tras una ignición, la combustión se propaga a la totalidad de la mezcla no quemada. 
+    Las medidas que deben adoptarse para evitar que se produzcan explosiones en presencia de atmósferas ATEX, son: el empresario deberá tomar medidas siguiendo el orden de prioridades siguiente: impedir la formación de ATEX o, cuando la naturaleza de la actividad no lo permita, evitar la ignición de ATEX y atenuar los efectos perjudiciales de una explosión de forma que se garantice la salud y la seguridad de los trabajadores; evaluar el riesgo de formarse una ATEX y de que llegue a producirse la explosión, como consecuencia de ello se elaborará en cada empresa o centro de trabajo un Documento de protección contra explosiones; todos los empresarios y trabajadores autónomos presentes en un mismo centro de trabajo tienen la obligación de coordinarse, de acuerdo con lo que dice el reglamento sobre coordinación (R.D. 171/2004), con el fin de evitar que se produzca una ATEX y el reglamento establece unos criterios para clasificar las diferentes zonas del centro de trabajo en función de la probabilidad de que se forme una ATEX. 
+    Se establece también una distinción entre las zonas, dependiendo de si la ATEX está formada por gases, vapores, etc., o si lo está por polvo.
 
 === Equipos de protección individual
 
@@ -1655,7 +1791,13 @@ Se excluyen de esta definición:
 - Los aparatos portátiles para la detección y señalización de los riesgos y de los factores de molestia.
 - Los Equipos de Protección Individual se clasifican en tres categorías, siendo el proyectista y/o fabricante del EPI y/o su delegado establecido en la Comunidad Económica Europea, el responsable de su clasificación:
 
-*Tabla de clasificación de EPI*
+#table(
+  columns: 2, 
+  table.header([Categoría], [Descripción]),
+  [I], [Aquellos, en que debido a su diseño sencillo, el usuario pueda juzgar por sí mismo su eficacia contra riesgos mínimos, y cuyos efectos, cuando sean graduales, puedan ser percibidos a tiempo y sin peligro para el usuario, podrán fabricarse sin someterlos a examen de tipo CE.],
+  [II], [Aquellos que no reuniendo las condiciones de la categoría anterior, no estén diseñados de la forma y para la magnitud de riesgo que se indica en la categoría III, antes de ser fabricados deberán superar el examen de tipo CE que indica la norma.],
+  [III], [Aquellos, de diseño complejo, destinados a proteger al usuario de todo peligro mortal o que puede dañar gravemente y de forma irreversible la salud, sin que se pueda descubrir a tiempo su efecto inmediato, están obligados a superar el examen de tipo CE que indica la norma.]
+)
 
 El proceso de fabricación y comercialización de los Equipos de Protección Individual es el siguiente:
 

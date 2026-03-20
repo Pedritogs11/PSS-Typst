@@ -4,6 +4,16 @@
 
 #let data = json("data.json")
 
+#let tabla_resumen_fases_obra() = table(
+  columns: 5, 
+  table.header([FASE DE OBRA], [APDO. Y \ PAG. PSS], [MAQUINARIA], [APDO. Y \ PAG. PSS], [RECURSO \ PREVENTIVO]),
+  [ACTUACIONES \ PREVIAS], [4.1.1 FASE 1 \ (PÁG. 17)], [PEQUEÑAS \ HERRAMIENTAS \ ELÉCTRICAS \ / DE MANO /], [],[Sí],
+  [EJECUCIÓN DE LA ESTRUCTURA DE SOPORTES DE MÓDULOS Y MONTAJE DE LOS MÓDULOS FV Y COMBINER BOX], [4.1.2 FASE 2 \ (PÁG. 18)], [EQUIPO DE \ ELEVACIÓN: \ CAMIÓN GRÚA EQUIPO DE SOLDADURA ELÉCTRICA], [8.3 CAMIÓN GRÚA \ 8.1/8.2 PEQUEÑAS HERRAMIENTAS ELÉCTRICAS \ (PÁG. 50-52)], [Sí],
+  [EJECUCIÓN DE CANALIZACIONES Y PEQUEÑOS TRABAJOS DE ALBAÑILERÍA], [4.1.3 FASE 3 \ (PÁG. 19)], [PEQUEÑAS HERRAMIENTAS ELÉCTRICAS / DE MANO / PLATAFORMA CON CESTILLO], [8.1 / 8.2 PEQUEÑAS HERRAMIENTAS ELÉCTRICAS / DE MANO / 8.6 PLATAFORMA ELEVADORA \ (PÁG. 50/51/58)], [Sí],
+  [MONTAJE DE INVERSORES Y EJECUCIÓN DE LA INSTALACIÓN ELÉCTRICA], [4.1.4 FASE 4 \ (PÁG. 19)], [PEQUEÑAS HERRAMINETAS ELÉCTRICAS / DE MANO], [8.1 / 8.2 PEQUEÑAS HERRAMINETAS ELÉCTRICAS / DE MANO \ (PÁG. 50/51)], [Sí],
+  [PUESTA EN MARCHA DE LA INSTALACIÓN Y MONITORIZACIÓN], [4.1.5 FASE 5 \ (PÁG. 19)], [], [], [Sí],
+)
+
 //Sergio: Preguntas o dudas que tengo sobre como incluir o redactar ciertos datos o frases en el documento para que todo quede coherente.
 //Codigo: Sitios donde aparece algo de código (sin incluir los bucles que hay en algunas tablas, como en la primera que ves justo debajo).
 
@@ -26,17 +36,8 @@
 )
 
 *Tabla resumen de las fases de obra.*
-
-#table(
-  columns: 5, 
-  table.header([FASE DE OBRA], [APDO. Y \ PAG. PSS], [MAQUINARIA], [APDO. Y \ PAG. PSS], [RECURSO \ PREVENTIVO]),
-  [ACTUACIONES \ PREVIAS], [4.1.1 FASE 1 \ (PÁG. 17)], [PEQUEÑAS \ HERRAMIENTAS \ ELÉCTRICAS \ / DE MANO /], [],[Sí],
-  [EJECUCIÓN DE LA ESTRUCTURA DE SOPORTES DE MÓDULOS Y MONTAJE DE LOS MÓDULOS FV Y COMBINER BOX], [4.1.2 FASE 2 \ (PÁG. 18)], [EQUIPO DE \ ELEVACIÓN: \ CAMIÓN GRÚA EQUIPO DE SOLDADURA ELÉCTRICA], [8.3 CAMIÓN GRÚA \ 8.1/8.2 PEQUEÑAS HERRAMIENTAS ELÉCTRICAS \ (PÁG. 50-52)], [Sí],
-  [EJECUCIÓN DE CANALIZACIONES Y PEQUEÑOS TRABAJOS DE ALBAÑILERÍA], [4.1.3 FASE 3 \ (PÁG. 19)], [PEQUEÑAS HERRAMIENTAS ELÉCTRICAS / DE MANO / PLATAFORMA CON CESTILLO], [8.1 / 8.2 PEQUEÑAS HERRAMIENTAS ELÉCTRICAS / DE MANO / 8.6 PLATAFORMA ELEVADORA \ (PÁG. 50/51/58)], [Sí],
-  [MONTAJE DE INVERSORES Y EJECUCIÓN DE LA INSTALACIÓN ELÉCTRICA], [4.1.4 FASE 4 \ (PÁG. 19)], [PEQUEÑAS HERRAMINETAS ELÉCTRICAS / DE MANO], [8.1 / 8.2 PEQUEÑAS HERRAMINETAS ELÉCTRICAS / DE MANO \ (PÁG. 50/51)], [Sí],
-  [PUESTA EN MARCHA DE LA INSTALACIÓN Y MONITORIZACIÓN], [4.1.5 FASE 5 \ (PÁG. 19)], [], [], [Sí],
-)
-
+//Codigo:
+#tabla_resumen_fases_obra()
 
 *Obligaciones del coordinador de sys en fase de ejecución de la obra.*
 
@@ -74,7 +75,7 @@ ejecución de la obra deberá desarrollar las siguientes funciones:
 #data.promotor.nombre como promotor de la instalación encarga a #data.instaladora.nombre para la ejecución de *una planta fotovoltaica sobre la cubierta de su nave*.
 
 //Sergio: En el primer punto de antecedentes, el segundo párrafo que menciona "Con tal motivo se encarga a INSTALADORA la realización del 'Proyecto de instalación ...'". Si el nombre del proyecto comienza con proyecto, el texto concuerda con el artículo, sin embargo, si el nombre del proyecto fuera 'Instalación solar fotovoltaica...', no sería correcto, pues instalación no es masculino y del es un pronombre masculino. La solución que se me ocurre es directamente suprimir el artículo, quedando como "... la realización de 'Proyecto de instalación/Instalación solar fotovoltaica'. Así resulta natural al leerlo y nos evitamos de buscar una solución que elija si poner "del" o "de la", a mi parecer simplificando las cosas.
-Con tal motivo, se encarga a #data.instaladora.nombre, la realización del “#data.proyecto.titulo” situada en #data.proyecto.localizacion.situacion, #data.proyecto.localizacion.localidad, #data.proyecto.localizacion.provincia, con el fin de que sirva de base al instalador para su ejecución, así como para solicitar de los Organismos Competentes de la Administración las preceptivas autorizaciones de instalación y puesta en servicio. 
+Con tal motivo, se encarga a #data.instaladora.nombre, la realización de la obra: “#data.proyecto.titulo” situada en #data.proyecto.localizacion.situacion, #data.proyecto.localizacion.localidad, #data.proyecto.localizacion.provincia, con el fin de que sirva de base al instalador para su ejecución, así como para solicitar de los Organismos Competentes de la Administración las preceptivas autorizaciones de instalación y puesta en servicio. 
 La empresa instaladora designada por #data.promotor.nombre es #data.instaladora.nombre, #data.instaladora.responsable, como responsable de dicha empresa, redacta el presente Plan de Seguridad y Salud con el fin de analizar, estudiar, desarrollar y complementar, en función del propio sistema de ejecución del contratista las previsiones respecto a la prevención del riesgo de accidentes laborales y enfermedades profesionales, las instalaciones preceptivas de higiene y bienestar y demás prescripciones reglamentarias, así como las contenidas en el Estudio Básico de Seguridad y Salud del Proyecto redactado por #data.instaladora.nombre
 //Sergio: En el final del anterior párrafo ocurre el problema del nombre de la instaladora, si acaba en S.L.U. como tiene un punto al final entonces el párrafo tiene su punto final, pero si no, el párrafo no tendría su punto final y, en caso de ponerlo, podría quedar duplicado.
 
@@ -220,16 +221,8 @@ Las instalaciones tanto de agua como de electricidad son las propias de la parce
 Se aportará al inicio de la obra el documento que autoriza a instaladora.nombre a hacer uso de las instalaciones del inmueble del cliente.
 
 == Tabla resumen de las fases de obra
-
-#table(
-  columns: (auto, auto, auto, auto, auto),
-  [FASE DE OBRA],[APDO. Y PÁG. PSS],[MAQUINARIA],[APDO. Y PÁG. PSS],[RECURSO PREVENTIVO],
-  [ACTUACIONES PREVIAS],[4.1.1 FASE 1 (PÁG. X)],[PEQEUÑAS HERRAMIENTAS ELÉCTRICAS / DE MANO],[],[SÍ],
-  [EJECUCIÓN DE LA ESTRUCTURA DE SOPORTES DE MÓDULOS Y MONTAJE DE LO SMÓDULOS FV Y CAJAS DE CONCENTRACIÓN],[4.1.2. FASE 2 (PÁG. X)],[EQUIPO DE ELEVACIÓN: CAMIÓN GRÚA EQUIPO DE SOLDADURA ELÉCTRICA], [8.3 CAMIÓN GRÚA (PÁG X) 8.1 / 8.2 PEQUEÑAS HERRAMIENTAS ELÉCTRICAS / DE MANO], [SÍ],
-  [EJECUCIÓN DE CANALIZACIONES Y PEQUEÑOS TRABAJOS DE ALBAÑILERÍA], [4.1.3 FASE 3 (PÁG. X)], [PEQUEÑAS HERRAMIENTAS ELÉCTRICAS / DE MANO / PLATAFORMA CON CESTILLO], [8.1 / 8.2 PEQUEÑAS HERRAMIENTAS ELÉCTRICAS / DE MANO / 8.6 PLATAFORMA ELEVADORA (PÁG. X/Y/Z)], [SÍ],
-  [MONTAJE DE INVERSORES Y EJECUCIÓN DE LA INSTALACIÓN ELÉCTRICA], [4.1.4 FASE 4 (PÁG. X)], [PEQUÑAS HERRAMIENTAS ELÉCTRICAS / DE MANO], [8.1 /.2 PEQUEÑAS HERRAMIENTAS ELÉCTRICAS / DE MANO (PÁG. X/Y)], [SÍ],
-  [PUESTA EN MARCHA DE LA INSTALACIÓN Y MONITORIZACIÓN], [4.1.5 FASE 5 (PÁG. X)], [], [], [SÍ]
-)
+//Codigo:
+#tabla_resumen_fases_obra()
 
 == Protecciones colectivas durante el proceso constructivo
 
@@ -3077,21 +3070,16 @@ Temporales de viento, lluvias, nevadas, olas de frío y de calor, tormentas, etc
 == Efectos de las condiciones climatológicas sobre la salud de los trabajadores
 === Calor
 //Cambiar
-*REVISAR ESTO PORQUE ESTÁ MAL EN EL PSS QUE NOS DAN*
 
-Las caídas a distinto nivel pueden ser debidas a:
--	Basculamiento del conjunto del equipo al estar situado sobre una superficie inclinada o en mal estado, falta de estabilizadores, etc.
--	Ausencia de barandillas de seguridad en parte o todo el perímetro de la plataforma.
--	Efectuar trabajos utilizando elementos auxiliares tipo escalera, banquetas, etc., para ganar altura.
--	Trabajar sobre la plataforma sin utilizar los equipos de protección individual debidamente anclados.
--	Rotura de la plataforma de trabajo por sobrecarga, deterioro o mal uso de la misma.
--	Utilizar la PEMP para acceder desde la misma a una instalación o estructura externa.
--	Trabajar con parte del cuerpo situado fuera de la plataforma de trabajo.
--	Subir o bajar utilizando la estructura de elevación.
--	Efecto catapulta al pasar por encima de un bordillo, etc.
-Es importante tener en cuenta que es imprescindible considerar todas las particularidades de cada obra, de cada tarea (esfuerzo físico requerido, etc...) y 
-de cada trabajador (edad, estado físico, etc...) y prestar especial atención a aquellos casos en los que se realizan actividades extenuantes, tareas que requieran 
-la utilización de equipos de prendas de protección (especialmente si no son transpirables) y trabajadores nuevos y no aclimatados.
+La exposición al calor puede tener efectos adversos en la salud de los trabajadores. 
+Por tanto, debe considerarse como un riesgo laboral que requiere una gestión adecuada del mismo, comenzando, como primer paso para su control, por la identificación de las situaciones que se van a considerar de riesgo.
+
+Con carácter general, estas situaciones serán aquellas en las que la temperatura sea elevada, especialmente por encima de los 30 °C, tanto si se llevan a cabo en interiores como a la intemperie. 
+Los trabajos en exteriores dependen de la climatología existente, lo que puede agravar la exposición debido a la radiación solar, la humedad o la falta de ventilación.
+
+Una vez identificado y evaluado el riesgo, el empresario debe garantizar que se toman medidas dirigidas a prevenir los posibles daños que podrían derivarse, tales como golpes de calor, deshidratación o agotamiento térmico.
+
+Respecto a los trabajadores, es fundamental que estén informados y entrenados para ser capaces de identificar los síntomas derivados de una exposición excesiva, de manera que puedan actuar cuanto antes, evitando daños mayores.
 
 ==== Efectos del calor sobre la salud
 

@@ -117,7 +117,7 @@
         "chaleco_reflectante": 45,
         "arnes_anticaida": 36,
         "dispositivo_anticaidas": 45,
-        "peqMaterial_desechable": 25
+        "peq_material_desechable": 25
       },
       "higiene_bienestar": {
         "colab_limpieza": 3
@@ -127,5 +127,139 @@
         "reunion_coordinacion": 1
       }
     }
-  }
+  },
+
+
+  "riesgos_montaje_generales": [
+    {
+      "tipo": "Físicos",
+      "riesgo": "Atropellos y choques con vehículos pesados",
+      "tareas": "Trabajos de construcción, de transporte y de almacenamiento de materiales en obra",
+      "senal": "images/senales/atropello.jpg"
+    },
+    {
+      "tipo": "Físicos",
+      "riesgo": "Caídas de personas a distinto nivel",
+      "tareas": "Las que se realizan mediante la utilización de andamios, plataformas, escaleras de mano, bancadas y trabajos en altura superior a 2m como cubiertas, terrazas, etc…",
+      "senal": "images/senales/caidas_distinto_nivel.jpg"
+    },
+    {
+      "tipo": "Físicos",
+      "riesgo": "Proyección de fragmentos o partículas",
+      "tareas": "Debido al empleo de herramientas de corte, sierras, piedras esmeriles, cinceles, martillos, etc. Incluso salpicaduras",
+      "senal": "images/senales/proyeccion_particulas.jpg" 
+    },
+    {
+      "tipo": "Físicos",
+      "riesgo": "Sobreesfuerzos",
+      "tareas": "Debidos a la manipulación de materiales y equipos y a posturas forzadas durante el trabajo",
+      "senal": "images/senales/sobreesfuerzos.jpg" 
+    },
+    {
+      "tipo": "Físicos",
+      "riesgo": "Golpes o cortes por objetos o herramientas",
+      "tareas": "Todas aquellas que conlleven manipulación de materiales o empleo de herramientas en general",
+      "senal": "images/senales/golpes_cortes_herramientas.jpg" 
+    },
+    {
+      "tipo": "Físicos",
+      "riesgo": "Atrapamientos por o entre objetos",
+      "tareas": "Debido a manipulación de todo tipo de materiales y montaje de estructuras y elementos",
+      "senal": "images/senales/atrapamiento.jpg" 
+    },
+    {
+      "tipo": "Físicos",
+      "riesgo": "Caída de objetos en manipulación",
+      "tareas": "En todo tipo de trabajo realizado en altura, materiales, equipos, etc…",
+      "senal": "images/senales/caida_objetos.jpg" 
+    },
+    {
+      "tipo": "Físicos",
+      "riesgo": "Pisadas sobre objetos punzantes",
+      "tareas": "Trabajos de cimentación, montaje estructura metálica, albañilería, etc, sobre superficies con elementos punzantes clavados o sueltos",
+      "senal": "images/senales/pisada_punzante.jpg" 
+    },
+    {
+      "tipo": "Físicos",
+      "riesgo": "Caída de objetos desprendidos",
+      "tareas": "Todo tipo de trabajos en cubiertas o tejados",
+      "senal": "images/senales/caida_objetos_desprendidos.jpg" 
+    },
+    {
+      "tipo": "Físicos",
+      "riesgo": "Contactos eléctricos indirectos",
+      "tareas": "Por empleo de herramientas y equipos eléctricos, materiales metálicos y condiciones de humedad alta",
+      "senal": "images/senales/contactos_electricos.jpg" 
+    },
+    {
+      "tipo": "Físicos",
+      "riesgo": "Estrés térmico",
+      "tareas": "Trabajos realizados a la intemperie en condiciones meteorológicas adversas de calor y frío",
+      "senal": "images/senales/estres_termico.jpg" 
+    },
+    {
+      "tipo": "Químicos",
+      "riesgo": "Contacto con sustancias cáusticas y corrosivas",
+      "tareas": "Contacto directo con materiales de construcción como cemento, hormigón, disolventes etc…",
+      "senal": "images/senales/sustancias_causticas_corrosivas.jpg" 
+    },
+    {
+      "tipo": "Químicos",
+      "riesgo": "Contacto con sustancias nocivas y peligrosas",
+      "tareas": "Contacto directo con pinturas, decapantes, fluidos anticongelantes, etc…",
+      "senal": "images/senales/sustancias_nocivas_peligrosas.jpg" 
+    }
+  ],
+
+    "riesgos_montaje_especificos": [
+    {
+      "tipo": "Físicos",
+      "riesgo": "Caída de cargas suspendidas",
+      "tareas": "Movimiento y transporte de cargas mediante equipos de elevación de cargas como grúas o plataformas",
+      "senal": "images/senales/caida_cargas_suspendidas.jpg"
+    },
+    {
+      "tipo": "Físicos",
+      "riesgo": "Sepultamiento",
+      "tareas": "Trabajos en zanjas y fosos de cimentación para soporte de las estructuras metálicas de los panales",
+      "senal": "images/senales/sepultamiento.jpg"
+    },
+    {
+      "tipo": "Físicos",
+      "riesgo": "Ruidos",
+      "tareas": "Trabajos de construcción y montaje realizados con utilización de equipos y maquinaria pesada, excavación, cimentación, hormigonado, etc…",
+      "senal": "images/senales/ruido.jpg"
+    },
+    {
+      "tipo": "Físicos",
+      "riesgo": "Contactos eléctricos directos",
+      "tareas": "Aquellos relacionados con el montaje y conexión de la instalación y los equipos eléctricos",
+      "senal": "images/senales/contactos_electricos.jpg"
+    },
+    {
+      "tipo": "Físicos",
+      "riesgo": "Quemaduras por arco eléctrico",
+      "tareas": "Producidas por cortocircuito provocado en una instalación eléctrica",
+      "senal": "images/senales/arco_electrico.jpg"
+    },
+    {
+      "tipo": "Químicos",
+      "riesgo": "Sustancias tóxicas y peligrosas",
+      "tareas": "Trabajos con baterías o acumuladores eléctricos que contienen electrolitos de esas características",
+      "senal": "images/senales/sustancias_toxicas_peligrosas.jpg"
+    },
+    {
+      "tipo": "Químicos",
+      "riesgo": "Sustancias inflamables",
+      "tareas": "Trabajos con baterías o acumuladores eléctricos que contienen electrolitos de esas características",
+      "senal": "images/senales/sustancias_inflamables.jpg"
+    }
+  ]
+
+
+
+
+
+
+
 }

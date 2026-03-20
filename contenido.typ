@@ -3,16 +3,8 @@
 // =======================
 
 #let data = json("data.json")
+#import "formato.typ": tabla-riesgos, tabla_resumen_fases_obra
 
-#let tabla_resumen_fases_obra() = table(
-  columns: 5, 
-  table.header([FASE DE OBRA], [APDO. Y \ PAG. PSS], [MAQUINARIA], [APDO. Y \ PAG. PSS], [RECURSO \ PREVENTIVO]),
-  [ACTUACIONES \ PREVIAS], [4.1.1 FASE 1 \ (PÁG. 17)], [PEQUEÑAS \ HERRAMIENTAS \ ELÉCTRICAS \ / DE MANO /], [],[Sí],
-  [EJECUCIÓN DE LA ESTRUCTURA DE SOPORTES DE MÓDULOS Y MONTAJE DE LOS MÓDULOS FV Y COMBINER BOX], [4.1.2 FASE 2 \ (PÁG. 18)], [EQUIPO DE \ ELEVACIÓN: \ CAMIÓN GRÚA EQUIPO DE SOLDADURA ELÉCTRICA], [8.3 CAMIÓN GRÚA \ 8.1/8.2 PEQUEÑAS HERRAMIENTAS ELÉCTRICAS \ (PÁG. 50-52)], [Sí],
-  [EJECUCIÓN DE CANALIZACIONES Y PEQUEÑOS TRABAJOS DE ALBAÑILERÍA], [4.1.3 FASE 3 \ (PÁG. 19)], [PEQUEÑAS HERRAMIENTAS ELÉCTRICAS / DE MANO / PLATAFORMA CON CESTILLO], [8.1 / 8.2 PEQUEÑAS HERRAMIENTAS ELÉCTRICAS / DE MANO / 8.6 PLATAFORMA ELEVADORA \ (PÁG. 50/51/58)], [Sí],
-  [MONTAJE DE INVERSORES Y EJECUCIÓN DE LA INSTALACIÓN ELÉCTRICA], [4.1.4 FASE 4 \ (PÁG. 19)], [PEQUEÑAS HERRAMINETAS ELÉCTRICAS / DE MANO], [8.1 / 8.2 PEQUEÑAS HERRAMINETAS ELÉCTRICAS / DE MANO \ (PÁG. 50/51)], [Sí],
-  [PUESTA EN MARCHA DE LA INSTALACIÓN Y MONITORIZACIÓN], [4.1.5 FASE 5 \ (PÁG. 19)], [], [], [Sí],
-)
 
 //Sergio: Preguntas o dudas que tengo sobre como incluir o redactar ciertos datos o frases en el documento para que todo quede coherente.
 //Codigo: Sitios donde aparece algo de código (sin incluir los bucles que hay en algunas tablas, como en la primera que ves justo debajo).
@@ -108,7 +100,7 @@ Dirección: #data.proyecto.localizacion.situacion, #data.proyecto.localizacion.l
 
 Ubicación google maps: #data.proyecto.empresa.enlace_maps
 
-//ubicacion empresa
+//Codigo: ubicacion empresa
 #image(data.proyecto.empresa.imagen_maps)
 
 === Datos generales
@@ -163,7 +155,7 @@ Ubicación: #data.sys.centro_salud.direccion
 
 #data.sys.centro_salud.enlace_maps
 
-//foto de la ruta de evacuación
+//Codigo: ruta de evacuación
 #image(data.sys.centro_salud.imagen_maps)
 
 En los planos se detalla el recorrido a seguir desde la obra en caso de ser necesario. 
@@ -1615,7 +1607,10 @@ Se distinguirán dos categorías, riesgos generales (los que afectan a todas las
 
 Aquellos que afectan tanto a las tareas de instalación como a las de mantenimiento y conservación de paneles solares para obtención de energía eléctrica y térmica.
 
-//*INSERTAR TABLAS DE RIESGOS Y SEÑALES*
+#tabla-riesgos(
+  "OPERACIONES DE MONTAJE Y COLOCACIÓN",
+  data.riesgos_montaje_generales
+)
 
 === Riesgos específicos
 
@@ -1623,7 +1618,10 @@ Además de los generales anteriormente citados, existen riesgos específicos en 
 
 ==== Instalaciones fotovoltaicas
 
-//*INSERTAR TABLAS DE RIESGOS Y SEÑALES*
+#tabla-riesgos(
+  "OPERACIONES DE MONTAJE Y COLOCACIÓN",
+  data.riesgos_montaje_especificos
+)
 
 == Medidas preventivas
 

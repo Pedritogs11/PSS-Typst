@@ -9,7 +9,7 @@
   [Montaje de inversores y ejecución de la instalación eléctrica], [4.1.4 Fase 4 (Pág. 19)], [Pequeñas herramientas eléctricas / de mano], [8.1 / 8.2 Pequeñas herramientas eléctricas / de mano (Pág. 50/51)], [Sí],
   [Puesta en marcha de la instalación y monitorización], [4.1.5 Fase 5 (Pág. 19)], [], [], [Sí],
 )
-
+ 
 
 #let tabla-riesgos(titulo, filas) = [
   #strong(titulo)

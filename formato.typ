@@ -2,12 +2,12 @@
 //Cambiar número de página que aparecen en la tabla, intentar hacer que se actualicen solos
 #let tabla_resumen_fases_obra() = table(
   columns: 5, 
-  table.header([FASE DE OBRA], [APDO. Y PAG. PSS], [MAQUINARIA], [APDO. Y PAG. PSS], [RECURSO PREVENTIVO]),
-  [ACTUACIONES PREVIAS], [4.1.1 FASE 1 (PÁG. 17)], [PEQUEÑAS HERRAMIENTAS ELÉCTRICAS / DE MANO /], [],[Sí],
-  [EJECUCIÓN DE LA ESTRUCTURA DE SOPORTES DE MÓDULOS Y MONTAJE DE LOS MÓDULOS FV Y COMBINER BOX], [4.1.2 FASE 2 (PÁG. 18)], [EQUIPO DE ELEVACIÓN: CAMIÓN GRÚA EQUIPO DE SOLDADURA ELÉCTRICA], [8.3 CAMIÓN GRÚA 8.1/8.2 PEQUEÑAS HERRAMIENTAS ELÉCTRICAS (PÁG. 50-52)], [Sí],
-  [EJECUCIÓN DE CANALIZACIONES Y PEQUEÑOS TRABAJOS DE ALBAÑILERÍA], [4.1.3 FASE 3 (PÁG. 19)], [PEQUEÑAS HERRAMIENTAS ELÉCTRICAS / DE MANO / PLATAFORMA CON CESTILLO], [8.1 / 8.2 PEQUEÑAS HERRAMIENTAS ELÉCTRICAS / DE MANO / 8.6 PLATAFORMA ELEVADORA (PÁG. 50/51/58)], [Sí],
-  [MONTAJE DE INVERSORES Y EJECUCIÓN DE LA INSTALACIÓN ELÉCTRICA], [4.1.4 FASE 4 (PÁG. 19)], [PEQUEÑAS HERRAMINETAS ELÉCTRICAS / DE MANO], [8.1 / 8.2 PEQUEÑAS HERRAMINETAS ELÉCTRICAS / DE MANO (PÁG. 50/51)], [Sí],
-  [PUESTA EN MARCHA DE LA INSTALACIÓN Y MONITORIZACIÓN], [4.1.5 FASE 5 (PÁG. 19)], [], [], [Sí],
+  table.header([Fase de obra], [Apdo. y pag. PSS], [Maquinaria], [Apdo. y pag. PSS], [Recurso preventivo]),
+  [Actuaciones previas], [4.1.1 Fase 1 (Pág. 17)], [Pequeñas herramientas eléctricas / de mano /], [],[Sí],
+  [Ejecución de la estructura de soportes de módulos y montaje de los módulos FV y combiner box], [4.1.2 FASE 2 (Pág. 18)], [Equipo de elevación: Camión grúa / Equipo de Soldadura eléctrica], [8.3 Camión grúa 8.1/8.2 Pequeñas herramientas eléctricas (Pág. 50-52)], [Sí],
+  [Ejecución de canalizaciones y pequeños trabajos de albañilería], [4.1.3 Fase 3 (Pág. 19)], [Pequeñas herramientas eléctricas / de mano / Plataforma con cestillo], [8.1 / 8.2 Pequeñas herramientas eléctricas / de mano / 8.6 Plataforma elevadora (Pág. 50/51/58)], [Sí],
+  [Montaje de inversores y ejecución de la instalación eléctrica], [4.1.4 Fase 4 (Pág. 19)], [Pequeñas herramientas eléctricas / de mano], [8.1 / 8.2 Pequeñas herramientas eléctricas / de mano (Pág. 50/51)], [Sí],
+  [Puesta en marcha de la instalación y monitorización], [4.1.5 Fase 5 (Pág. 19)], [], [], [Sí],
 )
 
 
@@ -29,7 +29,7 @@
       .flatten()
   )
 ]
-//Los puntos antes de "filas.map" sirven para expandir la lista dentro de la tabla como si lo hubiera escrito a mano. Escribe automáticamente tantas filas como datos haya en data.jason, evitando tener que escribir a mano cada fila, facilitando la modificación de la misma.
-//"map" crea un array de arrays, y table no entiende ese contenido, tenemos que separarlo en los array individuales, y eso lo hacemos con "flatten".
+//Los puntos antes de "filas.map" sirven para expandir la lista dentro de la tabla como si lo hubiera escrito a mano. Escribe automáticamente tantas filas como datos haya en data.jason, evitando tener que escribir a mano cada fila, facilitando la modificación de la tabla.
+//"map" crea un array de arrays, y #table no entiende ese dato, tenemos que separarlo en los array individuales, y eso lo hacemos con "flatten".
 
 

@@ -4123,7 +4123,6 @@ Estatales:
 
 
 
-
 -	Decreto 69/2024. Establece el contenido y efectos de la declaración de emergencia de interés general de Andalucía y se aprueba el Plan Territorial de Emergencias de Protección Civil de Andalucía.
 - Ley 2/2002.Gestión de Emergencias en Andalucía y Ley 2/2023, que la modifica.
 -	Ordenanza de 26-10-2012 (BOP núm. 208) Municipal de Jaén, reguladora de la ocupación de vía pública con veladores y estructuras auxiliares. //cambiar por  autonómica

@@ -3,7 +3,7 @@
 // =======================
 
 #let data = json("data.json")
-#import "formato.typ": tabla-riesgos, tabla_resumen_fases_obra
+#import "formato.typ": tabla-riesgos, tabla_resumen_fases_obra,
 
 
 //Sergio: Preguntas o dudas que tengo sobre como incluir o redactar ciertos datos o frases en el documento para que todo quede coherente.
@@ -1867,9 +1867,6 @@ En función de los riesgos establecidos y como complemento a las medidas de prot
   [Equipos filtrantes contra riesgo biológico]
 )
 
-
-
-//*INSERTAR TABLAS DE EPIs A UTILIZAR*
 
 == Procedimiento de trabajo seguro
 
@@ -3871,7 +3868,7 @@ En caso de ser así deben cumplir con las especificaciones mínimas de esta list
   -	Peso: 0,517kg.
   -	Es obligatoria la revisión anual de los dispositivos contra caídas después del primer uso.
 
-= Anexo X Normativa de aplicación al proyecto
+= Anexo X Normativa de aplicación al Plan de Seguridad y Salud
 
 #table(
   columns: (auto, auto, auto, auto),
@@ -4008,76 +4005,41 @@ Estatales:
 
 
 
--	R.D. 36/2023. Establece un sistema de Certificados de Ahorro Energético.
--	R.D-ley 18/2022. Medidas de refuerzo de la protección de los consumidores de energía y de contribución a la reducción del consumo de gas natural.
--	R.D-ley 29/2021. Adopta medidas urgentes en el ámbito energético para el fomento de la movilidad eléctrica, el autoconsumo y el despliegue de energías renovables.
--	R.D. 1183/2020, de acceso y conexión a las redes de transporte y distribución de energía eléctrica.
--	R.D. 647/2020. Regula aspectos necesarios para la implementación de los códigos de red de conexión de determinadas instalaciones eléctricas.
--	R.D. 244/2019. Regula las condiciones administrativas, técnicas y económicas del autoconsumo de energía eléctrica.
--	Resolución de 11-12-2019. Se aprueban determinados procedimientos de operación para su adaptación al R.D. 244/2019.
--	R.D-ley 15/2018. Medidas urgentes para la transición energética y la protección de los consumidores.
--	R.D. 187/2016. Regula las exigencias de seguridad del material eléctrico destinado a ser utilizado en determinados límites de tensión.
--	R.D. 186/2016. Regula la compatibilidad electromagnética de los equipos eléctricos y electrónicos.
--	R.D. 1074/2015. Modifica distintas disposiciones en el sector eléctrico.
--	R.D. 1073/2015. Modifica distintas disposiciones en los reales decretos de retribución de redes eléctricas.
--	R.D. 900/2015. Se regulan las condiciones administrativas, técnicas y económicas de las modalidades de suministro de energía eléctrica con autoconsumo y de producción con autoconsumo.
--	Orden IET/2660/2015. Aprueba las instalaciones tipo y los valores unitarios de referencia de inversión, de operación y mantenimiento por elemento de inmovilizado.
--	R.D-ley 9/2013, por el que se adoptan medidas urgentes para garantizar la estabilidad financiera del sistema eléctrico.
--	R.D. 413/2014. Regula la actividad de producción de energía eléctrica a partir de fuentes de energía renovables, cogeneración y residuos.
-- R.D. 917/2025. Modifica el RD 413/2014.
--	R.D.1048/2013. Establece la metodología para el cálculo de la retribución de la actividad de distribución de energía eléctrica.
--	R.D. 1047/2013. Establece la metodología para el cálculo de la retribución de la actividad de transporte de energía eléctrica.
--	R.D. 1699/2011. Regula la conexión a red de instalaciones de producción de energía eléctrica de pequeña potencia.
--	R.D. 222/2008. Establece el régimen retributivo de la actividad de distribución de energía eléctrica (Derogada por RD 1048/2013, excepto la disposición adicional 4ª).
+-	R.D. 1183/2020, de acceso y conexión a las redes de transporte y distribución de energía eléctrica.//La quitaría
+-	R.D. 187/2016. Regula las exigencias de seguridad del material eléctrico destinado a ser utilizado en determinados límites de tensión.//creo que la dejaría
+
+
+
+-	Orden IET/2660/2015. Aprueba las instalaciones tipo y los valores unitarios de referencia de inversión, de operación y mantenimiento por elemento de inmovilizado.//quitaria
+
+-	R.D. 1699/2011. Regula la conexión a red de instalaciones de producción de energía eléctrica de pequeña potencia.//quitaria
 -	R.D. 1110/2007. Reglamento unificado de puntos de medida del sistema eléctrico y Orden TEC/1281/2019, que aprueba las ITCs al Reglamento unificado de puntos de medida del sistema eléctrico.
 -	R.D. 1454/2005. Modifica determinadas disposiciones relativas al sector eléctrico.
--	R.D. 1955/2000. Regulación de las actividades de transporte, distribución, comercialización, suministro y procedimientos de autorización de instalaciones de energía eléctrica y Decreto 9/2011 que modifica algunas de sus normas.
 -	R.D. 164/2025. Reglamento de seguridad contra incendios en los establecimientos industriales.
 -	R.D. 513/2017. Reglamento de instalaciones de protección contra incendios.
 -	R.D. 842/2013. Clasificación de los productos de construcción y de los elementos constructivos en función de sus propiedades de reacción y de resistencia frente al fuego.
 -	R.D. 809/2021. Reglamento de equipos a presión y sus I.T.Cs.
--	R.D. 709/2015. Establece los requisitos esenciales de seguridad para la comercialización de los equipos a presión.
--	R.D. 108/2016. Establece los requisitos esenciales de seguridad para la comercialización de los recipientes a presión simples.
-- R.D. 1027/2007, RITE y sus ITEs., y R. Decretos: 1826/2009, 249/2010, 238/2013, 56/2016 y R. Decreto 178/2021, que lo modifican entre otros.
+
+
 -	R.D. 487/2022. Establece los requisitos sanitarios para la prevención y el control de la legionelosis y R.D. 614/2024, por el que se modifica.
--	R.D. 390/2021. Procedimiento básico para la certificación de la eficiencia energética de los edificios.
--	R.D. 659/2025. Modificaciones del RD 390/2021.
--	R.D. 56/2016, por el que se transpone la Directiva 2012/27/UE, relativa a la eficiencia energética, en lo referente a auditorías energéticas, acreditación de proveedores de servicios y auditores energéticos y promoción de la eficiencia del suministro de energía.
--	R.D. 919/2006. Reglamento técnico de distribución y utilización de combustibles gaseosos y sus ITCs ICG 01 a 11.
--	R.D. 552/2019. Reglamento de seguridad para instalaciones frigoríficas y sus ITCs. Corrección erratas B.O.E. 25-10-2019.
--	Resolución de 15-03-2021, que amplía la relación de refrigerantes autorizados por  el Reglamento de seguridad para instalaciones frigoríficas y Resolución de 15-06-2021 que la modifica.
--	R.D. 115/2017. Regula la comercialización y manipulación de gases fluorados y equipos basados en los mismos, así como la certificación de los profesionales que los utilizan y por el que se establecen los requisitos técnicos para las instalaciones que desarrollen actividades que emitan gases fluorados.
--	R.D. 1644/2008. Normas para la comercialización y puesta en servicio de las máquinas y modificaciones en R.D. 494/2012.
--	R.D. 355/2024. Aprueba la ITC AEM 1 «Ascensores», que regula la puesta en servicio, modificación, mantenimiento e inspección de los ascensores, así como el incremento de la seguridad del parque de ascensores existente.
--	R.D. 203/2016. Establece los requisitos esenciales de seguridad para la comercialización de ascensores y componentes de seguridad para ascensores.
+
+
+
+
+
+
 -	R.D. 836/2003. Aprueba una nueva ITC "MIE-AEM-2" del Reglamento de aparatos de elevación y manutención, referente a grúas torre para obras u otras aplicaciones.
 -	R.D. 837/2003. Aprueba el nuevo texto modificado y refundido de la ITC "MIE-AEM-4" del Reglamento de aparatos de elevación y manutención, referente a grúas móviles autopropulsadas.
--	R. D. 958/2020. Comunicaciones comerciales de las actividades de juego.
--	R.D. 2816/1982. Reglamento general de policía de espectáculos públicos y actividades recreativas.
--	R.D. 1457/1986. Regula la actividad industrial y la prestación de servicios en los talleres de reparación de vehículos y R.D. 455/2010, que lo modifica.
--	Ley 11/2022. General de Telecomunicaciones y disposiciones adicionales no derogadas de la antigua Ley 9/2014.
--	R.D. 391/2019. Plan técnico nacional de la televisión digital terrestre y se regulan determinados aspectos para la liberación del segundo dividendo digital.
--	R.D. 346/2011. Reglamento regulador de las infraestructuras comunes de telecomunicaciones para el acceso a los servicios de telecomunicación en el interior de las edificaciones y Orden ITC/1644/2011 que lo desarrolla.
--	Orden ITC/1077/2006. Procedimiento a seguir en las instalaciones colectivas de recepción de televisión en el proceso de su adecuación para la recepción de la televisión digital terrestre y se modifican determinados aspectos administrativos y técnicos de las infraestructuras comunes de telecomunicaciones en el interior de los edificios.
--	Ley 10/2005. Medidas urgentes para el impulso de la televisión digital terrestre, de liberalización de la televisión por cable y de fomento del pluralismo.
--	R. Decreto Ley 1/1998. Infraestructuras comunes en los edificios para el acceso a los servicios de telecomunicación.
--	R.D. 188/2016. Reglamento por el que se establecen los requisitos para la comercialización, puesta en servicio y uso de equipos radioeléctricos, y se regula el procedimiento para la evaluación de la conformidad, la vigilancia del mercado y el régimen sancionador de los equipos de telecomunicación.
+
+
+
 -	R.D. 656/2017. Reglamento de almacenamiento de productos químicos y sus ITCs MIE APQs 0 a 10.
 -	R.D. 888/2006. Reglamento sobre almacenamiento de fertilizantes a base de nitrato amónico con un contenido en nitrógeno igual o inferior al 28% en masa.
-- RD 137/1993. Reglamento de Armas,  RD 726/2020, R.D. 653/2023, Orden  INT/291/2025  y  Orden INT/330/2025 por los que se modifica.
--	Ley 25/2022, sobre precursores de explosivos
--	R.D. 130/2017. Reglamento de Explosivos.
--	Orden TED/1098/2025. Modifica la ITC 9, del Reglamento de Explosivos.
--	R.D 989/2015. Reglamento de artículos pirotécnicos y cartuchería, Orden PJC/342/2025 que lo modifica.
--	R.D. 1217/2024. Reglamento sobre instalaciones nucleares y radiactivas, y otras actividades relacionadas con la exposición a las radiaciones ionizantes.
--	Ley 34/1998, del sector de hidrocarburos y Ley 12/2007 que la modifica.
+
+
 -	R.D. 376/2022. Regula los criterios de sostenibilidad y de reducción de las emisiones de gases de efecto invernadero de los biocarburantes, biolíquidos y combustibles de biomasa, así como el sistema de garantías de origen de los gases renovables.
--	R.D. 2085/1994. Reglamento de instalaciones petrolíferas e instrucciones técnicas complementarias MI-IP01 “refinerías” y MI-IP02 “parques de almacenamiento de líquidos petrolíferos”.
--	R.D. 1562/1998. Modificación de la ITC-MI-IP2.
--	R.D. 1427/1997. ITC MI-IP03 “Instalaciones petrolíferas para uso propio”.
--	R.D. 1523/1999. Modificaciones del Reglamento de instalaciones petrolíferas y de la ITC MI-IP03 que queda redactada como “Instalaciones de almacenamiento para su consumo en la propia instalación”.
--	R.D. 706/2017. ITC MI-IP 04 "Instalaciones para suministro a vehículos" y se regulan determinados aspectos de la reglamentación de instalaciones petrolíferas.
--	Resolución de 25-03-2019. Se actualiza el listado de normas de la ITC MI-IP 04 "instalaciones de suministro a vehículos", aprobada por el RD 706/2017.
+
+
 
 
 
@@ -4097,7 +4059,18 @@ Estatales:
 
 
 
--	Ley 31/1995, de Prevención de riesgos laborales, y Reglamentos que desarrollan dicha Ley, y modificaciones, entre otros: R.D. 39/1997 Reglamento de los servicios de prevención, Orden Ministerial del 27-06-97 que desarrolla el R.D. 39/1997, R.D. 780/1998, que modifica el RD 39/1997, R.D. 1627/1997 sobre Disposiciones mínimas de seguridad y salud en las obras, R.D. 598/2015, R.D. 337/2010, R.D. 604/2006, R.D. 665/1997, R.D. 664/1997, R.D. 486/1997, Disposiciones mínimas de seguridad y salud en los lugares de trabajo, R.D. 487/1997, Disposiciones mínimas de seguridad y salud relativas a la manipulación manual de cargas que entrañe riesgos, en particular dorsolumbares, R.D. 485/1997, Disposiciones mínimas en materia de señalización de seguridad y salud en el trabajo, R.D. 1215/1997, Disposiciones mínimas de seguridad y salud para la utilización por los trabajadores de los equipos de trabajo, R.D. 773/1997, Disposiciones mínimas de seguridad y salud relativas a la utilización por los trabajadores de equipos de protección individual, R.D. 614/2001, Disposiciones mínimas para la protección de la salud y seguridad de los trabajadores frente al riesgo eléctrico, R.D. 286/2006, protección de la salud y la seguridad de los trabajadores contra los riesgos relacionados con la exposición al ruido, R.D. 299/2016, protección de la salud y la seguridad de los trabajadores contra los riesgos relacionados con la exposición a campos electromagnéticos, R.D. 1029/2022, protección de la salud contra los riesgos derivados de la exposición a las radiaciones ionizantes.
+// -	Ley 31/1995, de Prevención de riesgos laborales, y Reglamentos que desarrollan dicha Ley, y modificaciones, entre otros: R.D. 39/1997 Reglamento de los servicios de prevención, Orden Ministerial del 27-06-97 que desarrolla el R.D. 39/1997, R.D. 780/1998, que modifica el RD 39/1997, R.D. 1627/1997 sobre Disposiciones mínimas de seguridad y salud en las obras, R.D. 598/2015, R.D. 337/2010, R.D. 604/2006, R.D. 665/1997, R.D. 664/1997, R.D. 486/1997, Disposiciones mínimas de seguridad y salud en los lugares de trabajo, R.D. 487/1997, Disposiciones mínimas de seguridad y salud relativas a la manipulación manual de cargas que entrañe riesgos, en particular dorsolumbares, R.D. 485/1997, Disposiciones mínimas en materia de señalización de seguridad y salud en el trabajo, R.D. 1215/1997, Disposiciones mínimas de seguridad y salud para la utilización por los trabajadores de los equipos de trabajo, R.D. 773/1997, Disposiciones mínimas de seguridad y salud relativas a la utilización por los trabajadores de equipos de protección individual, R.D. 614/2001, Disposiciones mínimas para la protección de la salud y seguridad de los trabajadores frente al riesgo eléctrico, R.D. 286/2006, protección de la salud y la seguridad de los trabajadores contra los riesgos relacionados con la exposición al ruido, R.D. 299/2016, protección de la salud y la seguridad de los trabajadores contra los riesgos relacionados con la exposición a campos electromagnéticos, R.D. 1029/2022, protección de la salud contra los riesgos derivados de la exposición a las radiaciones ionizantes.
+//Cambiado lo de arriba por el listado de abajo
+- Ley 31/1995, de Prevención de Riesgos Laborales.
+- Real Decreto 39/1997, por el que se aprueba el Reglamento de los Servicios de Prevención.
+- Real Decreto 1627/1997, por el que se establecen las disposiciones mínimas de seguridad y salud en las obras de construcción.
+- Real Decreto 486/1997, sobre disposiciones mínimas de seguridad y salud en los lugares de trabajo.
+- Real Decreto 485/1997, sobre disposiciones mínimas en materia de señalización de seguridad y salud en el trabajo.
+- Real Decreto 487/1997, sobre manipulación manual de cargas.
+- Real Decreto 1215/1997, sobre utilización de equipos de trabajo.
+- Real Decreto 773/1997, sobre equipos de protección individual.
+- Real Decreto 614/2001, sobre riesgo eléctrico.
+- Real Decreto 286/2006, sobre exposición al ruido.
 
 -	Ley 32/2006, de subcontratación en el sector de la construcción, R.D. 1109/2007 que desarrolla la ley 32/2006, Orden de 22-11-2007 que desarrolla el procedimiento de habilitación del libro de subcontratación y R.D. 337/2010 que modifica el R.D.1109/2007, y modificaciones.
 -	Condiciones impuestas por los Organismos Públicos afectados.
@@ -4107,7 +4080,7 @@ Estatales:
 
 
 
-- R. D. 286/2006
+- Real Decreto 286/2006, sobre la protección de la salud y la seguridad de los trabajadores contra los riesgos relacionados con la exposición al ruido.
 
 
 -	Ordenanza General de Seguridad e Higiene en el Trabajo del 09-03-71.
@@ -4118,84 +4091,51 @@ Estatales:
 
 -	Artículos aplicables del R.D 1993/1995, que establece el Reglamento General sobre colaboración en la gestión de las Mutuas de Accidentes de Trabajo y Enfermedades Profesionales de la Seguridad Social.
 -	Artículos aplicables del R.D. 250/97, que modifica el Reglamento de Colaboración de las Mutuas de Accidentes de Trabajo y Enfermedades Profesionales de la Seguridad Social, aprobado por RD 1993/95, y el Reglamento General sobre inscripción de empresas y afiliación, altas, bajas y variaciones de datos de trabajadores en la Seguridad Social, aprobado por RD 84/96.
--	Artículos aplicables del R R.D. 216/99, que recoge las Disposiciones mínimas de seguridad y salud en el trabajo en el ámbito de las empresas de trabajo temporal.
+-	Artículos aplicables del R.D. 216/99, que recoge las Disposiciones mínimas de seguridad y salud en el trabajo en el ámbito de las empresas de trabajo temporal.
 -	Orden TAS/3623/2006, por la que se regulan las actividades preventivas en el ámbito de la Seguridad Social y la financiación de la Fundación para la Prevención de Riesgos Laborales.
 -	Orden TIN/442/2009, por la que se modifica la Orden TAS/3623/2006, por la que se regulan las actividades preventivas en el ámbito de la Seguridad Social y la financiación de la Fundación para la Prevención de Riesgos Laborales.
+
+
+
 
 *Comunidad Autónoma de Andalucía*
 
 -	Decreto 50/2025.
   Reglamento para la preservación de la calidad acústica en Andalucía.
--	Decreto 37/2025. Reglamento de protección frente a la contaminación lumínica en Andalucía.
--	Ley 3/2023, de Economía Circular de Andalucía.
--	Decreto-ley 3/2024. Medidas de simplificación y racionalización administrativa para la mejora de las relaciones de los ciudadanos con la Administración de la Junta de Andalucía y el impulso de la actividad económica en Andalucía.
--	Decreto 550/2022. Reglamento General de la Ley 7/2021, de impulso para la sostenibilidad del territorio de Andalucía.
--	Ley 7/2021, de impulso para la sostenibilidad del territorio de Andalucía. Modificaciones en el Decreto-ley 11/2022.
--	Ley 7/2007. Gestión Integrada de la Calidad Ambiental.
--	Decreto 5/2012. Regulación de la Autorización Ambiental Integrada.
--	Decreto 356/2010. Regula la Autorización Ambiental Unificada y sus modificaciones surgidas en el Decreto 5/2012.
--	Decreto 297/1995. Reglamento de Calificación Ambiental.
--	Decreto 18/2015. Reglamento que regula el régimen aplicable a los suelos contaminados.
+
+
 - Decreto 169/2014. Procedimiento de la Evaluación del Impacto en la Salud de la Comunidad Autónoma de Andalucía.
--	Decreto-ley 26/2021. Adopta medidas de simplificación administrativa y mejora de la calidad regulatoria para la reactivación económica en Andalucía.
--	Decreto 234/2021. Aprueba el Plan Andaluz de Acción por el Clima.
--	Ley 8/2018. Medidas frente al cambio climático y para la transición hacia un nuevo modelo energético en Andalucía.
--	Decreto-ley 2/2020. Mejora y simplificación de la regulación para el fomento de la actividad productiva de Andalucía.
--	Decreto-ley 2/2018. Simplificación de normas en materia de energía y fomento de las energías renovables en Andalucía.
--	Decreto 1/2016. Medidas para la aplicación de la declaración responsable para determinadas actividades económicas reguladas en la Ley 3/2014.
--	Ley 3/2015. Medidas en Materia de Gestión Integrada de Calidad Ambiental, de Aguas, Tributaria y de Sanidad Animal.
--	Ley 3/2014. Medidas normativas para reducir las trabas administrativas para las empresas.
--	Decreto-ley 5/2014. Medidas normativas para reducir las trabas administrativas para las empresas.
--	Decreto 73/2012. Reglamento de Residuos de Andalucía.
--	Decreto 293/2011. Regula la calidad del medio ambiente atmosférico y se crea el registro de sistemas de evaluación de la calidad del aire en Andalucía.
 -	Decreto 67/2011. Regula el control de calidad de la construcción y obra pública.
--	Decreto 9/2011. Modifica diversas Normas Reguladoras de Procedimientos Administrativos de Industria y Energía.
--	Decreto 22/2010. Regula el distintivo de calidad ambiental de la Administración de la Junta de Andalucía.
 -	Decreto 293/2009, Reglamento que regula las normas para la accesibilidad en las infraestructuras, el urbanismo, la edificación y el transporte en Andalucía y Orden 9-01-2012,  que aprueba los modelos de fichas y tablas justificativas de dicho Reglamento.
--	Decreto 50/2008. Regulan los procedimientos administrativos referidos a las instalaciones de energía solar fotovoltaica emplazadas en la comunidad autónoma de Andalucía.
--	Ley 2/2007. Fomento de las energías renovables y del ahorro y eficiencia energética de Andalucía.
--	Decreto 155/2018. Catálogo de Espectáculos Públicos, Actividades Recreativas y Establecimientos Públicos de Andalucía y se regulan sus modalidades, régimen de apertura o instalación y horarios de apertura y cierre.
--	Decreto 251/2023, por el que se modifica el Decreto 155/2018.
--	Decreto 195/2007. Condiciones generales para la celebración de espectáculos públicos y actividades recreativas de carácter ocasional y extraordinario.
--	Ley 13/1999. Normas reguladoras de espectáculos públicos y actividades recreativas en Andalucía.
--	Decreto 178/2006. Normas de protección de la avifauna para las instalaciones eléctricas de alta tensión.
--	Resolución de 23-09-2019. Aprueba especificaciones particulares y proyectos tipo de Endesa, SLU.
--	Resolución de 05-12-2018. Aprueba especificaciones particulares y proyectos tipo de Endesa, SLU.
+
+
+
 -	Resolución de 05-05-2005. Normas particulares y condiciones técnicas y de seguridad de Endesa, en Andalucía y modificaciones.
 -	Resolución de 03-06-2020 y Resolución de 14-06-2019, por la que se derogan parcialmente la Resolución de 05-05-2005.
--	Instrucción de 14-10-2004, Sobre previsión de cargas eléctricas y coeficientes de simultaneidad en áreas de uso residencial y áreas de uso industrial e Instrucción 2/2023, por la que se modifica la Instrucción de 14-10-2004.
--	Resolución de 8-10-2019, por la que se modifican los Anexos I y II de la Orden de 5-03-2013.
--	Instrucción de 01-03-2017, sobre tramitación de modificaciones y ampliaciones de líneas e instalaciones eléctricas de alta tensión competencia de la comunidad autónoma de Andalucía.
+
 -	Resolución de 29-11-2016, por la que se modifican los Anexos II y III de la Orden de 20-02-2013, para adaptarla al RD 337/2014, por el que se aprueban el reglamento sobre condiciones técnicas y garantías de seguridad en instalaciones eléctricas de alta tensión y sus ITCs-RAT 01 a 23
--	Orden de 20-02-2013, aprueba la tramitación electrónica de los procedimientos para la expedición de las habilitaciones profesionales y para la presentación de declaraciones y comunicaciones, en materia de Industria, Energía y Minas
--	Decreto 59/2005. Regula el procedimiento para la instalación, ampliación, traslado y puesta en funcionamiento de los establecimientos industriales, así como el control, responsabilidad y régimen sancionador de los mismos con desarrollo y modificaciones en: Orden de 27-05-2005, Orden de 05-10-2007, Orden de 05-03-2013, Resolución de 13-05-2025 y demás Resoluciones donde se modifican los Anexos I y II de dicha Orden para la comunicación de puesta en funcionamiento de establecimientos e instalaciones industriales y las fichas técnicas descriptivas de instalaciones industriales.
--	Orden de 24-01-2003. Normas de diseño y constructivas para edificios de uso docente (Capítulos dedicados a instalaciones).
+
+
+
+
 -	Decreto 287/2002. Establece medidas para el control y la vigilancia higiénico-sanitarias de instalaciones de riesgo en la transmisión de la legionelosis.
--	Decreto 327/2012. Modifica diversos Decreto (Decreto 120/1991, D 9/2003, D 60/2010), para su adaptación a la normativa estatal de transposición de la Directiva de Servicios.
-- Decreto 120/1991. Reglamento de suministro domiciliario de agua y Decreto 9/2011 que modifica algunas normas de dicho Decreto.
--	Decreto 9/2003. Regula la actividad industrial y la prestación de servicios en los talleres de reparación y mantenimiento de vehículos automóviles y el artículo 7 y el Anexo II de la Orden 25- 01-2007.
--	Decreto 36/2014. Regula el ejercicio de las competencias de la Administración de la Junta de Andalucía en materia de Ordenación del Territorio y Urbanismo.
--	Ley 8/2001, de 12 de julio, de Carreteras de Andalucía.
+
+
+
+
+
 -	Decreto 69/2024. Establece el contenido y efectos de la declaración de emergencia de interés general de Andalucía y se aprueba el Plan Territorial de Emergencias de Protección Civil de Andalucía.
 - Ley 2/2002.Gestión de Emergencias en Andalucía y Ley 2/2023, que la modifica.
--	Ordenanza de 26-10-2012 (BOP núm. 208) Municipal de Jaén, reguladora de la ocupación de vía pública con veladores y estructuras auxiliares.
+-	Ordenanza de 26-10-2012 (BOP núm. 208) Municipal de Jaén, reguladora de la ocupación de vía pública con veladores y estructuras auxiliares. //cambiar por  autonómica
 -	Plan general Municipal de ordenación urbana.
 
-*Atribuciones profesionales*
-
--	Ley 38 de 05-11-1999. Ordenación de la edificación.
--	Ley 12 de 01-04-1986. Regulación de las atribuciones profesionales de los Arquitectos e Ingenieros Técnicos y Ley 33/1992, que la modifica.
--	R.D. 37/1977. Atribuciones de los Peritos Industriales.
--	Resolución de 21-07-2015, por la que se publica el Acuerdo del Consejo de Ministros de 10-07- 2015, por el que se determina el nivel de correspondencia al nivel del Marco Español de Cualificaciones para la Educación Superior del Título Universitario Oficial de Ingeniero Técnico Industrial, especialidad: Electricidad, Electrónica Industrial, Mecánica, Química Industrial, Textil.
--	R.D. 967/2014. Requisitos y procedimiento para la homologación y declaración de equivalencia a titulación y a nivel académico universitario oficial y para la convalidación de estudios extranjeros de educación superior, y el procedimiento para determinar la correspondencia a los niveles del marco español de cualificaciones para la educación superior de los títulos oficiales de Arquitecto, Ingeniero, Licenciado, Arquitecto Técnico, Ingeniero Técnico y Diplomado.
--	Orden CIN/351/2009. Requisitos para la verificación de los títulos universitarios oficiales que habiliten para el ejercicio de la profesión de Ingeniero Técnico Industrial.
-
-*Normas*
-
-Norma Básica de la Edificación:
-
-Normas NTE que les sean de aplicación, según fase de obra.
-
-Normas UNE que les sean de aplicación.
-
 = Planos
+
+
+// Seguridad en obras → RD 1627/1997
+// PRL general → Ley 31/1995
+// Riesgo eléctrico → RD 614/2001
+// Equipos de trabajo → RD 1215/1997
+// EPIs → RD 773/1997
+// Señalización → RD 485/1997
+// Lugares de trabajo → RD 486/1997

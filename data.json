@@ -98,39 +98,154 @@
   "presupuesto": {
     "pem": 63750,
     "p_pss": 2500,
-    "ud": {
-      "protecciones_colectivas": {
-        "anclajes": 5,
-        "lineas_de_vida": 4,
-        "red": 6
+    "capitulos": {
+      "1": {
+        "nombre": "Protecciones colectivas.",
+        "items": {
+          "1.01": {
+            "nombre": "Anclajes para líneas de vida.",
+            "descripcion": "Suministro e instalación de punto de anclaje permanente de acero inoxidable para línea de vida sobre cubierta, según planos, incluido su montaje, desmontaje y mantenimiento.",
+            "ud": "ud",
+            "cantidad": 10,
+            "precio_unitario": 20
+          },
+          "1.02": {
+            "nombre": "Líneas de vida provisionales.",
+            "descripcion": "Suministro, instalación, mantenimiento y retirada de línea de vida provisional textil. Instalada según planos y material amortizable en 5 años.",
+            "ud": "m",
+            "cantidad": 66,
+            "precio_unitario": 20
+          },
+          "1.03": {
+            "nombre": "Red sobre lucernario.",
+            "descripcion": "Suministro, instalación, mantenimiento y retirada de red provisional textil. Instalada según planos y material amortizable en 5 años.",
+            "ud": "m2",
+            "cantidad": 80,
+            "precio_unitario": 20
+          }
+        }
       },
-      "balizado": {
-        "cinta": 2,
-        "cono": 5,
-        "cartel_riesgos_prohibiciones": 4,
-        "senal_riesgo_especifico": 5,
-        "senal_uso_epis": 4
+      "2": {
+        "nombre": "Señalización y balizado de zonas, según planos.",
+        "items": {
+          "2.01": {
+            "nombre": "Cinta de balizado.",
+            "descripcion": "Cinta de polietileno bicolor para balizar y acotar zonas, incluido instalación, mantenimiento y retirada.",
+            "ud": "m",
+            "cantidad": 100,
+            "precio_unitario": 0.1
+          },
+          "2.02": {
+            "nombre": "Cono de señalización.",
+            "descripcion": "Cono bicolor reflectante reutilizable de 50 cm., amortizable en 750 jornadas, para señalización y acotación de zonas de trabajo de maquinaria perimetrando el radio de acción de las mismas, incluido su montaje, desmontaje y mantenimiento.",
+            "ud": "ud",
+            "cantidad": 4,
+            "precio_unitario": 0.5
+          },
+          "2.03": {
+            "nombre": "Cartel con señalización general de riesgos y prohibiciones.",
+            "descripcion": "Cartel que incluye pictogramas de obligaciones y peligros generales de la instalación, que se colocará en los accesos a las zonas de actuación, para indicar las obligaciones antes de acceder a las zonas de trabajo. Incluido montaje y posterior retirada.",
+            "ud": "ud",
+            "cantidad": 1,
+            "precio_unitario": 10
+          },
+          "2.04": {
+            "nombre": "Señal de riesgo específico.",
+            "descripcion": "Señal para marcar riesgos concretos existentes en zonas definidas del área de trabajo, reutilizables, amortizables en 10 usos. Incluido montaje y posterior retirada.",
+            "ud": "ud",
+            "cantidad": 4,
+            "precio_unitario": 2
+          },
+          "2.05": {
+            "nombre": "Señal de uso de EPIS.",
+            "descripcion": "Señal de obligatoriedad de uso de EPIS específicos en ciertas zonas con riesgos concretos dentro de la zona de trabajo, como uso obligatorio de arnés al acceder a cubierta, uso de chaleco reflectante en zonas de maniobras de máquinas,... amortizable en 10 usos. Incluido montaje, mantenimiento y posterior retirada.",
+            "ud": "m2",
+            "cantidad": 4,
+            "precio_unitario": 2
+          }
+        }
       },
-      "epis": {
-        "uniforme_invierno": 45,
-        "casco": 25,
-        "chaleco_reflectante": 45,
-        "arnes_anticaida": 36,
-        "dispositivo_anticaidas": 45,
-        "peq_material_desechable": 25
+      "3": {
+        "nombre": "Señalización y balizado de zonas, según planos.",
+        "items": {
+          "3.01": {
+            "nombre": "Uniforme de invieno.",
+            "descripcion": "Ropa de trabajo de protección para bajas temperaturas, formada por 2 pantalones, 5 camisetas de manga corta, 2 sudaderas, 1 abrigo, 1 calzado de seguridad y 1 gafas antiproyecciones con filtro UV amortizable en 6 meses.",
+            "ud": "ud",
+            "cantidad": 45,
+            "precio_unitario": 2.5
+          },
+          "3.02": {
+            "nombre": "Casco.",
+            "descripcion": "Casco de trabajo según CE EN 397 adecuado para trabajo en altura. Amortizable en 660 usos.",
+            "ud": "ud",
+            "cantidad": 45,
+            "precio_unitario": 0.2
+          },
+          "3.03": {
+            "nombre": "Chaleco reflectante.",
+            "descripcion": "Chaleco de alta visibilidad para trabajos en zonas de movimiento de vehículos o maquinaria, amortizable en 132 usos.",
+            "ud": "ud",
+            "cantidad": 45,
+            "precio_unitario": 0.1
+          },
+          "3.04": {
+            "nombre": "Arnés anticaída.",
+            "descripcion": "Arnés para sujeción del operario en caso de caída desde altura con cinturón de posicionamiento y amortizable en 5 años.",
+            "ud": "ud",
+            "cantidad": 45,
+            "precio_unitario": 0.25
+          },
+          "3.05": {
+            "nombre": "Dispositivo anticaídas retráctil.",
+            "descripcion": "Dispositivo con cable de acero de 15 metros para anclaje de arnés a línea de vida con mecanismo retráctil que recoge el cable de acero evitando qeu quede extendido y lo frena en caso de caída. Amortizable en 5 años.",
+            "ud": "ud",
+            "cantidad": 45,
+            "precio_unitario": 0.55
+          },
+          "3.06": {
+            "nombre": "Pequeño material deshechable.",
+            "descripcion": "Materiales de protección de corta vida útil o de un solo uso, como guantes, mascarillas, etc.",
+            "ud": "ud",
+            "cantidad": 45,
+            "precio_unitario": 1
+          }
+        }
       },
-      "higiene_bienestar": {
-        "colab_limpieza": 3
+      "4": {
+        "nombre": "Higiene y bienestar.",
+        "items": {
+          "4.01": {
+            "nombre": "Colaboración en limpieza de instalaciones higiénicas.",
+            "descripcion": "Colaboración en el mantenimiento de las instalaciones de higiene de l anave, estimando una hora semanal, incluida parte proporcional de material de limpieza.",
+            "ud": "h",
+            "cantidad": 3,
+            "precio_unitario": 15
+          }
+        }
       },
-      "formacion_informacion": {
-        "charla_informativa": 1,
-        "reunion_coordinacion": 1
+      "5": {
+        "nombre": "Formación e información.",
+        "items": {
+          "5.01": {
+            "nombre": "Charla informativa previa a comienzo de obra.",
+            "descripcion": "Reunión con los trabajadores destinados a este proyecto, para explicar las particularidades del mismo, la adaptación de los procedimientos de trabajo al lugar de actuación. Y las rutas de evacuación y accesos a zonas de servicios higiénicos. Incluido desplazamiento de técnico a la obra.",
+            "ud": "h",
+            "cantidad": 1,
+            "precio_unitario": 45
+          },
+          "5.02": {
+            "nombre": "Reunión de coordinación de actividades empresariales con propietario de las instalaciones.",
+            "descripcion": "Reunión de dirección de obra, recurso preventivo y responsable de contratista con propiedad de la nave para coordinar los horarios de trabajo, accesos, uso de instalaciones, etc. Incluido desplazamiento a obra",
+            "ud": "h",
+            "cantidad": 1,
+            "precio_unitario": 45
+          }
+        }
       }
     }
   },
 
-
-  
 
   "riesgos_montaje_generales": [
     {
@@ -149,71 +264,70 @@
       "tipo": "Físicos",
       "riesgo": "Proyección de fragmentos o partículas",
       "tareas": "Debido al empleo de herramientas de corte, sierras, piedras esmeriles, cinceles, martillos, etc. Incluso salpicaduras",
-      "senal": "images/senales/proyeccion_particulas.jpg" 
+      "senal": "images/senales/proyeccion_particulas.jpg"
     },
     {
       "tipo": "Físicos",
       "riesgo": "Sobreesfuerzos",
       "tareas": "Debidos a la manipulación de materiales y equipos y a posturas forzadas durante el trabajo",
-      "senal": "images/senales/sobreesfuerzos.jpg" 
+      "senal": "images/senales/sobreesfuerzos.jpg"
     },
     {
       "tipo": "Físicos",
       "riesgo": "Golpes o cortes por objetos o herramientas",
       "tareas": "Todas aquellas que conlleven manipulación de materiales o empleo de herramientas en general",
-      "senal": "images/senales/golpes_cortes_herramientas.jpg" 
+      "senal": "images/senales/golpes_cortes_herramientas.jpg"
     },
     {
       "tipo": "Físicos",
       "riesgo": "Atrapamientos por o entre objetos",
       "tareas": "Debido a manipulación de todo tipo de materiales y montaje de estructuras y elementos",
-      "senal": "images/senales/atrapamiento.jpg" 
+      "senal": "images/senales/atrapamiento.jpg"
     },
     {
       "tipo": "Físicos",
       "riesgo": "Caída de objetos en manipulación",
       "tareas": "En todo tipo de trabajo realizado en altura, materiales, equipos, etc…",
-      "senal": "images/senales/caida_objetos.jpg" 
+      "senal": "images/senales/caida_objetos.jpg"
     },
     {
       "tipo": "Físicos",
       "riesgo": "Pisadas sobre objetos punzantes",
       "tareas": "Trabajos de cimentación, montaje estructura metálica, albañilería, etc, sobre superficies con elementos punzantes clavados o sueltos",
-      "senal": "images/senales/pisada_punzante.jpg" 
+      "senal": "images/senales/pisada_punzante.jpg"
     },
     {
       "tipo": "Físicos",
       "riesgo": "Caída de objetos desprendidos",
       "tareas": "Todo tipo de trabajos en cubiertas o tejados",
-      "senal": "images/senales/caida_objetos_desprendidos.jpg" 
+      "senal": "images/senales/caida_objetos_desprendidos.jpg"
     },
     {
       "tipo": "Físicos",
       "riesgo": "Contactos eléctricos indirectos",
       "tareas": "Por empleo de herramientas y equipos eléctricos, materiales metálicos y condiciones de humedad alta",
-      "senal": "images/senales/contactos_electricos.jpg" 
+      "senal": "images/senales/contactos_electricos.jpg"
     },
     {
       "tipo": "Físicos",
       "riesgo": "Estrés térmico",
       "tareas": "Trabajos realizados a la intemperie en condiciones meteorológicas adversas de calor y frío",
-      "senal": "images/senales/estres_termico.jpg" 
+      "senal": "images/senales/estres_termico.jpg"
     },
     {
       "tipo": "Químicos",
       "riesgo": "Contacto con sustancias cáusticas y corrosivas",
       "tareas": "Contacto directo con materiales de construcción como cemento, hormigón, disolventes etc…",
-      "senal": "images/senales/sustancias_causticas_corrosivas.jpg" 
+      "senal": "images/senales/sustancias_causticas_corrosivas.jpg"
     },
     {
       "tipo": "Químicos",
       "riesgo": "Contacto con sustancias nocivas y peligrosas",
       "tareas": "Contacto directo con pinturas, decapantes, fluidos anticongelantes, etc…",
-      "senal": "images/senales/sustancias_nocivas_peligrosas.jpg" 
+      "senal": "images/senales/sustancias_nocivas_peligrosas.jpg"
     }
   ],
-
-    "riesgos_montaje_especificos": [
+  "riesgos_montaje_especificos": [
     {
       "tipo": "Físicos",
       "riesgo": "Caída de cargas suspendidas",
@@ -257,11 +371,4 @@
       "senal": "images/senales/sustancias_inflamables.jpg"
     }
   ]
-
-
-
-
-
-
-
 }

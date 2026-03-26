@@ -8,6 +8,7 @@
 
 //Sergio: Preguntas o dudas que tengo sobre como incluir o redactar ciertos datos o frases en el documento para que todo quede coherente.
 //Codigo: Sitios donde aparece algo de código (sin incluir los bucles que hay en algunas tablas, como en la primera que ves justo debajo).
+//Álvaro: dudas del propio pss
 
 
 // =======================
@@ -2469,7 +2470,15 @@ Para la evaluación de los riesgos se utiliza el concepto "Grado de Riesgo" obte
 
 Se han establecido cinco niveles de grado de riesgo de las diferentes combinaciones de la probabilidad y severidad, las cuales se indican en la tabla siguiente:
 
-//*INSERTAR TABLA COMBINACIONES RIESGOS*
+//TABLA COMBINACIONES RIESGOS
+#table(
+  columns: (auto,auto,auto,auto,auto),
+  table.cell(rowspan: 2, colspan: 2, [Grado de riesgo]), table.cell(colspan: 3, [Severidad]),
+  [Alta], [Media], [Baja],
+  table.cell(rowspan: 3, [Probabilidad]), [Alta], [Muy alto], [Alto], [Moderado],
+  [Media], [Alto], [Moderado], [Bajo],
+  [Baja], [Moderado], [Bajo], [Muy bajo]
+)
 
 La probabilidad se valora teniendo en cuenta las medidas de prevención existentes y su adecuación a los requisitos legales, a las normas técnicas y a los objetos sobre prácticas correctas. 
 La severidad se valora en base a las más probables consecuencias de accidente o enfermedad profesional.
@@ -2488,11 +2497,44 @@ Los niveles bajo, medio y alto de severidad pueden asemejarse a la clasificació
 Tras el análisis de las características de los trabajos y del personal expuesto a los riesgos se establecen las medidas y acciones necesarias para llevarse a cabo por parte de las empresas instaladoras, para tratar cada uno de los riesgos de accidente de trabajo y/o enfermedad profesional detectados. 
 (Ley 31/1995, de 8 de noviembre, sobre Prevención de Riesgos Laborales).
 
-//*INSERTAR TABLAS VARIAS*
+//Álvaro: Revisar tabla inferior
+*Gestión y evaluación de riesgos. Planificación preventiva.*
+#table(
+  columns: (auto, auto, auto, auto, auto, auto, auto),
+  table.header(table.cell(rowspan:2, [Riesgos]), table.cell(rowspan:2, [Evaluación]), table.cell(rowspan:2, [Medidas de control]), table.cell(rowspan:2, [Formación información]), table.cell(rowspan:2, [Normas de trabajo]), table.cell(colspan:2, [Riesgo controlado]), [Sí], [No]),
+  [1. Caídas de personas a distinto nivel], [Moderado], [Protecciones colectivas y E.P.I.], [X], [X], [X], [],
+  [2. Caídas de personas al mismo nivel], [Medio], [Orden y limpieza], [X], [X], [X], [],
+  [3. Caídas de objetos por desplome o derrumbamiento], [Moderado],[Protecciones colectivas], [X], [X], [X], [],
+  [4. Caídas de objetos en manipulación], [Bajo], [E.P.I.], [X], [X], [X], [],
+  [5. Caída de objetos desprendidos], [Medio], [Protección colectiva], [X], [X], [X], [],
+  [6. Pisadas sobre objetos], [Bajo], [Orden y limpieza], [X], [X], [X], [],
+  [7. Choque contra objetos inmóviles], [Bajo], [], [X], [X], [X], [],
+  [8. Choque contra objetos móviles], [Bajo], [Protecciones colectivas], [X], [X], [X], [],
+  [9. Golpes por objetos y herramientas], [Bajo], [E.P.I.], [X], [X], [X], [],
+  [10. Proyección de fragmentos o partículas], [Bajo], [Gafas o pantallas de seguridad (E.P.I.)], [X], [X], [X], [],
+  [11. Atrapamiento por o entre objetos], [Medio], [], [X], [X], [X], [],
+  [12. Atrapamiento por vuelco de máquinas, tractores o vehículos], [Medio], [Manejo correcto], [X], [X], [X], [],
+  [13. Sobreesfuerzos], [Medio], [Manejo de pesos y levantamiento correcto], [X], [X], [X], [],
+  [14. Exposición a temperaturas ambientales extremas], [No procede], [], [], [X], [], [],
+  [15. Contactos térmicos], [No procede], [Cumplir REBT y normas de seguridad], [X], [X], [], [X],
+  [16. Exposición a contactos eléctricos], [Alto], [Cumplir REBT y uso E.P.I.], [X], [X], [], [X],
+  [17. Exposición a sustancias nocivas], [Bajo], [E.P.I.], [X], [X], [], [X],
+  [18. Contactos sustancias cáusticas y/o corrosivas], [Bajo], [E.P.I.], [X], [X], [], [X],
+  [19. Exposición a radiaciones], [Bajo], [E.P.I.], [X], [X], [], [X],
+  [20. Explosiones], [Medio], [Prohibición de hacer fuego / fumar], [X], [X], [], [X],
+  [21. Incendios], [Medio], [Prohibición de hacer fuego / fumar], [X], [X], [], [X],
+  [22. Accidentes causados por seres vivos], [No procede], [], [], [], [X], [],
+  [23. Atropello o golpes con vehículos], [Medio], [Normas de circulación y pasillo de seguridad], [X], [X], [], [X],
+  [24. E.P. producida por agentes químicos], [Muy bajo], [E.P.I.], [X], [X], [], [X],
+  [25. E.P. infecciona o parasitaria], [No procede], [], [], [], [X], [],
+  [26. E.P. producida por agentes físicos], [Muy baja], [E.P.I.], [X], [X], [], [X],
+  [27. Enfermedad sistemática], [No procede], [], [], [], [X], [], 
+  [28. Otros], [No procede], [], [], [], [X], [],
+)
 
 == Conclusión
 
-Con lo anteriormente expuesto, estimamos que queda suficientemente aclarado el alcance de la presente EVALUACIÓN DE RIESGOS.
+Con lo anteriormente expuesto, estimamos que queda suficientemente aclarado el alcance de la presente evaluación de riesgos.
 
 //*INSERTAR FIRMA, FECHA Y DEMÁS*
 

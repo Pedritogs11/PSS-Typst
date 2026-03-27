@@ -79,7 +79,7 @@
         [Descripción],
         [Nº],
         [Precio (€)],
-        [Total],
+        [Total (€)],
 
         ..for (codigo, item) in items.pairs() {
           let cantidad = item.at("cantidad")

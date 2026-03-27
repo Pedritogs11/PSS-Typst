@@ -4,7 +4,7 @@
 
 #let data = json("data.json")
 
-#import "formato.typ": tabla_riesgos, tabla_resumen_fases_obra
+#import "formato.typ": tabla_riesgos, tabla_resumen_fases_obra, tabla_presupuesto
 
 
 //Sergio: Preguntas o dudas que tengo sobre como incluir o redactar ciertos datos o frases en el documento para que todo quede coherente.
@@ -2510,12 +2510,9 @@ Tras el análisis de las características de los trabajos y del personal expuest
 Con lo anteriormente expuesto, estimamos que queda suficientemente aclarado el alcance de la presente evaluación de riesgos.
 
 = Presupuesto
-
-#import "formato.typ": tabla_presupuesto
-
-#let data = json("data.json")
-
+//Código
 #tabla_presupuesto(data.at("presupuesto"))
+
 //Sergio: dejo en todos los anexos la enumeración "Anexo I, II, ...", ¿ ves bien dejarlo así ? o hago una función que cada vez que aparezca en el texto aumente el número del anexo y podamos elegir si escribir "Anexo" o "Anejo"
 //Además, tras leer todos los anexos y la memoria, considero que son anexos del PSS y no de la memoria en concreto, por tanto dejaría cada título con "="
 = Anexo I Planning de obra
@@ -3746,7 +3743,25 @@ En la identificación de los riesgos se ha utilizado la lista de “Riesgos de a
 -	Otros.
 
 //*INSERTAR TABLA DE PROBABILIDAD / SEVERIDAD*
+#table(
+  columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+  table.header(table.cell(rowspan: 2, [Riesgo]), table.cell(colspan: 3, [Probabilidad]), table.cell(colspan: 3, [Severidad]), table.cell(rowspan: 2, [Valor riesgo]),
+  [B], [M], [A], [LD], [D], [ED]),
+  [Exposición a temperaturas ambientales extremas], [], [], [X], [X], [], [], [Moderado],
+  [Caídas de personas a distinto nivel], [X], [], [], [X], [], [], [Trivial],
+  [Caídas de personas al mismo nivel], [X], [], [], [X], [], [], [Trivial],
+  [Pisadas sobre objetos], [X], [], [], [X], [], [], [Trivial],
+  [Accidentes de tráfico], [X], [], [], [], [], [X], [Moderado],
+  [Accidentes causados por seres vivos], [], [X], [], [X], [], [], [Tolerable]
+)
 
+#table(
+  columns: (auto, auto),
+  table.header([Probabilidad], [Severidad]),
+  [B: Bajo], [LD: Ligeramente dañino],
+  [M: Medio],[D: Dañino],
+  [A: Alto], [ED: Extremadamente dañino]
+)
 === Medidas preventivas
 
 Protección contra el calor:

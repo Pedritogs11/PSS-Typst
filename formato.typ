@@ -11,7 +11,7 @@
 )
 
 
-#let tabla-riesgos(titulo, filas) = [
+#let tabla_riesgos(titulo, filas) = [
   #strong(titulo)
 
   #table(
@@ -33,3 +33,84 @@
 //"map" crea un array de arrays, y #table no entiende ese dato, tenemos que separarlo en los array individuales, y eso lo hacemos con "flatten".
 
 
+#let euros(n) = {
+  let valor = calc.round(n * 100) / 100
+  str(valor) + " €"
+}
+
+#let subtotal_capitulo(items) = {
+  let subtotal = 0.0
+
+  for (_, item) in items.pairs() {
+    subtotal += item.at("cantidad") * item.at("precio_unitario")
+  }
+
+  subtotal
+}
+
+#let total_presupuesto(capitulos) = {
+  let total = 0.0
+
+  for (_, capitulo) in capitulos.pairs() {
+    total += subtotal_capitulo(capitulo.at("items"))
+  }
+
+  total
+}
+
+#let tabla_presupuesto(presupuesto) = {
+  let capitulos = presupuesto.at("capitulos")
+  let total_final = total_presupuesto(capitulos)
+
+  table(
+    columns: (auto, auto, 1fr, auto, auto, auto),
+
+    ..for (num_capitulo, capitulo) in capitulos.pairs() {
+      let items = capitulo.at("items")
+      let subtotal = subtotal_capitulo(items)
+
+      (
+        table.cell(colspan: 6)[
+          *Capítulo #num_capitulo: #capitulo.at("nombre")*
+        ],
+
+        [Código],
+        [Ud],
+        [Descripción],
+        [Nº],
+        [Precio (€)],
+        [Total],
+
+        ..for (codigo, item) in items.pairs() {
+          let cantidad = item.at("cantidad")
+          let precio = item.at("precio_unitario")
+          let total = cantidad * precio
+
+          (
+            [#codigo],
+            [#item.at("ud")],
+            [
+              *#item.at("nombre")* \
+              #item.at("descripcion")
+            ],
+            [#cantidad],
+            [#euros(precio)],
+            [#euros(total)],
+          )
+        },
+
+        table.cell(colspan: 5)[
+          *Subtotal capítulo #num_capitulo*
+        ],
+        [#euros(subtotal)],
+
+        //table.cell(colspan: 6, inset: (top: 8pt, bottom: 8pt))[]
+      )
+    },
+
+    table.cell(colspan: 5)[
+      *TOTAL PRESUPUESTO*
+    ],
+    [#euros(total_final)],
+  )
+}

@@ -3,7 +3,8 @@
 // =======================
 
 #let data = json("data.json")
-#import "formato.typ": tabla-riesgos, tabla_resumen_fases_obra,
+
+#import "formato.typ": tabla_riesgos, tabla_resumen_fases_obra
 
 
 //Sergio: Preguntas o dudas que tengo sobre como incluir o redactar ciertos datos o frases en el documento para que todo quede coherente.
@@ -1608,7 +1609,7 @@ Se distinguirán dos categorías, riesgos generales (los que afectan a todas las
 
 Aquellos que afectan tanto a las tareas de instalación como a las de mantenimiento y conservación de paneles solares para obtención de energía eléctrica y térmica.
 
-#tabla-riesgos(
+#tabla_riesgos(
   "Operaciones de montaje y colocación:",
   data.riesgos_montaje_generales
 )
@@ -1619,7 +1620,7 @@ Además de los generales anteriormente citados, existen riesgos específicos en 
 
 ==== Instalaciones fotovoltaicas
 
-#tabla-riesgos(
+#tabla_riesgos(
   "Operaciones de montaje y colocación:",
   data.riesgos_montaje_especificos
 )
@@ -2498,6 +2499,7 @@ Tras el análisis de las características de los trabajos y del personal expuest
 (Ley 31/1995, de 8 de noviembre, sobre Prevención de Riesgos Laborales).
 
 //Álvaro: Revisar tabla inferior
+//Sergio: La numeración de las celdas de la tabla no se pueden poner con un "+", aparece en todas como "1.", mientras averiguo como hacer que sea automático lo dejo numerado a mano.
 *Gestión y evaluación de riesgos. Planificación preventiva.*
 #table(
   columns: (auto, auto, auto, auto, auto, auto, auto),
@@ -2536,10 +2538,13 @@ Tras el análisis de las características de los trabajos y del personal expuest
 
 Con lo anteriormente expuesto, estimamos que queda suficientemente aclarado el alcance de la presente evaluación de riesgos.
 
-//*INSERTAR FIRMA, FECHA Y DEMÁS*
-
 = Presupuesto
 
+#import "formato.typ": tabla_presupuesto
+
+#let data = json("data.json")
+
+#tabla_presupuesto(data.at("presupuesto"))
 //Sergio: dejo en todos los anexos la enumeración "Anexo I, II, ...", ¿ ves bien dejarlo así ? o hago una función que cada vez que aparezca en el texto aumente el número del anexo y podamos elegir si escribir "Anexo" o "Anejo"
 //Además, tras leer todos los anexos y la memoria, considero que son anexos del PSS y no de la memoria en concreto, por tanto dejaría cada título con "="
 = Anexo I Planning de obra

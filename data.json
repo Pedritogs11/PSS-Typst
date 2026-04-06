@@ -238,8 +238,8 @@
             "nombre": "Reunión de coordinación de actividades empresariales con propietario de las instalaciones.",
             "descripcion": "Reunión de dirección de obra, recurso preventivo y responsable de contratista con propiedad de la nave para coordinar los horarios de trabajo, accesos, uso de instalaciones, etc. Incluido desplazamiento a obra",
             "ud": "h",
-            "cantidad": 1,
-            "precio_unitario": 45
+            "cantidad": 2,
+            "precio_unitario": 90
           }
         }
       }

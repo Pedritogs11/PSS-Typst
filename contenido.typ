@@ -4,7 +4,7 @@
 
 #let data = json("data.json")
 
-#import "formato.typ": tabla_riesgos, tabla_resumen_fases_obra, tabla_presupuesto
+#import "formato.typ": tabla_riesgos, tabla_resumen_fases_obra, tabla_presupuesto, total_presupuesto, euros
 
 
 //Sergio: Preguntas o dudas que tengo sobre como incluir o redactar ciertos datos o frases en el documento para que todo quede coherente.
@@ -118,7 +118,7 @@ Ubicación google maps: #data.proyecto.empresa.enlace_maps
   [COORDINADOR DE SEGURIDAD Y SALUD], [#for (_, valor) in data.coordinador_pss [#valor \ ]],
   [ENCARGADO / RECURSO PREVENTIVO],[#data.sys.encargado_recurso_preventivo],
   [PRESUPUESTO EJECUCIÓN MATERIAL], [#data.presupuesto.pem €],
-  [PRESUPUESTO PLAN SEGURIDAD Y SALUD], [#data.presupuesto.p_pss €],
+  [PRESUPUESTO PLAN SEGURIDAD Y SALUD], [#euros(total_presupuesto(data.at("presupuesto").at("capitulos")))],
   [PLAZO DE EJECUCIÓN], [#data.proyecto.duracion de trabajo efectivo, en función del suministro se podría alargar en el tiempo cronológico, pero no en trabajo efectivo],
   [JORNADA LABORAL],[Según convenio, siempre que la climatología y los trabajos a efectuar lo permitan],
   [Nº TRABAJADORES PREVISTOS],[Máxima concentración de personal de obra: #data.proyecto.trabajadores.totales operarios. Personal medio de obra: #data.proyecto.trabajadores.media operarios.]
@@ -873,6 +873,7 @@ Está previsto que puedan ser utilizadas en obra todo tipo de escaleras de mano 
 Cuando se utilice, se tendrá en cuenta el siguiente esquema:
 
 //*FOTO*
+//Insertar
 
 -	Respecto a los materiales de los que están compuestas, preveo que se podrán utilizarse de madera, acero o aluminio.
   -	Maquinaria y herramientas necesarias: Las herramientas a utilizar serán:
@@ -1391,7 +1392,7 @@ Medidas preventivas y protecciones colectivas:
 -	El esfuerzo será soportado siempre por la garganta del gancho, nunca por el pico.
 -	En los trabajos de izado de cargas el personal que los ejecute dispondrá permanentemente de cinturón de seguridad anclado a elemento seguro y estable distinto de cualquier elemento de la maquinaria de elevación.
 
-//*FOTO*
+//*FOTO* Insertar
 
 == Materiales
 
@@ -1573,9 +1574,7 @@ Con lo anteriormente expuesto, estimamos que queda suficientemente aclarado el a
 En #data.autor_pss.localidad, #data.proyecto.fecha
 
 El autor del P.S.S.
-
-//autorPSS.firma
-
+//Álvaro:
 
 
 = Evaluación de riesgos <evaluacionRiesgos>
@@ -2805,8 +2804,6 @@ Como normas generales de actuación, los recursos preventivos tendrán que:
 -	Informar y proporcionar las instrucciones adecuadas a los trabajadores autónomos sobre todas las medidas que hayan de adoptarse en lo que se refiere a su seguridad y salud en la obra.
 -	Atender las indicaciones y cumplir las instrucciones del coordinador en materia de seguridad y de salud durante la ejecución de la obra o, en su caso, de la dirección facultativa.
 
-//*CUADRADOS CON FIRMAS *
-
 = Anexo IV Nombramiento de jefe de obra
 == Designación del jefe de obra
 
@@ -2845,8 +2842,6 @@ Funciones del jefe de trabajo
 
 Debiendo de estar presente en obra durante la ejecución de los trabajos, o bien designar un sustituto en caso de ausentarse de la zona de los trabajos.
 
-//*CUADRADOS CON FIRMAS*
-
 = Anexo V Nombramiento de supervisor manejo de cargas
 == Nombramiento del supervisor del manejo de cargas
 
@@ -2862,8 +2857,6 @@ Como normas generales de actuación tendrá que:
   -	La delimitación y el acondicionamiento de las zonas de almacenamiento y depósito de los distintos materiales, en particular si se trata de materias o sustancias peligrosas.
   -	Supervisión en el izado y bajada de materiales en obra, asegurándose que se realiza cumpliendo todas las medidas de seguridad.
   -	Comprobación del estado de los medios de elevación de las cargas.
-
-//*CUADRADOS CON FIRMAS*
 
 = Anexo VI Protocolo uso de plataformas elevadoras <anexoVI>
 
@@ -3061,6 +3054,7 @@ Una vez vista la información de riesgos y medidas preventivas descritas y previ
 == Uso correcto del arnés en la plataforma
 //Sergio: Justo aquí, en este apartado aparece una foto que describe el uso del arnés en la plataforma, esta foto no cambia, entonces, ¿añado directamente la foto aquí, ya que es contenido?. El formato de la misma por supuesto que no tendría que determinarlo aquí, sino en el propio archivo de formato.
 //*FOTO DEL USO DEL ARNÉS*
+// Insertar
 
 == Consideraciones sobre la plataforma y su operador
 === Documentación
@@ -3742,7 +3736,6 @@ En la identificación de los riesgos se ha utilizado la lista de “Riesgos de a
 -	Ruidos y/o vibraciones.
 -	Otros.
 
-//*INSERTAR TABLA DE PROBABILIDAD / SEVERIDAD*
 #table(
   columns: (auto, auto, auto, auto, auto, auto, auto, auto),
   table.header(table.cell(rowspan: 2, [Riesgo]), table.cell(colspan: 3, [Probabilidad]), table.cell(colspan: 3, [Severidad]), table.cell(rowspan: 2, [Valor riesgo]),
@@ -4161,9 +4154,6 @@ Estatales:
 -	Ordenanza de 26-10-2012 (BOP núm. 208) Municipal de Jaén, reguladora de la ocupación de vía pública con veladores y estructuras auxiliares. //cambiar por  autonómica
 -	Plan general Municipal de ordenación urbana.
 
-= Planos
-
-
 // Seguridad en obras → RD 1627/1997
 // PRL general → Ley 31/1995
 // Riesgo eléctrico → RD 614/2001
@@ -4171,3 +4161,8 @@ Estatales:
 // EPIs → RD 773/1997
 // Señalización → RD 485/1997
 // Lugares de trabajo → RD 486/1997
+
+
+
+
+= Planos
